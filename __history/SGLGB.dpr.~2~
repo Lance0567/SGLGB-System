@@ -1,0 +1,22 @@
+program SGLGB;
+
+uses
+  Vcl.Forms,
+  uMainForm in 'Main\uMainForm.pas' {MainForm},
+  uDataMod in 'Data Module\uDataMod.pas' {DM: TDataModule},
+  uDraftProposal in 'Modal\uDraftProposal.pas' {DraftProposalForm},
+  uLeads in 'Modal\uLeads.pas' {LeadsForm},
+  uProposal in 'Modal\uProposal.pas' {ProposalForm};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TMainForm, MainForm);
+  Application.CreateForm(TDM, DM);
+  Application.CreateForm(TDraftProposalForm, DraftProposalForm);
+  Application.CreateForm(TLeadsForm, LeadsForm);
+  Application.CreateForm(TProposalForm, ProposalForm);
+  Application.Run;
+end.
