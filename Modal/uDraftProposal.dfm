@@ -21,36 +21,36 @@ object DraftProposalForm: TDraftProposalForm
     ActiveCard = DraftCard
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitWidth = 840
-    ExplicitHeight = 657
+    ExplicitWidth = 830
+    ExplicitHeight = 627
     object DraftCard: TCard
       Left = 0
       Top = 0
-      Width = 836
-      Height = 631
+      Width = 832
+      Height = 630
       Caption = 'DraftCard'
       CardIndex = 0
       TabOrder = 0
-      ExplicitWidth = 840
-      ExplicitHeight = 657
+      ExplicitWidth = 830
+      ExplicitHeight = 627
       object DraftHeaderPanel: TPanel
         AlignWithMargins = True
         Left = 25
         Top = 3
-        Width = 808
+        Width = 804
         Height = 67
         Margins.Left = 25
         Align = alTop
         BevelOuter = bvNone
         FullRepaint = False
         TabOrder = 0
-        ExplicitWidth = 812
+        ExplicitWidth = 802
         object Label11: TLabel
           AlignWithMargins = True
           Left = 108
           Top = 10
           Width = 210
-          Height = 45
+          Height = 47
           Margins.Top = 10
           Margins.Bottom = 10
           Align = alLeft
@@ -62,6 +62,7 @@ object DraftProposalForm: TDraftProposalForm
           Font.Style = [fsBold]
           ParentFont = False
           Layout = tlCenter
+          ExplicitHeight = 45
         end
         object VirtualImage1: TVirtualImage
           Left = 0
@@ -69,7 +70,6 @@ object DraftProposalForm: TDraftProposalForm
           Width = 105
           Height = 67
           Align = alLeft
-          ImageCollection = MainForm.ImageCollection1
           ImageWidth = 0
           ImageHeight = 0
           ImageIndex = 16
@@ -81,7 +81,7 @@ object DraftProposalForm: TDraftProposalForm
         AlignWithMargins = True
         Left = 25
         Top = 282
-        Width = 786
+        Width = 782
         Height = 223
         Margins.Left = 25
         Margins.Right = 25
@@ -107,13 +107,13 @@ object DraftProposalForm: TDraftProposalForm
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 1
-        ExplicitWidth = 790
+        ExplicitWidth = 780
         object LineItemsStringGrid: TStringGrid
           Tag = 4
           AlignWithMargins = True
           Left = 3
           Top = 3
-          Width = 780
+          Width = 776
           Height = 184
           ColCount = 4
           FixedCols = 0
@@ -135,7 +135,7 @@ object DraftProposalForm: TDraftProposalForm
           AlignWithMargins = True
           Left = 3
           Top = 195
-          Width = 780
+          Width = 770
           Height = 25
           DataSource = BindSourceDBLineItems
           Orientation = orHorizontal
@@ -146,8 +146,8 @@ object DraftProposalForm: TDraftProposalForm
         AlignWithMargins = True
         Left = 25
         Top = 511
-        Width = 786
-        Height = 117
+        Width = 782
+        Height = 116
         Margins.Left = 25
         Margins.Right = 25
         ControlCollection = <
@@ -172,21 +172,21 @@ object DraftProposalForm: TDraftProposalForm
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 2
-        ExplicitWidth = 790
-        ExplicitHeight = 143
+        ExplicitWidth = 780
+        ExplicitHeight = 113
         object Panel1: TPanel
           AlignWithMargins = True
           Left = 3
           Top = 3
-          Width = 780
+          Width = 776
           Height = 37
           BevelOuter = bvNone
           TabOrder = 0
           object Total: TLabel
-            Left = 611
+            Left = 607
             Top = 0
             Width = 42
-            Height = 19
+            Height = 37
             Margins.Right = 6
             Align = alRight
             Alignment = taRightJustify
@@ -198,10 +198,12 @@ object DraftProposalForm: TDraftProposalForm
             Font.Style = []
             ParentFont = False
             Layout = tlCenter
+            ExplicitLeft = 611
+            ExplicitHeight = 19
           end
           object TotalEdit: TEdit
             AlignWithMargins = True
-            Left = 656
+            Left = 652
             Top = 3
             Width = 121
             Height = 31
@@ -215,20 +217,20 @@ object DraftProposalForm: TDraftProposalForm
             ParentFont = False
             TabOrder = 0
             TextHint = 'Total'
-            ExplicitLeft = 660
+            ExplicitLeft = 650
             ExplicitHeight = 27
           end
         end
         object Panel6: TPanel
           Left = 0
-          Top = 76
-          Width = 786
+          Top = 75
+          Width = 782
           Height = 41
           BevelOuter = bvNone
           TabOrder = 1
           object PreviewButton: TButton
             AlignWithMargins = True
-            Left = 656
+            Left = 652
             Top = 3
             Width = 127
             Height = 35
@@ -236,7 +238,7 @@ object DraftProposalForm: TDraftProposalForm
             Caption = 'Preview'
             TabOrder = 0
             OnClick = PreviewButtonClick
-            ExplicitLeft = 660
+            ExplicitLeft = 650
           end
           object CancelButton: TButton
             AlignWithMargins = True
@@ -256,7 +258,7 @@ object DraftProposalForm: TDraftProposalForm
         AlignWithMargins = True
         Left = 25
         Top = 76
-        Width = 786
+        Width = 782
         Margins.Left = 25
         Margins.Right = 25
         Align = alTop
@@ -283,21 +285,21 @@ object DraftProposalForm: TDraftProposalForm
             VerticalPositioning = spvpTop
           end>
         TabOrder = 3
-        ExplicitWidth = 790
+        ExplicitWidth = 780
         object Panel5: TPanel
           Left = 0
           Top = 0
-          Width = 786
+          Width = 782
           Height = 41
           Align = alTop
           BevelOuter = bvNone
           TabOrder = 3
           object Label1: TLabel
             AlignWithMargins = True
-            Left = 676
+            Left = 672
             Top = 0
             Width = 107
-            Height = 45
+            Height = 41
             Margins.Top = 0
             Margins.Bottom = 0
             Align = alRight
@@ -309,6 +311,8 @@ object DraftProposalForm: TDraftProposalForm
             Font.Style = [fsBold]
             ParentFont = False
             Layout = tlCenter
+            ExplicitLeft = 676
+            ExplicitHeight = 45
           end
           object CompanyEdit: TEdit
             AlignWithMargins = True
@@ -333,7 +337,7 @@ object DraftProposalForm: TDraftProposalForm
         object Panel4: TPanel
           Left = 0
           Top = 43
-          Width = 786
+          Width = 782
           Height = 41
           Align = alTop
           BevelOuter = bvNone
@@ -359,7 +363,7 @@ object DraftProposalForm: TDraftProposalForm
           end
           object DateEdit: TEdit
             AlignWithMargins = True
-            Left = 660
+            Left = 656
             Top = 8
             Width = 123
             Height = 25
@@ -374,14 +378,14 @@ object DraftProposalForm: TDraftProposalForm
             ParentFont = False
             TabOrder = 1
             TextHint = 'Date'
-            ExplicitLeft = 664
+            ExplicitLeft = 654
             ExplicitHeight = 27
           end
         end
         object Panel3: TPanel
           Left = 0
           Top = 86
-          Width = 786
+          Width = 782
           Height = 41
           Align = alTop
           BevelOuter = bvNone
@@ -409,7 +413,7 @@ object DraftProposalForm: TDraftProposalForm
         object Panel2: TPanel
           Left = 0
           Top = 129
-          Width = 786
+          Width = 782
           Height = 41
           Align = alTop
           BevelOuter = bvNone
@@ -542,24 +546,20 @@ object DraftProposalForm: TDraftProposalForm
       CardIndex = 1
       TabOrder = 1
       OnClick = PreviewCardClick
-      ExplicitWidth = 840
-      ExplicitHeight = 657
       object WebBrowser1: TWebBrowser
         AlignWithMargins = True
         Left = 25
         Top = 76
-        Width = 786
-        Height = 505
+        Width = 782
+        Height = 504
         Margins.Left = 25
         Margins.Right = 25
         Align = alClient
         TabOrder = 0
-        ExplicitLeft = 344
-        ExplicitTop = 160
-        ExplicitWidth = 300
-        ExplicitHeight = 150
+        ExplicitWidth = 790
+        ExplicitHeight = 531
         ControlData = {
-          4C000000A6510000E13600000000000000000000000000000000000000000000
+          4C000000D2500000173400000000000000000000000000000000000000000000
           000000004C000000000000000000000001000000E0D057007335CF11AE690800
           2B2E126208000000000000004C0000000114020000000000C000000000000046
           8000000000000000000000000000000000000000000000000000000000000000
@@ -569,14 +569,13 @@ object DraftProposalForm: TDraftProposalForm
         AlignWithMargins = True
         Left = 25
         Top = 3
-        Width = 808
+        Width = 804
         Height = 67
         Margins.Left = 25
         Align = alTop
         BevelOuter = bvNone
         FullRepaint = False
         TabOrder = 1
-        ExplicitWidth = 812
         object Label2: TLabel
           AlignWithMargins = True
           Left = 108
@@ -602,7 +601,6 @@ object DraftProposalForm: TDraftProposalForm
           Width = 105
           Height = 67
           Align = alLeft
-          ImageCollection = MainForm.ImageCollection1
           ImageWidth = 0
           ImageHeight = 0
           ImageIndex = 16
@@ -632,11 +630,9 @@ object DraftProposalForm: TDraftProposalForm
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 2
-        ExplicitTop = 613
-        ExplicitWidth = 790
         object SaveProposalButton: TButton
           AlignWithMargins = True
-          Left = 660
+          Left = 652
           Top = 3
           Width = 127
           Height = 35

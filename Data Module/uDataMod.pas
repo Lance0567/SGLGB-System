@@ -15,6 +15,13 @@ uses
   FireDAC.Phys.SQLiteWrapper.Stat;
 
 type
+  TUser = class(Tobject)
+    id: Integer;
+    username: String;
+    isAdmin: boolean;
+    isActive: boolean;
+  end;
+
   TDM = class(TDataModule)
     LeadsFDMemTable: TFDMemTable;
     FDStanStorageBinLink1: TFDStanStorageBinLink;
@@ -27,7 +34,7 @@ type
     ProposalFDMemTable: TFDMemTable;
     ProposalStatusFDMemTable: TFDMemTable;
     FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink;
-    FDConnection1: TFDConnection;
+    conSGLGB: TFDConnection;
     FDLocalSQL1: TFDLocalSQL;
     FDEmailsQuery: TFDQuery;
     FDBatchMove1: TFDBatchMove;
@@ -56,12 +63,16 @@ type
     ProposalsFDTable: TFDTable;
     FDDocsQuery: TFDQuery;
     FDLeadsQueryAll: TFDQuery;
+    qTemp: TFDQuery;
     procedure FDLeadsQueryNewAfterScroll(DataSet: TDataSet);
     procedure LeadsFDTableAfterScroll(DataSet: TDataSet);
+    procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
+    FUser: TUser;
   public
     { Public declarations }
+    property User: TUser read FUser write FUser;
     procedure InitializeTable(ATable: TFDTable; AMemTable: TFDMemTable);
     procedure InitializeDatabase;
     procedure CompleteProposal(ALeadId: Integer);
@@ -104,20 +115,20 @@ end;
 
 procedure TDM.InitializeDatabase;
 begin
-  FDConnection1.Params.Values['Database'] := TPath.Combine(TPath.GetDocumentsPath, DB_FILENAME);
+  conSGLGB.Params.Values['Database'] := TPath.Combine(TPath.GetDocumentsPath, DB_FILENAME);
 
   LeadsFDTable.TableName := DB_LEADSTABLE;
   AcctFDTable.TableName := DB_ACCTSTABLE;
   UsersFDTable.TableName := DB_USERSTABLE;
   DocsFDTable.TableName := DB_DOCSTABLE;
   ProposalsFDTable.TableName := DB_PROPOSALSTABLE;
-  if TFile.Exists(FDConnection1.Params.Values['Database'])=True then
+  if TFile.Exists(conSGLGB.Params.Values['Database'])=True then
     begin
-      FDSQLiteSecurity1.Database := FDConnection1.Params.Values['Database'];
+      FDSQLiteSecurity1.Database := conSGLGB.Params.Values['Database'];
     end
   else
     begin
-      FDConnection1.Open;
+      conSGLGB.Open;
       try
         InitializeTable(DocsFDTable,DocsFDMemTable);
         InitializeTable(LeadsFDTable,LeadsFDMemTable);
@@ -125,16 +136,16 @@ begin
         InitializeTable(UsersFDTable,UsersFDMemTable);
         InitializeTable(ProposalsFDTable,ProposalFDMemTable);
       finally
-        FDConnection1.Close;
+        conSGLGB.Close;
       end;
-      FDSQLiteSecurity1.Database := FDConnection1.Params.Values['Database'];
+      FDSQLiteSecurity1.Database := conSGLGB.Params.Values['Database'];
       FDSQLiteSecurity1.Password := DB_ENCRYPTION + ':' + DB_PASSWORD;
       FDSQLiteSecurity1.SetPassword;
     end;
 
-  FDConnection1.Params.Values['Encrypt'] := DB_ENCRYPTION;
-  FDConnection1.Params.Password := DB_PASSWORD;
-  FDConnection1.Open;
+  conSGLGB.Params.Values['Encrypt'] := DB_ENCRYPTION;
+  conSGLGB.Params.Password := DB_PASSWORD;
+  conSGLGB.Open;
 
   DocsFDTable.Open;
   LeadsFDTable.Open;
@@ -205,6 +216,11 @@ begin
   FDDocsQuery.Open;
 end;
 
+
+procedure TDM.DataModuleCreate(Sender: TObject);
+begin
+  FUser := TUser.Create;
+end;
 
 procedure TDM.ExportEmails(const AFilename: string);
 begin

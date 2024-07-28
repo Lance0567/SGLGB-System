@@ -102,7 +102,7 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="Main\uMainForm.pas">
-            <Form>MainForm</Form>
+            <Form>frmMain</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Data Module\uDataMod.pas">
@@ -120,6 +120,10 @@
         </DCCReference>
         <DCCReference Include="Modal\uProposal.pas">
             <Form>ProposalForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Modal\uLogin.pas">
+            <Form>frmLogin</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">

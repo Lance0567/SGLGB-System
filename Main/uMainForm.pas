@@ -17,10 +17,10 @@ uses
   Vcl.WinXPanels, System.Actions, Vcl.ActnList, Vcl.Themes,
   Vcl.BaseImageCollection, Vcl.ImageCollection, System.ImageList, Vcl.ImgList,
   Vcl.VirtualImageList, Vcl.VirtualImage, System.IOUtils, Vcl.TitleBarCtrls,
-  System.Skia, Vcl.Skia, Vcl.Menus;
+  System.Skia, Vcl.Skia, Vcl.Menus, uLogin;
 
 type
-  TMainForm = class(TForm)
+  TfrmMain = class(TForm)
     pnlToolbar: TPanel;
     SplitView: TSplitView;
     NavPanel: TPanel;
@@ -182,9 +182,12 @@ type
     lbUserStatus: TSkLabel;
     MainMenu1: TMainMenu;
     Options1: TMenuItem;
-    Options2: TMenuItem;
+    Login: TMenuItem;
     N1: TMenuItem;
     Exit1: TMenuItem;
+    VirtualImage8: TVirtualImage;
+    LogOut: TMenuItem;
+    btnEdit: TSpeedButton;
     procedure CalendarView1DrawDayItem(Sender: TObject;
       DrawParams: TDrawViewInfoParams; CalendarViewViewInfo: TCellItemViewInfo);
     procedure AcctSearchBoxKeyPress(Sender: TObject; var Key: Char);
@@ -233,6 +236,9 @@ type
     procedure VCLStylesCBKeyPress(Sender: TObject; var Key: Char);
     procedure FormActivate(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure LoginClick(Sender: TObject);
+    procedure LogOutClick(Sender: TObject);
+    procedure btnEditClick(Sender: TObject);
   private
     { Private declarations }
     FRanOnce: Boolean;
@@ -244,7 +250,7 @@ type
   end;
 
 var
-  MainForm: TMainForm;
+  frmMain: TfrmMain;
 
 implementation
 
@@ -252,7 +258,7 @@ implementation
 
 uses uDataMod, uLeads, uDraftProposal, uProposal;
 
-procedure TMainForm.RefreshGrids;
+procedure TfrmMain.RefreshGrids;
 begin
   LeadsBindClosedSourceDB.DataSet.Refresh;
   LeadsBindActiveSourceDB.DataSet.Refresh;
@@ -260,22 +266,22 @@ begin
   LeadsBindProposalSentSourceDB.DataSet.Refresh;
 end;
 
-procedure TMainForm.RemoveAcctButtonClick(Sender: TObject);
+procedure TfrmMain.RemoveAcctButtonClick(Sender: TObject);
 begin
   AcctBindSourceDB.DataSet.Delete;
 end;
 
-procedure TMainForm.RemoveUserButtonClick(Sender: TObject);
+procedure TfrmMain.RemoveUserButtonClick(Sender: TObject);
 begin
   UsersBindSourceDB.DataSet.Delete;
 end;
 
-procedure TMainForm.AcctSearchBoxKeyPress(Sender: TObject; var Key: Char);
+procedure TfrmMain.AcctSearchBoxKeyPress(Sender: TObject; var Key: Char);
 begin
   DM.SearchAccounts(AcctSearchBox.Text);
 end;
 
-procedure TMainForm.CalendarView1DrawDayItem(Sender: TObject;
+procedure TfrmMain.CalendarView1DrawDayItem(Sender: TObject;
   DrawParams: TDrawViewInfoParams; CalendarViewViewInfo: TCellItemViewInfo);
 begin
   if DayOfWeek(CalendarViewViewInfo.Date) in [1, 7] then
@@ -284,7 +290,7 @@ begin
   end;
 end;
 
-procedure TMainForm.CancelProposalButtonClick(Sender: TObject);
+procedure TfrmMain.CancelProposalButtonClick(Sender: TObject);
 begin
   if ProposalBindSourceDB.DataSet.RecordCount>0 then
   begin
@@ -292,7 +298,7 @@ begin
   end;
 end;
 
-procedure TMainForm.PageControlChange(Sender: TObject);
+procedure TfrmMain.PageControlChange(Sender: TObject);
 begin
   if PageControl.ActivePageIndex=0 then
     begin
@@ -318,12 +324,12 @@ begin
 
 end;
 
-procedure TMainForm.SalesSearchBoxKeyPress(Sender: TObject; var Key: Char);
+procedure TfrmMain.SalesSearchBoxKeyPress(Sender: TObject; var Key: Char);
 begin
   DM.SearchProposals(SalesSearchBox.Text);
 end;
 
-procedure TMainForm.SplitViewClosing(Sender: TObject);
+procedure TfrmMain.SplitViewClosing(Sender: TObject);
 begin
   DashboardButton.Caption := '';
   AcctsButton.Caption := '';
@@ -334,7 +340,7 @@ begin
   UsersButton.Caption := '';
 end;
 
-procedure TMainForm.SplitViewOpening(Sender: TObject);
+procedure TfrmMain.SplitViewOpening(Sender: TObject);
 begin
   DashboardButton.Caption := '          '+DashboardButton.Hint;
   AcctsButton.Caption := '          '+AcctsButton.Hint;
@@ -345,18 +351,18 @@ begin
   UsersButton.Caption := '          '+UsersButton.Hint;
 end;
 
-procedure TMainForm.AccountsTabResize(Sender: TObject);
+procedure TfrmMain.AccountsTabResize(Sender: TObject);
 begin
   LinkGridToDataSourceAcctBindSourceDB.Columns[1].Width := AccountsSG.Width - LinkGridToDataSourceAcctBindSourceDB.Columns[0].Width;
 end;
 
-procedure TMainForm.UsersTabResize(Sender: TObject);
+procedure TfrmMain.UsersTabResize(Sender: TObject);
 begin
   LinkGridToDataSourceUsersBindSourceDB.Columns[1].Width := UsersSG.Width - LinkGridToDataSourceUsersBindSourceDB.Columns[0].Width;
 
 end;
 
-procedure TMainForm.UsernameComboBoxChange(Sender: TObject);
+procedure TfrmMain.UsernameComboBoxChange(Sender: TObject);
 begin
   LeadsForm.Close;
   DraftProposalForm.Close;
@@ -364,12 +370,12 @@ begin
   DM.SetUser(UsernameComboBox.Text);
 end;
 
-procedure TMainForm.UsernameComboBoxKeyPress(Sender: TObject; var Key: Char);
+procedure TfrmMain.UsernameComboBoxKeyPress(Sender: TObject; var Key: Char);
 begin
   Key := #0;
 end;
 
-procedure TMainForm.UsersRelativePanelResize(Sender: TObject);
+procedure TfrmMain.UsersRelativePanelResize(Sender: TObject);
 begin
   if UsersRelativePanel.Width<=436 then
   begin
@@ -387,29 +393,29 @@ begin
   end;
 end;
 
-procedure TMainForm.VCLStylesCBChange(Sender: TObject);
+procedure TfrmMain.VCLStylesCBChange(Sender: TObject);
 begin
-  MainForm.WindowState := TWindowState.wsMaximized;
+  frmMain.WindowState := TWindowState.wsMaximized;
   TStyleManager.TrySetStyle(VCLStylesCB.Text);
   UpdateNavButtons;
 end;
 
-procedure TMainForm.VCLStylesCBKeyPress(Sender: TObject; var Key: Char);
+procedure TfrmMain.VCLStylesCBKeyPress(Sender: TObject; var Key: Char);
 begin
   Key := #0;
 end;
 
-procedure TMainForm.ViewLeadButtonClick(Sender: TObject);
+procedure TfrmMain.ViewLeadButtonClick(Sender: TObject);
 begin
   LeadsForm.Show;
 end;
 
-procedure TMainForm.MenuVirtualImageClick(Sender: TObject);
+procedure TfrmMain.MenuVirtualImageClick(Sender: TObject);
 begin
   SplitView.Opened := not SplitView.Opened;
 end;
 
-procedure TMainForm.AcctsRelativePanelResize(Sender: TObject);
+procedure TfrmMain.AcctsRelativePanelResize(Sender: TObject);
 begin
   if AcctsRelativePanel.Width<=634 then
   begin
@@ -432,24 +438,24 @@ begin
   end;
 end;
 
-procedure TMainForm.ActiveLeadsSGDblClick(Sender: TObject);
+procedure TfrmMain.ActiveLeadsSGDblClick(Sender: TObject);
 begin
   ViewLeadButtonClick(Sender);
 end;
 
-procedure TMainForm.ActiveLeadsSGEnter(Sender: TObject);
+procedure TfrmMain.ActiveLeadsSGEnter(Sender: TObject);
 begin
   LeadsForm.LocateLead(LeadsBindActiveSourceDB.DataSet.FieldByName('LeadId').AsInteger);
   BindNavigator1.DataSource := LeadsBindActiveSourceDB;
 end;
 
-procedure TMainForm.ProposalSentLeadsSGEnter(Sender: TObject);
+procedure TfrmMain.ProposalSentLeadsSGEnter(Sender: TObject);
 begin
   LeadsForm.LocateLead(LeadsBindProposalSentSourceDB.DataSet.FieldByName('LeadId').AsInteger);
   BindNavigator1.DataSource := LeadsBindProposalSentSourceDB;
 end;
 
-procedure TMainForm.ProposalsRelativePanelResize(Sender: TObject);
+procedure TfrmMain.ProposalsRelativePanelResize(Sender: TObject);
 begin
   if ProposalsRelativePanel.Width<=436 then
   begin
@@ -467,13 +473,13 @@ begin
   end;
 end;
 
-procedure TMainForm.ClosedLeadsSGEnter(Sender: TObject);
+procedure TfrmMain.ClosedLeadsSGEnter(Sender: TObject);
 begin
   LeadsForm.LocateLead(LeadsBindClosedSourceDB.DataSet.FieldByName('LeadId').AsInteger);
   BindNavigator1.DataSource := LeadsBindClosedSourceDB;
 end;
 
-procedure TMainForm.CompleteProposalButtonClick(Sender: TObject);
+procedure TfrmMain.CompleteProposalButtonClick(Sender: TObject);
 begin
   if ProposalBindSourceDB.DataSet.RecordCount>0 then
   begin
@@ -482,7 +488,7 @@ begin
   end;
 end;
 
-procedure TMainForm.CreateAcctButtonClick(Sender: TObject);
+procedure TfrmMain.CreateAcctButtonClick(Sender: TObject);
 var
 LNewAccount: String;
 begin
@@ -495,7 +501,7 @@ begin
 
 end;
 
-procedure TMainForm.CreateLeadButtonClick(Sender: TObject);
+procedure TfrmMain.CreateLeadButtonClick(Sender: TObject);
 begin
   LeadsBindNewSourceDB.DataSet.Append;
   LeadsBindNewSourceDB.DataSet.FieldByName('LeadId').AsString := '';
@@ -509,7 +515,7 @@ begin
   LeadsForm.Show;
 end;
 
-procedure TMainForm.CreateUserButtonClick(Sender: TObject);
+procedure TfrmMain.CreateUserButtonClick(Sender: TObject);
 var
 LNewUser: String;
 begin
@@ -528,12 +534,12 @@ begin
   end;
 end;
 
-procedure TMainForm.DashboardButtonClick(Sender: TObject);
+procedure TfrmMain.DashboardButtonClick(Sender: TObject);
 begin
   PageControl.ActivePageIndex := TButton(Sender).Tag;
 end;
 
-procedure TMainForm.LeadsRelativePanelResize(Sender: TObject);
+procedure TfrmMain.LeadsRelativePanelResize(Sender: TObject);
 begin
   if LeadsRelativePanel.Width<=781 then
   begin
@@ -556,12 +562,12 @@ begin
   end;
 end;
 
-procedure TMainForm.LeadsSearchBoxKeyPress(Sender: TObject; var Key: Char);
+procedure TfrmMain.LeadsSearchBoxKeyPress(Sender: TObject; var Key: Char);
 begin
   DM.SearchLeads(LeadsSearchBox.Text);
 end;
 
-procedure TMainForm.MarketingRelativePanelResize(Sender: TObject);
+procedure TfrmMain.MarketingRelativePanelResize(Sender: TObject);
 begin
   if MarketingRelativePanel.Width<=320 then
   begin
@@ -575,12 +581,12 @@ begin
   end;
 end;
 
-procedure TMainForm.NewLeadsSGDblClick(Sender: TObject);
+procedure TfrmMain.NewLeadsSGDblClick(Sender: TObject);
 begin
   ViewLeadButtonClick(Sender);
 end;
 
-procedure TMainForm.NewLeadsSGDragDrop(Sender, Source: TObject; X, Y: Integer);
+procedure TfrmMain.NewLeadsSGDragDrop(Sender, Source: TObject; X, Y: Integer);
 var
   LStatus: String;
   LIndex: Integer;
@@ -694,31 +700,59 @@ begin
   end;
 end;
 
-procedure TMainForm.NewLeadsSGDragOver(Sender, Source: TObject; X, Y: Integer;
+procedure TfrmMain.NewLeadsSGDragOver(Sender, Source: TObject; X, Y: Integer;
   State: TDragState; var Accept: Boolean);
 begin
   Accept := Source is TStringGrid;
 end;
 
-procedure TMainForm.NewLeadsSGEnter(Sender: TObject);
+procedure TfrmMain.NewLeadsSGEnter(Sender: TObject);
 begin
   LeadsForm.LocateLead(LeadsBindNewSourceDB.DataSet.FieldByName('LeadId').AsInteger);
   BindNavigator1.DataSource := LeadsBindNewSourceDB;
 end;
 
-procedure TMainForm.NewLeadsSGMouseDown(Sender: TObject; Button: TMouseButton;
+procedure TfrmMain.NewLeadsSGMouseDown(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Integer);
 begin
   if Button = mbLeft then
      TStringGrid(Sender).BeginDrag(False,4);
 end;
 
-procedure TMainForm.EmailsSearchBoxKeyPress(Sender: TObject; var Key: Char);
+procedure TfrmMain.LoginClick(Sender: TObject);
+begin
+  frmLogin.Tag := 0;
+  frmLogin.ShowModal;
+
+  if frmLogin.Tag = 0 then
+  begin
+    ShowMessage('Not logged in');
+    // Application.Terminate;
+  end
+  else
+  begin
+    VirtualImage8.ImageName := 'open';
+    lbUserStatus.Caption := 'You are logged in system activated';
+    Self.Caption := 'SGLGB System | SEAL OF GOOD LOCAL GOVERNANCE FOR BARANGAY | 2024 | ' ;
+    Login.Visible := False;
+    LogOut.Visible := True;
+  end;
+end;
+
+procedure TfrmMain.LogOutClick(Sender: TObject);
+begin
+  VirtualImage8.ImageName := 'close';
+  lbUserStatus.Caption := 'You have logout system deactivated';
+  Login.Visible := True;
+  LogOut.Visible := False;
+end;
+
+procedure TfrmMain.EmailsSearchBoxKeyPress(Sender: TObject; var Key: Char);
 begin
   DM.SearchEmails(EmailsSearchBox.Text);
 end;
 
-procedure TMainForm.ExportAcctsButtonClick(Sender: TObject);
+procedure TfrmMain.ExportAcctsButtonClick(Sender: TObject);
 begin
   if ExportAcctsDialog.Execute then
   begin
@@ -726,7 +760,7 @@ begin
   end;
 end;
 
-procedure TMainForm.ExportEmailsButtonClick(Sender: TObject);
+procedure TfrmMain.ExportEmailsButtonClick(Sender: TObject);
 begin
   if SaveEmailsDialog.Execute then
   begin
@@ -734,7 +768,7 @@ begin
   end;
 end;
 
-procedure TMainForm.ExportLeadsButtonClick(Sender: TObject);
+procedure TfrmMain.ExportLeadsButtonClick(Sender: TObject);
 begin
   if ExportLeadsDialog.Execute then
   begin
@@ -742,7 +776,7 @@ begin
   end;
 end;
 
-procedure TMainForm.AppIdle(Sender: TObject; var Done: Boolean);
+procedure TfrmMain.AppIdle(Sender: TObject; var Done: Boolean);
 begin
   if not FRanOnce then
   begin
@@ -754,7 +788,32 @@ begin
   end;
 end;
 
-procedure TMainForm.FormActivate(Sender: TObject);
+procedure TfrmMain.btnEditClick(Sender: TObject);
+var
+  idHolder: Integer;
+  userHolder: String;
+  inputEditor: String;
+begin
+  idHolder := UsersBindSourceDB.DataSet.FieldByName('UserId').AsInteger;
+  userHolder := UsersBindSourceDB.DataSet.FieldByName('Username').AsString;
+
+  inputEditor := InputBox('Edit User', 'ID', idHolder.ToString);
+  inputEditor := InputBox('Edit User', 'Username', userHolder);
+  if UsersBindSourceDB.DataSet.Lookup('Username', VarArrayOf([inputEditor]),'Username')<>inputEditor then
+  begin
+    UsersBindSourceDB.DataSet.Edit;
+//    UsersBindSourceDB.DataSet.FieldByName('UserId').AsInteger := 0;
+    UsersBindSourceDB.DataSet.FieldByName('Username').AsString := inputEditor;
+    UsersBindSourceDB.DataSet.Post;
+    DM.UsersFDTable.Refresh;
+  end
+  else
+  begin
+    ShowMessage('A user with that username already exists.');
+  end;
+end;
+
+procedure TfrmMain.FormActivate(Sender: TObject);
 begin
   if FRanOnce then
   begin
@@ -764,7 +823,7 @@ begin
   end;
 end;
 
-procedure TMainForm.FormCreate(Sender: TObject);
+procedure TfrmMain.FormCreate(Sender: TObject);
 var
   StyleName: string;
 begin
@@ -778,7 +837,7 @@ begin
   UpdateNavButtons;
 end;
 
-procedure TMainForm.UpdateNavButtons;
+procedure TfrmMain.UpdateNavButtons;
 var
   LStyle: Dword;
 begin
@@ -799,9 +858,9 @@ begin
   UsersButton.Caption := '          '+UsersButton.Hint;
 end;
 
-procedure TMainForm.FormResize(Sender: TObject);
+procedure TfrmMain.FormResize(Sender: TObject);
 begin
-  if MainForm.Width<=640 then
+  if frmMain.Width<=640 then
   begin
     if SplitView.Opened=True then SplitView.Opened := False;
   end
@@ -811,7 +870,7 @@ begin
   end;
 end;
 
-procedure TMainForm.FormShow(Sender: TObject);
+procedure TfrmMain.FormShow(Sender: TObject);
 begin
   VCLStylesCB.AutoComplete := True;
   Self.Caption := 'Height: ' + IntToStr(ClientHeight) + ' ' + 'Width: ' + IntToStr(ClientWidth);

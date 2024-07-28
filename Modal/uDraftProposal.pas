@@ -223,7 +223,7 @@ begin
     LReportStream.Free;
   end;
   BindSourceDBProposal.DataSet.FieldByName('DateCreated').AsDateTime := Now;
-  BindSourceDBProposal.DataSet.FieldByName('User').AsString := MainForm.UsernameComboBox.Text;
+  BindSourceDBProposal.DataSet.FieldByName('User').AsString := frmMain.UsernameComboBox.Text;
   BindSourceDBProposal.DataSet.Post;
   BindSourceDBProposalQuery.DataSet.Refresh;
   BindSourceDBProposalQuery.DataSet.Locate('LeadId',VarArrayOf([FLeadId]),[]);

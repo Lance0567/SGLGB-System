@@ -1,4 +1,5 @@
 object DM: TDM
+  OnCreate = DataModuleCreate
   Height = 639
   Width = 753
   object LeadsFDMemTable: TFDMemTable
@@ -237,7 +238,7 @@ object DM: TDM
     Top = 104
   end
   object FDStanStorageJSONLink1: TFDStanStorageJSONLink
-    Left = 441
+    Left = 417
     Top = 40
   end
   object StatusFDMemTable: TFDMemTable
@@ -993,7 +994,7 @@ object DM: TDM
     Left = 616
     Top = 72
   end
-  object FDConnection1: TFDConnection
+  object conSGLGB: TFDConnection
     Params.Strings = (
       'DriverID=SQLite')
     LoginPrompt = False
@@ -1001,7 +1002,7 @@ object DM: TDM
     Top = 24
   end
   object FDLocalSQL1: TFDLocalSQL
-    Connection = FDConnection1
+    Connection = conSGLGB
     Active = True
     DataSets = <
       item
@@ -1012,7 +1013,7 @@ object DM: TDM
     Top = 96
   end
   object FDEmailsQuery: TFDQuery
-    Connection = FDConnection1
+    Connection = conSGLGB
     SQL.Strings = (
       
         'SELECT Email, Name FROM Leads WHERE Status<>'#39'Inactive'#39' AND User=' +
@@ -1052,7 +1053,7 @@ object DM: TDM
     Top = 232
   end
   object FDAccountsQuery: TFDQuery
-    Connection = FDConnection1
+    Connection = conSGLGB
     SQL.Strings = (
       'SELECT * FROM Accounts {IF !Where} WHERE !Where {FI}')
     Left = 280
@@ -1065,7 +1066,7 @@ object DM: TDM
   end
   object FDLeadsQueryNew: TFDQuery
     AfterScroll = FDLeadsQueryNewAfterScroll
-    Connection = FDConnection1
+    Connection = conSGLGB
     UpdateOptions.AssignedValues = [uvCountUpdatedRecords]
     UpdateOptions.AutoIncFields = 'LeadId'
     SQL.Strings = (
@@ -1088,7 +1089,7 @@ object DM: TDM
       end>
   end
   object FDProposalsQuery: TFDQuery
-    Connection = FDConnection1
+    Connection = conSGLGB
     SQL.Strings = (
       'SELECT * FROM Proposals WHERE User=:Username !Where')
     Left = 344
@@ -1107,7 +1108,7 @@ object DM: TDM
   end
   object FDLeadsQueryActive: TFDQuery
     AfterScroll = FDLeadsQueryNewAfterScroll
-    Connection = FDConnection1
+    Connection = conSGLGB
     UpdateOptions.AssignedValues = [uvCountUpdatedRecords]
     UpdateOptions.AutoIncFields = 'LeadId'
     SQL.Strings = (
@@ -1130,7 +1131,7 @@ object DM: TDM
   end
   object FDLeadsQueryProposalSent: TFDQuery
     AfterScroll = FDLeadsQueryNewAfterScroll
-    Connection = FDConnection1
+    Connection = conSGLGB
     UpdateOptions.AssignedValues = [uvCountUpdatedRecords]
     UpdateOptions.KeyFields = 'LeadId'
     UpdateOptions.AutoIncFields = 'LeadId'
@@ -1154,7 +1155,7 @@ object DM: TDM
   end
   object FDLeadsQueryClosed: TFDQuery
     AfterScroll = FDLeadsQueryNewAfterScroll
-    Connection = FDConnection1
+    Connection = conSGLGB
     UpdateOptions.AssignedValues = [uvCountUpdatedRecords]
     UpdateOptions.KeyFields = 'LeadId'
     UpdateOptions.AutoIncFields = 'LeadId'
@@ -1353,7 +1354,7 @@ object DM: TDM
       00}
   end
   object LineItemsTotalQuery: TFDQuery
-    Connection = FDConnection1
+    Connection = conSGLGB
     SQL.Strings = (
       
         'Select printf("%.2f", coalesce(sum(Quantity * Price),0)) as tota' +
@@ -1362,7 +1363,7 @@ object DM: TDM
     Top = 344
   end
   object FDQueryNewTotal: TFDQuery
-    Connection = FDConnection1
+    Connection = conSGLGB
     SQL.Strings = (
       
         'SELECT COUNT(LeadId) As NewLeads FROM Leads WHERE Status='#39'New'#39' A' +
@@ -1377,7 +1378,7 @@ object DM: TDM
       end>
   end
   object FDQueryActiveTotal: TFDQuery
-    Connection = FDConnection1
+    Connection = conSGLGB
     SQL.Strings = (
       
         'SELECT COUNT(LeadId) As ActiveLeads FROM Leads WHERE Status='#39'Act' +
@@ -1392,7 +1393,7 @@ object DM: TDM
       end>
   end
   object FDQueryProposalTotal: TFDQuery
-    Connection = FDConnection1
+    Connection = conSGLGB
     SQL.Strings = (
       
         'SELECT COUNT(LeadId) AS ProposalSentLeads  FROM Leads WHERE Stat' +
@@ -1407,7 +1408,7 @@ object DM: TDM
       end>
   end
   object FDQueryClosedTotal: TFDQuery
-    Connection = FDConnection1
+    Connection = conSGLGB
     SQL.Strings = (
       
         'SELECT COUNT(LeadId) AS ClosedLeads FROM Leads WHERE Status='#39'Clo' +
@@ -1422,7 +1423,7 @@ object DM: TDM
       end>
   end
   object FDQueryTotal: TFDQuery
-    Connection = FDConnection1
+    Connection = conSGLGB
     SQL.Strings = (
       
         'SELECT COUNT(LeadId) AS LeadsCount FROM Leads WHERE User=:Userna' +
@@ -1437,7 +1438,7 @@ object DM: TDM
       end>
   end
   object FDQueryInactiveTotal: TFDQuery
-    Connection = FDConnection1
+    Connection = conSGLGB
     SQL.Strings = (
       
         'SELECT COUNT(LeadId) AS InactiveLeads FROM Leads WHERE Status='#39'I' +
@@ -1453,7 +1454,7 @@ object DM: TDM
   end
   object LeadsFDTable: TFDTable
     AfterScroll = LeadsFDTableAfterScroll
-    Connection = FDConnection1
+    Connection = conSGLGB
     Left = 112
     Top = 296
   end
@@ -1463,27 +1464,27 @@ object DM: TDM
     Top = 464
   end
   object DocsFDTable: TFDTable
-    Connection = FDConnection1
+    Connection = conSGLGB
     Left = 208
     Top = 304
   end
   object UsersFDTable: TFDTable
-    Connection = FDConnection1
+    Connection = conSGLGB
     Left = 88
     Top = 344
   end
   object AcctFDTable: TFDTable
-    Connection = FDConnection1
+    Connection = conSGLGB
     Left = 176
     Top = 344
   end
   object ProposalsFDTable: TFDTable
-    Connection = FDConnection1
+    Connection = conSGLGB
     Left = 240
     Top = 344
   end
   object FDDocsQuery: TFDQuery
-    Connection = FDConnection1
+    Connection = conSGLGB
     SQL.Strings = (
       
         'SELECT * FROM Docs WHERE LeadId=:LeadId AND User=:Username !Wher' +
@@ -1509,7 +1510,7 @@ object DM: TDM
   end
   object FDLeadsQueryAll: TFDQuery
     AfterScroll = FDLeadsQueryNewAfterScroll
-    Connection = FDConnection1
+    Connection = conSGLGB
     UpdateOptions.AssignedValues = [uvCountUpdatedRecords]
     UpdateOptions.AutoIncFields = 'LeadId'
     SQL.Strings = (
@@ -1528,5 +1529,10 @@ object DM: TDM
         Value = Null
         Name = 'WHERE'
       end>
+  end
+  object qTemp: TFDQuery
+    Connection = conSGLGB
+    Left = 48
+    Top = 504
   end
 end

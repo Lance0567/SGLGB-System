@@ -1,22 +1,10 @@
-object MainForm: TMainForm
+object frmMain: TfrmMain
   Left = 10
   Top = 0
-  Caption = 'SGLGB System'
+  Caption = 'SGLGB System | SEAL OF GOOD LOCAL GOVERNANCE FOR BARANGAY | 2024'
   ClientHeight = 606
   ClientWidth = 1130
   Color = clBtnFace
-  CustomTitleBar.BackgroundColor = clWhite
-  CustomTitleBar.ForegroundColor = 65793
-  CustomTitleBar.InactiveBackgroundColor = clWhite
-  CustomTitleBar.InactiveForegroundColor = 10066329
-  CustomTitleBar.ButtonForegroundColor = 65793
-  CustomTitleBar.ButtonBackgroundColor = clWhite
-  CustomTitleBar.ButtonHoverForegroundColor = 65793
-  CustomTitleBar.ButtonHoverBackgroundColor = 16053492
-  CustomTitleBar.ButtonPressedForegroundColor = 65793
-  CustomTitleBar.ButtonPressedBackgroundColor = 15395562
-  CustomTitleBar.ButtonInactiveForegroundColor = 10066329
-  CustomTitleBar.ButtonInactiveBackgroundColor = clWhite
   Constraints.MinHeight = 575
   Constraints.MinWidth = 550
   DockSite = True
@@ -47,8 +35,6 @@ object MainForm: TMainForm
     StyleName = 'Windows10 SlateGray'
     OnClosing = SplitViewClosing
     OnOpening = SplitViewOpening
-    ExplicitTop = 39
-    ExplicitHeight = 598
     object pnlToolbar: TPanel
       Left = 0
       Top = 0
@@ -97,7 +83,6 @@ object MainForm: TMainForm
       FullRepaint = False
       ParentBackground = False
       TabOrder = 1
-      ExplicitHeight = 542
       object Image5: TImage
         Left = -56
         Top = 272
@@ -823,6 +808,7 @@ object MainForm: TMainForm
         ParentFont = False
         TabOrder = 0
         OnClick = DashboardButtonClick
+        ExplicitLeft = 315
       end
       object AcctsButton: TButton
         Tag = 1
@@ -959,13 +945,12 @@ object MainForm: TMainForm
     Width = 924
     Height = 562
     Margins.Top = 0
-    ActivePage = DashboardTab
+    ActivePage = UsersTab
     Align = alClient
     TabHeight = 30
     TabOrder = 1
     TabWidth = 75
     OnChange = PageControlChange
-    ExplicitWidth = 930
     object DashboardTab: TTabSheet
       Caption = 'Dashboard'
       ImageIndex = 3
@@ -1025,7 +1010,6 @@ object MainForm: TMainForm
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 1
-        ExplicitHeight = 466
         object RelativePanel1: TRelativePanel
           AlignWithMargins = True
           Left = 3
@@ -1918,7 +1902,6 @@ object MainForm: TMainForm
         Align = alBottom
         Orientation = orHorizontal
         TabOrder = 2
-        ExplicitTop = 476
       end
     end
     object LeadsTab: TTabSheet
@@ -1962,7 +1945,6 @@ object MainForm: TMainForm
         Align = alBottom
         Orientation = orHorizontal
         TabOrder = 0
-        ExplicitTop = 476
       end
       object Panel2: TPanel
         AlignWithMargins = True
@@ -2149,7 +2131,6 @@ object MainForm: TMainForm
         Align = alLeft
         Caption = 'NewLeadsPanel'
         TabOrder = 2
-        ExplicitHeight = 394
         object Label27: TLabel
           Left = 1
           Top = 1
@@ -2206,7 +2187,6 @@ object MainForm: TMainForm
         Caption = 'ActiveLeadsPanel'
         Constraints.MinWidth = 202
         TabOrder = 3
-        ExplicitHeight = 394
         object Label28: TLabel
           Left = 1
           Top = 1
@@ -2261,7 +2241,6 @@ object MainForm: TMainForm
         Align = alRight
         Caption = 'ProposalSentPanel'
         TabOrder = 4
-        ExplicitHeight = 394
         object Label29: TLabel
           Left = 1
           Top = 1
@@ -2318,7 +2297,6 @@ object MainForm: TMainForm
         Align = alRight
         Caption = 'ClosedPanel'
         TabOrder = 5
-        ExplicitHeight = 394
         object Label30: TLabel
           Left = 1
           Top = 1
@@ -2532,7 +2510,6 @@ object MainForm: TMainForm
         Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goRowSelect]
         ParentDoubleBuffered = False
         TabOrder = 1
-        ExplicitHeight = 394
         ColWidths = (
           64)
       end
@@ -2549,7 +2526,6 @@ object MainForm: TMainForm
         Align = alBottom
         Orientation = orHorizontal
         TabOrder = 2
-        ExplicitTop = 476
       end
     end
     object MarketingTab: TTabSheet
@@ -2688,7 +2664,6 @@ object MainForm: TMainForm
         Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goRowSelect]
         ParentDoubleBuffered = False
         TabOrder = 1
-        ExplicitHeight = 425
         ColWidths = (
           604)
       end
@@ -2725,7 +2700,6 @@ object MainForm: TMainForm
         ParentFont = False
         SelectionMode = smMultiple
         TabOrder = 0
-        ExplicitHeight = 403
       end
       object Panel4: TPanel
         AlignWithMargins = True
@@ -2852,6 +2826,16 @@ object MainForm: TMainForm
               AlignRightWithPanel = False
               AlignTopWithPanel = False
               AlignVerticalCenterWithPanel = True
+              LeftOf = btnEdit
+            end
+            item
+              Control = btnEdit
+              AlignBottomWithPanel = False
+              AlignHorizontalCenterWithPanel = False
+              AlignLeftWithPanel = False
+              AlignRightWithPanel = False
+              AlignTopWithPanel = False
+              AlignVerticalCenterWithPanel = False
               LeftOf = CreateUserButton
             end>
           Align = alClient
@@ -2900,7 +2884,7 @@ object MainForm: TMainForm
             OnClick = CreateUserButtonClick
           end
           object RemoveUserButton: TSpeedButton
-            Left = 265
+            Left = 144
             Top = 14
             Width = 121
             Height = 38
@@ -2917,6 +2901,25 @@ object MainForm: TMainForm
             Font.Style = []
             ParentFont = False
             OnClick = RemoveUserButtonClick
+          end
+          object btnEdit: TSpeedButton
+            Left = 265
+            Top = 14
+            Width = 121
+            Height = 38
+            Hint = 'Remove'
+            Anchors = []
+            Caption = 'Edit'
+            ImageIndex = 9
+            ImageName = 'baseline_create_white'
+            Images = VirtualImageList1
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -16
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+            OnClick = btnEditClick
           end
         end
       end
@@ -2939,7 +2942,6 @@ object MainForm: TMainForm
         ParentDoubleBuffered = False
         ScrollBars = ssVertical
         TabOrder = 1
-        ExplicitHeight = 394
         ColWidths = (
           64
           64)
@@ -2953,10 +2955,12 @@ object MainForm: TMainForm
         Margins.Left = 25
         Margins.Right = 25
         DataSource = UsersBindSourceDB
+        VisibleButtons = [nbEdit, nbPost, nbCancel, nbRefresh]
         Align = alBottom
         Orientation = orHorizontal
+        ParentShowHint = False
+        ShowHint = True
         TabOrder = 2
-        ExplicitTop = 476
       end
     end
   end
@@ -2967,24 +2971,38 @@ object MainForm: TMainForm
     Height = 41
     Align = alTop
     TabOrder = 2
-    ExplicitLeft = 480
-    ExplicitTop = 304
-    ExplicitWidth = 185
+    ExplicitTop = -3
     object lbUserStatus: TSkLabel
       AlignWithMargins = True
-      Left = 6
+      Left = 47
       Top = 4
-      Width = 70
+      Width = 134
       Height = 33
-      Margins.Left = 5
+      Margins.Left = 0
       Align = alLeft
       Words = <
         item
-          Caption = 'User Status'
+          Caption = 'You are not logged in'
         end>
-      ExplicitLeft = 1
-      ExplicitTop = 1
-      ExplicitHeight = 39
+    end
+    object VirtualImage8: TVirtualImage
+      AlignWithMargins = True
+      Left = 6
+      Top = 6
+      Width = 36
+      Height = 29
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
+      Align = alLeft
+      ImageCollection = ImageCollection1
+      ImageWidth = 0
+      ImageHeight = 0
+      ImageIndex = 18
+      ImageName = 'error'
+      ExplicitTop = 4
+      ExplicitHeight = 33
     end
     object UsernameComboBox: TComboBox
       AlignWithMargins = True
@@ -3004,8 +3022,6 @@ object MainForm: TMainForm
       StyleName = 'Windows'
       OnChange = UsernameComboBoxChange
       OnKeyPress = UsernameComboBoxKeyPress
-      ExplicitLeft = 385
-      ExplicitTop = 10
     end
     object VCLStylesCB: TComboBox
       AlignWithMargins = True
@@ -3025,21 +3041,19 @@ object MainForm: TMainForm
       StyleName = 'Windows'
       OnChange = VCLStylesCBChange
       OnKeyPress = VCLStylesCBKeyPress
-      ExplicitLeft = 492
-      ExplicitTop = 10
     end
   end
   object LeadsBindNewSourceDB: TBindSourceDB
     DataSet = DM.FDLeadsQueryNew
     ScopeMappings = <>
-    Left = 1048
-    Top = 544
+    Left = 1064
+    Top = 256
   end
   object BindingsList1: TBindingsList
     Methods = <>
     OutputConverters = <>
-    Left = 228
-    Top = 549
+    Left = 244
+    Top = 261
     object LinkGridToDataSourceUsersBindSourceDB: TLinkGridToDataSource
       Category = 'Quick Bindings'
       DataSource = UsersBindSourceDB
@@ -3216,68 +3230,68 @@ object MainForm: TMainForm
   object ImportLeadsDialog: TOpenDialog
     DefaultExt = 'json'
     Filter = 'FireDAC JSON (*.json)|*.json'
-    Left = 344
-    Top = 256
+    Left = 248
+    Top = 314
   end
   object ExportLeadsDialog: TSaveDialog
     DefaultExt = 'json'
     Filter = 'FireDAC JSON (*.json)|*.json'
     Left = 248
-    Top = 440
+    Top = 432
   end
   object UsersBindSourceDB: TBindSourceDB
     DataSet = DM.UsersFDTable
     ScopeMappings = <>
-    Left = 928
-    Top = 544
+    Left = 944
+    Top = 256
   end
   object ProposalBindSourceDB: TBindSourceDB
     DataSet = DM.FDProposalsQuery
     ScopeMappings = <>
-    Left = 616
-    Top = 544
+    Left = 632
+    Top = 256
   end
   object AcctBindSourceDB: TBindSourceDB
     DataSet = DM.FDAccountsQuery
     ScopeMappings = <>
-    Left = 336
-    Top = 544
+    Left = 352
+    Top = 256
   end
   object EmailsBindSourceDB: TBindSourceDB
     DataSet = DM.FDEmailsQuery
     ScopeMappings = <>
-    Left = 1008
-    Top = 544
+    Left = 1024
+    Top = 256
   end
   object SaveEmailsDialog: TSaveDialog
     DefaultExt = 'csv'
     Filter = 'Comma Separated Values (*.csv)|*.csv'
     Left = 248
-    Top = 400
+    Top = 372
   end
   object LeadsBindActiveSourceDB: TBindSourceDB
     DataSet = DM.FDLeadsQueryActive
     ScopeMappings = <>
-    Left = 432
-    Top = 544
+    Left = 448
+    Top = 256
   end
   object LeadsBindSourceDB: TBindSourceDB
     DataSet = DM.LeadsFDTable
     ScopeMappings = <>
-    Left = 847
-    Top = 543
+    Left = 863
+    Top = 255
   end
   object LeadsBindProposalSentSourceDB: TBindSourceDB
     DataSet = DM.FDLeadsQueryProposalSent
     ScopeMappings = <>
-    Left = 968
-    Top = 552
+    Left = 984
+    Top = 264
   end
   object LeadsBindClosedSourceDB: TBindSourceDB
     DataSet = DM.FDLeadsQueryClosed
     ScopeMappings = <>
-    Left = 800
-    Top = 544
+    Left = 816
+    Top = 256
   end
   object VirtualImageList1: TVirtualImageList
     AutoFill = True
@@ -3366,11 +3380,26 @@ object MainForm: TMainForm
         CollectionIndex = 16
         CollectionName = 'baseline_whatshot_white'
         Name = 'baseline_whatshot_white'
+      end
+      item
+        CollectionIndex = 17
+        CollectionName = 'open'
+        Name = 'open'
+      end
+      item
+        CollectionIndex = 18
+        CollectionName = 'error'
+        Name = 'error'
+      end
+      item
+        CollectionIndex = 19
+        CollectionName = 'close'
+        Name = 'close'
       end>
     ImageCollection = ImageCollection1
     Width = 32
     Height = 32
-    Left = 72
+    Left = 136
     Top = 384
   end
   object ImageCollection1: TImageCollection
@@ -4846,8 +4875,191 @@ object MainForm: TMainForm
               35FA78BEDC0E870B92BD4DD38D27A3C11C5AEDEDEDEDEDEDEDEDEDEDEDEDFD0C
               DBC29C2E59FB3E610000000049454E44AE426082}
           end>
+      end
+      item
+        Name = 'open'
+        SourceImages = <
+          item
+            Image.Data = {
+              89504E470D0A1A0A0000000D4948445200000060000000600806000000E29877
+              3800000006624B474400FF00FF00FFA0BDA7930000042D494441545809ED984D
+              48146118C79FF79D7575A356C45432B0F0AB4E8504D5A98B1DFA3844F76E2512
+              418997D2AE6674283D44908627EF75E91064873A7910424F956B1F94B595451B
+              B67ECD3BCDF8B0E2CAA28B3BAF8FD97F71FEE37C3DFF99DF6FD91589F0020110
+              000110000110000110000110F8DF08A8CC03B776F69E23CF1CCB6C636D9180D2
+              CFEF77B70D060D912016171FFE8EB2F296AADDD58B9B083B04929F26E9F7CFA9
+              60F860109120324B00FF48F3F1CC26D616080C0F3DCD08589CAE171321460002
+              C4D07331043007B1840031F45C0C01CC412C21400C3D17430073104B081043CF
+              C510C01CC41202C4D07331043007B1840031F45C0C01CC412C21400C3D174300
+              73104B081043CFC510C01CC41202C4D07331043007B1840031F45C0C01CC412C
+              21400C3D17430073104B081043CFC510C01CC41202C4D07331043007B1840031
+              F45C0C01CC412C21400C3D17430073104B081043CFC510C01CC41202C4D07331
+              043007B1840031F45C0C01CC412C21400C3D17430073104B081043CFC510C01C
+              C41202C4D07331043007B1840031F45C0C01CC412C21400C3D17430073104B08
+              1043CFC510C01CC41202C4D07331043007B1840031F45C1CE115E7DCEC2CBD19
+              1BE30DA4150201E3E583B304A4A7A769F8D9D0F2E3F83D640295D5D55913F111
+              948563E3372060E3996735667D04651DC146DE049A1A8BE9D4D158CEF33F4FB9
+              34F0F877CE63C14E08082814B86C8F29AAA95A1FCAF55D55E00D6FB5CBBFF8EF
+              F217A333391FEB47CAE4DC9FD90901191205ACDF7C9CA76059CF087C09AF875A
+              88D76409F83A3919E2688CCA456025E3A58F20CF385D46D1FD5C1749EC73C8BB
+              5E555571B6AEAEB6A0FA44628292C96F0F5D52370A1A14E2C5DAA36F99714B02
+              FA6E5DF9E0EF0C167F25FFD3DA71E77B345A44A5A53B0ABA99600629F3FDC1CD
+              F691820659BA585B9A8BB1791280803C41D93A0D026C91CD732E04E409CAD669
+              10608B6C9E73559EE7157C5AEBD5DB0749EB66A3548322AF7CAD81CAA343B16D
+              B1DAD2787CAD53573DFE2B95A2F49FF484A768CDBF823C52538ACC6B437AE841
+              77DBE8AA83433A685DC085CEDE03458E1E30AE698AC7E373B1588953E4BF42BA
+              FF50C7CCFBAF747AC64DA55251EDA81177CE3DDF77AB7D2CD49215C3AC0A68E9
+              EC39E97FC63DDA5DBD2BB2AFB141171717AFA8DF9C9B3333B3F47A7CDC9DFCF4
+              65C125EF4C7F77DB135B776A4D404BC7ED4647455EEEDFDF50B2774F8DB51E5B
+              6082B913EFDE7BAF5E8DA73DAD0EF4755D4E04FBC25EFC3768D823799EA3233D
+              95953B9D7F157EF014B57BF7A88A9DE5116DE84EB06D63B122E052C7DD7263CC
+              89FAFADAA88D9BDEC8990DF5755143E6F4C56BF7CA6CF42EFD2F28CCE10B347B
+              84C85189C4DB30C7CACDF2482FE8B9C3FE0D84FE5D604580ABE987F6BCFECFC9
+              A47FCF5BE0C7FF06F394F9B5059E048F000220000220000220000220000220B0
+              0908FC05602CC6625C0954520000000049454E44AE426082}
+          end>
+      end
+      item
+        Name = 'error'
+        SourceImages = <
+          item
+            Image.Data = {
+              89504E470D0A1A0A0000000D4948445200000040000000400806000000AA6971
+              DE0000000970485973000001D8000001D801FA5CA6720000001974455874536F
+              667477617265007777772E696E6B73636170652E6F72679BEE3C1A000007EB49
+              444154789CED9B6B6C14D719869F33B357DBEBDDB5CB122E064CB04A9B842456
+              9A868A364A281182A8690910450D97B64943697F8014556968932025A9425B09
+              14A94EE815829A34AE4151A24409D0B4691A1094160C568118DBF80636187B7D
+              1DEFECCCE98FB117DBBB6B2F30B3B8C2EFAF9DF37DDF99F7BC73AE9FCEC20426
+              308109DCC010A39B57A8DE82DC454873A130998A22DCD9A1758D30A52E159A31
+              E4BEFECE9BF7C2F3663AD7B402E40457DD650AF147E0162738660B028E0B29BE
+              D31BDD71248D3D19BED0AA7B41BC0FF81D65973DF422CCC55AFBAE7F8C34240B
+              105A1BF2619E062601786F2D21B07C11EAB4C9783C2A3322015CEA1823E73AC3
+              D4E3F49E3DCFD9373FE4E2C747074A458B26BC9FA77D7B74A8AF3A32D8E7BBED
+              C7209602F8179412FAC12328A10042114C29C8C5E7490A197710AA82A7209FC8
+              D7EE443BDF464F4D13409E4BE8DD71AD72582F5046064BC4B700448E8FC0A34B
+              40585FDBA50AF2FCAE2CD0B71773D62FC795EB03404A65D9487B920002E60078
+              6617A1F8BD8972AFDBDEC69B319DAE53F5749DAAC78CC56DAD7B285CB93E0273
+              670120902549F6143179006248E301141B877DCBFEC39C79750F7AB41B007730
+              8F39EB9711B9EF2EFB5E3204AEDCC45C1E48B239F2C651D076A88A935B768194
+              89323DDACDC9975F47CDF55378777657DDA421E0248C984EF52BE520258A906C
+              5CD8C886858D2842224D49F52BE518313D9B94B2DB031ACBF7A3B55C02E07B5F
+              39CF4B0FD58210F4B842FCE6833CB4964B3496EF67E6B717678D53D67A407F5B
+              94863FEF03209413E7B9A57596211466F39A2E0AF2ADDD6AC31B7BE96F6DCF16
+              ADEC0950B3FD6D0C2D06C0A6C5F514E6C5C1E586609070C0E4272BBB006B98D4
+              FCFE9D6CD1CA8E009DFFADA5F56FD6567CEEE45E9EFC6A3300959D53A8ACF300
+              B0EEC16E6E99692D87AD1F1D217AA2261BD49C17409A92EAB2DD8959FFE565B5
+              B85549E5C530F39F99C9FC0D118ED7B971A9B0E5F18E812049755905D294A3D4
+              6C0F1C17A065EF21BA4E9E0560E9AD9778E00B970041754F04D304D384CF1AAD
+              B9F8FE3BFA59F2250D80EECF1A68D977C8697ACE0A10EFEBA7F60FEF02E07149
+              7EFECD816E9D1F0057EA05E8174F44F1BAAD2F5FF3BB7788F76A4E52745680FA
+              3F7D40EC9275F85A7F6F1325913E50140817A48D993D25CEBA077B00D0DB3BA9
+              7F63AF93149D13403BD746D3EEBF033029A0F3F4030D96211CB64418059B1EED
+              6272C800A069F747F4355D708AA6730254BFB60753B776759B97D611F4C7C1ED
+              8140108039D3E2288AA545C9F4E187A180DFE4D9C73A01EB6C5FF3DBB79DA2E9
+              8C001D474FD3F6692500B74FEF66F53D2D96A1B02091829957AC73705B2B07B7
+              B572DBACE4EDEFDA45BD949658E517FF5949FB91934E50B55F00699A9C29AB48
+              3CFFF2E11A5445424E0EF87346F80E3B130D27A6C0AFBEDF31988EE04CD91EA4
+              61D84DD77E019ADFFD84EEDA73002C2FBDC0829BA35652A5A070985F65AD9BF9
+              1B23CCDF10A1B23675B2F99EB931962DE803A0A7FE1CCDEF7D6A375D7B0588F7
+              68D4ED7C1F00BFDBE4C56FD45A86FC20B8D367D4C528B98697D646F17BAC6E52
+              B7E33DE23DF62E8BB60AD0B2EF10F14E6B09DBB8B0911905FD03CB5E28C9775E
+              B1CE81ADAD1CD89A7A0E18C48C88C1C66556E224DED943CB5F0FDB49D95E017A
+              CF9E4BFC7E7281B5DFC7EB0591FA35F38A75E6158F7DFE7F6249F7E577D49C1B
+              C5F3CA61AB00EEE0E58C53F97F2218A600FDDAF27D8609159F5C9E3CDDE1A4AC
+              D635C1D68448E4FE52EADFDC8B340C9EAA98CD5315B3EDAC1EE15289DC576A6B
+              9DB6F6809CA29B98F3A3871163ECF4AE06425529F9E10A728A26DB5AAFED29B1
+              A94B1790FFC5D9B4EE3F8CD6DA0ED77AA45504BE4898C8C2BBC92B9E620FC921
+              70242798573C95BCC71F72A26ADB91D5ACF078C40D2F40DA2160B475A01D3E91
+              78161E950B016F3AF7718DD1B2CC499B505F68B5F389B8EB08AD63E7B0364F0C
+              8114653AE0167E3F6A612451A8F8BCB80AD2A7B2C633FA4F9FC2E86807888DB4
+              A512A0099885612082970F31C2E3C53D6DBA63249D8344AB3A3EF8D034D29A62
+              0888FD00321643463B12A566AC1F339624E0B887DED888D9639D5011EC1B694F
+              12C014621B600018CD0D98ED6D80352FC65A9D4B4E3A01BDB181BE7F272E8719
+              036D1B8674B7C49E05B139E1E4F120BC7EA422505C2E14AF6FCC1B86D715A689
+              D119BDFCE501103FD33A76BC30D2355D33842FB4FAA7C073A4B848F57F0603C4
+              F35AC78E1719ECCA4390B67171EDD8C78A7FDE6E81F00061207734FF71861850
+              8FE02FA662ACE96F7FBD229D63563AB22FBCE62DA45C01A0DD1406C0E5F1E30F
+              4C4AF2D5AB8E0D327B4B6BDFF988D3DC263642571C317955AE4FE3CB020AC776
+              B6204D5934D8D7D4814B124A1CA4D9913EC8A4C81F5CB522E377409B96EB3F48
+              F3F6DE4C63E0CA8680F085D73C8D94CF3070956E1CA25B485EE88BEEDC428A09
+              2F15329ED4FCA1D55B814D80E72AC965031E045F577DB7070CEDD887990464D4
+              0372828F959A42F9172084A2220A27A178ADA3B1F079715FEF338204A3AB9358
+              F569643C0E200DCC3BF58E5DC7C60ACD680E30156525D2124B9D5684C80F266C
+              BE1945283EDF5532B70F6EC0951FA4E7D00100A14A65A50E630A90D92A20993A
+              F853E4E40EAFC0337E46845A38645E164CCB2426A31E2024557260B0E8A7AA86
+              D9A255638A7C5D20A43831B657863DA0CFEDFA3570FA9A18651392937D9EDE57
+              3371CD7C19FCDC77037E3DBE4EC21DE3F6CF53A6D4051CEDF3F49571A1BC7BEC
+              80094C600213B8C1F13F27A99263CB0E89CD0000000049454E44AE426082}
+          end>
+      end
+      item
+        Name = 'close'
+        SourceImages = <
+          item
+            Image.Data = {
+              89504E470D0A1A0A0000000D4948445200000040000000400806000000AA6971
+              DE0000000970485973000001D8000001D801FA5CA6720000001974455874536F
+              667477617265007777772E696E6B73636170652E6F72679BEE3C1A000006D849
+              444154789CED9B7D6C55E51DC73FCF39B72FF78572EF85521447155A4BE94C61
+              F266DB980273616138875B8CBA2D1BC966B245365D244BDD962E4E6224C8E270
+              68484C34732801D9166513D14D450D20F3A52D2F13265ADADBDE7B7B4B6FDBFB
+              DA739EFD715BC6E5DE22E77ACEA9A17E9327B9F739E7F77BBECFF73CCFEF3C6F
+              47701E1E7EE4E155A9D4C80D9AD4A670194215EA60B1CBF1E686F51BF68DE509
+              804D8F6C5A73F2F4C73B427D11F7C4D1B30FE5D3A60D55565E715BCB2F5AF68A
+              CD9B37371CE9683B9048A6C44413B313AED2527DFEBCDA06A52BDCFBD464AB3C
+              402C9150FAFAC24F3B82A1F09CB1CC69B3AEA26AC90D13C9CB729C7CE7207D9D
+              9F00100C87AB1CF1445219BBE8BBF22A16ADB965C2C8D981FE40D73901628984
+              A248292798D2C4414A89F2E9B75DDE70D85E602C8EF7C4099CA11045D12800E9
+              B232E233CA395B53C388D3692F1FBB0AF29CFE98D97BFF81F7C40984A6E5BD47
+              77A80CD4D4D0F9F5550C5E5D690B2FCB05501349E6EE788EE947FE0DA3F166BC
+              A823D21ADEF6A3783B8E115EF4154EDD7E1B5A4989A5FC2C15A0A42FC2BC6DDB
+              7177751BB4944C3F7804E79900C77FF223927EBF25FC00EB82A0239EA076EB13
+              B83BBB41A7A0E4EEEC66FEEFB7A1C6E256D1B44E80EAED4FE1EAEAC9B4F7CF90
+              9C3D41AA9FFC935534AD11C0F77E3BDE0F8E2275B293DB038B17C2359539D7C4
+              9CAB51965E0F6E4FCE35DF7BED78DB8F5A41D59A1830FBF9177323DD341FCAAF
+              7F8698E24608817CF52DB467F664487C772DEA579B1042C0D030C9DF6C468623
+              59E695BB5FE0EC97E79BCED574019C5D015C9FE4063D71E352F0B880CC084CAC
+              684055320D5059D1F0FF7C8F1B477303E99D2F64D9BB4E77E1EAEE25766585A9
+              7C4D17C0FF6E7B26885D00994C9F7B0D0A2132956D5E76EEF7F9F93299CAEBC3
+              F76E9BE902981E035C9D01A42437ED7F0BC2FD990A8E8D07F2FC96A10823FB0E
+              E4F5E13C13309BAEF902144506F2BFD606E3E80F3E0EC1C8B822E8A108A9DFFD
+              11198DE5F551DC17359BAEF90288F4489EC73F9AFACEA2FFE72320FFD3D78F9D
+              42F6F68D6B2F5229B3E99A2F407A6AD9F8839BEFDF020D0BC7ED024AD3F538D6
+              7D7B5CFB9477AAD974CD1720E9F7E5BEFF75908BAF432E5F02E47FFA63BFC5CA
+              6528CB16E4F591F4FBCCA66BBE0003F5B5794774B26A766EC5831108E50646AA
+              66E7F531B0A0D66CBAE60B10ADAB462B75E636E18EFF02E73DF1503FFA6F9F40
+              6B7D3C4704BDED548EBDE6743238BFDA6CBAE68F03F422073DAB9B99F5DCDFB3
+              F2C5E163C8ED7BA0B13E53E1675F86FE4C54D75A1E43B9631572860F79E03DE4
+              A18E1CBF81352BD11DAAD974AD190A77DFBC82F297DEA4A8FF82D7D6FEC3B0FF
+              70EE7A40248AB675E7B8FE52FEA904BED16C364DC0A2C990EE2CE1C3FBD6A1AB
+              8E82A7C263492A2AA7EEFD017A69B11554AD9B0E0FD5CEE1F44F6F472A4AC153
+              61A9AA7C74F79D0CD6CDB58AA6B52B42E1E58B49CEF053B5F1498A06060DD98E
+              4C7171F297EB88D65F6B11BB0C2C5F131CAC9B4BDBB61666EE7E858ABFFC0B25
+              3D72D1FBA543257CD352BABEB79AB4D7FA4D6A5B568547CADC9CF9E1CDF47EB3
+              19DFDB1FE03DD44171204C49F82C00C9E95E92579433B0B48EFE65D791F697D9
+              410BB0795F20ED2F23B8BA89E0EA263B8BBD2826FDCED0A41720AB0B4443418E
+              BDF1DA4471B10503C160D67FB1F6CE3B26EFF6305F74812F0470D4565B37CCFC
+              BC4322A578E7E0EB9339066893BE0B4C7A016C3F2203E074BAF1F9A72346B7C6
+              A4AE13898448C463B673B15D80E29252E6D52D4051B21B5FC5CC5974B41D2195
+              4ADACAC7F62EE0F14CC9A93C80A2AAB83DF69FD15618FFC88E25181A8AA2EBB9
+              87A4744D6378C8D8A28909900EA01798695789A96492E31DEF67C5005DD7E88F
+              846D6FFE40C02185FC9B90E2C776961A8F0F13EF1AB6B3C8BC10F0574528A215
+              81D1635C97033A1D23EA03CAA245370634299B807DD81C0F26083AF0A22E6463
+              7D636330EB3B814387FE395308752E0853CFAB0E0D0DCF8B0DC7FE60C4C6E574
+              DDED29731F379307C878714AFDB0BEB1F1DCA240D63860C992E53D408FB985C2
+              F3BBFEFC3589B16F3212F1D49796AF5CB5D56C2E17C296718044AC356C24E477
+              2CA09203CB05D8B56BC742A09039F7357B763EB3C06C3E17C2720114E4AD85DA
+              EA4229D8F65261B9000535FF51081BBA81A502ECDEFDEC62A0E0631D125133EA
+              C3325826406B6BAB822E1FFACC8E74F9506B6BAB653C0D7F2FF8E8A31BCB35CD
+              F969D3B6928A0AFF83AAA27EAB405E59D075B9A7A7377C3F70D1C982AAC607D7
+              AF6F0919F16D48802D5B36DD8FE001A37636424AE4AFEEFDF9868D976A60AC69
+              09EEE2F35B7900211077193130DAB7F61ABCDF7608A4218E869EA694526CD9B2
+              A94951EC5B3F30025DA7E79E7BEE3B2084B8E449DDFF000FD564178897B24B00
+              00000049454E44AE426082}
+          end>
       end>
-    Left = 64
+    Left = 133
     Top = 448
   end
   object ExportAcctsDialog: TSaveDialog
@@ -4859,52 +5071,58 @@ object MainForm: TMainForm
   object NewTotalBindSourceDB: TBindSourceDB
     DataSet = DM.FDQueryNewTotal
     ScopeMappings = <>
-    Left = 664
-    Top = 544
+    Left = 680
+    Top = 256
   end
   object ActiveTotalBindSourceDB: TBindSourceDB
     DataSet = DM.FDQueryActiveTotal
     ScopeMappings = <>
-    Left = 752
-    Top = 544
+    Left = 768
+    Top = 256
   end
   object ProposalTotalBindSourceDB: TBindSourceDB
     DataSet = DM.FDQueryProposalTotal
     ScopeMappings = <>
-    Left = 568
-    Top = 544
+    Left = 584
+    Top = 256
   end
   object ClosedTotalBindSourceDB: TBindSourceDB
     DataSet = DM.FDQueryClosedTotal
     ScopeMappings = <>
-    Left = 272
-    Top = 544
+    Left = 288
+    Top = 256
   end
   object InactiveTotalBindSourceDB: TBindSourceDB
     DataSet = DM.FDQueryInactiveTotal
     ScopeMappings = <>
-    Left = 384
-    Top = 552
+    Left = 400
+    Top = 264
   end
   object AllTotalBindSourceDB: TBindSourceDB
     DataSet = DM.FDQueryTotal
     ScopeMappings = <>
-    Left = 480
-    Top = 544
+    Left = 496
+    Top = 256
   end
   object MainMenu1: TMainMenu
-    Left = 64
-    Top = 528
+    Left = 132
+    Top = 518
     object Options1: TMenuItem
       Caption = 'Options'
-      object Options2: TMenuItem
+      object Login: TMenuItem
         Caption = 'Login'
+        OnClick = LoginClick
+      end
+      object LogOut: TMenuItem
+        Caption = 'Log Out'
+        Visible = False
+        OnClick = LogOutClick
       end
       object N1: TMenuItem
         Caption = '-'
       end
       object Exit1: TMenuItem
-        Caption = 'Exit'
+        Caption = 'Restart System'
       end
     end
   end

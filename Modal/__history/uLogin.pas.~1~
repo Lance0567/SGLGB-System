@@ -1,0 +1,69 @@
+unit uLogin;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Imaging.pngimage,
+  Vcl.ExtCtrls;
+
+type
+  TfrmLogin = class(TForm)
+    GroupBox1: TGroupBox;
+    Label1: TLabel;
+    Label2: TLabel;
+    imgMCS: TImage;
+    imgLock: TImage;
+    edUserName: TEdit;
+    edPassword: TEdit;
+    btLogin: TButton;
+    btnOpenDb: TButton;
+    chckShowpass: TCheckBox;
+    imgHeader: TImage;
+    procedure chckShowpassClick(Sender: TObject);
+    procedure btLoginClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmLogin: TfrmLogin;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmLogin.btLoginClick(Sender: TObject);
+begin
+  frmLogin.Tag := 1;
+  Close;
+end;
+
+procedure TfrmLogin.chckShowpassClick(Sender: TObject);
+begin
+  if chckShowpass.Checked then
+    edPassword.PasswordChar := #0  // Show password
+  else
+    edPassword.PasswordChar := '*'; // Hide password
+end;
+
+procedure TfrmLogin.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  if (Key = 13) or (Key = 27) then
+  begin
+    btLoginClick(Sender);
+  end;
+end;
+
+procedure TfrmLogin.FormShow(Sender: TObject);
+begin
+  edUserName.Text := 'admin';
+  edPassword.Text := 'admin@123';
+end;
+
+end.
