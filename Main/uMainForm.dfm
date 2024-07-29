@@ -808,7 +808,6 @@ object frmMain: TfrmMain
         ParentFont = False
         TabOrder = 0
         OnClick = DashboardButtonClick
-        ExplicitLeft = 315
       end
       object AcctsButton: TButton
         Tag = 1
@@ -2971,7 +2970,6 @@ object frmMain: TfrmMain
     Height = 41
     Align = alTop
     TabOrder = 2
-    ExplicitTop = -3
     object lbUserStatus: TSkLabel
       AlignWithMargins = True
       Left = 47
