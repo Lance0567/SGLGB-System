@@ -1,0 +1,8 @@
+object DM: TDM
+  Height = 639
+  Width = 753
+  object conSGLGB: TFDConnection
+    Left = 88
+    Top = 32
+  end
+end
