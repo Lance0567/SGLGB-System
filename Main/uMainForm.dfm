@@ -7,16 +7,14 @@ object frmMain: TfrmMain
   Color = clBtnFace
   Constraints.MinHeight = 575
   Constraints.MinWidth = 550
-  DockSite = True
-  DoubleBuffered = True
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
+  KeyPreview = True
   Menu = MainMenu1
   Position = poScreenCenter
-  StyleElements = [seFont, seClient]
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnResize = FormResize
@@ -35,6 +33,7 @@ object frmMain: TfrmMain
     StyleName = 'Windows10 SlateGray'
     OnClosing = SplitViewClosing
     OnOpening = SplitViewOpening
+    ExplicitHeight = 562
     object pnlToolbar: TPanel
       Left = 0
       Top = 0
@@ -83,6 +82,7 @@ object frmMain: TfrmMain
       FullRepaint = False
       ParentBackground = False
       TabOrder = 1
+      ExplicitHeight = 506
       object Image5: TImage
         Left = -56
         Top = 272
@@ -809,15 +809,15 @@ object frmMain: TfrmMain
         TabOrder = 0
         OnClick = DashboardButtonClick
       end
-      object AcctsButton: TButton
+      object btnMunicipalities: TButton
         Tag = 1
         Left = 0
         Top = 38
         Width = 192
         Height = 38
-        Hint = 'Accounts'
+        Hint = 'Municipalities'
         Align = alTop
-        Caption = 'Accounts'
+        Caption = 'Municipalities'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -16
@@ -830,15 +830,15 @@ object frmMain: TfrmMain
         TabOrder = 1
         OnClick = DashboardButtonClick
       end
-      object LeadsButton: TButton
+      object btnMOVs: TButton
         Tag = 2
         Left = 0
         Top = 76
         Width = 192
         Height = 38
-        Hint = 'Leads'
+        Hint = 'MOV'#39's'
         Align = alTop
-        Caption = 'Leads'
+        Caption = 'MOV'#39's'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -16
@@ -851,15 +851,15 @@ object frmMain: TfrmMain
         TabOrder = 2
         OnClick = DashboardButtonClick
       end
-      object SalesButton: TButton
+      object btnReports: TButton
         Tag = 3
         Left = 0
         Top = 114
         Width = 192
         Height = 38
-        Hint = 'Sales'
+        Hint = 'Reports'
         Align = alTop
-        Caption = 'Sales'
+        Caption = 'Reports'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -16
@@ -946,6 +946,7 @@ object frmMain: TfrmMain
     Margins.Top = 0
     ActivePage = DashboardTab
     Align = alClient
+    MultiLine = True
     TabHeight = 30
     TabOrder = 1
     TabWidth = 75
@@ -1688,10 +1689,10 @@ object frmMain: TfrmMain
         end
       end
     end
-    object AccountsTab: TTabSheet
-      Caption = 'Accounts'
+    object MunicipalitiesTab: TTabSheet
+      Caption = 'Municipalities'
       ImageIndex = 5
-      OnResize = AccountsTabResize
+      OnResize = MunicipalitiesTabResize
       object Panel7: TPanel
         AlignWithMargins = True
         Left = 25
@@ -1707,12 +1708,12 @@ object frmMain: TfrmMain
           AlignWithMargins = True
           Left = 108
           Top = 5
-          Width = 137
+          Width = 209
           Height = 57
           Margins.Top = 5
           Margins.Bottom = 5
           Align = alLeft
-          Caption = 'Accounts'
+          Caption = 'Municipalities'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -32
@@ -1736,9 +1737,9 @@ object frmMain: TfrmMain
           ExplicitLeft = 8
         end
         object AcctsRelativePanel: TRelativePanel
-          Left = 248
+          Left = 320
           Top = 0
-          Width = 640
+          Width = 568
           Height = 67
           ControlCollection = <
             item
@@ -1786,11 +1787,11 @@ object frmMain: TfrmMain
           TabOrder = 0
           OnResize = AcctsRelativePanelResize
           DesignSize = (
-            640
+            568
             67)
           object AcctSearchBox: TSearchBox
             AlignWithMargins = True
-            Left = 454
+            Left = 382
             Top = 15
             Width = 163
             Height = 36
@@ -1808,7 +1809,7 @@ object frmMain: TfrmMain
             OnKeyPress = AcctSearchBoxKeyPress
           end
           object ExportAcctsButton: TSpeedButton
-            Left = 115
+            Left = 43
             Top = 14
             Width = 112
             Height = 38
@@ -1827,7 +1828,7 @@ object frmMain: TfrmMain
             OnClick = ExportAcctsButtonClick
           end
           object RemoveAcctButton: TSpeedButton
-            Left = 227
+            Left = 155
             Top = 14
             Width = 112
             Height = 38
@@ -1846,7 +1847,7 @@ object frmMain: TfrmMain
             OnClick = RemoveAcctButtonClick
           end
           object CreateAcctButton: TSpeedButton
-            Left = 339
+            Left = 267
             Top = 14
             Width = 112
             Height = 38
@@ -1902,8 +1903,8 @@ object frmMain: TfrmMain
         TabOrder = 2
       end
     end
-    object LeadsTab: TTabSheet
-      Caption = 'Leads'
+    object MOVsTabs: TTabSheet
+      Caption = 'MOV'#39's'
       object Splitter1: TSplitter
         Left = 261
         Top = 73
@@ -1958,12 +1959,12 @@ object frmMain: TfrmMain
           AlignWithMargins = True
           Left = 108
           Top = 5
-          Width = 84
+          Width = 97
           Height = 57
           Margins.Top = 5
           Margins.Bottom = 5
           Align = alLeft
-          Caption = 'Leads'
+          Caption = 'MOV'#39's'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -32
@@ -1988,9 +1989,9 @@ object frmMain: TfrmMain
         end
         object LeadsRelativePanel: TRelativePanel
           AlignWithMargins = True
-          Left = 198
+          Left = 211
           Top = 3
-          Width = 665
+          Width = 652
           Height = 61
           Margins.Right = 25
           ControlCollection = <
@@ -2039,10 +2040,10 @@ object frmMain: TfrmMain
           TabOrder = 0
           OnResize = LeadsRelativePanelResize
           DesignSize = (
-            665
+            652
             61)
           object CreateLeadButton: TSpeedButton
-            Left = 343
+            Left = 330
             Top = 11
             Width = 153
             Height = 38
@@ -2061,7 +2062,7 @@ object frmMain: TfrmMain
             OnClick = CreateLeadButtonClick
           end
           object ExportLeadsButton: TSpeedButton
-            Left = 37
+            Left = 24
             Top = 11
             Width = 153
             Height = 38
@@ -2081,7 +2082,7 @@ object frmMain: TfrmMain
           end
           object LeadsSearchBox: TSearchBox
             AlignWithMargins = True
-            Left = 499
+            Left = 486
             Top = 12
             Width = 163
             Height = 36
@@ -2097,7 +2098,7 @@ object frmMain: TfrmMain
             OnKeyPress = LeadsSearchBoxKeyPress
           end
           object ViewLeadButton: TSpeedButton
-            Left = 190
+            Left = 177
             Top = 11
             Width = 153
             Height = 38
@@ -2327,8 +2328,8 @@ object frmMain: TfrmMain
         end
       end
     end
-    object SalesTab: TTabSheet
-      Caption = 'Sales'
+    object ReportsTab: TTabSheet
+      Caption = 'Reports'
       ImageIndex = 4
       object Panel6: TPanel
         AlignWithMargins = True
@@ -2345,12 +2346,12 @@ object frmMain: TfrmMain
           AlignWithMargins = True
           Left = 108
           Top = 5
-          Width = 231
+          Width = 117
           Height = 57
           Margins.Top = 5
           Margins.Bottom = 5
           Align = alLeft
-          Caption = 'Sales Proposals'
+          Caption = 'Reports'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -32
@@ -2374,9 +2375,9 @@ object frmMain: TfrmMain
           ExplicitLeft = 8
         end
         object ProposalsRelativePanel: TRelativePanel
-          Left = 342
+          Left = 228
           Top = 0
-          Width = 546
+          Width = 660
           Height = 67
           ControlCollection = <
             item
@@ -2414,11 +2415,11 @@ object frmMain: TfrmMain
           TabOrder = 0
           OnResize = ProposalsRelativePanelResize
           DesignSize = (
-            546
+            660
             67)
           object SalesSearchBox: TSearchBox
             AlignWithMargins = True
-            Left = 360
+            Left = 474
             Top = 15
             Width = 163
             Height = 36
@@ -2438,7 +2439,7 @@ object frmMain: TfrmMain
             OnKeyPress = SalesSearchBoxKeyPress
           end
           object CancelProposalButton: TSpeedButton
-            Left = 115
+            Left = 229
             Top = 14
             Width = 121
             Height = 38
@@ -2457,7 +2458,7 @@ object frmMain: TfrmMain
             OnClick = CancelProposalButtonClick
           end
           object CompleteProposalButton: TSpeedButton
-            Left = 236
+            Left = 350
             Top = 14
             Width = 121
             Height = 38
@@ -2950,6 +2951,7 @@ object frmMain: TfrmMain
     Height = 41
     Align = alTop
     TabOrder = 2
+    ExplicitWidth = 1128
     object lbUserStatus: TSkLabel
       AlignWithMargins = True
       Left = 47
@@ -3000,6 +3002,7 @@ object frmMain: TfrmMain
       StyleName = 'Windows'
       OnChange = UsernameComboBoxChange
       OnKeyPress = UsernameComboBoxKeyPress
+      ExplicitLeft = 984
     end
     object VCLStylesCB: TComboBox
       AlignWithMargins = True
@@ -3019,6 +3022,7 @@ object frmMain: TfrmMain
       StyleName = 'Windows'
       OnChange = VCLStylesCBChange
       OnKeyPress = VCLStylesCBKeyPress
+      ExplicitLeft = 831
     end
   end
   object ImportLeadsDialog: TOpenDialog

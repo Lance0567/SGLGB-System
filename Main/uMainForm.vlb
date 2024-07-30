@@ -107,9 +107,6 @@ Coordinates=543,1150,102,36
 [CreateUserButton]
 Coordinates=838,1234,117,36
 
-[SalesButton]
-Coordinates=2022,982,84,58
-
 [Panel4]
 Coordinates=1531,770,55,58
 
@@ -140,9 +137,6 @@ Coordinates=675,898,53,58
 [FlowPanel1]
 Coordinates=1799,1066,82,58
 
-[LeadsButton]
-Coordinates=193,1066,87,58
-
 [Label5]
 Coordinates=1366,770,53,58
 
@@ -172,9 +166,6 @@ Coordinates=10,664,53,58
 
 [NavPanel]
 Coordinates=1703,1066,70,58
-
-[AcctsButton]
-Coordinates=1051,982,83,58
 
 [pnlToolbar]
 Coordinates=573,898,76,58
@@ -318,14 +309,8 @@ Coordinates=903,1150,89,36
 [DashboardButton]
 Coordinates=1669,982,114,58
 
-[LeadsTab]
-Coordinates=130,1234,71,36
-
 [MarketingButton]
 Coordinates=1010,898,108,58
-
-[AccountsTab]
-Coordinates=599,1296,89,36
 
 [Label13]
 Coordinates=306,1066,60,58
@@ -360,9 +345,6 @@ Coordinates=954,1296,62,36
 
 [SearchBox7]
 Coordinates=1066,770,84,58
-
-[SalesTab]
-Coordinates=233,1150,69,36
 
 [Panel6]
 Coordinates=1332,982,55,58
@@ -407,4 +389,22 @@ Coordinates=10,114,132,152
 [DM.]
 Coordinates=906,898,78,58
 Visible=False
+
+[btnMunicipalities]
+Coordinates=1051,982,83,58
+
+[btnMOVs]
+Coordinates=193,1066,87,58
+
+[btnReports]
+Coordinates=2022,982,84,58
+
+[MunicipalitiesTab]
+Coordinates=599,1296,89,36
+
+[MOVsTabs]
+Coordinates=130,1234,71,36
+
+[ReportsTab]
+Coordinates=233,1150,69,36
 

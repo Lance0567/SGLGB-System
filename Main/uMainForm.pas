@@ -28,7 +28,7 @@ type
     BindNavigator1: TBindNavigator;
     lblTitle: TLabel;
     PageControl: TPageControl;
-    LeadsTab: TTabSheet;
+    MOVsTabs: TTabSheet;
     CalendarTab: TTabSheet;
     Panel2: TPanel;
     Label1: TLabel;
@@ -67,13 +67,13 @@ type
     Label20: TLabel;
     Label21: TLabel;
     Label22: TLabel;
-    SalesTab: TTabSheet;
+    ReportsTab: TTabSheet;
     Panel6: TPanel;
     Label23: TLabel;
     SalesSearchBox: TSearchBox;
     ProposalStringGrid: TStringGrid;
     BindNavigator3: TBindNavigator;
-    AccountsTab: TTabSheet;
+    MunicipalitiesTab: TTabSheet;
     Panel7: TPanel;
     Label24: TLabel;
     AcctSearchBox: TSearchBox;
@@ -126,9 +126,9 @@ type
     CreateUserButton: TSpeedButton;
     RemoveUserButton: TSpeedButton;
     DashboardButton: TButton;
-    AcctsButton: TButton;
-    LeadsButton: TButton;
-    SalesButton: TButton;
+    btnMunicipalities: TButton;
+    btnMOVs: TButton;
+    btnReports: TButton;
     MarketingButton: TButton;
     CalendarButton: TButton;
     UsersButton: TButton;
@@ -188,7 +188,7 @@ type
     procedure SplitViewClosing(Sender: TObject);
     procedure CreateAcctButtonClick(Sender: TObject);
     procedure DashboardButtonClick(Sender: TObject);
-    procedure AccountsTabResize(Sender: TObject);
+    procedure MunicipalitiesTabResize(Sender: TObject);
     procedure RemoveAcctButtonClick(Sender: TObject);
     procedure ExportAcctsButtonClick(Sender: TObject);
     procedure CreateUserButtonClick(Sender: TObject);
@@ -276,9 +276,9 @@ begin
     end;
   case PageControl.ActivePageIndex of
     0: DashboardButton.SetFocus;
-    1: AcctsButton.SetFocus;
-    2: LeadsButton.SetFocus;
-    3: SalesButton.SetFocus;
+    1: btnMunicipalities.SetFocus;
+    2: btnMOVs.SetFocus;
+    3: btnReports.SetFocus;
     4: begin
       MarketingButton.SetFocus;
 //      EmailsBindSourceDB.DataSet.Refresh;
@@ -297,9 +297,9 @@ end;
 procedure TfrmMain.SplitViewClosing(Sender: TObject);
 begin
   DashboardButton.Caption := '';
-  AcctsButton.Caption := '';
-  LeadsButton.Caption := '';
-  SalesButton.Caption := '';
+  btnMunicipalities.Caption := '';
+  btnMOVs.Caption := '';
+  btnReports.Caption := '';
   MarketingButton.Caption := '';
   CalendarButton.Caption := '';
   UsersButton.Caption := '';
@@ -308,15 +308,15 @@ end;
 procedure TfrmMain.SplitViewOpening(Sender: TObject);
 begin
   DashboardButton.Caption := '          '+DashboardButton.Hint;
-  AcctsButton.Caption := '          '+AcctsButton.Hint;
-  LeadsButton.Caption := '          '+LeadsButton.Hint;
-  SalesButton.Caption := '          '+SalesButton.Hint;
+  btnMunicipalities.Caption := '          '+btnMunicipalities.Hint;
+  btnMOVs.Caption := '          '+btnMOVs.Hint;
+  btnReports.Caption := '          '+btnReports.Hint;
   MarketingButton.Caption := '          '+MarketingButton.Hint;
   CalendarButton.Caption := '          '+CalendarButton.Hint;
   UsersButton.Caption := '          '+UsersButton.Hint;
 end;
 
-procedure TfrmMain.AccountsTabResize(Sender: TObject);
+procedure TfrmMain.MunicipalitiesTabResize(Sender: TObject);
 begin
 //
 end;
@@ -643,12 +643,12 @@ begin
   LStyle := GetWindowLong(DashboardButton.Handle, GWL_STYLE);
   SetWindowLong(DashboardButton.Handle, GWL_STYLE, LStyle or BS_LEFT);
   DashboardButton.Caption := '          '+DashboardButton.Hint;
-  SetWindowLong(AcctsButton.Handle, GWL_STYLE, LStyle or BS_LEFT);
-  AcctsButton.Caption := '          '+AcctsButton.Hint;
-  SetWindowLong(LeadsButton.Handle, GWL_STYLE, LStyle or BS_LEFT);
-  LeadsButton.Caption := '          '+LeadsButton.Hint;
-  SetWindowLong(SalesButton.Handle, GWL_STYLE, LStyle or BS_LEFT);
-  SalesButton.Caption := '          '+SalesButton.Hint;
+  SetWindowLong(btnMunicipalities.Handle, GWL_STYLE, LStyle or BS_LEFT);
+  btnMunicipalities.Caption := '          '+btnMunicipalities.Hint;
+  SetWindowLong(btnMOVs.Handle, GWL_STYLE, LStyle or BS_LEFT);
+  btnMOVs.Caption := '          '+btnMOVs.Hint;
+  SetWindowLong(btnReports.Handle, GWL_STYLE, LStyle or BS_LEFT);
+  btnReports.Caption := '          '+btnReports.Hint;
   SetWindowLong(MarketingButton.Handle, GWL_STYLE, LStyle or BS_LEFT);
   MarketingButton.Caption := '          '+MarketingButton.Hint;
   SetWindowLong(CalendarButton.Handle, GWL_STYLE, LStyle or BS_LEFT);
