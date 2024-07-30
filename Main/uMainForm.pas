@@ -17,7 +17,7 @@ uses
   Vcl.WinXPanels, System.Actions, Vcl.ActnList, Vcl.Themes,
   Vcl.BaseImageCollection, Vcl.ImageCollection, System.ImageList, Vcl.ImgList,
   Vcl.VirtualImageList, Vcl.VirtualImage, System.IOUtils, Vcl.TitleBarCtrls,
-  System.Skia, Vcl.Skia, Vcl.Menus, uLogin;
+  System.Skia, Vcl.Skia, Vcl.Menus, uLogin, Vcl.DBGrids, uMunicipalities;
 
 type
   TfrmMain = class(TForm)
@@ -114,9 +114,9 @@ type
     ExportLeadsButton: TSpeedButton;
     LeadsRelativePanel: TRelativePanel;
     AcctsRelativePanel: TRelativePanel;
-    ExportAcctsButton: TSpeedButton;
-    RemoveAcctButton: TSpeedButton;
-    CreateAcctButton: TSpeedButton;
+    btnExportMuni: TSpeedButton;
+    btnRemoveMuni: TSpeedButton;
+    btnCreateMuni: TSpeedButton;
     ProposalsRelativePanel: TRelativePanel;
     CancelProposalButton: TSpeedButton;
     CompleteProposalButton: TSpeedButton;
@@ -157,6 +157,7 @@ type
     VirtualImage8: TVirtualImage;
     LogOut: TMenuItem;
     btnEdit: TSpeedButton;
+    dbgMunicipalities: TDBGrid;
     procedure CalendarView1DrawDayItem(Sender: TObject;
       DrawParams: TDrawViewInfoParams; CalendarViewViewInfo: TCellItemViewInfo);
     procedure AcctSearchBoxKeyPress(Sender: TObject; var Key: Char);
@@ -189,7 +190,7 @@ type
     procedure CreateAcctButtonClick(Sender: TObject);
     procedure DashboardButtonClick(Sender: TObject);
     procedure MunicipalitiesTabResize(Sender: TObject);
-    procedure RemoveAcctButtonClick(Sender: TObject);
+    procedure btnRemoveMuniClick(Sender: TObject);
     procedure ExportAcctsButtonClick(Sender: TObject);
     procedure CreateUserButtonClick(Sender: TObject);
     procedure RemoveUserButtonClick(Sender: TObject);
@@ -207,6 +208,8 @@ type
     procedure FormShow(Sender: TObject);
     procedure LoginClick(Sender: TObject);
     procedure LogOutClick(Sender: TObject);
+    procedure AccountsSGDblClick(Sender: TObject);
+    procedure btnCreateMuniClick(Sender: TObject);
   private
     { Private declarations }
     FRanOnce: Boolean;
@@ -234,7 +237,17 @@ begin
 //  LeadsBindProposalSentSourceDB.DataSet.Refresh;
 end;
 
-procedure TfrmMain.RemoveAcctButtonClick(Sender: TObject);
+procedure TfrmMain.btnCreateMuniClick(Sender: TObject);
+var
+  LNewMunicipality: String;
+begin
+  frmMunicipalities.ShowModal;
+  LNewMunicipality := InputBox('Create New Municipality', 'Municipality Name', 'New Municipality');
+
+
+end;
+
+procedure TfrmMain.btnRemoveMuniClick(Sender: TObject);
 begin
 //  AcctBindSourceDB.DataSet.Delete;
 end;
@@ -242,6 +255,11 @@ end;
 procedure TfrmMain.RemoveUserButtonClick(Sender: TObject);
 begin
 //  UsersBindSourceDB.DataSet.Delete;
+end;
+
+procedure TfrmMain.AccountsSGDblClick(Sender: TObject);
+begin
+// double click record in the grid
 end;
 
 procedure TfrmMain.AcctSearchBoxKeyPress(Sender: TObject; var Key: Char);
@@ -384,21 +402,21 @@ begin
   if AcctsRelativePanel.Width<=634 then
   begin
 
-    ExportAcctsButton.Caption := '';
-    ExportAcctsButton.Width := 40;
-    CreateAcctButton.Caption := '';
-    CreateAcctButton.Width := 40;
-    RemoveAcctButton.Caption := '';
-    RemoveAcctButton.Width := 40;
+    btnExportMuni.Caption := '';
+    btnExportMuni.Width := 40;
+    btnCreateMuni.Caption := '';
+    btnCreateMuni.Width := 40;
+    btnRemoveMuni.Caption := '';
+    btnRemoveMuni.Width := 40;
   end
   else
   begin
-    ExportAcctsButton.Caption := ExportAcctsButton.Hint;
-    ExportAcctsButton.Width := 112;
-    CreateAcctButton.Caption := CreateAcctButton.Hint;
-    CreateAcctButton.Width := 112;
-    RemoveAcctButton.Caption := RemoveAcctButton.Hint;
-    RemoveAcctButton.Width := 112;
+    btnExportMuni.Caption := btnExportMuni.Hint;
+    btnExportMuni.Width := 112;
+    btnCreateMuni.Caption := btnCreateMuni.Hint;
+    btnCreateMuni.Width := 112;
+    btnRemoveMuni.Caption := btnRemoveMuni.Hint;
+    btnRemoveMuni.Width := 112;
   end;
 end;
 
@@ -584,11 +602,6 @@ begin
 //
 end;
 
-procedure TfrmMain.ExportAcctsButtonClick(Sender: TObject);
-begin
-//
-end;
-
 procedure TfrmMain.ExportEmailsButtonClick(Sender: TObject);
 begin
   if SaveEmailsDialog.Execute then
@@ -673,6 +686,16 @@ procedure TfrmMain.FormShow(Sender: TObject);
 begin
   VCLStylesCB.AutoComplete := True;
   Self.Caption := 'Height: ' + IntToStr(ClientHeight) + ' ' + 'Width: ' + IntToStr(ClientWidth);
+
+  if dm.User.username = 'admin' then
+  begin
+    btnRemoveMuni.Visible := True;
+//    btnExportMuni
+  end
+  else
+  begin
+    btnRemoveMuni.Visible := False;
+  end;
 end;
 
 end.

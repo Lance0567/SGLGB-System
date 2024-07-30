@@ -9,7 +9,8 @@ uses
   uProposal in 'Modal\uProposal.pas' {ProposalForm},
   Vcl.Themes,
   Vcl.Styles,
-  uLogin in 'Modal\uLogin.pas' {frmLogin};
+  uLogin in 'Modal\uLogin.pas' {frmLogin},
+  uMunicipalities in 'Form\uMunicipalities.pas' {Municipalities};
 
 {$R *.res}
 
@@ -23,5 +24,6 @@ begin
   Application.CreateForm(TLeadsForm, LeadsForm);
   Application.CreateForm(TProposalForm, ProposalForm);
   Application.CreateForm(TfrmLogin, frmLogin);
+  Application.CreateForm(TMunicipalities, Municipalities);
   Application.Run;
 end.

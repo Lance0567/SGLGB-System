@@ -23,6 +23,11 @@ type
   end;
 
   TDM = class(TDataModule)
+    conSGLGB: TFDConnection;
+    qMunicipalities: TFDQuery;
+    qMunicipalitiesid: TFDAutoIncField;
+    qMunicipalitiesmunicipality: TStringField;
+    dsMunicipalities: TDataSource;
     procedure DataModuleCreate(Sender: TObject);
     procedure DataModuleDestroy(Sender: TObject);
   private
@@ -42,8 +47,21 @@ implementation
 {$R *.dfm}
 
 procedure TDM.DataModuleCreate(Sender: TObject);
+var
+  DBPath: String;
 begin
   FUser := TUser.Create;
+
+  conSGLGB.Params.Values['Database'] := '';
+
+  // Get the directory of the executable relative path
+  DBPath := ExtractFilePath(ParamStr(0)) + 'database\SGLGB.db';
+  conSGLGB.Params.Values['DriverID'] := 'SQLite';
+  conSGLGB.Params.Values['Database'] := DBPath;
+
+  // Deactivate queries
+  qMunicipalities.Close;
+
 end;
 
 procedure TDM.DataModuleDestroy(Sender: TObject);
