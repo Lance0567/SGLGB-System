@@ -944,7 +944,7 @@ object frmMain: TfrmMain
     Width = 924
     Height = 562
     Margins.Top = 0
-    ActivePage = UsersTab
+    ActivePage = DashboardTab
     Align = alClient
     TabHeight = 30
     TabOrder = 1
@@ -1867,7 +1867,6 @@ object frmMain: TfrmMain
         end
       end
       object AccountsSG: TStringGrid
-        Tag = 2
         AlignWithMargins = True
         Left = 25
         Top = 76
@@ -1877,7 +1876,7 @@ object frmMain: TfrmMain
         Margins.Right = 25
         Align = alClient
         BorderStyle = bsNone
-        ColCount = 2
+        ColCount = 1
         DoubleBuffered = True
         FixedCols = 0
         RowCount = 2
@@ -1886,8 +1885,9 @@ object frmMain: TfrmMain
         ScrollBars = ssVertical
         TabOrder = 1
         ColWidths = (
-          64
           64)
+        ColAligments = (
+          0)
       end
       object BindNavigator4: TBindNavigator
         AlignWithMargins = True
@@ -1897,7 +1897,6 @@ object frmMain: TfrmMain
         Height = 25
         Margins.Left = 25
         Margins.Right = 25
-        DataSource = AcctBindSourceDB
         Align = alBottom
         Orientation = orHorizontal
         TabOrder = 2
@@ -1939,7 +1938,6 @@ object frmMain: TfrmMain
         Height = 25
         Margins.Left = 25
         Margins.Right = 25
-        DataSource = LeadsBindNewSourceDB
         VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbDelete, nbRefresh]
         Align = alBottom
         Orientation = orHorizontal
@@ -2147,7 +2145,6 @@ object frmMain: TfrmMain
           ExplicitWidth = 30
         end
         object NewLeadsSG: TStringGrid
-          Tag = 3
           Left = 1
           Top = 20
           Width = 231
@@ -2156,7 +2153,7 @@ object frmMain: TfrmMain
           Margins.Right = 25
           Align = alClient
           BorderStyle = bsNone
-          ColCount = 3
+          ColCount = 1
           DefaultRowHeight = 40
           DoubleBuffered = True
           FixedCols = 0
@@ -2170,8 +2167,6 @@ object frmMain: TfrmMain
           OnEnter = NewLeadsSGEnter
           OnMouseDown = NewLeadsSGMouseDown
           ColWidths = (
-            64
-            64
             64)
         end
       end
@@ -2203,13 +2198,13 @@ object frmMain: TfrmMain
           ExplicitWidth = 42
         end
         object ActiveLeadsSG: TStringGrid
-          Tag = 5
           Left = 1
           Top = 20
           Width = 200
           Height = 391
           Align = alClient
           BorderStyle = bsNone
+          ColCount = 1
           DefaultRowHeight = 40
           DoubleBuffered = True
           FixedCols = 0
@@ -2223,10 +2218,6 @@ object frmMain: TfrmMain
           OnEnter = ActiveLeadsSGEnter
           OnMouseDown = NewLeadsSGMouseDown
           ColWidths = (
-            150
-            150
-            150
-            150
             150)
         end
       end
@@ -2257,7 +2248,6 @@ object frmMain: TfrmMain
           ExplicitWidth = 93
         end
         object ProposalSentLeadsSG: TStringGrid
-          Tag = 3
           Left = 1
           Top = 20
           Width = 201
@@ -2266,7 +2256,7 @@ object frmMain: TfrmMain
           Margins.Right = 25
           Align = alClient
           BorderStyle = bsNone
-          ColCount = 3
+          ColCount = 1
           DefaultRowHeight = 40
           DoubleBuffered = True
           FixedCols = 0
@@ -2280,8 +2270,6 @@ object frmMain: TfrmMain
           OnEnter = ProposalSentLeadsSGEnter
           OnMouseDown = NewLeadsSGMouseDown
           ColWidths = (
-            64
-            64
             64)
         end
       end
@@ -2313,7 +2301,6 @@ object frmMain: TfrmMain
           ExplicitWidth = 45
         end
         object ClosedLeadsSG: TStringGrid
-          Tag = 3
           Left = 1
           Top = 20
           Width = 199
@@ -2322,7 +2309,7 @@ object frmMain: TfrmMain
           Margins.Right = 25
           Align = alClient
           BorderStyle = bsNone
-          ColCount = 3
+          ColCount = 1
           DefaultRowHeight = 40
           DoubleBuffered = True
           FixedCols = 0
@@ -2336,8 +2323,6 @@ object frmMain: TfrmMain
           OnEnter = ClosedLeadsSGEnter
           OnMouseDown = NewLeadsSGMouseDown
           ColWidths = (
-            64
-            64
             64)
         end
       end
@@ -2520,7 +2505,6 @@ object frmMain: TfrmMain
         Height = 25
         Margins.Left = 25
         Margins.Right = 25
-        DataSource = ProposalBindSourceDB
         VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbDelete, nbRefresh]
         Align = alBottom
         Orientation = orHorizontal
@@ -2918,12 +2902,10 @@ object frmMain: TfrmMain
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
-            OnClick = btnEditClick
           end
         end
       end
       object UsersSG: TStringGrid
-        Tag = 2
         AlignWithMargins = True
         Left = 25
         Top = 76
@@ -2933,7 +2915,7 @@ object frmMain: TfrmMain
         Margins.Right = 25
         Align = alClient
         BorderStyle = bsNone
-        ColCount = 2
+        ColCount = 1
         DoubleBuffered = True
         FixedCols = 0
         RowCount = 2
@@ -2942,7 +2924,6 @@ object frmMain: TfrmMain
         ScrollBars = ssVertical
         TabOrder = 1
         ColWidths = (
-          64
           64)
       end
       object BindNavigator5: TBindNavigator
@@ -2953,7 +2934,6 @@ object frmMain: TfrmMain
         Height = 25
         Margins.Left = 25
         Margins.Right = 25
-        DataSource = UsersBindSourceDB
         VisibleButtons = [nbEdit, nbPost, nbCancel, nbRefresh]
         Align = alBottom
         Orientation = orHorizontal
@@ -3041,190 +3021,6 @@ object frmMain: TfrmMain
       OnKeyPress = VCLStylesCBKeyPress
     end
   end
-  object LeadsBindNewSourceDB: TBindSourceDB
-    DataSet = DM.FDLeadsQueryNew
-    ScopeMappings = <>
-    Left = 1064
-    Top = 256
-  end
-  object BindingsList1: TBindingsList
-    Methods = <>
-    OutputConverters = <>
-    Left = 244
-    Top = 261
-    object LinkGridToDataSourceUsersBindSourceDB: TLinkGridToDataSource
-      Category = 'Quick Bindings'
-      DataSource = UsersBindSourceDB
-      GridControl = UsersSG
-      Columns = <
-        item
-          MemberName = 'UserId'
-        end
-        item
-          MemberName = 'Username'
-        end>
-    end
-    object LinkGridToDataSourceBindSourceDB5: TLinkGridToDataSource
-      Category = 'Quick Bindings'
-      DataSource = ProposalBindSourceDB
-      GridControl = ProposalStringGrid
-      Columns = <>
-    end
-    object LinkListControlToField1: TLinkListControlToField
-      Category = 'Quick Bindings'
-      DataSource = UsersBindSourceDB
-      FieldName = 'Username'
-      Control = UsernameComboBox
-      FillExpressions = <>
-      FillHeaderExpressions = <>
-      FillBreakGroups = <>
-    end
-    object LinkGridToDataSourceBindSourceDB4: TLinkGridToDataSource
-      Category = 'Quick Bindings'
-      DataSource = EmailsBindSourceDB
-      GridControl = StringGrid2
-      Columns = <>
-    end
-    object LinkGridToDataSourceLeadsBindSourceDB: TLinkGridToDataSource
-      Category = 'Quick Bindings'
-      DataSource = LeadsBindNewSourceDB
-      GridControl = NewLeadsSG
-      Columns = <
-        item
-          MemberName = 'DateCreated'
-          Header = 'Date Created'
-        end
-        item
-          MemberName = 'Name'
-          Header = 'Name'
-        end
-        item
-          MemberName = 'LeadId'
-          Header = 'Lead Id'
-        end>
-    end
-    object LinkGridToDataSourceLeadsBindActiveSourceDB: TLinkGridToDataSource
-      Category = 'Quick Bindings'
-      DataSource = LeadsBindActiveSourceDB
-      GridControl = ActiveLeadsSG
-      Columns = <
-        item
-          MemberName = 'DateContacted'
-          Header = 'Date Contacted'
-          Width = 150
-        end
-        item
-          MemberName = 'Name'
-          Header = 'Name'
-          Width = 150
-        end
-        item
-          MemberName = 'Email'
-          Header = 'Email'
-          Width = 150
-        end
-        item
-          MemberName = 'OfficePhone'
-          Header = 'Office Phone'
-          Width = 150
-        end
-        item
-          MemberName = 'LeadId'
-          Header = 'Lead Id'
-          Width = 150
-        end>
-    end
-    object LinkGridToDataSourceLeadsBindClosedSourceDB: TLinkGridToDataSource
-      Category = 'Quick Bindings'
-      DataSource = LeadsBindClosedSourceDB
-      GridControl = ClosedLeadsSG
-      Columns = <
-        item
-          MemberName = 'DateClosed'
-          Header = 'Date Closed'
-        end
-        item
-          MemberName = 'AccountName'
-          Header = 'Account Name'
-        end
-        item
-          MemberName = 'LeadId'
-          Header = 'Lead Id'
-        end>
-    end
-    object LinkGridToDataSourceAcctBindSourceDB: TLinkGridToDataSource
-      Category = 'Quick Bindings'
-      DataSource = AcctBindSourceDB
-      GridControl = AccountsSG
-      Columns = <
-        item
-          MemberName = 'AccountId'
-        end
-        item
-          MemberName = 'AccountName'
-        end>
-    end
-    object LinkGridToDataSourceLeadsBindProposalSentSourceDB: TLinkGridToDataSource
-      Category = 'Quick Bindings'
-      DataSource = LeadsBindProposalSentSourceDB
-      GridControl = ProposalSentLeadsSG
-      Columns = <
-        item
-          MemberName = 'DateDrafted'
-          Header = 'Date Drafted'
-        end
-        item
-          MemberName = 'AccountName'
-          Header = 'Account Name'
-        end
-        item
-          MemberName = 'LeadId'
-          Header = 'Lead Id'
-        end>
-    end
-    object LinkPropertyToFieldCaption: TLinkPropertyToField
-      Category = 'Quick Bindings'
-      DataSource = NewTotalBindSourceDB
-      FieldName = 'NewLeads'
-      Component = Label6
-      ComponentProperty = 'Caption'
-    end
-    object LinkPropertyToFieldCaption2: TLinkPropertyToField
-      Category = 'Quick Bindings'
-      DataSource = ActiveTotalBindSourceDB
-      FieldName = 'ActiveLeads'
-      Component = Label9
-      ComponentProperty = 'Caption'
-    end
-    object LinkPropertyToFieldCaption3: TLinkPropertyToField
-      Category = 'Quick Bindings'
-      DataSource = ProposalTotalBindSourceDB
-      FieldName = 'ProposalSentLeads'
-      Component = Label12
-      ComponentProperty = 'Caption'
-    end
-    object LinkPropertyToFieldCaption4: TLinkPropertyToField
-      Category = 'Quick Bindings'
-      DataSource = ClosedTotalBindSourceDB
-      FieldName = 'ClosedLeads'
-      Component = Label15
-      ComponentProperty = 'Caption'
-    end
-    object LinkPropertyToFieldCaption5: TLinkPropertyToField
-      Category = 'Quick Bindings'
-      DataSource = InactiveTotalBindSourceDB
-      FieldName = 'InactiveLeads'
-      Component = Label18
-      ComponentProperty = 'Caption'
-    end
-    object LinkPropertyToFieldCaption6: TLinkPropertyToField
-      Category = 'Quick Bindings'
-      DataSource = AllTotalBindSourceDB
-      FieldName = 'LeadsCount'
-      Component = Label21
-      ComponentProperty = 'Caption'
-    end
-  end
   object ImportLeadsDialog: TOpenDialog
     DefaultExt = 'json'
     Filter = 'FireDAC JSON (*.json)|*.json'
@@ -3237,59 +3033,11 @@ object frmMain: TfrmMain
     Left = 248
     Top = 432
   end
-  object UsersBindSourceDB: TBindSourceDB
-    DataSet = DM.UsersFDTable
-    ScopeMappings = <>
-    Left = 944
-    Top = 256
-  end
-  object ProposalBindSourceDB: TBindSourceDB
-    DataSet = DM.FDProposalsQuery
-    ScopeMappings = <>
-    Left = 632
-    Top = 256
-  end
-  object AcctBindSourceDB: TBindSourceDB
-    DataSet = DM.FDAccountsQuery
-    ScopeMappings = <>
-    Left = 352
-    Top = 256
-  end
-  object EmailsBindSourceDB: TBindSourceDB
-    DataSet = DM.FDEmailsQuery
-    ScopeMappings = <>
-    Left = 1024
-    Top = 256
-  end
   object SaveEmailsDialog: TSaveDialog
     DefaultExt = 'csv'
     Filter = 'Comma Separated Values (*.csv)|*.csv'
     Left = 248
     Top = 372
-  end
-  object LeadsBindActiveSourceDB: TBindSourceDB
-    DataSet = DM.FDLeadsQueryActive
-    ScopeMappings = <>
-    Left = 448
-    Top = 256
-  end
-  object LeadsBindSourceDB: TBindSourceDB
-    DataSet = DM.LeadsFDTable
-    ScopeMappings = <>
-    Left = 863
-    Top = 255
-  end
-  object LeadsBindProposalSentSourceDB: TBindSourceDB
-    DataSet = DM.FDLeadsQueryProposalSent
-    ScopeMappings = <>
-    Left = 984
-    Top = 264
-  end
-  object LeadsBindClosedSourceDB: TBindSourceDB
-    DataSet = DM.FDLeadsQueryClosed
-    ScopeMappings = <>
-    Left = 816
-    Top = 256
   end
   object VirtualImageList1: TVirtualImageList
     AutoFill = True
@@ -5065,42 +4813,6 @@ object frmMain: TfrmMain
     Filter = 'FireDAC JSON (*.json)|*.json'
     Left = 248
     Top = 488
-  end
-  object NewTotalBindSourceDB: TBindSourceDB
-    DataSet = DM.FDQueryNewTotal
-    ScopeMappings = <>
-    Left = 680
-    Top = 256
-  end
-  object ActiveTotalBindSourceDB: TBindSourceDB
-    DataSet = DM.FDQueryActiveTotal
-    ScopeMappings = <>
-    Left = 768
-    Top = 256
-  end
-  object ProposalTotalBindSourceDB: TBindSourceDB
-    DataSet = DM.FDQueryProposalTotal
-    ScopeMappings = <>
-    Left = 584
-    Top = 256
-  end
-  object ClosedTotalBindSourceDB: TBindSourceDB
-    DataSet = DM.FDQueryClosedTotal
-    ScopeMappings = <>
-    Left = 288
-    Top = 256
-  end
-  object InactiveTotalBindSourceDB: TBindSourceDB
-    DataSet = DM.FDQueryInactiveTotal
-    ScopeMappings = <>
-    Left = 400
-    Top = 264
-  end
-  object AllTotalBindSourceDB: TBindSourceDB
-    DataSet = DM.FDQueryTotal
-    ScopeMappings = <>
-    Left = 496
-    Top = 256
   end
   object MainMenu1: TMainMenu
     Left = 132

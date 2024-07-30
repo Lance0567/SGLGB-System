@@ -20,10 +20,6 @@ type
     RelativePanel1: TRelativePanel;
     LineItemsStringGrid: TStringGrid;
     BindNavigator1: TBindNavigator;
-    BindSourceDBProposal: TBindSourceDB;
-    BindSourceDBLineItems: TBindSourceDB;
-    BindingsList1: TBindingsList;
-    LinkGridToDataSourceBindSourceDB2: TLinkGridToDataSource;
     Panel1: TPanel;
     PreviewButton: TButton;
     CancelButton: TButton;
@@ -52,24 +48,14 @@ type
     NavPanel: TPanel;
     SaveProposalButton: TButton;
     BackButton: TButton;
-    BindSourceDBDraftProposal: TBindSourceDB;
-    LinkControlToField1: TLinkControlToField;
-    LinkControlToField2: TLinkControlToField;
-    LinkControlToField3: TLinkControlToField;
-    LinkControlToField4: TLinkControlToField;
-    LinkControlToField5: TLinkControlToField;
-    LinkControlToField6: TLinkControlToField;
     ProposalCSSMemo: TMemo;
     ReportMemo: TMemo;
     VirtualImage1: TVirtualImage;
     VirtualImage2: TVirtualImage;
-    BindSourceDBProposalQuery: TBindSourceDB;
     procedure PreviewButtonClick(Sender: TObject);
     procedure BackButtonClick(Sender: TObject);
     procedure PreviewCardClick(Sender: TObject);
     procedure CancelButtonClick(Sender: TObject);
-    procedure BindSourceDBLineItemsSubDataSourceDataChange(Sender: TObject;
-      Field: TField);
     procedure SaveProposalButtonClick(Sender: TObject);
   private
     { Private declarations }
@@ -113,45 +99,25 @@ uses
 
 procedure TDraftProposalForm.NewDraft(ALeadId: Integer; const ACompanyName: String);
 begin
-  DM.LineItemsFDMemTable.EmptyDataSet;
-  DM.DraftProposalFDMemTable.EmptyDataSet;
-  FLeadId := ALeadId;
-  DateEdit.Text := FormatDateTime('ddddd', Now);
-  TLinkObservers.ControlChanged(DateEdit);
-  CompanyEdit.Text := ACompanyName;
-  TLinkObservers.ControlChanged(CompanyEdit);
-end;
-
-procedure TDraftProposalForm.BindSourceDBLineItemsSubDataSourceDataChange(
-  Sender: TObject; Field: TField);
-begin
-  if DraftProposalForm.Visible then
-  begin
-    DM.LineItemsTotalQuery.Open;
-    if DM.LineItemsTotalQuery.FindField('Total')<>nil then
-      TotalEdit.Text := CurrToStr(DM.LineItemsTotalQuery.FieldByName('Total').AsCurrency);
-      TLinkObservers.ControlChanged(TotalEdit);
-    DM.LineItemsTotalQuery.Close;
-  end;
+//
 end;
 
 procedure TDraftProposalForm.PreviewButtonClick(Sender: TObject);
 var
   LDoc: Variant;
 begin
-  DraftCardPanel.NextCard;
-
-  ReportMemo.Lines.Text := GenerateReport(BindSourceDBDraftProposal.DataSet, BindSourceDBLineItems.DataSet);
-
-  if not Assigned(WebBrowser1.Document) then
-    WebBrowser1.Navigate('about:blank');
-
-  LDoc := WebBrowser1.Document;
-  LDoc.Clear;
-  LDoc.Write(ReportMemo.Lines.Text);
-  LDoc.Close;
+//  DraftCardPanel.NextCard;
+//
+//  ReportMemo.Lines.Text := GenerateReport(BindSourceDBDraftProposal.DataSet, BindSourceDBLineItems.DataSet);
+//
+//  if not Assigned(WebBrowser1.Document) then
+//    WebBrowser1.Navigate('about:blank');
+//
+//  LDoc := WebBrowser1.Document;
+//  LDoc.Clear;
+//  LDoc.Write(ReportMemo.Lines.Text);
+//  LDoc.Close;
 end;
-
 
 procedure TDraftProposalForm.CancelButtonClick(Sender: TObject);
 begin
@@ -206,28 +172,28 @@ end;
 
 procedure TDraftProposalForm.SaveProposalButtonClick(Sender: TObject);
 var
-LReportStream: TStringStream;
+  LReportStream: TStringStream;
 begin
-  BindSourceDBProposal.DataSet.Append;
-  BindSourceDBProposal.DataSet.Edit;
-  BindSourceDBProposal.DataSet.FieldByName('LeadId').AsInteger := FLeadId;
-  BindSourceDBProposal.DataSet.FieldByName('ProposalName').AsString := 'New Proposal';
-  BindSourceDBProposal.DataSet.FieldByName('Status').AsString := 'New';
-  BindSourceDBProposal.DataSet.FieldByName('Value').AsCurrency := BindSourceDBDraftProposal.DataSet.FieldByName('Total').AsCurrency;
-  LReportStream := TStringStream.Create;
-  try
-    LReportStream.WriteString(ReportMemo.Lines.Text);
-    LReportStream.Position := 0;
-    TBlobField(BindSourceDBProposal.DataSet.FieldByName('Proposal')).LoadFromStream(LReportStream);
-  finally
-    LReportStream.Free;
-  end;
-  BindSourceDBProposal.DataSet.FieldByName('DateCreated').AsDateTime := Now;
-  BindSourceDBProposal.DataSet.FieldByName('User').AsString := frmMain.UsernameComboBox.Text;
-  BindSourceDBProposal.DataSet.Post;
-  BindSourceDBProposalQuery.DataSet.Refresh;
-  BindSourceDBProposalQuery.DataSet.Locate('LeadId',VarArrayOf([FLeadId]),[]);
-  DraftCardPanel.PreviousCard;
+//  BindSourceDBProposal.DataSet.Append;
+//  BindSourceDBProposal.DataSet.Edit;
+//  BindSourceDBProposal.DataSet.FieldByName('LeadId').AsInteger := FLeadId;
+//  BindSourceDBProposal.DataSet.FieldByName('ProposalName').AsString := 'New Proposal';
+//  BindSourceDBProposal.DataSet.FieldByName('Status').AsString := 'New';
+//  BindSourceDBProposal.DataSet.FieldByName('Value').AsCurrency := BindSourceDBDraftProposal.DataSet.FieldByName('Total').AsCurrency;
+//  LReportStream := TStringStream.Create;
+//  try
+//    LReportStream.WriteString(ReportMemo.Lines.Text);
+//    LReportStream.Position := 0;
+//    TBlobField(BindSourceDBProposal.DataSet.FieldByName('Proposal')).LoadFromStream(LReportStream);
+//  finally
+//    LReportStream.Free;
+//  end;
+//  BindSourceDBProposal.DataSet.FieldByName('DateCreated').AsDateTime := Now;
+//  BindSourceDBProposal.DataSet.FieldByName('User').AsString := frmMain.UsernameComboBox.Text;
+//  BindSourceDBProposal.DataSet.Post;
+//  BindSourceDBProposalQuery.DataSet.Refresh;
+//  BindSourceDBProposalQuery.DataSet.Locate('LeadId',VarArrayOf([FLeadId]),[]);
+//  DraftCardPanel.PreviousCard;
   Close;
 end;
 

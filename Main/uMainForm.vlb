@@ -1,64 +1,4 @@
-﻿[DM.FDEmailsQuery]
-Visible=False
-Coordinates=1843,111,128,36
-
-[DM.FDAccountsQuery]
-Visible=False
-Coordinates=1642,276,143,36
-
-[DM.FDLeadsQueryNew]
-Visible=False
-Coordinates=1642,1211,150,36
-
-[DM.FDProposalsQuery]
-Visible=False
-Coordinates=721,1386,147,36
-
-[DM.FDLeadsQueryActive]
-Visible=False
-Coordinates=1335,1482,160,36
-
-[DM.FDLeadsQueryProposalSent]
-Visible=False
-Coordinates=1837,1,202,36
-
-[DM.FDLeadsQueryClosed]
-Visible=False
-Coordinates=305,1482,165,36
-
-[DM.FDQueryNewTotal]
-Visible=False
-Coordinates=156,1482,144,36
-
-[DM.FDQueryActiveTotal]
-Visible=False
-Coordinates=1642,111,154,36
-
-[DM.FDQueryProposalTotal]
-Visible=False
-Coordinates=1843,386,169,36
-
-[DM.FDQueryClosedTotal]
-Visible=False
-Coordinates=1843,276,159,36
-
-[DM.FDQueryTotal]
-Visible=False
-Coordinates=1642,936,119,36
-
-[DM.FDQueryInactiveTotal]
-Visible=False
-Coordinates=1642,1266,163,36
-
-[DM.LeadsFDTable]
-Visible=False
-Coordinates=1642,606,122,36
-
-[DM.UsersFDTable]
-Visible=False
-Coordinates=285,1386,121,36
-
-[VirtualImage2]
+﻿[VirtualImage2]
 Coordinates=671,1150,94,36
 
 [StringGrid2]
@@ -69,9 +9,6 @@ Coordinates=850,451,145,124
 
 [Panel8]
 Coordinates=10,898,55,58
-
-[ActiveTotalBindSourceDB]
-Coordinates=1669,440,163,102
 
 [Label4]
 Coordinates=1176,770,53,58
@@ -85,20 +22,11 @@ Coordinates=1160,982,60,58
 [Label3]
 Coordinates=505,1066,53,58
 
-[DM.DocsFDTable]
-Coordinates=445,982,116,58
-
-[InactiveTotalBindSourceDB]
-Coordinates=945,642,172,102
-
 [VirtualImage3]
 Coordinates=834,1296,94,36
 
 [ClosedPanel]
 Coordinates=392,1066,87,58
-
-[LeadsBindProposalSentSourceDB]
-Coordinates=559,440,211,146
 
 [Label14]
 Coordinates=1391,1066,60,58
@@ -127,17 +55,11 @@ Coordinates=1948,898,53,58
 [Label25]
 Coordinates=96,982,60,58
 
-[NewTotalBindSourceDB]
-Coordinates=143,642,153,102
-
 [AcctsRelativePanel]
 Coordinates=754,898,126,58
 
 [ActiveLeadsPanel]
 Coordinates=2027,898,118,58
-
-[UsersBindSourceDB]
-Coordinates=10,114,132,152
 
 [VirtualImage4]
 Coordinates=308,1234,94,36
@@ -148,38 +70,20 @@ Coordinates=1393,898,55,58
 [ImportLeadsDialog]
 Coordinates=57,1386,123,36
 
-[DM.AcctFDTable]
-Coordinates=1602,898,112,58
-
 [Label16]
 Coordinates=827,982,60,58
-
-[DM.ProposalStatusFDMemTable]
-Coordinates=176,770,203,80
 
 [Image5]
 Coordinates=1977,770,57,58
 
-[DM.ProposalFDMemTable]
-Coordinates=561,10,166,256
-
 [ExportAcctsDialog]
 Coordinates=1642,1,120,36
-
-[LeadsBindClosedSourceDB]
-Coordinates=1021,440,174,146
 
 [SalesSearchBox]
 Coordinates=91,898,109,58
 
 [UsernameComboBox]
 Coordinates=222,128,137,124
-
-[DM.LeadsFDMemTable]
-Coordinates=385,10,150,322
-
-[EmailsBindSourceDB]
-Coordinates=405,770,137,80
 
 [VirtualImage1]
 Coordinates=1316,1234,94,36
@@ -200,18 +104,11 @@ Coordinates=472,1296,101,36
 [CalendarView1]
 Coordinates=543,1150,102,36
 
-[DM.DraftProposalFDMemTable]
-Coordinates=352,399,194,36
-Visible=False
-
 [CreateUserButton]
 Coordinates=838,1234,117,36
 
 [SalesButton]
 Coordinates=2022,982,84,58
-
-[DM.FDLeadsQueryAll]
-Coordinates=797,1066,139,58
 
 [Panel4]
 Coordinates=1531,770,55,58
@@ -227,10 +124,6 @@ Coordinates=1690,770,53,58
 
 [MarketingRelativePanel]
 Coordinates=1492,982,151,58
-
-[DM.LineItemsFDMemTable]
-Coordinates=1455,399,171,36
-Visible=False
 
 [AccountsSG]
 Coordinates=1339,128,86,102
@@ -253,20 +146,11 @@ Coordinates=193,1066,87,58
 [Label5]
 Coordinates=1366,770,53,58
 
-[DM.StatusFDMemTable]
-Coordinates=888,770,152,80
-
 [RemoveAcctButton]
 Coordinates=1948,1150,124,36
 
-[AllTotalBindSourceDB]
-Coordinates=637,642,142,102
-
 [AcctSearchBox]
 Coordinates=1474,898,102,58
-
-[DM.UsersFDMemTable]
-Coordinates=322,642,149,102
 
 [VirtualImage14]
 Coordinates=1582,1150,101,36
@@ -295,9 +179,6 @@ Coordinates=1051,982,83,58
 [pnlToolbar]
 Coordinates=573,898,76,58
 
-[ProposalBindSourceDB]
-Coordinates=10,481,149,94
-
 [ExportAcctsButton]
 Coordinates=428,1234,120,36
 
@@ -318,9 +199,6 @@ Coordinates=693,1234,119,36
 
 [CompleteProposalButton]
 Coordinates=1399,1150,157,36
-
-[LeadsBindActiveSourceDB]
-Coordinates=1460,10,169,190
 
 [ProposalStringGrid]
 Coordinates=239,440,124,58
@@ -343,17 +221,11 @@ Coordinates=1436,1234,124,36
 [ProposalsRelativePanel]
 Coordinates=182,982,151,58
 
-[ProposalTotalBindSourceDB]
-Coordinates=1283,642,178,102
-
 [VirtualImage13]
 Coordinates=1189,1234,101,36
 
 [NewLeadsPanel]
 Coordinates=226,898,108,58
-
-[LeadsBindSourceDB]
-Coordinates=728,770,134,80
 
 [DashboardTab]
 Coordinates=1823,1150,99,36
@@ -376,9 +248,6 @@ Coordinates=1536,462,53,58
 [Splitter2]
 Coordinates=1101,1234,62,36
 
-[DM.LineItemsTotalQuery]
-Coordinates=10,1066,157,58
-
 [NewLeadsSG]
 Coordinates=997,128,93,124
 
@@ -396,9 +265,6 @@ Coordinates=91,1150,116,58
 
 [UsersButton]
 Coordinates=1255,770,85,58
-
-[LeadsBindNewSourceDB]
-Coordinates=753,58,159,146
 
 [Label12]
 Coordinates=1143,664,60,58
@@ -422,12 +288,6 @@ Coordinates=1144,898,68,58
 [VirtualImage9]
 Coordinates=1279,1150,94,36
 
-[BindingsList1]
-Coordinates=919,1482,91,36
-
-[AcctBindSourceDB]
-Coordinates=1121,58,130,124
-
 [Panel2]
 Coordinates=10,1150,55,58
 
@@ -442,13 +302,6 @@ Coordinates=913,982,112,58
 
 [VirtualImage6]
 Coordinates=1682,1234,94,36
-
-[DM.ProposalsFDTable]
-Coordinates=1092,964,144,36
-Visible=False
-
-[ClosedTotalBindSourceDB]
-Coordinates=1627,642,167,102
 
 [Splitter1]
 Coordinates=328,1150,62,36
@@ -477,14 +330,8 @@ Coordinates=599,1296,89,36
 [Label13]
 Coordinates=306,1066,60,58
 
-[DM.DocsFDMemTable]
-Coordinates=389,440,144,168
-
 [Label29]
 Coordinates=1907,1066,60,58
-
-[DM.AcctFDMemTable]
-Coordinates=10,770,140,102
 
 [ExportLeadsDialog]
 Coordinates=27,1482,123,36
@@ -504,9 +351,6 @@ Visible=True
 
 [Label28]
 Coordinates=584,1066,60,58
-
-[DM.FDDocsQuery]
-Coordinates=1477,1066,119,58
 
 [ImageCollection1]
 Coordinates=1843,166,114,36
@@ -554,9 +398,13 @@ Coordinates=1843,551,46,36
 [LogOut]
 Coordinates=44,70,57,36
 
-[DM.qTemp]
-Coordinates=906,898,78,58
-
 [btnEdit]
 Coordinates=227,1234,55,36
+
+[]
+Coordinates=10,114,132,152
+
+[DM.]
+Coordinates=906,898,78,58
+Visible=False
 

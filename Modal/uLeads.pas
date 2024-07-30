@@ -21,7 +21,6 @@ type
     EmailPanel: TPanel;
     UserPanel: TPanel;
     DateCreatedPanel: TPanel;
-    LeadsBindSourceDB: TBindSourceDB;
     Label2: TLabel;
     StatusComboBox: TComboBox;
     Label3: TLabel;
@@ -34,21 +33,12 @@ type
     Label7: TLabel;
     UserEdit: TEdit;
     Label8: TLabel;
-    BindingsList1: TBindingsList;
-    LinkControlToField1: TLinkControlToField;
-    LinkControlToField3: TLinkControlToField;
-    LinkControlToField4: TLinkControlToField;
-    LinkControlToField5: TLinkControlToField;
-    StatusBindSourceDB: TBindSourceDB;
-    LinkFillControlToField1: TLinkFillControlToField;
     DocsPanel: TPanel;
     Panel9: TPanel;
     DeleteDocButton: TButton;
     AddDocButton: TButton;
     OpenDialog1: TOpenDialog;
     AccountNameComboBox: TComboBox;
-    LinkFillControlToField2: TLinkFillControlToField;
-    AcctBindSourceDB: TBindSourceDB;
     ScrollBox1: TScrollBox;
     DatesPanel: TPanel;
     Label9: TLabel;
@@ -56,15 +46,10 @@ type
     Label10: TLabel;
     DateContactedPicker: TDateTimePicker;
     DateCreatedPicker: TDateTimePicker;
-    LinkControlToField6: TLinkControlToField;
-    DocsBindSourceDB: TBindSourceDB;
     NotesMemo: TMemo;
-    LinkControlToField7: TLinkControlToField;
     DocStringGrid: TStringGrid;
-    LinkGridToDataSourceBindSourceDB4: TLinkGridToDataSource;
     Button7: TButton;
     Button8: TButton;
-    UsersBindSourceDB: TBindSourceDB;
     ViewDocButton: TButton;
     Panel13: TPanel;
     Label11: TLabel;
@@ -83,14 +68,9 @@ type
     DateDraftedPanel: TPanel;
     Label13: TLabel;
     DateDraftedPicker: TDateTimePicker;
-    LinkControlToField8: TLinkControlToField;
-    LinkControlToField9: TLinkControlToField;
     LeadIdPanel: TPanel;
     Label14: TLabel;
-    LinkControlToField10: TLinkControlToField;
-    ProposalBindSourceDB: TBindSourceDB;
     LeadIdLabel: TLabel;
-    LinkPropertyToFieldCaption: TLinkPropertyToField;
     DateContactedPanel: TPanel;
     VirtualImage3: TVirtualImage;
     procedure AddDocButtonClick(Sender: TObject);
@@ -130,7 +110,7 @@ uses
 
 procedure TLeadsForm.LocateLead(AIndex: Integer);
 begin
-  LeadsBindSourceDB.DataSet.Locate('LeadId',VarArrayOf([AIndex]),[]);
+//
 end;
 
 procedure TLeadsForm.DateContactedPickerChange(Sender: TObject);
@@ -143,14 +123,14 @@ end;
 
 procedure TLeadsForm.DeleteDocButtonClick(Sender: TObject);
 begin
-  if DocsBindSourceDB.DataSet.RecordCount>0 then
-  begin
-    if MessageDlg('Delete ' + DocsBindSourceDB.DataSet.FieldByName('DocumentName')
-      .AsString + '?', mtConfirmation, [mbYes, mbNo], 0, mbYes) = mrYes then
-    begin
-      DocsBindSourceDB.DataSet.Delete;
-    end;
-  end;
+//  if DocsBindSourceDB.DataSet.RecordCount>0 then
+//  begin
+//    if MessageDlg('Delete ' + DocsBindSourceDB.DataSet.FieldByName('DocumentName')
+//      .AsString + '?', mtConfirmation, [mbYes, mbNo], 0, mbYes) = mrYes then
+//    begin
+//      DocsBindSourceDB.DataSet.Delete;
+//    end;
+//  end;
 end;
 
 procedure TLeadsForm.DetailRelativePanelResize(Sender: TObject);
@@ -224,70 +204,62 @@ end;
 
 procedure TLeadsForm.AddDocButtonClick(Sender: TObject);
 begin
-  if OpenDialog1.Execute then
-  begin
-    DocsBindSourceDB.DataSet.Append;
-    DocsBindSourceDB.DataSet.Edit;
-    DocsBindSourceDB.DataSet.FieldByName('LeadId').AsInteger :=
-      LeadsBindSourceDB.DataSet.FieldByName('LeadId').AsInteger;
-    DocsBindSourceDB.DataSet.FieldByName('DocumentName').AsString :=
-      ExtractFileName(OpenDialog1.FileName);
-    TBlobField(DocsBindSourceDB.DataSet.FieldByName('Document'))
-      .LoadFromFile(OpenDialog1.FileName);
-    DocsBindSourceDB.DataSet.FieldByName('User').AsString :=
-      UsersBindSourceDB.DataSet.FieldByName('Username').AsString;
-    DocsBindSourceDB.DataSet.Post;
-  end;
+//  if OpenDialog1.Execute then
+//  begin
+//    DocsBindSourceDB.DataSet.Append;
+//    DocsBindSourceDB.DataSet.Edit;
+//    DocsBindSourceDB.DataSet.FieldByName('LeadId').AsInteger :=
+//      LeadsBindSourceDB.DataSet.FieldByName('LeadId').AsInteger;
+//    DocsBindSourceDB.DataSet.FieldByName('DocumentName').AsString :=
+//      ExtractFileName(OpenDialog1.FileName);
+//    TBlobField(DocsBindSourceDB.DataSet.FieldByName('Document'))
+//      .LoadFromFile(OpenDialog1.FileName);
+//    DocsBindSourceDB.DataSet.FieldByName('User').AsString :=
+//      UsersBindSourceDB.DataSet.FieldByName('Username').AsString;
+//    DocsBindSourceDB.DataSet.Post;
+//  end;
 end;
 
 procedure TLeadsForm.CancelProposalButtonClick(Sender: TObject);
 begin
-  DM.UpdateProposalStatus(LeadsBindSourceDB.DataSet.FieldByName('LeadId').AsInteger,'Canceled');
+//
 end;
 
 procedure TLeadsForm.CompleteProposalButtonClick(Sender: TObject);
 begin
-  DM.CompleteProposal(LeadsBindSourceDB.DataSet.FieldByName('LeadId').AsInteger);
+//
 end;
 
 procedure TLeadsForm.CreateProposalButtonClick(Sender: TObject);
 begin
-  if not ProposalBindSourceDB.DataSet.Locate('LeadId',VarArrayOf([LeadsBindSourceDB.DataSet.FieldByName('LeadId').AsInteger]),[]) then
-  begin
-    DraftProposalForm.NewDraft(LeadsBindSourceDB.DataSet.FieldByName('LeadId').AsInteger,LeadsBindSourceDB.DataSet.FieldByName('AccountName').AsString);
-    DraftProposalForm.ShowModal;
-  end
-  else
-  begin
-    ShowMessage('This lead already has a proposal.');
-  end;
+//
 end;
 
 procedure TLeadsForm.ViewDocButtonClick(Sender: TObject);
 var
-LDocStream: TMemoryStream;
-LTempDocument: String;
+  LDocStream: TMemoryStream;
+  LTempDocument: String;
 begin
-  LDocStream := TStringStream.Create;
-  try
-    if DocsBindSourceDB.DataSet.RecordCount>0 then
-    begin
-      if DocsBindSourceDB.DataSet.FieldByName('Document') <> nil then
-      begin
-        TBlobField(DocsBindSourceDB.DataSet.FieldByName('Document')).SaveToStream(LDocStream);
-        LTempDocument := TPath.Combine(TPath.GetTempPath,DocsBindSourceDB.DataSet.FieldByName('DocumentName').AsString);
-        LDocStream.SaveToFile(LTempDocument);
-      end;
-    end;
-
-  finally
-    LDocStream.Free;
-  end;
-
-  if LTempDocument<>'' then
-    ShellExecute(Handle, nil, PChar(LTempDocument), nil,  nil, SW_SHOWNORMAL)
-  else
-    ShowMessage('No document selected.');
+//  LDocStream := TStringStream.Create;
+//  try
+//    if DocsBindSourceDB.DataSet.RecordCount>0 then
+//    begin
+//      if DocsBindSourceDB.DataSet.FieldByName('Document') <> nil then
+//      begin
+//        TBlobField(DocsBindSourceDB.DataSet.FieldByName('Document')).SaveToStream(LDocStream);
+//        LTempDocument := TPath.Combine(TPath.GetTempPath,DocsBindSourceDB.DataSet.FieldByName('DocumentName').AsString);
+//        LDocStream.SaveToFile(LTempDocument);
+//      end;
+//    end;
+//
+//  finally
+//    LDocStream.Free;
+//  end;
+//
+//  if LTempDocument<>'' then
+//    ShellExecute(Handle, nil, PChar(LTempDocument), nil,  nil, SW_SHOWNORMAL)
+//  else
+//    ShowMessage('No document selected.');
 end;
 
 procedure TLeadsForm.ViewProposalButtonClick(Sender: TObject);
@@ -296,27 +268,27 @@ LReportStream: TStringStream;
 LReportString: String;
 LCurrentLeadId: Integer;
 begin
-  LCurrentLeadId := LeadsBindSourceDB.DataSet.FieldByName('LeadId').AsInteger;
-
-  LReportStream := TStringStream.Create;
-  try
-    if ProposalBindSourceDB.DataSet.Locate('LeadId',VarArrayOf([LCurrentLeadId]),[]) then
-    begin
-      if ProposalBindSourceDB.DataSet.FieldByName('Proposal') <> nil then
-      begin
-        TBlobField(ProposalBindSourceDB.DataSet.FieldByName('Proposal')).SaveToStream(LReportStream);
-        LReportString := LReportStream.DataString;
-      end;
-    end;
-
-  finally
-    LReportStream.Free;
-  end;
-  if LReportString <> '' then
-  begin
-    ProposalForm.LoadProposal(LCurrentLeadId, LReportString);
-    ProposalForm.ShowModal;
-  end;
+//  LCurrentLeadId := LeadsBindSourceDB.DataSet.FieldByName('LeadId').AsInteger;
+//
+//  LReportStream := TStringStream.Create;
+//  try
+//    if ProposalBindSourceDB.DataSet.Locate('LeadId',VarArrayOf([LCurrentLeadId]),[]) then
+//    begin
+//      if ProposalBindSourceDB.DataSet.FieldByName('Proposal') <> nil then
+//      begin
+//        TBlobField(ProposalBindSourceDB.DataSet.FieldByName('Proposal')).SaveToStream(LReportStream);
+//        LReportString := LReportStream.DataString;
+//      end;
+//    end;
+//
+//  finally
+//    LReportStream.Free;
+//  end;
+//  if LReportString <> '' then
+//  begin
+//    ProposalForm.LoadProposal(LCurrentLeadId, LReportString);
+//    ProposalForm.ShowModal;
+//  end;
 end;
 
 end.

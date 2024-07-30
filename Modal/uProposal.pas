@@ -38,7 +38,7 @@ uses
 
 procedure TProposalForm.CompleteButtonClick(Sender: TObject);
 begin
-  DM.CompleteProposal(FLeadId);
+
   Close;
 end;
 

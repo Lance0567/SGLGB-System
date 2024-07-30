@@ -32,8 +32,6 @@ type
     CalendarTab: TTabSheet;
     Panel2: TPanel;
     Label1: TLabel;
-    LeadsBindNewSourceDB: TBindSourceDB;
-    BindingsList1: TBindingsList;
     Image5: TImage;
     CalendarView1: TCalendarView;
     LeadsSearchBox: TSearchBox;
@@ -86,21 +84,13 @@ type
     Label25: TLabel;
     SearchBox7: TSearchBox;
     UsersSG: TStringGrid;
-    UsersBindSourceDB: TBindSourceDB;
-    LinkGridToDataSourceUsersBindSourceDB: TLinkGridToDataSource;
     BindNavigator5: TBindNavigator;
-    ProposalBindSourceDB: TBindSourceDB;
-    LinkGridToDataSourceBindSourceDB5: TLinkGridToDataSource;
     UsernameComboBox: TComboBox;
-    LinkListControlToField1: TLinkListControlToField;
-    AcctBindSourceDB: TBindSourceDB;
     MarketingTab: TTabSheet;
     Panel3: TPanel;
     Label2: TLabel;
     EmailsSearchBox: TSearchBox;
     StringGrid2: TStringGrid;
-    EmailsBindSourceDB: TBindSourceDB;
-    LinkGridToDataSourceBindSourceDB4: TLinkGridToDataSource;
     SaveEmailsDialog: TSaveDialog;
     NewLeadsPanel: TPanel;
     Splitter1: TSplitter;
@@ -116,13 +106,6 @@ type
     ClosedPanel: TPanel;
     ClosedLeadsSG: TStringGrid;
     Label30: TLabel;
-    LinkGridToDataSourceLeadsBindSourceDB: TLinkGridToDataSource;
-    LeadsBindActiveSourceDB: TBindSourceDB;
-    LinkGridToDataSourceLeadsBindActiveSourceDB: TLinkGridToDataSource;
-    LeadsBindSourceDB: TBindSourceDB;
-    LeadsBindProposalSentSourceDB: TBindSourceDB;
-    LeadsBindClosedSourceDB: TBindSourceDB;
-    LinkGridToDataSourceLeadsBindClosedSourceDB: TLinkGridToDataSource;
     VCLStylesCB: TComboBox;
     VirtualImageList1: TVirtualImageList;
     ImageCollection1: TImageCollection;
@@ -149,9 +132,7 @@ type
     MarketingButton: TButton;
     CalendarButton: TButton;
     UsersButton: TButton;
-    LinkGridToDataSourceAcctBindSourceDB: TLinkGridToDataSource;
     ExportAcctsDialog: TSaveDialog;
-    LinkGridToDataSourceLeadsBindProposalSentSourceDB: TLinkGridToDataSource;
     VirtualImage1: TVirtualImage;
     VirtualImage2: TVirtualImage;
     VirtualImage3: TVirtualImage;
@@ -160,18 +141,6 @@ type
     VirtualImage6: TVirtualImage;
     VirtualImage7: TVirtualImage;
     MenuVirtualImage: TVirtualImage;
-    NewTotalBindSourceDB: TBindSourceDB;
-    LinkPropertyToFieldCaption: TLinkPropertyToField;
-    ActiveTotalBindSourceDB: TBindSourceDB;
-    LinkPropertyToFieldCaption2: TLinkPropertyToField;
-    ProposalTotalBindSourceDB: TBindSourceDB;
-    LinkPropertyToFieldCaption3: TLinkPropertyToField;
-    ClosedTotalBindSourceDB: TBindSourceDB;
-    LinkPropertyToFieldCaption4: TLinkPropertyToField;
-    InactiveTotalBindSourceDB: TBindSourceDB;
-    LinkPropertyToFieldCaption5: TLinkPropertyToField;
-    AllTotalBindSourceDB: TBindSourceDB;
-    LinkPropertyToFieldCaption6: TLinkPropertyToField;
     VirtualImage9: TVirtualImage;
     VirtualImage10: TVirtualImage;
     VirtualImage11: TVirtualImage;
@@ -238,7 +207,6 @@ type
     procedure FormShow(Sender: TObject);
     procedure LoginClick(Sender: TObject);
     procedure LogOutClick(Sender: TObject);
-    procedure btnEditClick(Sender: TObject);
   private
     { Private declarations }
     FRanOnce: Boolean;
@@ -260,25 +228,25 @@ uses uDataMod, uLeads, uDraftProposal, uProposal;
 
 procedure TfrmMain.RefreshGrids;
 begin
-  LeadsBindClosedSourceDB.DataSet.Refresh;
-  LeadsBindActiveSourceDB.DataSet.Refresh;
-  LeadsBindNewSourceDB.DataSet.Refresh;
-  LeadsBindProposalSentSourceDB.DataSet.Refresh;
+//  LeadsBindClosedSourceDB.DataSet.Refresh;
+//  LeadsBindActiveSourceDB.DataSet.Refresh;
+//  LeadsBindNewSourceDB.DataSet.Refresh;
+//  LeadsBindProposalSentSourceDB.DataSet.Refresh;
 end;
 
 procedure TfrmMain.RemoveAcctButtonClick(Sender: TObject);
 begin
-  AcctBindSourceDB.DataSet.Delete;
+//  AcctBindSourceDB.DataSet.Delete;
 end;
 
 procedure TfrmMain.RemoveUserButtonClick(Sender: TObject);
 begin
-  UsersBindSourceDB.DataSet.Delete;
+//  UsersBindSourceDB.DataSet.Delete;
 end;
 
 procedure TfrmMain.AcctSearchBoxKeyPress(Sender: TObject; var Key: Char);
 begin
-  DM.SearchAccounts(AcctSearchBox.Text);
+//
 end;
 
 procedure TfrmMain.CalendarView1DrawDayItem(Sender: TObject;
@@ -292,22 +260,19 @@ end;
 
 procedure TfrmMain.CancelProposalButtonClick(Sender: TObject);
 begin
-  if ProposalBindSourceDB.DataSet.RecordCount>0 then
-  begin
-    DM.UpdateProposalStatus(ProposalBindSourceDB.DataSet.FieldByName('LeadId').AsInteger,'Canceled');
-  end;
+//
 end;
 
 procedure TfrmMain.PageControlChange(Sender: TObject);
 begin
   if PageControl.ActivePageIndex=0 then
     begin
-      DM.FDQueryNewTotal.Refresh;
-      DM.FDQueryActiveTotal.Refresh;
-      DM.FDQueryProposalTotal.Refresh;
-      DM.FDQueryInactiveTotal.Refresh;
-      DM.FDQueryClosedTotal.Refresh;
-      DM.FDQueryTotal.Refresh;
+//      DM.FDQueryNewTotal.Refresh;
+//      DM.FDQueryActiveTotal.Refresh;
+//      DM.FDQueryProposalTotal.Refresh;
+//      DM.FDQueryInactiveTotal.Refresh;
+//      DM.FDQueryClosedTotal.Refresh;
+//      DM.FDQueryTotal.Refresh;
     end;
   case PageControl.ActivePageIndex of
     0: DashboardButton.SetFocus;
@@ -316,7 +281,7 @@ begin
     3: SalesButton.SetFocus;
     4: begin
       MarketingButton.SetFocus;
-      EmailsBindSourceDB.DataSet.Refresh;
+//      EmailsBindSourceDB.DataSet.Refresh;
     end;
     5: CalendarButton.SetFocus;
     6: UsersButton.SetFocus;
@@ -326,7 +291,7 @@ end;
 
 procedure TfrmMain.SalesSearchBoxKeyPress(Sender: TObject; var Key: Char);
 begin
-  DM.SearchProposals(SalesSearchBox.Text);
+//  DM.SearchProposals(SalesSearchBox.Text);
 end;
 
 procedure TfrmMain.SplitViewClosing(Sender: TObject);
@@ -353,13 +318,12 @@ end;
 
 procedure TfrmMain.AccountsTabResize(Sender: TObject);
 begin
-  LinkGridToDataSourceAcctBindSourceDB.Columns[1].Width := AccountsSG.Width - LinkGridToDataSourceAcctBindSourceDB.Columns[0].Width;
+//
 end;
 
 procedure TfrmMain.UsersTabResize(Sender: TObject);
 begin
-  LinkGridToDataSourceUsersBindSourceDB.Columns[1].Width := UsersSG.Width - LinkGridToDataSourceUsersBindSourceDB.Columns[0].Width;
-
+//
 end;
 
 procedure TfrmMain.UsernameComboBoxChange(Sender: TObject);
@@ -367,7 +331,7 @@ begin
   LeadsForm.Close;
   DraftProposalForm.Close;
   ProposalForm.Close;
-  DM.SetUser(UsernameComboBox.Text);
+//  DM.SetUser(UsernameComboBox.Text);
 end;
 
 procedure TfrmMain.UsernameComboBoxKeyPress(Sender: TObject; var Key: Char);
@@ -445,14 +409,14 @@ end;
 
 procedure TfrmMain.ActiveLeadsSGEnter(Sender: TObject);
 begin
-  LeadsForm.LocateLead(LeadsBindActiveSourceDB.DataSet.FieldByName('LeadId').AsInteger);
-  BindNavigator1.DataSource := LeadsBindActiveSourceDB;
+//  LeadsForm.LocateLead(LeadsBindActiveSourceDB.DataSet.FieldByName('LeadId').AsInteger);
+//  BindNavigator1.DataSource := LeadsBindActiveSourceDB;
 end;
 
 procedure TfrmMain.ProposalSentLeadsSGEnter(Sender: TObject);
 begin
-  LeadsForm.LocateLead(LeadsBindProposalSentSourceDB.DataSet.FieldByName('LeadId').AsInteger);
-  BindNavigator1.DataSource := LeadsBindProposalSentSourceDB;
+//  LeadsForm.LocateLead(LeadsBindProposalSentSourceDB.DataSet.FieldByName('LeadId').AsInteger);
+//  BindNavigator1.DataSource := LeadsBindProposalSentSourceDB;
 end;
 
 procedure TfrmMain.ProposalsRelativePanelResize(Sender: TObject);
@@ -475,17 +439,17 @@ end;
 
 procedure TfrmMain.ClosedLeadsSGEnter(Sender: TObject);
 begin
-  LeadsForm.LocateLead(LeadsBindClosedSourceDB.DataSet.FieldByName('LeadId').AsInteger);
-  BindNavigator1.DataSource := LeadsBindClosedSourceDB;
+//  LeadsForm.LocateLead(LeadsBindClosedSourceDB.DataSet.FieldByName('LeadId').AsInteger);
+//  BindNavigator1.DataSource := LeadsBindClosedSourceDB;
 end;
 
 procedure TfrmMain.CompleteProposalButtonClick(Sender: TObject);
 begin
-  if ProposalBindSourceDB.DataSet.RecordCount>0 then
-  begin
-    DM.UpdateProposalStatus(ProposalBindSourceDB.DataSet.FieldByName('LeadId').AsInteger,'Accepted');
-    ProposalBindSourceDB.DataSet.Refresh;
-  end;
+//  if ProposalBindSourceDB.DataSet.RecordCount>0 then
+//  begin
+//    DM.UpdateProposalStatus(ProposalBindSourceDB.DataSet.FieldByName('LeadId').AsInteger,'Accepted');
+//    ProposalBindSourceDB.DataSet.Refresh;
+//  end;
 end;
 
 procedure TfrmMain.CreateAcctButtonClick(Sender: TObject);
@@ -493,25 +457,10 @@ var
 LNewAccount: String;
 begin
   LNewAccount := InputBox('Create New Account', 'Account Name', 'New Account');
-  AcctBindSourceDB.DataSet.DisableControls;
-  AcctBindSourceDB.DataSet.AppendRecord([nil,LNewAccount]);
-  AcctBindSourceDB.DataSet.EnableControls;
-  LinkGridToDataSourceAcctBindSourceDB.Active := False;
-  LinkGridToDataSourceAcctBindSourceDB.Active := True;
-
 end;
 
 procedure TfrmMain.CreateLeadButtonClick(Sender: TObject);
 begin
-  LeadsBindNewSourceDB.DataSet.Append;
-  LeadsBindNewSourceDB.DataSet.FieldByName('LeadId').AsString := '';
-  LeadsBindNewSourceDB.DataSet.FieldByName('Status').AsString := 'New';
-  LeadsBindNewSourceDB.DataSet.FieldByName('Name').AsString := 'First Last';
-  LeadsBindNewSourceDB.DataSet.FieldByName('User').AsString := UsernameCombobox.Text;
-  LeadsBindNewSourceDB.DataSet.FieldByName('DateCreated').AsDateTime := Now;
-  LeadsBindNewSourceDB.DataSet.Post;
-  LeadsBindSourceDB.DataSet.Locate('LeadId',VarArrayOf([LeadsBindNewSourceDB.DataSet.FieldByName('LeadId').AsInteger]),[]);
-  BindNavigator1.DataSource := LeadsBindNewSourceDB;
   LeadsForm.Show;
 end;
 
@@ -519,19 +468,7 @@ procedure TfrmMain.CreateUserButtonClick(Sender: TObject);
 var
 LNewUser: String;
 begin
-  LNewUser := InputBox('Create New User', 'User Name', 'user');
-  if UsersBindSourceDB.DataSet.Lookup('Username', VarArrayOf([LNewUser]),'Username')<>LNewUser then
-  begin
-    UsersBindSourceDB.DataSet.Append;
-    UsersBindSourceDB.DataSet.FieldByName('UserId').AsInteger := 0;
-    UsersBindSourceDB.DataSet.FieldByName('Username').AsString := LNewUser;
-    UsersBindSourceDB.DataSet.Post;
-    DM.UsersFDTable.Refresh;
-  end
-  else
-  begin
-    ShowMessage('A user with that username already exists.');
-  end;
+//
 end;
 
 procedure TfrmMain.DashboardButtonClick(Sender: TObject);
@@ -564,7 +501,7 @@ end;
 
 procedure TfrmMain.LeadsSearchBoxKeyPress(Sender: TObject; var Key: Char);
 begin
-  DM.SearchLeads(LeadsSearchBox.Text);
+//
 end;
 
 procedure TfrmMain.MarketingRelativePanelResize(Sender: TObject);
@@ -593,111 +530,7 @@ var
   LDataSet: TDataSet;
   LDateField: String;
 begin
-  LIndex := -1;
-
-  if Source = Sender then
-  begin
-
-  end
-  else
-  begin
-
-    case TStringGrid(Sender).Parent.Tag of
-      1:
-        begin
-          LStatus := 'New';
-          LDateField := 'DateCreated';
-          LDataSet := LeadsBindNewSourceDB.DataSet;
-        end;
-      2:
-        begin
-          LStatus := 'Active';
-          LDateField := 'DateContacted';
-          LDataSet := LeadsBindActiveSourceDB.DataSet;
-        end;
-      3:
-        begin
-          LStatus := 'Proposal Sent';
-          LDateField := 'DateDrafted';
-          LDataSet := LeadsBindProposalSentSourceDB.DataSet;
-        end;
-      4:
-        begin
-          LStatus := 'Closed';
-          LDateField := 'DateClosed';
-          LDataSet := LeadsBindClosedSourceDB.DataSet;
-        end;
-      else
-       LDataSet := LeadsBindNewSourceDB.DataSet;
-    end;
-
-    case TStringGrid(Source).Parent.Tag of
-      1:
-        begin
-          if LeadsBindNewSourceDB.DataSet.RecordCount > 0 then
-          begin
-            LIndex := LeadsBindNewSourceDB.DataSet.FieldByName('LeadId').AsInteger;
-            if LeadsBindSourceDB.DataSet.Locate('LeadId',VarArrayOf([LIndex]),[]) then
-            begin
-              LeadsBindSourceDB.DataSet.Edit;
-              LeadsBindSourceDB.DataSet.FieldByName('Status').AsString := LStatus;
-              if LeadsBindSourceDB.DataSet.FieldByName(LDateField).AsDateTime=0 then LeadsBindSourceDB.DataSet.FieldByName(LDateField).AsDateTime := Now;
-              LeadsBindSourceDB.DataSet.Post;
-            end;
-            LDataSet.Locate('LeadId',VarArrayOf([LIndex]),[]);
-          end;
-        end;
-      2:
-        begin
-          if LeadsBindActiveSourceDB.DataSet.RecordCount > 0 then
-          begin
-            LIndex := LeadsBindActiveSourceDB.DataSet.FieldByName('LeadId').AsInteger;
-            if LeadsBindSourceDB.DataSet.Locate('LeadId',VarArrayOf([LIndex]),[]) then
-            begin
-              LeadsBindSourceDB.DataSet.Edit;
-              LeadsBindSourceDB.DataSet.FieldByName('Status').AsString := LStatus;
-              if LeadsBindSourceDB.DataSet.FieldByName(LDateField).AsDateTime=0 then LeadsBindSourceDB.DataSet.FieldByName(LDateField).AsDateTime := Now;
-              LeadsBindSourceDB.DataSet.Post;
-            end;
-            LDataSet.Locate('LeadId',VarArrayOf([LIndex]),[]);
-          end;
-        end;
-      3:
-        begin
-          if LeadsBindProposalSentSourceDB.DataSet.RecordCount > 0 then
-          begin
-            LIndex := LeadsBindProposalSentSourceDB.DataSet.FieldByName('LeadId').AsInteger;
-            if LeadsBindSourceDB.DataSet.Locate('LeadId',VarArrayOf([LIndex]),[]) then
-            begin
-              LeadsBindSourceDB.DataSet.Edit;
-              LeadsBindSourceDB.DataSet.FieldByName('Status').AsString := LStatus;
-              if LeadsBindSourceDB.DataSet.FieldByName(LDateField).AsDateTime=0 then LeadsBindSourceDB.DataSet.FieldByName(LDateField).AsDateTime := Now;
-              LeadsBindSourceDB.DataSet.Post;
-            end;
-            LDataSet.Locate('LeadId',VarArrayOf([LIndex]),[]);
-          end;
-        end;
-      4:
-        begin
-          if LeadsBindClosedSourceDB.DataSet.RecordCount > 0 then
-          begin
-            LIndex := LeadsBindClosedSourceDB.DataSet.FieldByName('LeadId').AsInteger;
-            if LeadsBindSourceDB.DataSet.Locate('LeadId',VarArrayOf([LIndex]),[]) then
-            begin
-              LeadsBindSourceDB.DataSet.Edit;
-              LeadsBindSourceDB.DataSet.FieldByName('Status').AsString := LStatus;
-              if LeadsBindSourceDB.DataSet.FieldByName(LDateField).AsDateTime=0 then LeadsBindSourceDB.DataSet.FieldByName(LDateField).AsDateTime := Now;
-              LeadsBindSourceDB.DataSet.Post;
-            end;
-            LDataSet.Locate('LeadId',VarArrayOf([LIndex]),[]);
-          end;
-        end;
-    end;
-
-    RefreshGrids;
-
-    LDataSet.Locate('LeadId',VarArrayOf([LIndex]),[]);
-  end;
+//
 end;
 
 procedure TfrmMain.NewLeadsSGDragOver(Sender, Source: TObject; X, Y: Integer;
@@ -708,8 +541,7 @@ end;
 
 procedure TfrmMain.NewLeadsSGEnter(Sender: TObject);
 begin
-  LeadsForm.LocateLead(LeadsBindNewSourceDB.DataSet.FieldByName('LeadId').AsInteger);
-  BindNavigator1.DataSource := LeadsBindNewSourceDB;
+//
 end;
 
 procedure TfrmMain.NewLeadsSGMouseDown(Sender: TObject; Button: TMouseButton;
@@ -749,31 +581,25 @@ end;
 
 procedure TfrmMain.EmailsSearchBoxKeyPress(Sender: TObject; var Key: Char);
 begin
-  DM.SearchEmails(EmailsSearchBox.Text);
+//
 end;
 
 procedure TfrmMain.ExportAcctsButtonClick(Sender: TObject);
 begin
-  if ExportAcctsDialog.Execute then
-  begin
-    DM.AcctFDTable.SaveToFile(ExportAcctsDialog.FileName);
-  end;
+//
 end;
 
 procedure TfrmMain.ExportEmailsButtonClick(Sender: TObject);
 begin
   if SaveEmailsDialog.Execute then
   begin
-    DM.ExportEmails(SaveEmailsDialog.FileName);
+//    DM.ExportEmails(SaveEmailsDialog.FileName);
   end;
 end;
 
 procedure TfrmMain.ExportLeadsButtonClick(Sender: TObject);
 begin
-  if ExportLeadsDialog.Execute then
-  begin
-    DM.LeadsFDTable.SaveToFile(ExportLeadsDialog.FileName);
-  end;
+//
 end;
 
 procedure TfrmMain.AppIdle(Sender: TObject; var Done: Boolean);
@@ -782,45 +608,18 @@ begin
   begin
     FRanOnce := True;
 
-    DM.InitializeDatabase;
-
     DashboardButton.SetFocus;
-  end;
-end;
-
-procedure TfrmMain.btnEditClick(Sender: TObject);
-var
-  idHolder: Integer;
-  userHolder: String;
-  inputEditor: String;
-begin
-  idHolder := UsersBindSourceDB.DataSet.FieldByName('UserId').AsInteger;
-  userHolder := UsersBindSourceDB.DataSet.FieldByName('Username').AsString;
-
-  inputEditor := InputBox('Edit User', 'ID', idHolder.ToString);
-  inputEditor := InputBox('Edit User', 'Username', userHolder);
-  if UsersBindSourceDB.DataSet.Lookup('Username', VarArrayOf([inputEditor]),'Username')<>inputEditor then
-  begin
-    UsersBindSourceDB.DataSet.Edit;
-//    UsersBindSourceDB.DataSet.FieldByName('UserId').AsInteger := 0;
-    UsersBindSourceDB.DataSet.FieldByName('Username').AsString := inputEditor;
-    UsersBindSourceDB.DataSet.Post;
-    DM.UsersFDTable.Refresh;
-  end
-  else
-  begin
-    ShowMessage('A user with that username already exists.');
   end;
 end;
 
 procedure TfrmMain.FormActivate(Sender: TObject);
 begin
-  if FRanOnce then
-  begin
-    if LeadsBindSourceDB.DataSet.State = TDataSetState.dsEdit then
-      LeadsBindSourceDB.DataSet.Post;
-    TBindSourceDB(BindNavigator1.DataSource).DataSet.Refresh;
-  end;
+//  if FRanOnce then
+//  begin
+//    if LeadsBindSourceDB.DataSet.State = TDataSetState.dsEdit then
+//      LeadsBindSourceDB.DataSet.Post;
+//    TBindSourceDB(BindNavigator1.DataSource).DataSet.Refresh;
+//  end;
 end;
 
 procedure TfrmMain.FormCreate(Sender: TObject);

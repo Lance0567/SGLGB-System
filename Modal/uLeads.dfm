@@ -102,7 +102,7 @@ object LeadsForm: TLeadsForm
                 AlignWithMargins = True
                 Left = 3
                 Top = 3
-                Width = 145
+                Width = 144
                 Height = 30
                 Align = alTop
                 Caption = 'Date Contacted'
@@ -112,13 +112,14 @@ object LeadsForm: TLeadsForm
                 Font.Name = 'Segoe UI'
                 Font.Style = []
                 ParentFont = False
+                ExplicitWidth = 145
               end
               object DateContactedPicker: TDateTimePicker
                 AlignWithMargins = True
                 Left = 3
                 Top = 46
                 Width = 144
-                Height = 29
+                Height = 31
                 Margins.Top = 10
                 Align = alClient
                 Date = 43916.000000000000000000
@@ -147,7 +148,7 @@ object LeadsForm: TLeadsForm
                 AlignWithMargins = True
                 Left = 3
                 Top = 3
-                Width = 122
+                Width = 144
                 Height = 30
                 Align = alTop
                 Caption = 'Date Created'
@@ -157,13 +158,14 @@ object LeadsForm: TLeadsForm
                 Font.Name = 'Segoe UI'
                 Font.Style = []
                 ParentFont = False
+                ExplicitWidth = 122
               end
               object DateCreatedPicker: TDateTimePicker
                 AlignWithMargins = True
                 Left = 3
                 Top = 46
                 Width = 144
-                Height = 29
+                Height = 31
                 Margins.Top = 10
                 Align = alClient
                 Date = 43916.000000000000000000
@@ -192,7 +194,7 @@ object LeadsForm: TLeadsForm
                 AlignWithMargins = True
                 Left = 3
                 Top = 3
-                Width = 120
+                Width = 144
                 Height = 30
                 Align = alTop
                 Caption = 'Date Drafted'
@@ -202,13 +204,14 @@ object LeadsForm: TLeadsForm
                 Font.Name = 'Segoe UI'
                 Font.Style = []
                 ParentFont = False
+                ExplicitWidth = 120
               end
               object DateDraftedPicker: TDateTimePicker
                 AlignWithMargins = True
                 Left = 3
                 Top = 46
                 Width = 144
-                Height = 29
+                Height = 31
                 Margins.Top = 10
                 Align = alClient
                 Date = 43916.000000000000000000
@@ -237,7 +240,7 @@ object LeadsForm: TLeadsForm
                 AlignWithMargins = True
                 Left = 3
                 Top = 3
-                Width = 112
+                Width = 144
                 Height = 30
                 Align = alTop
                 Caption = 'Date Closed'
@@ -247,13 +250,14 @@ object LeadsForm: TLeadsForm
                 Font.Name = 'Segoe UI'
                 Font.Style = []
                 ParentFont = False
+                ExplicitWidth = 112
               end
               object DateClosedPicker: TDateTimePicker
                 AlignWithMargins = True
                 Left = 3
                 Top = 46
                 Width = 144
-                Height = 29
+                Height = 31
                 Margins.Top = 10
                 Align = alClient
                 Date = 43916.000000000000000000
@@ -283,7 +287,7 @@ object LeadsForm: TLeadsForm
               AlignWithMargins = True
               Left = 3
               Top = 3
-              Width = 41
+              Width = 594
               Height = 30
               Align = alTop
               Caption = 'User'
@@ -293,6 +297,7 @@ object LeadsForm: TLeadsForm
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
+              ExplicitWidth = 41
             end
             object UserEdit: TEdit
               AlignWithMargins = True
@@ -326,7 +331,7 @@ object LeadsForm: TLeadsForm
               AlignWithMargins = True
               Left = 3
               Top = 3
-              Width = 50
+              Width = 594
               Height = 30
               Align = alTop
               Caption = 'Email'
@@ -336,6 +341,7 @@ object LeadsForm: TLeadsForm
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
+              ExplicitWidth = 50
             end
             object EmailEdit: TEdit
               AlignWithMargins = True
@@ -379,7 +385,7 @@ object LeadsForm: TLeadsForm
               AlignWithMargins = True
               Left = 3
               Top = 3
-              Width = 121
+              Width = 594
               Height = 30
               Align = alTop
               Caption = 'Office Phone'
@@ -389,6 +395,7 @@ object LeadsForm: TLeadsForm
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
+              ExplicitWidth = 121
             end
             object OfficePhoneEdit: TEdit
               AlignWithMargins = True
@@ -433,7 +440,7 @@ object LeadsForm: TLeadsForm
               AlignWithMargins = True
               Left = 3
               Top = 3
-              Width = 139
+              Width = 594
               Height = 30
               Align = alTop
               Caption = 'Account Name'
@@ -443,6 +450,7 @@ object LeadsForm: TLeadsForm
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
+              ExplicitWidth = 139
             end
             object AccountNameComboBox: TComboBox
               AlignWithMargins = True
@@ -475,7 +483,7 @@ object LeadsForm: TLeadsForm
               AlignWithMargins = True
               Left = 3
               Top = 3
-              Width = 56
+              Width = 594
               Height = 30
               Align = alTop
               Caption = 'Name'
@@ -485,6 +493,7 @@ object LeadsForm: TLeadsForm
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
+              ExplicitWidth = 56
             end
             object NameEdit: TEdit
               AlignWithMargins = True
@@ -542,6 +551,7 @@ object LeadsForm: TLeadsForm
               Font.Height = -16
               Font.Name = 'Segoe UI'
               Font.Style = []
+              ItemIndex = 0
               ParentFont = False
               TabOrder = 0
               Text = 'New'
@@ -604,7 +614,7 @@ object LeadsForm: TLeadsForm
               Left = 3
               Top = 3
               Width = 73
-              Height = 30
+              Height = 27
               Align = alLeft
               Caption = 'Lead Id:'
               Font.Charset = DEFAULT_CHARSET
@@ -613,13 +623,14 @@ object LeadsForm: TLeadsForm
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
+              ExplicitHeight = 30
             end
             object LeadIdLabel: TLabel
               AlignWithMargins = True
               Left = 82
               Top = 3
               Width = 6
-              Height = 30
+              Height = 27
               Align = alLeft
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
@@ -627,6 +638,7 @@ object LeadsForm: TLeadsForm
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
+              ExplicitHeight = 30
             end
           end
         end
@@ -704,7 +716,6 @@ object LeadsForm: TLeadsForm
             end
           end
           object DocStringGrid: TStringGrid
-            Tag = 2
             AlignWithMargins = True
             Left = 3
             Top = 201
@@ -713,15 +724,16 @@ object LeadsForm: TLeadsForm
             Align = alClient
             BorderStyle = bsNone
             Color = clBtnFace
-            ColCount = 2
+            ColCount = 1
             DefaultRowHeight = 48
             FixedCols = 0
             RowCount = 2
             Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goRowSelect]
             TabOrder = 1
             ColWidths = (
-              64
-              229)
+              64)
+            ColAligments = (
+              0)
           end
         end
       end
@@ -742,7 +754,7 @@ object LeadsForm: TLeadsForm
         Left = 108
         Top = 15
         Width = 167
-        Height = 45
+        Height = 37
         Margins.Top = 15
         Margins.Bottom = 15
         Align = alLeft
@@ -754,6 +766,7 @@ object LeadsForm: TLeadsForm
         Font.Style = [fsBold]
         ParentFont = False
         Layout = tlCenter
+        ExplicitHeight = 45
       end
       object VirtualImage3: TVirtualImage
         Left = 0
@@ -761,7 +774,7 @@ object LeadsForm: TLeadsForm
         Width = 105
         Height = 67
         Align = alLeft
-        ImageCollection = MainForm.ImageCollection1
+        ImageCollection = frmMain.ImageCollection1
         ImageWidth = 0
         ImageHeight = 0
         ImageIndex = 8
@@ -818,8 +831,6 @@ object LeadsForm: TLeadsForm
         FullRepaint = False
         TabOrder = 0
         OnResize = LeadRelativePanelResize
-        ExplicitLeft = 173
-        ExplicitWidth = 868
         DesignSize = (
           763
           67)
@@ -833,7 +844,7 @@ object LeadsForm: TLeadsForm
           Caption = 'Create Proposal'
           ImageIndex = 9
           ImageName = 'baseline_create_white'
-          Images = MainForm.VirtualImageList1
+          Images = frmMain.VirtualImageList1
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -16
@@ -852,7 +863,7 @@ object LeadsForm: TLeadsForm
           Caption = 'View Proposal'
           ImageIndex = 12
           ImageName = 'baseline_launch_white'
-          Images = MainForm.VirtualImageList1
+          Images = frmMain.VirtualImageList1
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -16
@@ -871,7 +882,7 @@ object LeadsForm: TLeadsForm
           Caption = 'Cancel Proposal'
           ImageIndex = 14
           ImageName = 'baseline_clear_white'
-          Images = MainForm.VirtualImageList1
+          Images = frmMain.VirtualImageList1
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -16
@@ -890,7 +901,7 @@ object LeadsForm: TLeadsForm
           Caption = 'Complete Proposal'
           ImageIndex = 1
           ImageName = 'baseline_account_balance_white'
-          Images = MainForm.VirtualImageList1
+          Images = frmMain.VirtualImageList1
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -16
@@ -902,167 +913,10 @@ object LeadsForm: TLeadsForm
       end
     end
   end
-  object LeadsBindSourceDB: TBindSourceDB
-    DataSet = DM.LeadsFDTable
-    ScopeMappings = <>
-    Left = 248
-    Top = 88
-  end
-  object BindingsList1: TBindingsList
-    Methods = <>
-    OutputConverters = <>
-    Left = 20
-    Top = 5
-    object LinkControlToField1: TLinkControlToField
-      Category = 'Quick Bindings'
-      DataSource = LeadsBindSourceDB
-      FieldName = 'Name'
-      Control = NameEdit
-      Track = True
-    end
-    object LinkControlToField3: TLinkControlToField
-      Category = 'Quick Bindings'
-      DataSource = LeadsBindSourceDB
-      FieldName = 'OfficePhone'
-      Control = OfficePhoneEdit
-      Track = True
-    end
-    object LinkControlToField4: TLinkControlToField
-      Category = 'Quick Bindings'
-      DataSource = LeadsBindSourceDB
-      FieldName = 'Email'
-      Control = EmailEdit
-      Track = True
-    end
-    object LinkControlToField5: TLinkControlToField
-      Category = 'Quick Bindings'
-      DataSource = LeadsBindSourceDB
-      FieldName = 'User'
-      Control = UserEdit
-      Track = True
-    end
-    object LinkFillControlToField1: TLinkFillControlToField
-      Category = 'Quick Bindings'
-      DataSource = LeadsBindSourceDB
-      FieldName = 'Status'
-      Control = StatusComboBox
-      Track = True
-      FillDataSource = StatusBindSourceDB
-      FillValueFieldName = 'Status'
-      FillDisplayFieldName = 'Status'
-      AutoFill = True
-      FillExpressions = <>
-      FillHeaderExpressions = <>
-      FillBreakGroups = <>
-    end
-    object LinkFillControlToField2: TLinkFillControlToField
-      Category = 'Quick Bindings'
-      DataSource = LeadsBindSourceDB
-      FieldName = 'AccountName'
-      Control = AccountNameComboBox
-      Track = True
-      FillDataSource = AcctBindSourceDB
-      FillValueFieldName = 'AccountName'
-      FillDisplayFieldName = 'AccountName'
-      AutoFill = True
-      FillExpressions = <>
-      FillHeaderExpressions = <>
-      FillBreakGroups = <>
-    end
-    object LinkControlToField6: TLinkControlToField
-      Category = 'Quick Bindings'
-      DataSource = LeadsBindSourceDB
-      FieldName = 'DateCreated'
-      Control = DateCreatedPicker
-      OnAssignedValue = LinkControlToField6AssignedValue
-      Track = True
-    end
-    object LinkControlToField7: TLinkControlToField
-      Category = 'Quick Bindings'
-      DataSource = LeadsBindSourceDB
-      FieldName = 'Notes'
-      Control = NotesMemo
-      Track = False
-    end
-    object LinkGridToDataSourceBindSourceDB4: TLinkGridToDataSource
-      Category = 'Quick Bindings'
-      DataSource = DocsBindSourceDB
-      GridControl = DocStringGrid
-      Columns = <
-        item
-          MemberName = 'DocId'
-        end
-        item
-          MemberName = 'DocumentName'
-          Width = 229
-        end>
-    end
-    object LinkControlToField8: TLinkControlToField
-      Category = 'Quick Bindings'
-      DataSource = LeadsBindSourceDB
-      FieldName = 'DateDrafted'
-      Control = DateDraftedPicker
-      OnAssignedValue = LinkControlToField8AssignedValue
-      Track = True
-    end
-    object LinkControlToField9: TLinkControlToField
-      Category = 'Quick Bindings'
-      DataSource = LeadsBindSourceDB
-      FieldName = 'DateClosed'
-      Control = DateClosedPicker
-      OnAssignedValue = LinkControlToField9AssignedValue
-      Track = True
-    end
-    object LinkControlToField10: TLinkControlToField
-      Category = 'Quick Bindings'
-      DataSource = LeadsBindSourceDB
-      FieldName = 'DateContacted'
-      Control = DateContactedPicker
-      OnAssignedValue = LinkControlToField10AssignedValue
-      Track = True
-    end
-    object LinkPropertyToFieldCaption: TLinkPropertyToField
-      Category = 'Quick Bindings'
-      DataSource = LeadsBindSourceDB
-      FieldName = 'LeadId'
-      Component = LeadIdLabel
-      ComponentProperty = 'Caption'
-    end
-  end
-  object StatusBindSourceDB: TBindSourceDB
-    DataSet = DM.StatusFDMemTable
-    ScopeMappings = <>
-    Left = 696
-    Top = 80
-  end
   object OpenDialog1: TOpenDialog
     DefaultExt = 'pdf'
     Filter = 'Documents (*.pdf)|*.pdf'
     Left = 700
     Top = 402
-  end
-  object AcctBindSourceDB: TBindSourceDB
-    DataSet = DM.AcctFDTable
-    ScopeMappings = <>
-    Left = 136
-    Top = 88
-  end
-  object DocsBindSourceDB: TBindSourceDB
-    DataSet = DM.FDDocsQuery
-    ScopeMappings = <>
-    Left = 376
-    Top = 96
-  end
-  object UsersBindSourceDB: TBindSourceDB
-    DataSet = DM.UsersFDTable
-    ScopeMappings = <>
-    Left = 480
-    Top = 88
-  end
-  object ProposalBindSourceDB: TBindSourceDB
-    DataSet = DM.ProposalsFDTable
-    ScopeMappings = <>
-    Left = 592
-    Top = 80
   end
 end

@@ -109,26 +109,19 @@ object DraftProposalForm: TDraftProposalForm
         TabOrder = 1
         ExplicitWidth = 780
         object LineItemsStringGrid: TStringGrid
-          Tag = 4
           AlignWithMargins = True
           Left = 3
           Top = 3
           Width = 776
           Height = 184
-          ColCount = 4
+          ColCount = 1
           FixedCols = 0
           RowCount = 2
           Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing]
           TabOrder = 0
           ColWidths = (
-            64
-            124
-            64
             64)
           ColAligments = (
-            1
-            0
-            1
             1)
         end
         object BindNavigator1: TBindNavigator
@@ -137,7 +130,6 @@ object DraftProposalForm: TDraftProposalForm
           Top = 195
           Width = 770
           Height = 25
-          DataSource = BindSourceDBLineItems
           Orientation = orHorizontal
           TabOrder = 1
         end
@@ -198,7 +190,6 @@ object DraftProposalForm: TDraftProposalForm
             Font.Style = []
             ParentFont = False
             Layout = tlCenter
-            ExplicitLeft = 611
             ExplicitHeight = 19
           end
           object TotalEdit: TEdit
@@ -311,7 +302,6 @@ object DraftProposalForm: TDraftProposalForm
             Font.Style = [fsBold]
             ParentFont = False
             Layout = tlCenter
-            ExplicitLeft = 676
             ExplicitHeight = 45
           end
           object CompanyEdit: TEdit
@@ -440,8 +430,8 @@ object DraftProposalForm: TDraftProposalForm
         end
       end
       object ProposalCSSMemo: TMemo
-        Left = 344
-        Top = 37
+        Left = 349
+        Top = 36
         Width = 393
         Height = 23
         Lines.Strings = (
@@ -654,84 +644,5 @@ object DraftProposalForm: TDraftProposalForm
         end
       end
     end
-  end
-  object BindSourceDBProposal: TBindSourceDB
-    DataSet = DM.ProposalsFDTable
-    ScopeMappings = <>
-    Left = 560
-    Top = 384
-  end
-  object BindSourceDBLineItems: TBindSourceDB
-    DataSource.OnDataChange = BindSourceDBLineItemsSubDataSourceDataChange
-    DataSet = DM.LineItemsFDMemTable
-    ScopeMappings = <>
-    Left = 400
-    Top = 408
-  end
-  object BindingsList1: TBindingsList
-    Methods = <>
-    OutputConverters = <>
-    Left = 788
-    Top = 29
-    object LinkGridToDataSourceBindSourceDB2: TLinkGridToDataSource
-      Category = 'Quick Bindings'
-      DataSource = BindSourceDBLineItems
-      GridControl = LineItemsStringGrid
-      Columns = <>
-    end
-    object LinkControlToField1: TLinkControlToField
-      Category = 'Quick Bindings'
-      DataSource = BindSourceDBDraftProposal
-      FieldName = 'CompanyName'
-      Control = CompanyEdit
-      Track = True
-    end
-    object LinkControlToField2: TLinkControlToField
-      Category = 'Quick Bindings'
-      DataSource = BindSourceDBDraftProposal
-      FieldName = 'Address1'
-      Control = Address1Edit
-      Track = True
-    end
-    object LinkControlToField3: TLinkControlToField
-      Category = 'Quick Bindings'
-      DataSource = BindSourceDBDraftProposal
-      FieldName = 'Address2'
-      Control = Address2Edit
-      Track = True
-    end
-    object LinkControlToField4: TLinkControlToField
-      Category = 'Quick Bindings'
-      DataSource = BindSourceDBDraftProposal
-      FieldName = 'Date'
-      Control = DateEdit
-      Track = True
-    end
-    object LinkControlToField5: TLinkControlToField
-      Category = 'Quick Bindings'
-      DataSource = BindSourceDBDraftProposal
-      FieldName = 'Phone'
-      Control = PhoneEdit
-      Track = True
-    end
-    object LinkControlToField6: TLinkControlToField
-      Category = 'Quick Bindings'
-      DataSource = BindSourceDBDraftProposal
-      FieldName = 'Total'
-      Control = TotalEdit
-      Track = True
-    end
-  end
-  object BindSourceDBDraftProposal: TBindSourceDB
-    DataSet = DM.DraftProposalFDMemTable
-    ScopeMappings = <>
-    Left = 416
-    Top = 336
-  end
-  object BindSourceDBProposalQuery: TBindSourceDB
-    DataSet = DM.FDProposalsQuery
-    ScopeMappings = <>
-    Left = 584
-    Top = 440
   end
 end

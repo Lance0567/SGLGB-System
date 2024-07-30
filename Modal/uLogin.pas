@@ -98,6 +98,8 @@ begin
 //      end;
 //    end;
 //  end;
+  self.Tag := 1;
+  Close;
 end;
 
 procedure TfrmLogin.chckShowpassClick(Sender: TObject);
