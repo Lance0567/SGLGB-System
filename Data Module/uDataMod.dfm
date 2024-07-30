@@ -6,10 +6,10 @@ object DM: TDM
   object conSGLGB: TFDConnection
     Params.Strings = (
       
-        'Database=C:\Users\pc\Documents\Delphi\Development\MCS Project\SG' +
-        'LGB VCL\New Version\Win32\database\sglgb.db'
+        'Database=C:\Users\user\Documents\Delphi\SGLGB-System\Win32\datab' +
+        'ase\sglgb.db'
+      'LockingMode=Normal'
       'DriverID=SQLite')
-    Connected = True
     LoginPrompt = False
     Left = 328
     Top = 40
@@ -25,6 +25,7 @@ object DM: TDM
       FieldName = 'id'
       Origin = 'id'
       ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
     end
     object qMunicipalitiesmunicipality: TStringField
       DisplayWidth = 100
@@ -35,6 +36,7 @@ object DM: TDM
     end
   end
   object dsMunicipalities: TDataSource
+    DataSet = qMunicipalities
     Left = 192
     Top = 120
   end

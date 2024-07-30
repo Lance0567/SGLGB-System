@@ -127,7 +127,7 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Form\uMunicipalities.pas">
-            <Form>Municipalities</Form>
+            <Form>frmMunicipalities</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">

@@ -55,13 +55,14 @@ begin
   conSGLGB.Params.Values['Database'] := '';
 
   // Get the directory of the executable relative path
-  DBPath := ExtractFilePath(ParamStr(0)) + 'database\SGLGB.db';
+  DBPath := ExtractFilePath(ParamStr(0)) + 'database\sglgb.db';
   conSGLGB.Params.Values['DriverID'] := 'SQLite';
   conSGLGB.Params.Values['Database'] := DBPath;
 
   // Deactivate queries
-  qMunicipalities.Close;
-
+//  dm.qMunicipalities.Active := False;
+//
+//  conSGLGB.Connected := True;
 end;
 
 procedure TDM.DataModuleDestroy(Sender: TObject);

@@ -191,7 +191,6 @@ type
     procedure DashboardButtonClick(Sender: TObject);
     procedure MunicipalitiesTabResize(Sender: TObject);
     procedure btnRemoveMuniClick(Sender: TObject);
-    procedure ExportAcctsButtonClick(Sender: TObject);
     procedure CreateUserButtonClick(Sender: TObject);
     procedure RemoveUserButtonClick(Sender: TObject);
     procedure UsersTabResize(Sender: TObject);
@@ -210,9 +209,13 @@ type
     procedure LogOutClick(Sender: TObject);
     procedure AccountsSGDblClick(Sender: TObject);
     procedure btnCreateMuniClick(Sender: TObject);
+    procedure MunicipalitiesTabShow(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
   private
     { Private declarations }
     FRanOnce: Boolean;
+    FMutex: THandle;
+    function IsAlreadyRunning: Boolean;
     procedure AppIdle(Sender: TObject; var Done: Boolean);
     procedure RefreshGrids;
     procedure UpdateNavButtons;
@@ -229,6 +232,15 @@ implementation
 
 uses uDataMod, uLeads, uDraftProposal, uProposal;
 
+{-------------------------------Functions & Procedures-------------------------}
+function TfrmMain.IsAlreadyRunning: Boolean;
+begin
+  // Create a unique mutex name for your application
+  FMutex := CreateMutex(nil, False, 'MyUniqueApplicationMutex');
+  // Check if the mutex already exists
+  Result := (GetLastError = ERROR_ALREADY_EXISTS);
+end;
+
 procedure TfrmMain.RefreshGrids;
 begin
 //  LeadsBindClosedSourceDB.DataSet.Refresh;
@@ -243,8 +255,6 @@ var
 begin
   frmMunicipalities.ShowModal;
   LNewMunicipality := InputBox('Create New Municipality', 'Municipality Name', 'New Municipality');
-
-
 end;
 
 procedure TfrmMain.btnRemoveMuniClick(Sender: TObject);
@@ -336,7 +346,32 @@ end;
 
 procedure TfrmMain.MunicipalitiesTabResize(Sender: TObject);
 begin
-//
+  // Check if the grid has at least two columns
+  if dbgMunicipalities.Columns.Count > 1 then
+  begin
+    // Define the width for the first column
+    dbgMunicipalities.Columns[0].Width := 100; // Example fixed width
+    // Calculate and set the width for the second column
+    // Ensure that the grid's width is sufficient for this operation
+    if dbgMunicipalities.ClientWidth > dbgMunicipalities.Columns[0].Width then
+    begin
+      dbgMunicipalities.Columns[1].Width := dbgMunicipalities.ClientWidth - dbgMunicipalities.Columns[0].Width;
+      // Prevent negative width
+      if dbgMunicipalities.Columns[1].Width < 0 then
+        dbgMunicipalities.Columns[1].Width := 0;
+    end
+    else
+    begin
+      // If the grid width is less than the first column's width, adjust accordingly
+      dbgMunicipalities.Columns[0].Width := dbgMunicipalities.ClientWidth; // Use the full width for the first column
+      dbgMunicipalities.Columns[1].Width := 0; // No space left for the second column
+    end;
+  end;
+end;
+
+procedure TfrmMain.MunicipalitiesTabShow(Sender: TObject);
+begin
+  dm.qMunicipalities.Active := True;
 end;
 
 procedure TfrmMain.UsersTabResize(Sender: TObject);
@@ -641,12 +676,26 @@ var
 begin
   Application.OnIdle := AppIdle;
 
+  if IsAlreadyRunning then
+  begin
+    MessageBox(0, 'The application is already running!', 'Information', MB_OK or MB_ICONINFORMATION)
+  end;
+
   for StyleName in TStyleManager.StyleNames do
     VCLStylesCB.Items.Add(StyleName);
 
   VCLStylesCB.ItemIndex := VCLStylesCB.Items.IndexOf(TStyleManager.ActiveStyle.Name);
 
   UpdateNavButtons;
+end;
+
+procedure TfrmMain.FormDestroy(Sender: TObject);
+begin
+  // Release the mutex
+  if FMutex <> 0 then
+  begin
+
+  end;
 end;
 
 procedure TfrmMain.UpdateNavButtons;

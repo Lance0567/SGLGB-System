@@ -10,7 +10,7 @@ uses
   Vcl.Themes,
   Vcl.Styles,
   uLogin in 'Modal\uLogin.pas' {frmLogin},
-  uMunicipalities in 'Form\uMunicipalities.pas' {Municipalities};
+  uMunicipalities in 'Form\uMunicipalities.pas' {frmMunicipalities};
 
 {$R *.res}
 
@@ -24,6 +24,6 @@ begin
   Application.CreateForm(TLeadsForm, LeadsForm);
   Application.CreateForm(TProposalForm, ProposalForm);
   Application.CreateForm(TfrmLogin, frmLogin);
-  Application.CreateForm(TMunicipalities, Municipalities);
+  Application.CreateForm(TfrmMunicipalities, frmMunicipalities);
   Application.Run;
 end.

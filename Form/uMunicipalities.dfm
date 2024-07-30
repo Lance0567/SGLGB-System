@@ -1,4 +1,4 @@
-object Municipalities: TMunicipalities
+object frmMunicipalities: TfrmMunicipalities
   Left = 0
   Top = 0
   Caption = 'Municipalities Form'

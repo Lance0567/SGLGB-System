@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
 
 type
-  TMunicipalities = class(TForm)
+  TfrmMunicipalities = class(TForm)
   private
     { Private declarations }
   public
@@ -15,7 +15,7 @@ type
   end;
 
 var
-  Municipalities: TMunicipalities;
+  frmMunicipalities: TfrmMunicipalities;
 
 implementation
 
