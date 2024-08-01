@@ -1,9 +1,6 @@
 ﻿[VirtualImage2]
 Coordinates=121,598,94,36
 
-[StringGrid2]
-Coordinates=626,212,80,58
-
 [ProposalSentLeadsSG]
 Coordinates=130,484,145,58
 
@@ -183,17 +180,11 @@ Coordinates=467,598,119,36
 [CompleteProposalButton]
 Coordinates=748,484,157,36
 
-[ProposalStringGrid]
-Coordinates=445,348,124,58
-
 [Label10]
 Coordinates=396,484,60,58
 
 [ViewLeadButton]
 Coordinates=267,644,108,36
-
-[MarketingTab]
-Coordinates=1101,552,93,36
 
 [CreateLeadButton]
 Coordinates=825,598,119,36
@@ -215,9 +206,6 @@ Coordinates=764,552,99,36
 
 [VirtualImage7]
 Coordinates=721,598,94,36
-
-[ExportEmailsButton]
-Coordinates=225,598,128,36
 
 [VirtualImageList1]
 Coordinates=1504,1482,114,36
@@ -376,7 +364,7 @@ Coordinates=44,70,57,36
 Coordinates=121,690,55,36
 
 []
-Coordinates=263,78,91,36
+Coordinates=626,212,80,58
 
 [DM.]
 Coordinates=906,898,78,58
@@ -388,17 +376,11 @@ Coordinates=10,484,110,58
 [btnMOVs]
 Coordinates=767,144,68,58
 
-[btnReports]
-Coordinates=240,416,77,58
-
 [MunicipalitiesTab]
 Coordinates=365,552,115,36
 
 [MOVsTabs]
 Coordinates=630,644,78,36
-
-[ReportsTab]
-Coordinates=873,552,82,36
 
 [btnRemoveMuni]
 Coordinates=512,644,108,36
@@ -420,4 +402,16 @@ Coordinates=596,598,115,36
 
 [btnExportMuni]
 Coordinates=490,552,120,36
+
+[BarangaysTab]
+Coordinates=873,552,82,36
+
+[btnBarangay]
+Coordinates=240,416,77,58
+
+[DCFTab]
+Coordinates=1101,552,93,36
+
+[btnCreateDCF]
+Coordinates=225,598,128,36
 

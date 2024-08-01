@@ -67,11 +67,10 @@ type
     Label20: TLabel;
     Label21: TLabel;
     Label22: TLabel;
-    ReportsTab: TTabSheet;
+    BarangaysTab: TTabSheet;
     Panel6: TPanel;
     Label23: TLabel;
     SalesSearchBox: TSearchBox;
-    ProposalStringGrid: TStringGrid;
     BindNavigator3: TBindNavigator;
     MunicipalitiesTab: TTabSheet;
     Panel7: TPanel;
@@ -86,11 +85,10 @@ type
     UsersSG: TStringGrid;
     BindNavigator5: TBindNavigator;
     UsernameComboBox: TComboBox;
-    MarketingTab: TTabSheet;
+    DCFTab: TTabSheet;
     Panel3: TPanel;
     Label2: TLabel;
     EmailsSearchBox: TSearchBox;
-    StringGrid2: TStringGrid;
     SaveEmailsDialog: TSaveDialog;
     NewLeadsPanel: TPanel;
     Splitter1: TSplitter;
@@ -121,14 +119,14 @@ type
     CancelProposalButton: TSpeedButton;
     CompleteProposalButton: TSpeedButton;
     MarketingRelativePanel: TRelativePanel;
-    ExportEmailsButton: TSpeedButton;
+    btnCreateDCF: TSpeedButton;
     UsersRelativePanel: TRelativePanel;
     CreateUserButton: TSpeedButton;
     RemoveUserButton: TSpeedButton;
     DashboardButton: TButton;
     btnMunicipalities: TButton;
     btnMOVs: TButton;
-    btnReports: TButton;
+    btnBarangay: TButton;
     MarketingButton: TButton;
     CalendarButton: TButton;
     UsersButton: TButton;
@@ -158,6 +156,9 @@ type
     LogOut: TMenuItem;
     btnEdit: TSpeedButton;
     dbgMunicipalities: TDBGrid;
+    RelativePanel7: TRelativePanel;
+    dbgBarangays: TDBGrid;
+    dbgDCF: TDBGrid;
     procedure CalendarView1DrawDayItem(Sender: TObject;
       DrawParams: TDrawViewInfoParams; CalendarViewViewInfo: TCellItemViewInfo);
     procedure AcctSearchBoxKeyPress(Sender: TObject; var Key: Char);
@@ -184,7 +185,7 @@ type
     procedure CreateLeadButtonClick(Sender: TObject);
     procedure ExportLeadsButtonClick(Sender: TObject);
     procedure ViewLeadButtonClick(Sender: TObject);
-    procedure ExportEmailsButtonClick(Sender: TObject);
+    procedure btnCreateDCFClick(Sender: TObject);
     procedure SplitViewOpening(Sender: TObject);
     procedure SplitViewClosing(Sender: TObject);
     procedure CreateAcctButtonClick(Sender: TObject);
@@ -207,7 +208,6 @@ type
     procedure FormShow(Sender: TObject);
     procedure LoginClick(Sender: TObject);
     procedure LogOutClick(Sender: TObject);
-    procedure AccountsSGDblClick(Sender: TObject);
     procedure btnCreateMuniClick(Sender: TObject);
     procedure MunicipalitiesTabShow(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -225,6 +225,7 @@ type
 
 var
   frmMain: TfrmMain;
+  AppMutex: THandle;
 
 implementation
 
@@ -267,11 +268,6 @@ begin
 //  UsersBindSourceDB.DataSet.Delete;
 end;
 
-procedure TfrmMain.AccountsSGDblClick(Sender: TObject);
-begin
-// double click record in the grid
-end;
-
 procedure TfrmMain.AcctSearchBoxKeyPress(Sender: TObject; var Key: Char);
 begin
 //
@@ -306,7 +302,7 @@ begin
     0: DashboardButton.SetFocus;
     1: btnMunicipalities.SetFocus;
     2: btnMOVs.SetFocus;
-    3: btnReports.SetFocus;
+    3: btnBarangay.SetFocus;
     4: begin
       MarketingButton.SetFocus;
 //      EmailsBindSourceDB.DataSet.Refresh;
@@ -327,7 +323,7 @@ begin
   DashboardButton.Caption := '';
   btnMunicipalities.Caption := '';
   btnMOVs.Caption := '';
-  btnReports.Caption := '';
+  btnBarangay.Caption := '';
   MarketingButton.Caption := '';
   CalendarButton.Caption := '';
   UsersButton.Caption := '';
@@ -338,7 +334,7 @@ begin
   DashboardButton.Caption := '          '+DashboardButton.Hint;
   btnMunicipalities.Caption := '          '+btnMunicipalities.Hint;
   btnMOVs.Caption := '          '+btnMOVs.Hint;
-  btnReports.Caption := '          '+btnReports.Hint;
+  btnBarangay.Caption := '          '+btnBarangay.Hint;
   MarketingButton.Caption := '          '+MarketingButton.Hint;
   CalendarButton.Caption := '          '+CalendarButton.Hint;
   UsersButton.Caption := '          '+UsersButton.Hint;
@@ -561,13 +557,13 @@ procedure TfrmMain.MarketingRelativePanelResize(Sender: TObject);
 begin
   if MarketingRelativePanel.Width<=320 then
   begin
-    ExportEmailsButton.Caption := '';
-    ExportEmailsButton.Width := 40;
+    btnCreateDCF.Caption := '';
+    btnCreateDCF.Width := 40;
   end
   else
   begin
-    ExportEmailsButton.Caption := ExportEmailsButton.Hint;
-    ExportEmailsButton.Width := 121;
+    btnCreateDCF.Caption := btnCreateDCF.Hint;
+    btnCreateDCF.Width := 121;
   end;
 end;
 
@@ -637,7 +633,7 @@ begin
 //
 end;
 
-procedure TfrmMain.ExportEmailsButtonClick(Sender: TObject);
+procedure TfrmMain.btnCreateDCFClick(Sender: TObject);
 begin
   if SaveEmailsDialog.Execute then
   begin
@@ -709,8 +705,8 @@ begin
   btnMunicipalities.Caption := '          '+btnMunicipalities.Hint;
   SetWindowLong(btnMOVs.Handle, GWL_STYLE, LStyle or BS_LEFT);
   btnMOVs.Caption := '          '+btnMOVs.Hint;
-  SetWindowLong(btnReports.Handle, GWL_STYLE, LStyle or BS_LEFT);
-  btnReports.Caption := '          '+btnReports.Hint;
+  SetWindowLong(btnBarangay.Handle, GWL_STYLE, LStyle or BS_LEFT);
+  btnBarangay.Caption := '          '+btnBarangay.Hint;
   SetWindowLong(MarketingButton.Handle, GWL_STYLE, LStyle or BS_LEFT);
   MarketingButton.Caption := '          '+MarketingButton.Hint;
   SetWindowLong(CalendarButton.Handle, GWL_STYLE, LStyle or BS_LEFT);

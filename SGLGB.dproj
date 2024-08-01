@@ -130,6 +130,10 @@
             <Form>frmMunicipalities</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Form\uDCF.pas">
+            <Form>frmDCF</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
