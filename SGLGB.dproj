@@ -134,6 +134,10 @@
             <Form>frmDCF</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Modal\uSettings.pas">
+            <Form>frmSettings</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

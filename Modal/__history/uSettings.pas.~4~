@@ -1,0 +1,64 @@
+unit uSettings;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls,
+  Vcl.ExtCtrls, Vcl.DBCtrls, Vcl.Mask, Vcl.ToolWin, System.Skia, Vcl.Skia;
+
+type
+  TfrmSettings = class(TForm)
+    ToolBar1: TToolBar;
+    PageControl1: TPageControl;
+    TabSheet1: TTabSheet;
+    GroupBox1: TGroupBox;
+    DBEdit1: TDBEdit;
+    GroupBox2: TGroupBox;
+    DBEdit2: TDBEdit;
+    GroupBox3: TGroupBox;
+    DBEdit3: TDBEdit;
+    GroupBox5: TGroupBox;
+    DBEdit5: TDBEdit;
+    GroupBox6: TGroupBox;
+    GroupBox4: TGroupBox;
+    DBEdit4: TDBEdit;
+    Panel1: TPanel;
+    btClose: TButton;
+    TabSheet3: TTabSheet;
+    history: TRichEdit;
+    Panel3: TPanel;
+    btSaveLogo: TButton;
+    gpLogoHolder: TGridPanel;
+    Panel2: TPanel;
+    SkLabel1: TSkLabel;
+    DBImage1: TDBImage;
+    gpLogo1: TGridPanel;
+    btnUpload1: TButton;
+    btnDelete1: TButton;
+    Panel4: TPanel;
+    SkLabel2: TSkLabel;
+    DBImage2: TDBImage;
+    gpLogo2: TGridPanel;
+    btnUpload2: TButton;
+    btnDelete2: TButton;
+    Panel5: TPanel;
+    SkLabel3: TSkLabel;
+    DBImage3: TDBImage;
+    gpLogo3: TGridPanel;
+    btnUpload3: TButton;
+    btnDelete3: TButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmSettings: TfrmSettings;
+
+implementation
+
+{$R *.dfm}
+
+end.

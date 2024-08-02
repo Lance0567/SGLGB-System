@@ -3,7 +3,7 @@ object frmDCF: TfrmDCF
   Top = 0
   Caption = 'Data Capture Form (DCF)'
   ClientHeight = 508
-  ClientWidth = 864
+  ClientWidth = 773
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,421 +15,75 @@ object frmDCF: TfrmDCF
   object PageControl1: TPageControl
     Left = 0
     Top = 0
-    Width = 864
+    Width = 773
     Height = 508
     ActivePage = tsDetails
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 771
-    ExplicitHeight = 505
     object tsDetails: TTabSheet
       Caption = 'Details'
       ImageIndex = 2
-      object RelativePanel4: TRelativePanel
+      object ScrollBox2: TScrollBox
         Left = 0
         Top = 0
-        Width = 856
+        Width = 765
         Height = 478
-        ControlCollection = <
-          item
-            Control = pProfile
-            AlignBottomWithPanel = True
-            AlignHorizontalCenterWithPanel = False
-            AlignLeftWithPanel = False
-            AlignRightWithPanel = True
-            AlignTopWithPanel = True
-            AlignVerticalCenterWithPanel = False
-            RightOf = ScrollBox2
-          end
-          item
-            Control = ScrollBox2
-            AlignBottomWithPanel = True
-            AlignHorizontalCenterWithPanel = False
-            AlignLeftWithPanel = True
-            AlignRightWithPanel = False
-            AlignTopWithPanel = True
-            AlignVerticalCenterWithPanel = False
-          end>
         Align = alClient
+        BorderStyle = bsNone
         TabOrder = 0
-        ExplicitWidth = 765
-        DesignSize = (
-          856
-          478)
-        object pProfile: TPanel
-          Left = 625
-          Top = 1
-          Width = 241
-          Height = 476
-          Anchors = []
-          TabOrder = 0
-          object Image1: TImage
-            AlignWithMargins = True
-            Left = 26
-            Top = 16
-            Width = 189
-            Height = 169
-            Margins.Left = 25
-            Margins.Top = 15
-            Margins.Right = 25
-            Align = alTop
-            ExplicitWidth = 168
-          end
-          object Panel4: TPanel
-            AlignWithMargins = True
-            Left = 31
-            Top = 198
-            Width = 179
-            Height = 227
-            Margins.Left = 30
-            Margins.Top = 10
-            Margins.Right = 30
-            Align = alTop
-            BevelOuter = bvNone
-            TabOrder = 0
-            object btnPrint: TButton
-              Left = 0
-              Top = 0
-              Width = 179
-              Height = 35
-              Margins.Top = 5
-              Align = alTop
-              Caption = 'Print Document'
-              TabOrder = 0
+        object RelativePanel4: TRelativePanel
+          Left = 0
+          Top = 0
+          Width = 765
+          Height = 478
+          ControlCollection = <
+            item
+              Control = pForm
+              AlignBottomWithPanel = True
+              AlignHorizontalCenterWithPanel = False
+              AlignLeftWithPanel = True
+              AlignRightWithPanel = False
+              AlignTopWithPanel = True
+              AlignVerticalCenterWithPanel = False
+              LeftOf = pProfile
             end
-            object btnComplete: TButton
-              AlignWithMargins = True
-              Left = 0
-              Top = 40
-              Width = 179
-              Height = 35
-              Margins.Left = 0
-              Margins.Top = 5
-              Margins.Right = 0
-              Margins.Bottom = 0
-              Align = alTop
-              Caption = 'Complete SGLGB'
-              TabOrder = 1
-            end
-            object btnPublish: TButton
-              AlignWithMargins = True
-              Left = 0
-              Top = 80
-              Width = 179
-              Height = 35
-              Margins.Left = 0
-              Margins.Top = 5
-              Margins.Right = 0
-              Margins.Bottom = 0
-              Align = alTop
-              Caption = 'Publish SGLGB'
-              TabOrder = 2
-            end
-          end
-        end
-        object ScrollBox2: TScrollBox
-          Left = 1
-          Top = 1
-          Width = 624
-          Height = 476
+            item
+              AlignBottomWithPanel = True
+              AlignHorizontalCenterWithPanel = False
+              AlignLeftWithPanel = False
+              AlignRightWithPanel = True
+              AlignTopWithPanel = True
+              AlignVerticalCenterWithPanel = False
+            end>
           Align = alClient
-          BorderStyle = bsNone
-          TabOrder = 1
+          TabOrder = 0
+          ExplicitWidth = 465
           object pForm: TPanel
             AlignWithMargins = True
-            Left = 10
-            Top = 3
-            Width = 599
+            Left = 0
+            Top = 4
+            Width = 521
             Height = 470
-            Margins.Left = 10
-            Margins.Right = 15
-            Align = alClient
             BevelOuter = bvNone
             TabOrder = 0
-            ExplicitWidth = 496
-            ExplicitHeight = 464
-            object pDCFId: TPanel
+            object Panel5: TPanel
               AlignWithMargins = True
-              Left = 3
-              Top = 5
-              Width = 593
-              Height = 33
-              Margins.Top = 5
-              Align = alTop
-              BevelOuter = bvNone
+              Left = 15
+              Top = 3
+              Width = 491
+              Height = 464
+              Margins.Left = 15
+              Margins.Right = 15
+              Align = alClient
               TabOrder = 0
-              ExplicitWidth = 490
-              object Label14: TLabel
-                AlignWithMargins = True
-                Left = 0
-                Top = 3
-                Width = 70
-                Height = 27
-                Margins.Left = 0
-                Align = alLeft
-                Caption = 'DCF ID:'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -21
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-                ExplicitLeft = 3
-                ExplicitHeight = 30
-              end
-              object DBEdit1: TDBEdit
-                AlignWithMargins = True
-                Left = 76
-                Top = 3
-                Width = 129
-                Height = 30
-                Margins.Bottom = 0
-                Align = alLeft
-                TabOrder = 0
-                ExplicitHeight = 23
-              end
-            end
-            object pStatus: TPanel
-              Left = 0
-              Top = 41
-              Width = 599
-              Height = 80
-              Align = alTop
-              BevelOuter = bvNone
-              FullRepaint = False
-              TabOrder = 1
-              object Label2: TLabel
-                AlignWithMargins = True
-                Left = 3
-                Top = 3
-                Width = 211
-                Height = 30
+              object Panel6: TPanel
+                Left = 1
+                Top = 1
+                Width = 489
+                Height = 80
                 Align = alTop
-                Caption = 'Status'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -21
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-                ExplicitWidth = 56
-              end
-              object StatusComboBox: TComboBox
-                AlignWithMargins = True
-                Left = 3
-                Top = 46
-                Width = 211
-                Height = 29
-                Margins.Top = 10
-                Align = alClient
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -16
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
+                Caption = 'Panel6'
                 TabOrder = 0
-                Text = 'New'
-                Items.Strings = (
-                  'New'
-                  'Active'
-                  'Proposal Sent'
-                  'Closed'
-                  'Inactive')
-                ExplicitWidth = 440
-              end
-            end
-            object pDates: TPanel
-              Left = 0
-              Top = 121
-              Width = 599
-              Height = 80
-              Align = alTop
-              BevelOuter = bvNone
-              FullRepaint = False
-              TabOrder = 2
-              ExplicitWidth = 496
-              object DateContactedPanel: TPanel
-                Left = 150
-                Top = 0
-                Width = 150
-                Height = 80
-                Align = alLeft
-                BevelOuter = bvNone
-                TabOrder = 0
-                object Label9: TLabel
-                  AlignWithMargins = True
-                  Left = 3
-                  Top = 3
-                  Width = 144
-                  Height = 30
-                  Align = alTop
-                  Caption = 'Date Contacted'
-                  Font.Charset = DEFAULT_CHARSET
-                  Font.Color = clWindowText
-                  Font.Height = -21
-                  Font.Name = 'Segoe UI'
-                  Font.Style = []
-                  ParentFont = False
-                  ExplicitWidth = 145
-                end
-                object DateContactedPicker: TDateTimePicker
-                  AlignWithMargins = True
-                  Left = 3
-                  Top = 46
-                  Width = 144
-                  Height = 31
-                  Margins.Top = 10
-                  Align = alClient
-                  Date = 43916.000000000000000000
-                  Format = ' '
-                  Time = 0.506186122685903700
-                  Font.Charset = DEFAULT_CHARSET
-                  Font.Color = clWindowText
-                  Font.Height = -16
-                  Font.Name = 'Segoe UI'
-                  Font.Style = []
-                  ParentFont = False
-                  TabOrder = 0
-                end
-              end
-              object DateCreatedPanel: TPanel
-                Left = 0
-                Top = 0
-                Width = 150
-                Height = 80
-                Align = alLeft
-                BevelOuter = bvNone
-                FullRepaint = False
-                TabOrder = 1
-                object Label8: TLabel
-                  AlignWithMargins = True
-                  Left = 3
-                  Top = 3
-                  Width = 144
-                  Height = 30
-                  Align = alTop
-                  Caption = 'Date Created'
-                  Font.Charset = DEFAULT_CHARSET
-                  Font.Color = clWindowText
-                  Font.Height = -21
-                  Font.Name = 'Segoe UI'
-                  Font.Style = []
-                  ParentFont = False
-                  ExplicitWidth = 122
-                end
-                object DateCreatedPicker: TDateTimePicker
-                  AlignWithMargins = True
-                  Left = 3
-                  Top = 46
-                  Width = 144
-                  Height = 31
-                  Margins.Top = 10
-                  Align = alClient
-                  Date = 43916.000000000000000000
-                  Format = ' '
-                  Time = 0.506186250000610000
-                  Font.Charset = DEFAULT_CHARSET
-                  Font.Color = clWindowText
-                  Font.Height = -16
-                  Font.Name = 'Segoe UI'
-                  Font.Style = []
-                  ParentFont = False
-                  TabOrder = 0
-                end
-              end
-              object DateDraftedPanel: TPanel
-                Left = 300
-                Top = 0
-                Width = 149
-                Height = 80
-                Align = alClient
-                BevelOuter = bvNone
-                FullRepaint = False
-                TabOrder = 2
-                ExplicitWidth = 46
-                object Label13: TLabel
-                  AlignWithMargins = True
-                  Left = 3
-                  Top = 3
-                  Width = 143
-                  Height = 30
-                  Align = alTop
-                  Caption = 'Date Drafted'
-                  Font.Charset = DEFAULT_CHARSET
-                  Font.Color = clWindowText
-                  Font.Height = -21
-                  Font.Name = 'Segoe UI'
-                  Font.Style = []
-                  ParentFont = False
-                  ExplicitWidth = 120
-                end
-                object DateDraftedPicker: TDateTimePicker
-                  AlignWithMargins = True
-                  Left = 3
-                  Top = 46
-                  Width = 143
-                  Height = 31
-                  Margins.Top = 10
-                  Align = alClient
-                  Date = 43916.000000000000000000
-                  Format = ' '
-                  Time = 0.506186516206071200
-                  Font.Charset = DEFAULT_CHARSET
-                  Font.Color = clWindowText
-                  Font.Height = -16
-                  Font.Name = 'Segoe UI'
-                  Font.Style = []
-                  ParentFont = False
-                  TabOrder = 0
-                  ExplicitWidth = 40
-                end
-              end
-              object DateClosedPanel: TPanel
-                Left = 449
-                Top = 0
-                Width = 150
-                Height = 80
-                Align = alRight
-                BevelOuter = bvNone
-                FullRepaint = False
-                TabOrder = 3
-                ExplicitLeft = 346
-                object Label12: TLabel
-                  AlignWithMargins = True
-                  Left = 3
-                  Top = 3
-                  Width = 144
-                  Height = 30
-                  Align = alTop
-                  Caption = 'Date Closed'
-                  Font.Charset = DEFAULT_CHARSET
-                  Font.Color = clWindowText
-                  Font.Height = -21
-                  Font.Name = 'Segoe UI'
-                  Font.Style = []
-                  ParentFont = False
-                  ExplicitWidth = 112
-                end
-                object DateClosedPicker: TDateTimePicker
-                  AlignWithMargins = True
-                  Left = 3
-                  Top = 46
-                  Width = 144
-                  Height = 31
-                  Margins.Top = 10
-                  Align = alClient
-                  Date = 43916.000000000000000000
-                  Format = ' '
-                  Time = 0.506186446757055800
-                  Font.Charset = DEFAULT_CHARSET
-                  Font.Color = clWindowText
-                  Font.Height = -16
-                  Font.Name = 'Segoe UI'
-                  Font.Style = []
-                  ParentFont = False
-                  TabOrder = 0
-                end
               end
             end
           end
@@ -441,28 +95,30 @@ object frmDCF: TfrmDCF
       object PageControl2: TPageControl
         Left = 0
         Top = 49
-        Width = 856
+        Width = 765
         Height = 429
         ActivePage = tsCompliance
         Align = alClient
         MultiLine = True
         TabOrder = 0
-        ExplicitWidth = 765
+        ExplicitWidth = 763
+        ExplicitHeight = 426
         object tsCompliance: TTabSheet
           Caption = '1.1'
           object Panel1: TPanel
             Left = 0
             Top = 0
-            Width = 848
+            Width = 757
             Height = 399
             Align = alClient
             TabOrder = 0
-            ExplicitWidth = 757
+            ExplicitWidth = 755
+            ExplicitHeight = 396
             object SkLabel2: TSkLabel
               AlignWithMargins = True
               Left = 4
               Top = 4
-              Width = 840
+              Width = 749
               Height = 19
               Align = alTop
               Words = <
@@ -486,7 +142,7 @@ object frmDCF: TfrmDCF
               AlignWithMargins = True
               Left = 4
               Top = 29
-              Width = 840
+              Width = 749
               Height = 366
               Align = alClient
               ColumnCollection = <
@@ -525,19 +181,19 @@ object frmDCF: TfrmDCF
                   Value = 94.696516794283770000
                 end>
               TabOrder = 0
-              ExplicitWidth = 749
+              ExplicitWidth = 747
+              ExplicitHeight = 363
               object Panel2: TPanel
                 Left = 1
                 Top = 1
-                Width = 376
+                Width = 335
                 Height = 19
                 Align = alClient
                 TabOrder = 0
-                ExplicitWidth = 335
                 object SkLabel3: TSkLabel
                   Left = 1
                   Top = 1
-                  Width = 374
+                  Width = 333
                   Height = 17
                   Align = alClient
                   TextSettings.Font.Weight = Bold
@@ -553,18 +209,16 @@ object frmDCF: TfrmDCF
                 end
               end
               object Panel3: TPanel
-                Left = 377
+                Left = 336
                 Top = 1
-                Width = 462
+                Width = 412
                 Height = 19
                 Align = alClient
                 TabOrder = 1
-                ExplicitLeft = 336
-                ExplicitWidth = 412
                 object SkLabel4: TSkLabel
                   Left = 1
                   Top = 1
-                  Width = 460
+                  Width = 410
                   Height = 17
                   Align = alClient
                   TextSettings.Font.Weight = Bold
@@ -575,14 +229,13 @@ object frmDCF: TfrmDCF
                     end>
                   ExplicitLeft = 2
                   ExplicitTop = 2
-                  ExplicitWidth = 410
                 end
               end
               object RelativePanel2: TRelativePanel
                 AlignWithMargins = True
                 Left = 1
                 Top = 20
-                Width = 376
+                Width = 335
                 Height = 345
                 Margins.Left = 0
                 Margins.Top = 0
@@ -666,9 +319,8 @@ object frmDCF: TfrmDCF
                   end>
                 Align = alClient
                 TabOrder = 2
-                ExplicitWidth = 335
                 DesignSize = (
-                  376
+                  335
                   345)
                 object SkLabel5: TSkLabel
                   AlignWithMargins = True
@@ -813,14 +465,12 @@ object frmDCF: TfrmDCF
                 end
               end
               object ScrollBox1: TScrollBox
-                Left = 377
+                Left = 336
                 Top = 20
-                Width = 462
+                Width = 412
                 Height = 345
                 Align = alClient
                 TabOrder = 3
-                ExplicitLeft = 336
-                ExplicitWidth = 412
                 object RelativePanel3: TRelativePanel
                   Left = 3
                   Top = 3
@@ -893,7 +543,7 @@ object frmDCF: TfrmDCF
       object RelativePanel1: TRelativePanel
         Left = 0
         Top = 0
-        Width = 856
+        Width = 765
         Height = 49
         ControlCollection = <
           item
@@ -907,11 +557,11 @@ object frmDCF: TfrmDCF
           end>
         Align = alTop
         TabOrder = 1
-        ExplicitWidth = 765
+        ExplicitWidth = 763
         object SkLabel1: TSkLabel
           Left = 0
           Top = 0
-          Width = 854
+          Width = 763
           Height = 47
           Align = alClient
           TextSettings.Font.Weight = Bold

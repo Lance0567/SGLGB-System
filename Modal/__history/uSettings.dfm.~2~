@@ -1,0 +1,431 @@
+object frmSettings: TfrmSettings
+  Left = 0
+  Top = 0
+  Caption = 'System settigns and Configuration'
+  ClientHeight = 557
+  ClientWidth = 476
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object ToolBar1: TToolBar
+    Left = 0
+    Top = 0
+    Width = 476
+    Height = 9
+    Caption = 'ToolBar1'
+    TabOrder = 0
+    ExplicitWidth = 464
+  end
+  object PageControl1: TPageControl
+    Left = 0
+    Top = 9
+    Width = 476
+    Height = 548
+    Cursor = crHandPoint
+    ActivePage = TabSheet1
+    Align = alClient
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI Semibold'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 1
+    ExplicitWidth = 464
+    object TabSheet1: TTabSheet
+      Caption = #9632'Regional Address Settings '
+      DesignSize = (
+        468
+        516)
+      object GroupBox1: TGroupBox
+        Left = 3
+        Top = 0
+        Width = 460
+        Height = 50
+        Anchors = [akLeft, akTop, akRight]
+        Caption = 'Republic of the Philippines | Republika ng Pilipinas'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 0
+        DesignSize = (
+          460
+          50)
+        object DBEdit1: TDBEdit
+          Left = 12
+          Top = 16
+          Width = 436
+          Height = 28
+          Anchors = [akLeft, akTop, akRight]
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -15
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+          TabOrder = 0
+          ExplicitWidth = 414
+        end
+      end
+      object GroupBox2: TGroupBox
+        Left = 3
+        Top = 53
+        Width = 460
+        Height = 50
+        Anchors = [akLeft, akTop, akRight]
+        Caption = 'Province or Probinsya'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 1
+        DesignSize = (
+          460
+          50)
+        object DBEdit2: TDBEdit
+          Left = 12
+          Top = 16
+          Width = 436
+          Height = 28
+          Anchors = [akLeft, akTop, akRight]
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -15
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+          TabOrder = 0
+          ExplicitWidth = 414
+        end
+      end
+      object GroupBox3: TGroupBox
+        Left = 3
+        Top = 103
+        Width = 460
+        Height = 50
+        Anchors = [akLeft, akTop, akRight]
+        Caption = 'City/Lungsod | Municipality/Bayan'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 2
+        DesignSize = (
+          460
+          50)
+        object DBEdit3: TDBEdit
+          Left = 12
+          Top = 16
+          Width = 436
+          Height = 28
+          Anchors = [akLeft, akTop, akRight]
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -15
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+          TabOrder = 0
+          ExplicitWidth = 414
+        end
+      end
+      object GroupBox5: TGroupBox
+        Left = 3
+        Top = 203
+        Width = 460
+        Height = 50
+        Anchors = [akLeft, akTop, akRight]
+        Caption = 'SERIAL NUMBER'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 4
+        DesignSize = (
+          460
+          50)
+        object DBEdit5: TDBEdit
+          Left = 12
+          Top = 16
+          Width = 436
+          Height = 28
+          Anchors = [akLeft, akTop, akRight]
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -15
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+          TabOrder = 0
+          ExplicitWidth = 414
+        end
+      end
+      object GroupBox6: TGroupBox
+        Left = 3
+        Top = 253
+        Width = 460
+        Height = 222
+        Anchors = [akLeft, akTop, akRight]
+        Caption = 'LOGO UPLOAD SETUP'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI Semibold'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 5
+        DesignSize = (
+          460
+          222)
+        object Label1: TLabel
+          Left = 15
+          Top = 23
+          Width = 79
+          Height = 15
+          Caption = 'Barangay Logo'
+        end
+        object Label2: TLabel
+          Left = 167
+          Top = 23
+          Width = 55
+          Height = 15
+          Caption = 'LGU  Logo'
+        end
+        object Label3: TLabel
+          Left = 319
+          Top = 23
+          Width = 118
+          Height = 15
+          Caption = 'Bagong Pilipinas Logo'
+        end
+        object DBImage1: TDBImage
+          Left = 15
+          Top = 44
+          Width = 105
+          Height = 105
+          TabOrder = 0
+        end
+        object DBImage2: TDBImage
+          Left = 167
+          Top = 44
+          Width = 105
+          Height = 105
+          TabOrder = 1
+        end
+        object DBImage3: TDBImage
+          Left = 319
+          Top = 44
+          Width = 105
+          Height = 105
+          TabOrder = 2
+        end
+        object btSaveLogo: TButton
+          Left = 174
+          Top = 186
+          Width = 105
+          Height = 25
+          Anchors = [akBottom]
+          Caption = 'Save Logo Setup'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+          TabOrder = 3
+          ExplicitLeft = 163
+        end
+        object btUpload1: TButton
+          Left = 15
+          Top = 154
+          Width = 45
+          Height = 25
+          Cursor = crHandPoint
+          Caption = 'Upload'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'Segoe UI Semilight'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 4
+          TabStop = False
+        end
+        object btDele1: TButton
+          Left = 72
+          Top = 154
+          Width = 48
+          Height = 25
+          Cursor = crHandPoint
+          Caption = 'Delete'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'Segoe UI Semilight'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 5
+          TabStop = False
+        end
+        object btUpload2: TButton
+          Left = 167
+          Top = 154
+          Width = 45
+          Height = 25
+          Cursor = crHandPoint
+          Caption = 'Upload'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'Segoe UI Semilight'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 6
+          TabStop = False
+        end
+        object btDele2: TButton
+          Left = 224
+          Top = 154
+          Width = 48
+          Height = 25
+          Cursor = crHandPoint
+          Caption = 'Delete'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'Segoe UI Semilight'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 7
+          TabStop = False
+        end
+        object btUpload3: TButton
+          Left = 319
+          Top = 154
+          Width = 45
+          Height = 25
+          Cursor = crHandPoint
+          Caption = 'Upload'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'Segoe UI Semilight'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 8
+          TabStop = False
+        end
+        object btDele3: TButton
+          Left = 376
+          Top = 154
+          Width = 48
+          Height = 25
+          Cursor = crHandPoint
+          Caption = 'Delete'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'Segoe UI Semilight'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 9
+          TabStop = False
+        end
+      end
+      object GroupBox4: TGroupBox
+        Left = 3
+        Top = 153
+        Width = 460
+        Height = 50
+        Anchors = [akLeft, akTop, akRight]
+        Caption = 'Barangay Name'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 3
+        DesignSize = (
+          460
+          50)
+        object DBEdit4: TDBEdit
+          Left = 12
+          Top = 16
+          Width = 436
+          Height = 28
+          Anchors = [akLeft, akTop, akRight]
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -15
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+          TabOrder = 0
+          ExplicitWidth = 414
+        end
+      end
+      object Panel1: TPanel
+        Left = 0
+        Top = 477
+        Width = 468
+        Height = 39
+        Align = alBottom
+        TabOrder = 6
+        ExplicitWidth = 456
+        object btClose: TButton
+          AlignWithMargins = True
+          Left = 387
+          Top = 4
+          Width = 75
+          Height = 31
+          Margins.Right = 5
+          Align = alRight
+          Caption = 'Close'
+          TabOrder = 0
+          ExplicitLeft = 3
+          ExplicitTop = 7
+          ExplicitHeight = 25
+        end
+      end
+    end
+    object TabSheet3: TTabSheet
+      Caption = #9632' System History '
+      ImageIndex = 2
+      object history: TRichEdit
+        Left = 0
+        Top = 0
+        Width = 468
+        Height = 516
+        Align = alClient
+        EditMargins.Left = 10
+        EditMargins.Right = 10
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        HideScrollBars = False
+        Lines.Strings = (
+          'history')
+        ParentFont = False
+        ScrollBars = ssVertical
+        TabOrder = 0
+        ExplicitWidth = 456
+      end
+    end
+  end
+end

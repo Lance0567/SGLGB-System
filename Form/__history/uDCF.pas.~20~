@@ -37,9 +37,11 @@ type
     SkLabel3: TSkLabel;
     SkLabel4: TSkLabel;
     tsDetails: TTabSheet;
+    ScrollBox2: TScrollBox;
     RelativePanel4: TRelativePanel;
-    pProfile: TPanel;
     pForm: TPanel;
+    pProfile: TPanel;
+    Panel5: TPanel;
     Image1: TImage;
     Panel4: TPanel;
     btnPrint: TButton;
@@ -64,7 +66,6 @@ type
     DateClosedPanel: TPanel;
     Label12: TLabel;
     DateClosedPicker: TDateTimePicker;
-    ScrollBox2: TScrollBox;
   private
     { Private declarations }
   public
