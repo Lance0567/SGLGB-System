@@ -569,7 +569,8 @@ begin
 
   if IsAlreadyRunning then
   begin
-    MessageBox(0, 'The application is already running!', 'Information', MB_OK or MB_ICONINFORMATION)
+    MessageBox(0, 'The application is already running!', 'Information', MB_OK or MB_ICONINFORMATION);
+    Application.Terminate;
   end;
 
   for StyleName in TStyleManager.StyleNames do
@@ -585,7 +586,7 @@ begin
   // Release the mutex
   if FMutex <> 0 then
   begin
-
+    CloseHandle(AppMutex);
   end;
 end;
 
