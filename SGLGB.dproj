@@ -126,14 +126,6 @@
             <Form>frmLogin</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="Form\uMunicipalities.pas">
-            <Form>frmMunicipalities</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="Form\uDCF.pas">
-            <Form>frmDCF</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
         <DCCReference Include="Modal\uSettings.pas">
             <Form>frmSettings</Form>
             <FormType>dfm</FormType>

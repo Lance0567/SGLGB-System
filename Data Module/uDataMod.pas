@@ -15,11 +15,18 @@ uses
   FireDAC.Phys.SQLiteWrapper.Stat;
 
 type
+  // User details
   TUser = class(Tobject)
     id: Integer;
     username: String;
     isAdmin: boolean;
     isActive: boolean;
+  end;
+
+  // DCF Details
+  TDCF = class(TObject)
+    id: integer;
+    rec: String;
   end;
 
   TDM = class(TDataModule)
@@ -33,9 +40,11 @@ type
   private
     { Private declarations }
     FUser: TUser;
+    FDCF: TDCF;
   public
     { Public declarations }
     property User: TUser read FUser write FUser;
+    property DCF: TDCF read FDCF write FDCF;
  end;
 
 var
@@ -50,7 +59,10 @@ procedure TDM.DataModuleCreate(Sender: TObject);
 var
   DBPath: String;
 begin
+  { Classes }
   FUser := TUser.Create;
+  FDCF := TDCF.Create;
+  {---------}
 
   conSGLGB.Params.Values['Database'] := '';
 
@@ -67,7 +79,8 @@ end;
 
 procedure TDM.DataModuleDestroy(Sender: TObject);
 begin
- FUser.Free;
+  FUser.Free;
+  FDCF.Free;
 end;
 
 end.

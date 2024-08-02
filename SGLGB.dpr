@@ -10,8 +10,6 @@ uses
   Vcl.Themes,
   Vcl.Styles,
   uLogin in 'Modal\uLogin.pas' {frmLogin},
-  uMunicipalities in 'Form\uMunicipalities.pas' {frmMunicipalities},
-  uDCF in 'Form\uDCF.pas' {frmDCF},
   uSettings in 'Modal\uSettings.pas' {frmSettings};
 
 {$R *.res}
@@ -21,13 +19,11 @@ begin
   Application.MainFormOnTaskbar := True;
   TStyleManager.TrySetStyle('Iceberg Classico');
   Application.CreateForm(TfrmMain, frmMain);
-  Application.CreateForm(TfrmDCF, frmDCF);
   Application.CreateForm(TDM, DM);
   Application.CreateForm(TDraftProposalForm, DraftProposalForm);
   Application.CreateForm(TLeadsForm, LeadsForm);
   Application.CreateForm(TProposalForm, ProposalForm);
   Application.CreateForm(TfrmLogin, frmLogin);
-  Application.CreateForm(TfrmMunicipalities, frmMunicipalities);
   Application.CreateForm(TfrmSettings, frmSettings);
   Application.Run;
 end.

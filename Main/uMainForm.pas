@@ -17,7 +17,7 @@ uses
   Vcl.WinXPanels, System.Actions, Vcl.ActnList, Vcl.Themes,
   Vcl.BaseImageCollection, Vcl.ImageCollection, System.ImageList, Vcl.ImgList,
   Vcl.VirtualImageList, Vcl.VirtualImage, System.IOUtils, Vcl.TitleBarCtrls,
-  System.Skia, Vcl.Skia, Vcl.Menus, uLogin, Vcl.DBGrids, uMunicipalities;
+  System.Skia, Vcl.Skia, Vcl.Menus, uLogin, Vcl.DBGrids;
 
 type
   TfrmMain = class(TForm)
@@ -67,24 +67,13 @@ type
     Label20: TLabel;
     Label21: TLabel;
     Label22: TLabel;
-    BarangaysTab: TTabSheet;
-    Panel6: TPanel;
-    Label23: TLabel;
-    SalesSearchBox: TSearchBox;
-    BindNavigator3: TBindNavigator;
-    MunicipalitiesTab: TTabSheet;
-    Panel7: TPanel;
-    Label24: TLabel;
-    AcctSearchBox: TSearchBox;
-    AccountsSG: TStringGrid;
-    BindNavigator4: TBindNavigator;
     UsersTab: TTabSheet;
     Panel8: TPanel;
     Label25: TLabel;
     SearchBox7: TSearchBox;
     UsersSG: TStringGrid;
     BindNavigator5: TBindNavigator;
-    UsernameComboBox: TComboBox;
+    cbYear: TComboBox;
     DCFTab: TTabSheet;
     Panel3: TPanel;
     Label2: TLabel;
@@ -111,30 +100,19 @@ type
     CreateLeadButton: TSpeedButton;
     ExportLeadsButton: TSpeedButton;
     LeadsRelativePanel: TRelativePanel;
-    AcctsRelativePanel: TRelativePanel;
-    btnExportMuni: TSpeedButton;
-    btnRemoveMuni: TSpeedButton;
-    btnCreateMuni: TSpeedButton;
-    ProposalsRelativePanel: TRelativePanel;
-    CancelProposalButton: TSpeedButton;
-    CompleteProposalButton: TSpeedButton;
     MarketingRelativePanel: TRelativePanel;
     btnCreateDCF: TSpeedButton;
     UsersRelativePanel: TRelativePanel;
     CreateUserButton: TSpeedButton;
     RemoveUserButton: TSpeedButton;
     DashboardButton: TButton;
-    btnMunicipalities: TButton;
     btnMOVs: TButton;
-    btnBarangay: TButton;
-    MarketingButton: TButton;
+    btnDCF: TButton;
     CalendarButton: TButton;
     UsersButton: TButton;
     ExportAcctsDialog: TSaveDialog;
     VirtualImage1: TVirtualImage;
-    VirtualImage2: TVirtualImage;
     VirtualImage3: TVirtualImage;
-    VirtualImage4: TVirtualImage;
     VirtualImage5: TVirtualImage;
     VirtualImage6: TVirtualImage;
     VirtualImage7: TVirtualImage;
@@ -148,19 +126,19 @@ type
     Panel1: TPanel;
     lbUserStatus: TSkLabel;
     MainMenu1: TMainMenu;
-    Options1: TMenuItem;
+    File1: TMenuItem;
     Login: TMenuItem;
     N1: TMenuItem;
     Exit1: TMenuItem;
     VirtualImage8: TVirtualImage;
     LogOut: TMenuItem;
     btnEdit: TSpeedButton;
-    dbgMunicipalities: TDBGrid;
     RelativePanel7: TRelativePanel;
-    dbgBarangays: TDBGrid;
     dbgDCF: TDBGrid;
     About1: TMenuItem;
     Help1: TMenuItem;
+    Backup1: TMenuItem;
+    Backup2: TMenuItem;
     procedure CalendarView1DrawDayItem(Sender: TObject;
       DrawParams: TDrawViewInfoParams; CalendarViewViewInfo: TCellItemViewInfo);
     procedure AcctSearchBoxKeyPress(Sender: TObject; var Key: Char);
@@ -180,8 +158,6 @@ type
     procedure FormCreate(Sender: TObject);
     procedure VCLStylesCBChange(Sender: TObject);
     procedure LeadsRelativePanelResize(Sender: TObject);
-    procedure AcctsRelativePanelResize(Sender: TObject);
-    procedure ProposalsRelativePanelResize(Sender: TObject);
     procedure MarketingRelativePanelResize(Sender: TObject);
     procedure UsersRelativePanelResize(Sender: TObject);
     procedure CreateLeadButtonClick(Sender: TObject);
@@ -192,7 +168,6 @@ type
     procedure SplitViewClosing(Sender: TObject);
     procedure CreateAcctButtonClick(Sender: TObject);
     procedure DashboardButtonClick(Sender: TObject);
-    procedure MunicipalitiesTabResize(Sender: TObject);
     procedure btnRemoveMuniClick(Sender: TObject);
     procedure CreateUserButtonClick(Sender: TObject);
     procedure RemoveUserButtonClick(Sender: TObject);
@@ -201,8 +176,8 @@ type
     procedure CompleteProposalButtonClick(Sender: TObject);
     procedure MenuVirtualImageClick(Sender: TObject);
     procedure PageControlChange(Sender: TObject);
-    procedure UsernameComboBoxKeyPress(Sender: TObject; var Key: Char);
-    procedure UsernameComboBoxChange(Sender: TObject);
+    procedure cbYearKeyPress(Sender: TObject; var Key: Char);
+    procedure cbYearChange(Sender: TObject);
     procedure NewLeadsSGDblClick(Sender: TObject);
     procedure ActiveLeadsSGDblClick(Sender: TObject);
     procedure VCLStylesCBKeyPress(Sender: TObject; var Key: Char);
@@ -210,7 +185,6 @@ type
     procedure FormShow(Sender: TObject);
     procedure LoginClick(Sender: TObject);
     procedure LogOutClick(Sender: TObject);
-    procedure btnCreateMuniClick(Sender: TObject);
     procedure MunicipalitiesTabShow(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
   private
@@ -250,14 +224,6 @@ begin
 //  LeadsBindActiveSourceDB.DataSet.Refresh;
 //  LeadsBindNewSourceDB.DataSet.Refresh;
 //  LeadsBindProposalSentSourceDB.DataSet.Refresh;
-end;
-
-procedure TfrmMain.btnCreateMuniClick(Sender: TObject);
-var
-  LNewMunicipality: String;
-begin
-  frmMunicipalities.ShowModal;
-  LNewMunicipality := InputBox('Create New Municipality', 'Municipality Name', 'New Municipality');
 end;
 
 procedure TfrmMain.btnRemoveMuniClick(Sender: TObject);
@@ -302,15 +268,10 @@ begin
     end;
   case PageControl.ActivePageIndex of
     0: DashboardButton.SetFocus;
-    1: btnMunicipalities.SetFocus;
+    1: btnDCF.SetFocus;
     2: btnMOVs.SetFocus;
-    3: btnBarangay.SetFocus;
-    4: begin
-      MarketingButton.SetFocus;
-//      EmailsBindSourceDB.DataSet.Refresh;
-    end;
-    5: CalendarButton.SetFocus;
-    6: UsersButton.SetFocus;
+    3: CalendarButton.SetFocus;
+    4: UsersButton.SetFocus;
   end;
 
 end;
@@ -323,10 +284,8 @@ end;
 procedure TfrmMain.SplitViewClosing(Sender: TObject);
 begin
   DashboardButton.Caption := '';
-  btnMunicipalities.Caption := '';
+  btnDCF.Caption := '';
   btnMOVs.Caption := '';
-  btnBarangay.Caption := '';
-  MarketingButton.Caption := '';
   CalendarButton.Caption := '';
   UsersButton.Caption := '';
 end;
@@ -334,37 +293,10 @@ end;
 procedure TfrmMain.SplitViewOpening(Sender: TObject);
 begin
   DashboardButton.Caption := '          '+DashboardButton.Hint;
-  btnMunicipalities.Caption := '          '+btnMunicipalities.Hint;
+  btnDCF.Caption := '          '+btnDCF.Hint;
   btnMOVs.Caption := '          '+btnMOVs.Hint;
-  btnBarangay.Caption := '          '+btnBarangay.Hint;
-  MarketingButton.Caption := '          '+MarketingButton.Hint;
   CalendarButton.Caption := '          '+CalendarButton.Hint;
   UsersButton.Caption := '          '+UsersButton.Hint;
-end;
-
-procedure TfrmMain.MunicipalitiesTabResize(Sender: TObject);
-begin
-  // Check if the grid has at least two columns
-  if dbgMunicipalities.Columns.Count > 1 then
-  begin
-    // Define the width for the first column
-    dbgMunicipalities.Columns[0].Width := 100; // Example fixed width
-    // Calculate and set the width for the second column
-    // Ensure that the grid's width is sufficient for this operation
-    if dbgMunicipalities.ClientWidth > dbgMunicipalities.Columns[0].Width then
-    begin
-      dbgMunicipalities.Columns[1].Width := dbgMunicipalities.ClientWidth - dbgMunicipalities.Columns[0].Width;
-      // Prevent negative width
-      if dbgMunicipalities.Columns[1].Width < 0 then
-        dbgMunicipalities.Columns[1].Width := 0;
-    end
-    else
-    begin
-      // If the grid width is less than the first column's width, adjust accordingly
-      dbgMunicipalities.Columns[0].Width := dbgMunicipalities.ClientWidth; // Use the full width for the first column
-      dbgMunicipalities.Columns[1].Width := 0; // No space left for the second column
-    end;
-  end;
 end;
 
 procedure TfrmMain.MunicipalitiesTabShow(Sender: TObject);
@@ -377,7 +309,7 @@ begin
 //
 end;
 
-procedure TfrmMain.UsernameComboBoxChange(Sender: TObject);
+procedure TfrmMain.cbYearChange(Sender: TObject);
 begin
   LeadsForm.Close;
   DraftProposalForm.Close;
@@ -385,7 +317,7 @@ begin
 //  DM.SetUser(UsernameComboBox.Text);
 end;
 
-procedure TfrmMain.UsernameComboBoxKeyPress(Sender: TObject; var Key: Char);
+procedure TfrmMain.cbYearKeyPress(Sender: TObject; var Key: Char);
 begin
   Key := #0;
 end;
@@ -430,29 +362,6 @@ begin
   SplitView.Opened := not SplitView.Opened;
 end;
 
-procedure TfrmMain.AcctsRelativePanelResize(Sender: TObject);
-begin
-  if AcctsRelativePanel.Width<=634 then
-  begin
-
-    btnExportMuni.Caption := '';
-    btnExportMuni.Width := 40;
-    btnCreateMuni.Caption := '';
-    btnCreateMuni.Width := 40;
-    btnRemoveMuni.Caption := '';
-    btnRemoveMuni.Width := 40;
-  end
-  else
-  begin
-    btnExportMuni.Caption := btnExportMuni.Hint;
-    btnExportMuni.Width := 112;
-    btnCreateMuni.Caption := btnCreateMuni.Hint;
-    btnCreateMuni.Width := 112;
-    btnRemoveMuni.Caption := btnRemoveMuni.Hint;
-    btnRemoveMuni.Width := 112;
-  end;
-end;
-
 procedure TfrmMain.ActiveLeadsSGDblClick(Sender: TObject);
 begin
   ViewLeadButtonClick(Sender);
@@ -468,24 +377,6 @@ procedure TfrmMain.ProposalSentLeadsSGEnter(Sender: TObject);
 begin
 //  LeadsForm.LocateLead(LeadsBindProposalSentSourceDB.DataSet.FieldByName('LeadId').AsInteger);
 //  BindNavigator1.DataSource := LeadsBindProposalSentSourceDB;
-end;
-
-procedure TfrmMain.ProposalsRelativePanelResize(Sender: TObject);
-begin
-  if ProposalsRelativePanel.Width<=436 then
-  begin
-    CompleteProposalButton.Caption := '';
-    CompleteProposalButton.Width := 40;
-    CancelProposalButton.Caption := '';
-    CancelProposalButton.Width := 40;
-  end
-  else
-  begin
-    CompleteProposalButton.Caption := CompleteProposalButton.Hint;
-    CompleteProposalButton.Width := 121;
-    CancelProposalButton.Caption := CancelProposalButton.Hint;
-    CancelProposalButton.Width := 121;
-  end;
 end;
 
 procedure TfrmMain.ClosedLeadsSGEnter(Sender: TObject);
@@ -637,10 +528,12 @@ end;
 
 procedure TfrmMain.btnCreateDCFClick(Sender: TObject);
 begin
-  if SaveEmailsDialog.Execute then
-  begin
-//    DM.ExportEmails(SaveEmailsDialog.FileName);
-  end;
+  dm.DCF.rec := InputBox('Create DCF', 'Barangay', '');
+
+//  if SaveEmailsDialog.Execute then
+//  begin
+////    DM.ExportEmails(SaveEmailsDialog.FileName);
+//  end;
 end;
 
 procedure TfrmMain.ExportLeadsButtonClick(Sender: TObject);
@@ -703,14 +596,10 @@ begin
   LStyle := GetWindowLong(DashboardButton.Handle, GWL_STYLE);
   SetWindowLong(DashboardButton.Handle, GWL_STYLE, LStyle or BS_LEFT);
   DashboardButton.Caption := '          '+DashboardButton.Hint;
-  SetWindowLong(btnMunicipalities.Handle, GWL_STYLE, LStyle or BS_LEFT);
-  btnMunicipalities.Caption := '          '+btnMunicipalities.Hint;
+  SetWindowLong(btnDCF.Handle, GWL_STYLE, LStyle or BS_LEFT);
+  btnDCF.Caption := '          '+btnDCF.Hint;
   SetWindowLong(btnMOVs.Handle, GWL_STYLE, LStyle or BS_LEFT);
   btnMOVs.Caption := '          '+btnMOVs.Hint;
-  SetWindowLong(btnBarangay.Handle, GWL_STYLE, LStyle or BS_LEFT);
-  btnBarangay.Caption := '          '+btnBarangay.Hint;
-  SetWindowLong(MarketingButton.Handle, GWL_STYLE, LStyle or BS_LEFT);
-  MarketingButton.Caption := '          '+MarketingButton.Hint;
   SetWindowLong(CalendarButton.Handle, GWL_STYLE, LStyle or BS_LEFT);
   CalendarButton.Caption := '          '+CalendarButton.Hint;
   SetWindowLong(UsersButton.Handle, GWL_STYLE, LStyle or BS_LEFT);
@@ -736,12 +625,11 @@ begin
 
   if dm.User.username = 'admin' then
   begin
-    btnRemoveMuni.Visible := True;
-//    btnExportMuni
+
   end
   else
   begin
-    btnRemoveMuni.Visible := False;
+
   end;
 end;
 

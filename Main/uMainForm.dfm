@@ -86,9 +86,9 @@ object frmMain: TfrmMain
       ExplicitHeight = 506
       object Image5: TImage
         Left = -56
-        Top = 272
+        Top = 192
         Width = 256
-        Height = 230
+        Height = 310
         Picture.Data = {
           0954506E67496D61676589504E470D0A1A0A0000000D49484452000002000000
           01CC0806000000A3BA10A8000000097048597300000EC300000EC301C76FA864
@@ -810,31 +810,10 @@ object frmMain: TfrmMain
         TabOrder = 0
         OnClick = DashboardButtonClick
       end
-      object btnMunicipalities: TButton
-        Tag = 1
-        Left = 0
-        Top = 76
-        Width = 192
-        Height = 38
-        Hint = 'Municipalities'
-        Align = alTop
-        Caption = 'Municipalities'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -16
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ImageIndex = 1
-        ImageName = 'baseline_account_balance_white'
-        Images = VirtualImageList1
-        ParentFont = False
-        TabOrder = 1
-        OnClick = DashboardButtonClick
-      end
       object btnMOVs: TButton
         Tag = 2
         Left = 0
-        Top = 114
+        Top = 76
         Width = 192
         Height = 38
         Hint = 'MOV'#39's'
@@ -849,55 +828,35 @@ object frmMain: TfrmMain
         ImageName = 'baseline_contact_mail_white'
         Images = VirtualImageList1
         ParentFont = False
-        TabOrder = 2
+        TabOrder = 1
         OnClick = DashboardButtonClick
+        ExplicitTop = 114
       end
-      object btnBarangay: TButton
+      object btnDCF: TButton
         Tag = 3
         Left = 0
         Top = 38
         Width = 192
         Height = 38
-        Hint = 'Barangays'
+        Hint = 'DCF'
         Align = alTop
-        Caption = 'Barangays'
+        Caption = 'DCF'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -16
         Font.Name = 'Segoe UI'
         Font.Style = []
-        ImageIndex = 0
-        ImageName = 'baseline_list_white'
+        ImageIndex = 20
+        ImageName = 'form'
         Images = VirtualImageList1
         ParentFont = False
-        TabOrder = 3
-        OnClick = DashboardButtonClick
-      end
-      object MarketingButton: TButton
-        Tag = 4
-        Left = 0
-        Top = 152
-        Width = 192
-        Height = 38
-        Hint = 'Marketing'
-        Align = alTop
-        Caption = 'Marketing'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -16
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ImageIndex = 11
-        ImageName = 'baseline_email_white'
-        Images = VirtualImageList1
-        ParentFont = False
-        TabOrder = 4
+        TabOrder = 2
         OnClick = DashboardButtonClick
       end
       object CalendarButton: TButton
         Tag = 5
         Left = 0
-        Top = 190
+        Top = 114
         Width = 192
         Height = 38
         Hint = 'Calendar'
@@ -912,13 +871,14 @@ object frmMain: TfrmMain
         ImageName = 'baseline_calendar_today_white'
         Images = VirtualImageList1
         ParentFont = False
-        TabOrder = 5
+        TabOrder = 3
         OnClick = DashboardButtonClick
+        ExplicitTop = 190
       end
       object UsersButton: TButton
         Tag = 6
         Left = 0
-        Top = 228
+        Top = 152
         Width = 192
         Height = 38
         Hint = 'Users'
@@ -933,8 +893,9 @@ object frmMain: TfrmMain
         ImageName = 'baseline_account_box_white'
         Images = VirtualImageList1
         ParentFont = False
-        TabOrder = 6
+        TabOrder = 4
         OnClick = DashboardButtonClick
+        ExplicitTop = 228
       end
     end
   end
@@ -952,6 +913,7 @@ object frmMain: TfrmMain
     TabOrder = 1
     TabWidth = 75
     OnChange = PageControlChange
+    ExplicitWidth = 930
     object DashboardTab: TTabSheet
       Caption = 'Dashboard'
       ImageIndex = 3
@@ -966,7 +928,6 @@ object frmMain: TfrmMain
         BevelOuter = bvNone
         FullRepaint = False
         TabOrder = 0
-        ExplicitWidth = 886
         object Label4: TLabel
           AlignWithMargins = True
           Left = 108
@@ -1830,448 +1791,6 @@ object frmMain: TfrmMain
         TitleFont.Style = []
       end
     end
-    object BarangaysTab: TTabSheet
-      Caption = 'Barangays'
-      ImageIndex = 4
-      object Panel6: TPanel
-        AlignWithMargins = True
-        Left = 25
-        Top = 3
-        Width = 888
-        Height = 67
-        Margins.Left = 25
-        Align = alTop
-        BevelOuter = bvNone
-        FullRepaint = False
-        TabOrder = 0
-        object Label23: TLabel
-          AlignWithMargins = True
-          Left = 108
-          Top = 5
-          Width = 155
-          Height = 57
-          Margins.Top = 5
-          Margins.Bottom = 5
-          Align = alLeft
-          Caption = 'Barangays'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -32
-          Font.Name = 'Segoe UI'
-          Font.Style = [fsBold]
-          ParentFont = False
-          Layout = tlCenter
-          ExplicitHeight = 45
-        end
-        object VirtualImage4: TVirtualImage
-          Left = 0
-          Top = 0
-          Width = 105
-          Height = 67
-          Align = alLeft
-          ImageCollection = ImageCollection1
-          ImageWidth = 0
-          ImageHeight = 0
-          ImageIndex = 0
-          ImageName = 'baseline_list_white'
-          ExplicitLeft = 8
-        end
-        object ProposalsRelativePanel: TRelativePanel
-          Left = 266
-          Top = 0
-          Width = 622
-          Height = 67
-          ControlCollection = <
-            item
-              Control = SalesSearchBox
-              AlignBottomWithPanel = False
-              AlignHorizontalCenterWithPanel = False
-              AlignLeftWithPanel = False
-              AlignRightWithPanel = True
-              AlignTopWithPanel = False
-              AlignVerticalCenterWithPanel = True
-            end
-            item
-              Control = CancelProposalButton
-              AlignBottomWithPanel = False
-              AlignHorizontalCenterWithPanel = False
-              AlignLeftWithPanel = False
-              AlignRightWithPanel = False
-              AlignTopWithPanel = False
-              AlignVerticalCenterWithPanel = True
-              LeftOf = CompleteProposalButton
-            end
-            item
-              Control = CompleteProposalButton
-              AlignBottomWithPanel = False
-              AlignHorizontalCenterWithPanel = False
-              AlignLeftWithPanel = False
-              AlignRightWithPanel = False
-              AlignTopWithPanel = False
-              AlignVerticalCenterWithPanel = True
-              LeftOf = SalesSearchBox
-            end>
-          Align = alClient
-          BevelOuter = bvNone
-          FullRepaint = False
-          TabOrder = 0
-          OnResize = ProposalsRelativePanelResize
-          DesignSize = (
-            622
-            67)
-          object SalesSearchBox: TSearchBox
-            AlignWithMargins = True
-            Left = 436
-            Top = 15
-            Width = 163
-            Height = 36
-            Margins.Top = 23
-            Margins.Right = 23
-            Margins.Bottom = 23
-            Align = alRight
-            Anchors = []
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -20
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-            TabOrder = 0
-            TextHint = 'Search'
-            OnKeyPress = SalesSearchBoxKeyPress
-          end
-          object CancelProposalButton: TSpeedButton
-            Left = 191
-            Top = 14
-            Width = 121
-            Height = 38
-            Hint = 'Cancel'
-            Anchors = []
-            Caption = 'Cancel'
-            ImageIndex = 14
-            ImageName = 'baseline_clear_white'
-            Images = VirtualImageList1
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -16
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-            OnClick = CancelProposalButtonClick
-          end
-          object CompleteProposalButton: TSpeedButton
-            Left = 312
-            Top = 14
-            Width = 121
-            Height = 38
-            Hint = 'Complete'
-            Anchors = []
-            Caption = 'Complete'
-            ImageIndex = 9
-            ImageName = 'baseline_create_white'
-            Images = VirtualImageList1
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -16
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-            OnClick = CompleteProposalButtonClick
-          end
-        end
-      end
-      object BindNavigator3: TBindNavigator
-        AlignWithMargins = True
-        Left = 25
-        Top = 494
-        Width = 866
-        Height = 25
-        Margins.Left = 25
-        Margins.Right = 25
-        VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbDelete, nbRefresh]
-        Align = alBottom
-        Orientation = orHorizontal
-        TabOrder = 1
-      end
-      object dbgBarangays: TDBGrid
-        AlignWithMargins = True
-        Left = 25
-        Top = 76
-        Width = 866
-        Height = 412
-        Margins.Left = 25
-        Margins.Right = 25
-        Align = alClient
-        TabOrder = 2
-        TitleFont.Charset = DEFAULT_CHARSET
-        TitleFont.Color = clWindowText
-        TitleFont.Height = -11
-        TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = []
-      end
-    end
-    object MunicipalitiesTab: TTabSheet
-      Caption = 'Municipalities'
-      ImageIndex = 5
-      OnResize = MunicipalitiesTabResize
-      OnShow = MunicipalitiesTabShow
-      object Panel7: TPanel
-        AlignWithMargins = True
-        Left = 25
-        Top = 3
-        Width = 888
-        Height = 67
-        Margins.Left = 25
-        Align = alTop
-        BevelOuter = bvNone
-        FullRepaint = False
-        TabOrder = 0
-        object Label24: TLabel
-          AlignWithMargins = True
-          Left = 108
-          Top = 5
-          Width = 209
-          Height = 57
-          Margins.Top = 5
-          Margins.Bottom = 5
-          Align = alLeft
-          Caption = 'Municipalities'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -32
-          Font.Name = 'Segoe UI'
-          Font.Style = [fsBold]
-          ParentFont = False
-          Layout = tlCenter
-          ExplicitHeight = 45
-        end
-        object VirtualImage2: TVirtualImage
-          Left = 0
-          Top = 0
-          Width = 105
-          Height = 67
-          Align = alLeft
-          ImageCollection = ImageCollection1
-          ImageWidth = 0
-          ImageHeight = 0
-          ImageIndex = 1
-          ImageName = 'baseline_account_balance_white'
-          ExplicitLeft = 8
-        end
-        object AcctsRelativePanel: TRelativePanel
-          Left = 320
-          Top = 0
-          Width = 568
-          Height = 67
-          ControlCollection = <
-            item
-              Control = AcctSearchBox
-              AlignBottomWithPanel = False
-              AlignHorizontalCenterWithPanel = False
-              AlignLeftWithPanel = False
-              AlignRightWithPanel = True
-              AlignTopWithPanel = False
-              AlignVerticalCenterWithPanel = True
-            end
-            item
-              Control = btnExportMuni
-              AlignBottomWithPanel = False
-              AlignHorizontalCenterWithPanel = False
-              AlignLeftWithPanel = False
-              AlignRightWithPanel = False
-              AlignTopWithPanel = False
-              AlignVerticalCenterWithPanel = True
-              LeftOf = btnRemoveMuni
-            end
-            item
-              Control = btnRemoveMuni
-              AlignBottomWithPanel = False
-              AlignHorizontalCenterWithPanel = False
-              AlignLeftWithPanel = False
-              AlignRightWithPanel = False
-              AlignTopWithPanel = False
-              AlignVerticalCenterWithPanel = True
-              LeftOf = btnCreateMuni
-            end
-            item
-              Control = btnCreateMuni
-              AlignBottomWithPanel = False
-              AlignHorizontalCenterWithPanel = False
-              AlignLeftWithPanel = False
-              AlignRightWithPanel = False
-              AlignTopWithPanel = False
-              AlignVerticalCenterWithPanel = True
-              LeftOf = AcctSearchBox
-            end>
-          Align = alClient
-          BevelOuter = bvNone
-          FullRepaint = False
-          TabOrder = 0
-          OnResize = AcctsRelativePanelResize
-          DesignSize = (
-            568
-            67)
-          object AcctSearchBox: TSearchBox
-            AlignWithMargins = True
-            Left = 382
-            Top = 15
-            Width = 163
-            Height = 36
-            Margins.Top = 23
-            Margins.Right = 23
-            Margins.Bottom = 23
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -20
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-            TabOrder = 0
-            TextHint = 'Search'
-            OnKeyPress = AcctSearchBoxKeyPress
-          end
-          object btnExportMuni: TSpeedButton
-            Left = 43
-            Top = 14
-            Width = 112
-            Height = 38
-            Hint = 'Export'
-            Anchors = []
-            Caption = 'Export'
-            ImageIndex = 7
-            ImageName = 'baseline_cloud_upload_white'
-            Images = VirtualImageList1
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -16
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-            ParentShowHint = False
-            ShowHint = True
-          end
-          object btnRemoveMuni: TSpeedButton
-            Left = 155
-            Top = 14
-            Width = 112
-            Height = 38
-            Hint = 'Remove'
-            Anchors = []
-            Caption = 'Remove'
-            ImageIndex = 13
-            ImageName = 'baseline_remove_white'
-            Images = VirtualImageList1
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -16
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-            ParentShowHint = False
-            ShowHint = True
-            OnClick = btnRemoveMuniClick
-          end
-          object btnCreateMuni: TSpeedButton
-            Left = 267
-            Top = 14
-            Width = 112
-            Height = 38
-            Hint = 'Create'
-            Anchors = []
-            Caption = 'Create'
-            ImageIndex = 3
-            ImageName = 'baseline_add_white'
-            Images = VirtualImageList1
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -16
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-            ParentShowHint = False
-            ShowHint = True
-            OnClick = btnCreateMuniClick
-          end
-        end
-      end
-      object AccountsSG: TStringGrid
-        AlignWithMargins = True
-        Left = 25
-        Top = 76
-        Width = 866
-        Height = 412
-        Margins.Left = 25
-        Margins.Right = 25
-        Align = alClient
-        BorderStyle = bsNone
-        ColCount = 1
-        DoubleBuffered = True
-        FixedCols = 0
-        RowCount = 2
-        Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goRowSelect]
-        ParentDoubleBuffered = False
-        ScrollBars = ssVertical
-        TabOrder = 1
-        ColWidths = (
-          64)
-        ColAligments = (
-          0)
-      end
-      object BindNavigator4: TBindNavigator
-        AlignWithMargins = True
-        Left = 25
-        Top = 494
-        Width = 866
-        Height = 25
-        Margins.Left = 25
-        Margins.Right = 25
-        VisibleButtons = [nbEdit, nbPost, nbCancel, nbRefresh]
-        Align = alBottom
-        Orientation = orHorizontal
-        TabOrder = 2
-      end
-      object dbgMunicipalities: TDBGrid
-        AlignWithMargins = True
-        Left = 25
-        Top = 76
-        Width = 866
-        Height = 412
-        Margins.Left = 25
-        Margins.Right = 25
-        Align = alClient
-        DataSource = DM.dsMunicipalities
-        Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
-        TabOrder = 3
-        TitleFont.Charset = DEFAULT_CHARSET
-        TitleFont.Color = clWindowText
-        TitleFont.Height = -11
-        TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = []
-        Columns = <
-          item
-            Expanded = False
-            FieldName = 'id'
-            Title.Caption = 'ID'
-            Title.Font.Charset = DEFAULT_CHARSET
-            Title.Font.Color = clWindowText
-            Title.Font.Height = -15
-            Title.Font.Name = 'Segoe UI'
-            Title.Font.Style = []
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'municipality'
-            Title.Caption = 'Municipality'
-            Title.Font.Charset = DEFAULT_CHARSET
-            Title.Font.Color = clWindowText
-            Title.Font.Height = -15
-            Title.Font.Name = 'Segoe UI'
-            Title.Font.Style = []
-            Visible = True
-          end>
-      end
-    end
     object MOVsTabs: TTabSheet
       Caption = 'MOV'#39's'
       object Splitter1: TSplitter
@@ -2729,6 +2248,7 @@ object frmMain: TfrmMain
         ParentFont = False
         SelectionMode = smMultiple
         TabOrder = 0
+        ExplicitWidth = 872
       end
       object Panel4: TPanel
         AlignWithMargins = True
@@ -2741,6 +2261,7 @@ object frmMain: TfrmMain
         BevelOuter = bvNone
         FullRepaint = False
         TabOrder = 1
+        ExplicitWidth = 894
         object Label3: TLabel
           AlignWithMargins = True
           Left = 108
@@ -2969,6 +2490,7 @@ object frmMain: TfrmMain
         ParentDoubleBuffered = False
         ScrollBars = ssVertical
         TabOrder = 1
+        ExplicitWidth = 872
         ColWidths = (
           64)
       end
@@ -2986,6 +2508,7 @@ object frmMain: TfrmMain
         ParentShowHint = False
         ShowHint = True
         TabOrder = 2
+        ExplicitWidth = 872
       end
     end
   end
@@ -3036,13 +2559,13 @@ object frmMain: TfrmMain
       Height = 39
       ControlCollection = <
         item
-          Control = UsernameComboBox
+          Control = cbYear
           AlignBottomWithPanel = False
           AlignHorizontalCenterWithPanel = False
           AlignLeftWithPanel = False
-          AlignRightWithPanel = False
+          AlignRightWithPanel = True
           AlignTopWithPanel = False
-          AlignVerticalCenterWithPanel = False
+          AlignVerticalCenterWithPanel = True
           LeftOf = VCLStylesCB
         end
         item
@@ -3050,19 +2573,19 @@ object frmMain: TfrmMain
           AlignBottomWithPanel = False
           AlignHorizontalCenterWithPanel = False
           AlignLeftWithPanel = False
-          AlignRightWithPanel = False
+          AlignRightWithPanel = True
           AlignTopWithPanel = False
-          AlignVerticalCenterWithPanel = False
+          AlignVerticalCenterWithPanel = True
         end>
       Align = alClient
       BevelOuter = bvNone
       FullRepaint = False
       TabOrder = 0
       ExplicitWidth = 943
-      object UsernameComboBox: TComboBox
+      object cbYear: TComboBox
         AlignWithMargins = True
-        Left = 641
-        Top = 10
+        Left = 649
+        Top = 9
         Width = 138
         Height = 21
         Margins.Left = 4
@@ -3072,15 +2595,16 @@ object frmMain: TfrmMain
         DoubleBuffered = True
         ParentDoubleBuffered = False
         TabOrder = 0
-        Text = 'CRMUser'
+        Text = 'Year'
+        Visible = False
         StyleName = 'Windows'
-        OnChange = UsernameComboBoxChange
-        OnKeyPress = UsernameComboBoxKeyPress
+        OnChange = cbYearChange
+        OnKeyPress = cbYearKeyPress
       end
       object VCLStylesCB: TComboBox
         AlignWithMargins = True
-        Left = 788
-        Top = 10
+        Left = 796
+        Top = 9
         Width = 145
         Height = 21
         Margins.Left = 4
@@ -4962,8 +4486,8 @@ object frmMain: TfrmMain
   object MainMenu1: TMainMenu
     Left = 284
     Top = 486
-    object Options1: TMenuItem
-      Caption = 'Options'
+    object File1: TMenuItem
+      Caption = 'File'
       object Login: TMenuItem
         Caption = 'Login'
         OnClick = LoginClick
@@ -4972,6 +4496,12 @@ object frmMain: TfrmMain
         Caption = 'Log Out'
         Visible = False
         OnClick = LogOutClick
+      end
+      object Backup2: TMenuItem
+        Caption = 'System Settings'
+      end
+      object Backup1: TMenuItem
+        Caption = 'Backup'
       end
       object N1: TMenuItem
         Caption = '-'

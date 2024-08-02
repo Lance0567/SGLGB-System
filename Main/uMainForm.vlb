@@ -1,7 +1,4 @@
-﻿[VirtualImage2]
-Coordinates=121,598,94,36
-
-[ProposalSentLeadsSG]
+﻿[ProposalSentLeadsSG]
 Coordinates=130,484,145,58
 
 [Panel8]
@@ -49,17 +46,8 @@ Coordinates=382,348,53,58
 [Label25]
 Coordinates=1005,280,60,58
 
-[AcctsRelativePanel]
-Coordinates=123,144,126,58
-
 [ActiveLeadsPanel]
 Coordinates=830,348,118,58
-
-[VirtualImage4]
-Coordinates=718,644,94,36
-
-[Panel7]
-Coordinates=1132,348,55,58
 
 [ImportLeadsDialog]
 Coordinates=57,1386,123,36
@@ -72,12 +60,6 @@ Coordinates=1147,212,57,58
 
 [ExportAcctsDialog]
 Coordinates=1642,1,120,36
-
-[SalesSearchBox]
-Coordinates=579,348,109,58
-
-[UsernameComboBox]
-Coordinates=10,10,137,124
 
 [VirtualImage1]
 Coordinates=162,552,94,36
@@ -116,10 +98,6 @@ Coordinates=564,144,53,58
 [MarketingRelativePanel]
 Coordinates=333,280,151,58
 
-[AccountsSG]
-Coordinates=925,144,86,58
-Visible=True
-
 [SaveEmailsDialog]
 Coordinates=1642,386,119,36
 
@@ -134,9 +112,6 @@ Coordinates=466,484,82,58
 
 [Label5]
 Coordinates=818,416,53,58
-
-[AcctSearchBox]
-Coordinates=564,280,102,58
 
 [VirtualImage14]
 Coordinates=186,690,101,36
@@ -177,9 +152,6 @@ Coordinates=327,416,101,58
 [MenuVirtualImage]
 Coordinates=467,598,119,36
 
-[CompleteProposalButton]
-Coordinates=748,484,157,36
-
 [Label10]
 Coordinates=396,484,60,58
 
@@ -191,9 +163,6 @@ Coordinates=825,598,119,36
 
 [ExportLeadsButton]
 Coordinates=822,644,124,36
-
-[ProposalsRelativePanel]
-Coordinates=741,280,151,58
 
 [VirtualImage13]
 Coordinates=10,598,101,36
@@ -228,9 +197,6 @@ Coordinates=697,144,60,58
 [UsersRelativePanel]
 Coordinates=680,416,128,58
 
-[Label24]
-Coordinates=494,280,60,58
-
 [EmailsSearchBox]
 Coordinates=1138,280,116,58
 
@@ -249,9 +215,6 @@ Coordinates=123,280,60,58
 
 [Label22]
 Coordinates=1084,416,60,58
-
-[CancelProposalButton]
-Coordinates=10,644,143,36
 
 [SplitView]
 Coordinates=10,348,68,58
@@ -277,9 +240,6 @@ Coordinates=1109,484,94,36
 [Splitter1]
 Coordinates=10,552,62,36
 
-[Label23]
-Coordinates=263,280,60,58
-
 [Label8]
 Coordinates=958,348,53,58
 
@@ -288,9 +248,6 @@ Coordinates=266,552,89,36
 
 [DashboardButton]
 Coordinates=556,416,114,58
-
-[MarketingButton]
-Coordinates=916,10,108,58
 
 [Label13]
 Coordinates=698,348,60,58
@@ -326,17 +283,11 @@ Coordinates=692,552,62,36
 [SearchBox7]
 Coordinates=1091,144,84,58
 
-[Panel6]
-Coordinates=370,212,55,58
-
 [(TMenuItem)]
 Coordinates=1843,881,75,33
 
 [MainMenu1]
 Coordinates=1843,496,81,36
-
-[Options1]
-Coordinates=1843,606,66,36
 
 [lbUserStatus]
 Coordinates=1011,484,88,36
@@ -364,29 +315,18 @@ Coordinates=44,70,57,36
 Coordinates=121,690,55,36
 
 []
-Coordinates=626,212,80,58
+Coordinates=916,10,108,58
+Visible=True
 
 [DM.]
 Coordinates=906,898,78,58
 Visible=False
 
-[btnMunicipalities]
-Coordinates=10,484,110,58
-
 [btnMOVs]
 Coordinates=767,144,68,58
 
-[MunicipalitiesTab]
-Coordinates=365,552,115,36
-
 [MOVsTabs]
 Coordinates=630,644,78,36
-
-[btnRemoveMuni]
-Coordinates=512,644,108,36
-
-[BindNavigator3]
-Coordinates=451,144,103,58
 
 [BindNavigator1]
 Coordinates=1034,10,103,58
@@ -394,24 +334,18 @@ Coordinates=1034,10,103,58
 [BindNavigator5]
 Coordinates=10,144,103,58
 
-[BindNavigator4]
-Coordinates=88,348,103,58
-
-[btnCreateMuni]
-Coordinates=596,598,115,36
-
-[btnExportMuni]
-Coordinates=490,552,120,36
-
-[BarangaysTab]
-Coordinates=873,552,82,36
-
-[btnBarangay]
-Coordinates=240,416,77,58
-
 [DCFTab]
 Coordinates=1101,552,93,36
 
 [btnCreateDCF]
 Coordinates=225,598,128,36
+
+[cbYear]
+Coordinates=10,10,137,124
+
+[File1]
+Coordinates=1843,606,66,36
+
+[btnDCF]
+Coordinates=240,416,77,58
 
