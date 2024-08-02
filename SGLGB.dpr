@@ -20,12 +20,12 @@ begin
   Application.MainFormOnTaskbar := True;
   TStyleManager.TrySetStyle('Iceberg Classico');
   Application.CreateForm(TfrmMain, frmMain);
+  Application.CreateForm(TfrmDCF, frmDCF);
   Application.CreateForm(TDM, DM);
   Application.CreateForm(TDraftProposalForm, DraftProposalForm);
   Application.CreateForm(TLeadsForm, LeadsForm);
   Application.CreateForm(TProposalForm, ProposalForm);
   Application.CreateForm(TfrmLogin, frmLogin);
   Application.CreateForm(TfrmMunicipalities, frmMunicipalities);
-  Application.CreateForm(TfrmDCF, frmDCF);
   Application.Run;
 end.

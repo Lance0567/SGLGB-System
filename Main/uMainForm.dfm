@@ -945,14 +945,13 @@ object frmMain: TfrmMain
     Width = 924
     Height = 562
     Margins.Top = 0
-    ActivePage = DCFTab
+    ActivePage = DashboardTab
     Align = alClient
     MultiLine = True
     TabHeight = 30
     TabOrder = 1
     TabWidth = 75
     OnChange = PageControlChange
-    ExplicitWidth = 930
     object DashboardTab: TTabSheet
       Caption = 'Dashboard'
       ImageIndex = 3
@@ -967,6 +966,7 @@ object frmMain: TfrmMain
         BevelOuter = bvNone
         FullRepaint = False
         TabOrder = 0
+        ExplicitWidth = 886
         object Label4: TLabel
           AlignWithMargins = True
           Left = 108
@@ -4979,6 +4979,12 @@ object frmMain: TfrmMain
       object Exit1: TMenuItem
         Caption = 'Restart System'
       end
+    end
+    object About1: TMenuItem
+      Caption = 'About'
+    end
+    object Help1: TMenuItem
+      Caption = 'Help'
     end
   end
 end

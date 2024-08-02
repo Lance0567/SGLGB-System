@@ -3,7 +3,7 @@ object frmDCF: TfrmDCF
   Top = 0
   Caption = 'Data Capture Form (DCF)'
   ClientHeight = 508
-  ClientWidth = 726
+  ClientWidth = 773
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,10 +13,522 @@ object frmDCF: TfrmDCF
   Position = poScreenCenter
   TextHeight = 15
   object PageControl1: TPageControl
-    Left = 224
-    Top = 176
-    Width = 289
-    Height = 193
+    Left = 0
+    Top = 0
+    Width = 773
+    Height = 508
+    ActivePage = tsFAS
+    Align = alClient
     TabOrder = 0
+    ExplicitLeft = -8
+    ExplicitTop = 24
+    ExplicitWidth = 726
+    object tsFAS: TTabSheet
+      Caption = 'FAS'
+      object PageControl2: TPageControl
+        Left = 0
+        Top = 49
+        Width = 765
+        Height = 429
+        ActivePage = tsCompliance
+        Align = alClient
+        MultiLine = True
+        TabOrder = 0
+        ExplicitWidth = 718
+        object tsCompliance: TTabSheet
+          Caption = '1.1'
+          object Panel1: TPanel
+            Left = 0
+            Top = 0
+            Width = 757
+            Height = 399
+            Align = alClient
+            TabOrder = 0
+            ExplicitLeft = 264
+            ExplicitTop = 176
+            ExplicitWidth = 185
+            ExplicitHeight = 41
+            object SkLabel2: TSkLabel
+              AlignWithMargins = True
+              Left = 4
+              Top = 4
+              Width = 749
+              Height = 19
+              Align = alTop
+              Words = <
+                item
+                  Caption = '1.1.1'
+                  Font.Weight = Bold
+                  Name = 'Item 0'
+                  StyledSettings = [Family, Size, FontColor]
+                end
+                item
+                  Caption = 
+                    ' Posted the following CY 2023 financial documenets in the BFDP b' +
+                    'oard:'
+                  Name = 'Item 1'
+                end>
+              ExplicitLeft = 0
+              ExplicitTop = 1
+              ExplicitWidth = 708
+            end
+            object GridPanel1: TGridPanel
+              AlignWithMargins = True
+              Left = 4
+              Top = 29
+              Width = 749
+              Height = 366
+              Align = alClient
+              ColumnCollection = <
+                item
+                  Value = 44.846527647435540000
+                end
+                item
+                  Value = 55.153472352564460000
+                end>
+              ControlCollection = <
+                item
+                  Column = 0
+                  Control = Panel2
+                  Row = 0
+                end
+                item
+                  Column = 1
+                  Control = Panel3
+                  Row = 0
+                end
+                item
+                  Column = 0
+                  Control = RelativePanel2
+                  Row = 1
+                end
+                item
+                  Column = 1
+                  Control = ScrollBox1
+                  Row = 1
+                end>
+              RowCollection = <
+                item
+                  Value = 5.303483205716226000
+                end
+                item
+                  Value = 94.696516794283770000
+                end>
+              TabOrder = 0
+              ExplicitLeft = 0
+              ExplicitWidth = 708
+              ExplicitHeight = 372
+              object Panel2: TPanel
+                Left = 1
+                Top = 1
+                Width = 335
+                Height = 19
+                Align = alClient
+                TabOrder = 0
+                ExplicitLeft = 280
+                ExplicitTop = 160
+                ExplicitWidth = 185
+                ExplicitHeight = 41
+                object SkLabel3: TSkLabel
+                  Left = 1
+                  Top = 1
+                  Width = 333
+                  Height = 17
+                  Align = alClient
+                  TextSettings.Font.Weight = Bold
+                  TextSettings.HorzAlign = Center
+                  Words = <
+                    item
+                      Caption = 'MINIMUM REQUIREMENT'
+                    end>
+                  ExplicitLeft = 144
+                  ExplicitTop = 0
+                  ExplicitWidth = 55
+                  ExplicitHeight = 19
+                end
+              end
+              object Panel3: TPanel
+                Left = 336
+                Top = 1
+                Width = 412
+                Height = 19
+                Align = alClient
+                TabOrder = 1
+                ExplicitLeft = 280
+                ExplicitTop = 160
+                ExplicitWidth = 185
+                ExplicitHeight = 41
+                object SkLabel4: TSkLabel
+                  Left = 1
+                  Top = 1
+                  Width = 410
+                  Height = 17
+                  Align = alClient
+                  TextSettings.Font.Weight = Bold
+                  TextSettings.HorzAlign = Center
+                  Words = <
+                    item
+                      Caption = 'MEANS OF VERIFICATION'
+                    end>
+                  ExplicitLeft = 2
+                  ExplicitTop = 2
+                end
+              end
+              object RelativePanel2: TRelativePanel
+                AlignWithMargins = True
+                Left = 1
+                Top = 20
+                Width = 335
+                Height = 345
+                Margins.Left = 0
+                Margins.Top = 0
+                Margins.Right = 0
+                Margins.Bottom = 0
+                ControlCollection = <
+                  item
+                    Control = SkLabel5
+                    AlignBottomWithPanel = True
+                    AlignHorizontalCenterWithPanel = False
+                    AlignLeftWithPanel = True
+                    AlignRightWithPanel = True
+                    AlignTopWithPanel = True
+                    AlignVerticalCenterWithPanel = False
+                  end
+                  item
+                    Control = SkLabel6
+                    AlignBottomWithPanel = False
+                    AlignHorizontalCenterWithPanel = False
+                    AlignLeftWithPanel = True
+                    AlignRightWithPanel = True
+                    AlignTopWith = SkLabel5
+                    AlignTopWithPanel = True
+                    AlignVerticalCenterWithPanel = False
+                    Below = SkLabel5
+                  end
+                  item
+                    Control = SkLabel7
+                    AlignBottomWithPanel = False
+                    AlignHorizontalCenterWithPanel = False
+                    AlignLeftWithPanel = True
+                    AlignRightWithPanel = True
+                    AlignTopWith = SkLabel6
+                    AlignTopWithPanel = True
+                    AlignVerticalCenterWithPanel = False
+                    Below = SkLabel6
+                  end
+                  item
+                    Control = SkLabel8
+                    AlignBottomWithPanel = False
+                    AlignHorizontalCenterWithPanel = False
+                    AlignLeftWithPanel = True
+                    AlignRightWithPanel = True
+                    AlignTopWith = SkLabel7
+                    AlignTopWithPanel = True
+                    AlignVerticalCenterWithPanel = False
+                    Below = SkLabel7
+                  end
+                  item
+                    Control = SkLabel9
+                    AlignBottomWithPanel = False
+                    AlignHorizontalCenterWithPanel = False
+                    AlignLeftWithPanel = True
+                    AlignRightWithPanel = True
+                    AlignTopWith = SkLabel8
+                    AlignTopWithPanel = True
+                    AlignVerticalCenterWithPanel = False
+                    Below = SkLabel8
+                  end
+                  item
+                    Control = SkLabel10
+                    AlignBottomWithPanel = False
+                    AlignHorizontalCenterWithPanel = False
+                    AlignLeftWithPanel = True
+                    AlignRightWithPanel = True
+                    AlignTopWith = SkLabel9
+                    AlignTopWithPanel = True
+                    AlignVerticalCenterWithPanel = False
+                    Below = SkLabel9
+                  end
+                  item
+                    Control = SkLabel11
+                    AlignBottomWithPanel = False
+                    AlignHorizontalCenterWithPanel = False
+                    AlignLeftWithPanel = True
+                    AlignRightWithPanel = True
+                    AlignTopWith = SkLabel10
+                    AlignTopWithPanel = True
+                    AlignVerticalCenterWithPanel = False
+                    Below = SkLabel10
+                  end>
+                Align = alClient
+                TabOrder = 2
+                ExplicitLeft = 3
+                ExplicitTop = -3
+                ExplicitWidth = 185
+                ExplicitHeight = 364
+                DesignSize = (
+                  335
+                  345)
+                object SkLabel5: TSkLabel
+                  AlignWithMargins = True
+                  Left = 6
+                  Top = 4
+                  Width = 178
+                  Height = 19
+                  Margins.Left = 5
+                  Words = <
+                    item
+                      Caption = 'a.'
+                      Font.Weight = Bold
+                      Name = 'Item 0'
+                      StyledSettings = [Family, Size, FontColor]
+                    end
+                    item
+                      Caption = ' Barangay Financial Report;'
+                      Name = 'Item 1'
+                    end>
+                end
+                object SkLabel6: TSkLabel
+                  AlignWithMargins = True
+                  Left = 6
+                  Top = 29
+                  Width = 125
+                  Height = 19
+                  Margins.Left = 5
+                  Anchors = []
+                  Words = <
+                    item
+                      Caption = 'b.'
+                      Font.Weight = Bold
+                      Name = 'Item 0'
+                      StyledSettings = [Family, Size, FontColor]
+                    end
+                    item
+                      Caption = ' Barangay Budget;'
+                      Name = 'Item 1'
+                    end>
+                end
+                object SkLabel7: TSkLabel
+                  AlignWithMargins = True
+                  Left = 6
+                  Top = 54
+                  Width = 252
+                  Height = 19
+                  Margins.Left = 5
+                  Anchors = []
+                  Words = <
+                    item
+                      Caption = 'c.'
+                      Font.Weight = Bold
+                      Name = 'Item 0'
+                      StyledSettings = [Family, Size, FontColor]
+                    end
+                    item
+                      Caption = ' Summary of Income and Expenditures;'
+                      Name = 'Item 1'
+                    end>
+                end
+                object SkLabel8: TSkLabel
+                  AlignWithMargins = True
+                  Left = 6
+                  Top = 79
+                  Width = 260
+                  Height = 19
+                  Margins.Left = 5
+                  Anchors = []
+                  Words = <
+                    item
+                      Caption = 'd.'
+                      Font.Weight = Bold
+                      Name = 'Item 0'
+                      StyledSettings = [Family, Size, FontColor]
+                    end
+                    item
+                      Caption = ' 20% Component of the NTA Utilization;'
+                      Name = 'Item 1'
+                    end>
+                end
+                object SkLabel9: TSkLabel
+                  AlignWithMargins = True
+                  Left = 6
+                  Top = 104
+                  Width = 300
+                  Height = 19
+                  Margins.Left = 5
+                  Anchors = []
+                  Words = <
+                    item
+                      Caption = 'e.'
+                      Font.Weight = Bold
+                      Name = 'Item 0'
+                      StyledSettings = [Family, Size, FontColor]
+                    end
+                    item
+                      Caption = ' Annual Procurement Plan or Procurement List;'
+                      Name = 'Item 1'
+                    end>
+                end
+                object SkLabel10: TSkLabel
+                  AlignWithMargins = True
+                  Left = 6
+                  Top = 129
+                  Width = 308
+                  Height = 38
+                  Margins.Left = 5
+                  Anchors = []
+                  Words = <
+                    item
+                      Caption = 'f.'
+                      Font.Weight = Bold
+                      Name = 'Item 0'
+                      StyledSettings = [Family, Size, FontColor]
+                    end
+                    item
+                      Caption = ' List of Notices of Award (1st - 3rd Quarter of CY'#13#10' 2023)'
+                      Name = 'Item 1'
+                    end>
+                end
+                object SkLabel11: TSkLabel
+                  AlignWithMargins = True
+                  Left = 6
+                  Top = 173
+                  Width = 307
+                  Height = 38
+                  Margins.Left = 5
+                  Anchors = []
+                  Words = <
+                    item
+                      Caption = 'g.'
+                      Font.Weight = Bold
+                      Name = 'Item 0'
+                      StyledSettings = [Family, Size, FontColor]
+                    end
+                    item
+                      Caption = 
+                        ' Itemized Monthly Collections & Disbursements'#13#10' (January to Sept' +
+                        'ember 2023)'
+                      Name = 'Item 1'
+                    end>
+                end
+              end
+              object ScrollBox1: TScrollBox
+                Left = 336
+                Top = 20
+                Width = 412
+                Height = 345
+                Align = alClient
+                TabOrder = 3
+                ExplicitLeft = 449
+                ExplicitTop = 182
+                ExplicitWidth = 185
+                ExplicitHeight = 364
+                object RelativePanel3: TRelativePanel
+                  Left = 3
+                  Top = 3
+                  Width = 388
+                  Height = 500
+                  ControlCollection = <
+                    item
+                      Control = chkboxC1
+                      AlignBottomWithPanel = False
+                      AlignHorizontalCenterWithPanel = False
+                      AlignLeftWithPanel = True
+                      AlignRightWithPanel = True
+                      AlignTopWithPanel = True
+                      AlignVerticalCenterWithPanel = False
+                    end
+                    item
+                      Control = chkboxC2
+                      AlignBottomWithPanel = False
+                      AlignHorizontalCenterWithPanel = False
+                      AlignLeftWithPanel = True
+                      AlignRightWithPanel = True
+                      AlignTopWith = chkboxC1
+                      AlignTopWithPanel = True
+                      AlignVerticalCenterWithPanel = False
+                      Below = chkboxC1
+                    end>
+                  BevelOuter = bvNone
+                  TabOrder = 0
+                  DesignSize = (
+                    388
+                    500)
+                  object chkboxC1: TCheckBox
+                    AlignWithMargins = True
+                    Left = 3
+                    Top = 3
+                    Width = 382
+                    Height = 53
+                    Anchors = []
+                    Caption = 
+                      'BFDP Monitoring Form A of the DILG Advisory covering the 1st to ' +
+                      '3rd quarter monitoring data signed by the City Director/C/MLGOO,' +
+                      ' Punong Barangay and Barangay Secretary'
+                    TabOrder = 0
+                    WordWrap = True
+                  end
+                  object chkboxC2: TCheckBox
+                    AlignWithMargins = True
+                    Left = 3
+                    Top = 69
+                    Width = 382
+                    Height = 35
+                    Margins.Top = 10
+                    Anchors = []
+                    Caption = 
+                      'Two (2) Photo Documentation of the BFDP board showing the name o' +
+                      'f the barangay'
+                    TabOrder = 1
+                    WordWrap = True
+                  end
+                end
+              end
+            end
+          end
+        end
+        object tsInnovations: TTabSheet
+          Caption = '1.2'
+          ImageIndex = 1
+        end
+      end
+      object RelativePanel1: TRelativePanel
+        Left = 0
+        Top = 0
+        Width = 765
+        Height = 49
+        ControlCollection = <
+          item
+            Control = SkLabel1
+            AlignBottomWithPanel = True
+            AlignHorizontalCenterWithPanel = True
+            AlignLeftWithPanel = True
+            AlignRightWithPanel = True
+            AlignTopWithPanel = True
+            AlignVerticalCenterWithPanel = True
+          end>
+        Align = alTop
+        TabOrder = 1
+        ExplicitWidth = 718
+        object SkLabel1: TSkLabel
+          Left = 0
+          Top = 0
+          Width = 763
+          Height = 47
+          Align = alClient
+          TextSettings.Font.Weight = Bold
+          TextSettings.HorzAlign = Center
+          Words = <
+            item
+              Caption = 
+                'Core Governance Area No. 1:'#13#10'Financial Administration and Sustai' +
+                'nability'
+            end>
+        end
+      end
+    end
+    object tsDP: TTabSheet
+      Caption = 'DP'
+      ImageIndex = 1
+    end
   end
 end

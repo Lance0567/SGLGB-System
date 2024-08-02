@@ -4,11 +4,38 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls,
+  Vcl.WinXCtrls, Vcl.ExtCtrls, System.Skia, Vcl.Skia;
 
 type
   TfrmDCF = class(TForm)
     PageControl1: TPageControl;
+    tsFAS: TTabSheet;
+    tsDP: TTabSheet;
+    PageControl2: TPageControl;
+    RelativePanel1: TRelativePanel;
+    SkLabel1: TSkLabel;
+    tsCompliance: TTabSheet;
+    tsInnovations: TTabSheet;
+    Panel1: TPanel;
+    SkLabel2: TSkLabel;
+    GridPanel1: TGridPanel;
+    Panel2: TPanel;
+    Panel3: TPanel;
+    RelativePanel2: TRelativePanel;
+    SkLabel5: TSkLabel;
+    SkLabel6: TSkLabel;
+    SkLabel7: TSkLabel;
+    SkLabel8: TSkLabel;
+    SkLabel9: TSkLabel;
+    SkLabel10: TSkLabel;
+    SkLabel11: TSkLabel;
+    ScrollBox1: TScrollBox;
+    RelativePanel3: TRelativePanel;
+    chkboxC1: TCheckBox;
+    chkboxC2: TCheckBox;
+    SkLabel3: TSkLabel;
+    SkLabel4: TSkLabel;
   private
     { Private declarations }
   public

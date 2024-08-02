@@ -159,6 +159,8 @@ type
     RelativePanel7: TRelativePanel;
     dbgBarangays: TDBGrid;
     dbgDCF: TDBGrid;
+    About1: TMenuItem;
+    Help1: TMenuItem;
     procedure CalendarView1DrawDayItem(Sender: TObject;
       DrawParams: TDrawViewInfoParams; CalendarViewViewInfo: TCellItemViewInfo);
     procedure AcctSearchBoxKeyPress(Sender: TObject; var Key: Char);

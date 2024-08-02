@@ -1,0 +1,146 @@
+object frmDCF: TfrmDCF
+  Left = 0
+  Top = 0
+  Caption = 'Data Capture Form (DCF)'
+  ClientHeight = 508
+  ClientWidth = 726
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Position = poScreenCenter
+  TextHeight = 15
+  object PageControl1: TPageControl
+    Left = 0
+    Top = 0
+    Width = 726
+    Height = 508
+    ActivePage = tsFAS
+    Align = alClient
+    TabOrder = 0
+    ExplicitLeft = -8
+    ExplicitTop = 24
+    object tsFAS: TTabSheet
+      Caption = 'FAS'
+      object PageControl2: TPageControl
+        Left = 0
+        Top = 49
+        Width = 718
+        Height = 429
+        ActivePage = tsCompliance
+        Align = alClient
+        MultiLine = True
+        TabOrder = 0
+        object tsCompliance: TTabSheet
+          Caption = '1.1'
+          object RelativePanel2: TRelativePanel
+            Left = 0
+            Top = 0
+            Width = 710
+            Height = 399
+            ControlCollection = <
+              item
+                Control = Panel1
+                AlignBottomWithPanel = True
+                AlignHorizontalCenterWithPanel = True
+                AlignLeftWithPanel = True
+                AlignRightWithPanel = True
+                AlignTopWithPanel = True
+                AlignVerticalCenterWithPanel = True
+                Below = SkLabel2
+              end
+              item
+                Control = SkLabel2
+                AlignBottomWithPanel = True
+                AlignHorizontalCenterWithPanel = True
+                AlignLeftWithPanel = True
+                AlignRightWithPanel = True
+                AlignTopWithPanel = True
+                AlignVerticalCenterWithPanel = False
+              end>
+            Align = alClient
+            TabOrder = 0
+            ExplicitWidth = 257
+            object Panel1: TPanel
+              AlignWithMargins = True
+              Left = 10
+              Top = 20
+              Width = 688
+              Height = 387
+              Margins.Left = 10
+              Margins.Top = 0
+              Margins.Right = 10
+              Margins.Bottom = 10
+              Align = alClient
+              BevelOuter = bvNone
+              TabOrder = 0
+            end
+            object SkLabel2: TSkLabel
+              Left = 0
+              Top = 1
+              Width = 708
+              Height = 19
+              Align = alTop
+              Words = <
+                item
+                  Caption = '1.1.1'
+                  Font.Weight = Bold
+                  Name = 'Item 0'
+                  StyledSettings = [Family, Size, FontColor]
+                end
+                item
+                  Caption = 
+                    ' Posted the following CY 2023 financial documenets in the BFDP b' +
+                    'oard:'
+                  Name = 'Item 1'
+                end>
+            end
+          end
+        end
+        object tsInnovations: TTabSheet
+          Caption = '1.2'
+          ImageIndex = 1
+        end
+      end
+      object RelativePanel1: TRelativePanel
+        Left = 0
+        Top = 0
+        Width = 718
+        Height = 49
+        ControlCollection = <
+          item
+            Control = SkLabel1
+            AlignBottomWithPanel = True
+            AlignHorizontalCenterWithPanel = True
+            AlignLeftWithPanel = True
+            AlignRightWithPanel = True
+            AlignTopWithPanel = True
+            AlignVerticalCenterWithPanel = True
+          end>
+        Align = alTop
+        TabOrder = 1
+        object SkLabel1: TSkLabel
+          Left = 0
+          Top = 0
+          Width = 716
+          Height = 47
+          Align = alClient
+          TextSettings.Font.Weight = Bold
+          TextSettings.HorzAlign = Center
+          Words = <
+            item
+              Caption = 
+                'Core Governance Area No. 1:'#13#10'Financial Administration and Sustai' +
+                'nability'
+            end>
+        end
+      end
+    end
+    object tsDP: TTabSheet
+      Caption = 'DP'
+      ImageIndex = 1
+    end
+  end
+end
