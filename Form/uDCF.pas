@@ -32,8 +32,8 @@ type
     SkLabel11: TSkLabel;
     ScrollBox1: TScrollBox;
     RelativePanel3: TRelativePanel;
-    chkboxC1: TCheckBox;
-    chkboxC2: TCheckBox;
+    chkbC1: TCheckBox;
+    chkbC2: TCheckBox;
     SkLabel3: TSkLabel;
     SkLabel4: TSkLabel;
     tsDetails: TTabSheet;
@@ -78,9 +78,11 @@ type
     Label6: TLabel;
     edRegion: TDBEdit;
     Label7: TLabel;
+    chkbC3: TCheckBox;
+    pPhotoDoc: TPanel;
     procedure FormShow(Sender: TObject);
     procedure FormResize(Sender: TObject);
-    procedure ScrollBox2MouseWheel(Sender: TObject; Shift: TShiftState;
+    procedure ScrollBoxMouseWheelHandler(Sender: TObject; Shift: TShiftState;
       WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
   private
     { Private declarations }
@@ -95,12 +97,49 @@ implementation
 
 {$R *.dfm}
 
+{-----------------------------FUNCTIONS & PROCEDURES---------------------------}
+// Mouse Wheel
+procedure HandleScrollBoxMouseWheel(ScrollBox: TScrollBox; Shift: TShiftState;
+  WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
+const
+  ScrollAmount = 35; // Adjust this value to control the scroll speed
+begin
+  // Scroll up
+  if WheelDelta > 0 then
+  begin
+    if ScrollBox.VertScrollBar.Position - ScrollAmount < 0 then
+      ScrollBox.VertScrollBar.Position := 0
+    else
+      ScrollBox.VertScrollBar.Position := ScrollBox.VertScrollBar.Position -
+        ScrollAmount;
+  end;
+
+  // Scroll down
+  if WheelDelta < 0 then
+  begin
+    if ScrollBox.VertScrollBar.Position + ScrollAmount >
+      ScrollBox.VertScrollBar.Range then
+      ScrollBox.VertScrollBar.Position := ScrollBox.VertScrollBar.Range
+    else
+      ScrollBox.VertScrollBar.Position := ScrollBox.VertScrollBar.Position +
+        ScrollAmount;
+  end;
+
+  // Indicate that the event was handled
+  Handled := True;
+end;
+
+{------------------------------------FORM--------------------------------------}
 procedure TfrmDCF.FormResize(Sender: TObject);
 begin
-  Self.Caption := 'Height: ' + IntToStr(ClientHeight);
-  if ClientHeight <= 508 then
+  Self.Caption := 'Height: ' + IntToStr(ClientHeight) + ' ' + 'Width: ' + IntToStr(ClientWidth);
+
+  // Form Responsive Settings
+  if ClientHeight <= 750 then         // Optional 508
   begin
     pForm.Align := TAlign.alTop;
+    pForm.Height := 750;
+    pProfile.Width := 229;
   end
   else
   begin
@@ -113,31 +152,13 @@ begin
   ClientHeight := 508;
 end;
 
-procedure TfrmDCF.ScrollBox2MouseWheel(Sender: TObject; Shift: TShiftState;
+{----------------------------------SCROLLBOX-----------------------------------}
+// Mouse Wheel Sender
+procedure TfrmDCF.ScrollBoxMouseWheelHandler(Sender: TObject; Shift: TShiftState;
   WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
-const
-  ScrollAmount = 25; // Adjust this value to control the scroll speed
 begin
-  // Scroll up
-  if WheelDelta > 0 then
-  begin
-    if ScrollBox2.VertScrollBar.Position - ScrollAmount < 0 then
-      ScrollBox2.VertScrollBar.Position := 0
-    else
-      ScrollBox2.VertScrollBar.Position := ScrollBox2.VertScrollBar.Position - ScrollAmount;
-  end;
-
-  // Scroll down
-  if WheelDelta < 0 then
-  begin
-    if ScrollBox2.VertScrollBar.Position + ScrollAmount > ScrollBox2.VertScrollBar.Range then
-      ScrollBox2.VertScrollBar.Position := ScrollBox2.VertScrollBar.Range
-    else
-      ScrollBox2.VertScrollBar.Position := ScrollBox2.VertScrollBar.Position + ScrollAmount;
-  end;
-
-  // Indicate that the event was handled
-  Handled := True;
+  HandleScrollBoxMouseWheel(TScrollBox(Sender), Shift, WheelDelta,
+    MousePos, Handled);
 end;
 
 end.

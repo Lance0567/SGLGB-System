@@ -1,0 +1,164 @@
+unit uDCF;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls,
+  Vcl.WinXCtrls, Vcl.ExtCtrls, System.Skia, Vcl.Skia, Vcl.Mask, Vcl.DBCtrls,
+  Vcl.Imaging.pngimage;
+
+type
+  TfrmDCF = class(TForm)
+    PageControl1: TPageControl;
+    tsFAS: TTabSheet;
+    PageControl2: TPageControl;
+    RelativePanel1: TRelativePanel;
+    SkLabel1: TSkLabel;
+    tsCompliance: TTabSheet;
+    tsInnovations: TTabSheet;
+    Panel1: TPanel;
+    SkLabel2: TSkLabel;
+    GridPanel1: TGridPanel;
+    Panel2: TPanel;
+    Panel3: TPanel;
+    RelativePanel2: TRelativePanel;
+    SkLabel5: TSkLabel;
+    SkLabel6: TSkLabel;
+    SkLabel7: TSkLabel;
+    SkLabel8: TSkLabel;
+    SkLabel9: TSkLabel;
+    SkLabel10: TSkLabel;
+    SkLabel11: TSkLabel;
+    ScrollBox1: TScrollBox;
+    RelativePanel3: TRelativePanel;
+    chkboxC1: TCheckBox;
+    chkboxC2: TCheckBox;
+    SkLabel3: TSkLabel;
+    SkLabel4: TSkLabel;
+    tsDetails: TTabSheet;
+    ScrollBox2: TScrollBox;
+    pForm: TPanel;
+    pWrapper: TPanel;
+    pYear: TPanel;
+    Label1: TLabel;
+    edYear: TDBEdit;
+    pProfile: TPanel;
+    Image1: TImage;
+    pBtnHolder: TPanel;
+    btnPrint: TButton;
+    btnComplete: TButton;
+    btnPublish: TButton;
+    StatusPanel: TPanel;
+    Label2: TLabel;
+    DatesPanel: TPanel;
+    DateContactedPanel: TPanel;
+    Label9: TLabel;
+    dtpDateCompleted: TDateTimePicker;
+    DateCreatedPanel: TPanel;
+    Label8: TLabel;
+    dtpDateCreated: TDateTimePicker;
+    DateClosedPanel: TPanel;
+    dtpDatePublished: TDateTimePicker;
+    cbStatus: TComboBox;
+    tsDP: TTabSheet;
+    NotesPanel: TPanel;
+    Label10: TLabel;
+    NotesMemo: TMemo;
+    NamePanel: TPanel;
+    Label3: TLabel;
+    edBarangay: TDBEdit;
+    pCityMunicipality: TPanel;
+    Label4: TLabel;
+    edCM: TDBEdit;
+    pProvince: TPanel;
+    Label5: TLabel;
+    edProvince: TDBEdit;
+    pRegion: TPanel;
+    Label6: TLabel;
+    edRegion: TDBEdit;
+    Label7: TLabel;
+    procedure FormShow(Sender: TObject);
+    procedure FormResize(Sender: TObject);
+    procedure ScrollBoxMouseWheelHandler(Sender: TObject; Shift: TShiftState;
+      WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmDCF: TfrmDCF;
+
+implementation
+
+{$R *.dfm}
+
+{-----------------------------FUNCTIONS & PROCEDURES---------------------------}
+// Mouse Wheel
+procedure HandleScrollBoxMouseWheel(ScrollBox: TScrollBox; Shift: TShiftState;
+  WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
+const
+  ScrollAmount = 20; // Adjust this value to control the scroll speed
+begin
+  // Scroll up
+  if WheelDelta > 0 then
+  begin
+    if ScrollBox.VertScrollBar.Position - ScrollAmount < 0 then
+      ScrollBox.VertScrollBar.Position := 0
+    else
+      ScrollBox.VertScrollBar.Position := ScrollBox.VertScrollBar.Position -
+        ScrollAmount;
+  end;
+
+  // Scroll down
+  if WheelDelta < 0 then
+  begin
+    if ScrollBox.VertScrollBar.Position + ScrollAmount >
+      ScrollBox.VertScrollBar.Range then
+      ScrollBox.VertScrollBar.Position := ScrollBox.VertScrollBar.Range
+    else
+      ScrollBox.VertScrollBar.Position := ScrollBox.VertScrollBar.Position +
+        ScrollAmount;
+  end;
+
+  // Indicate that the event was handled
+  Handled := True;
+end;
+
+procedure TfrmDCF.FormResize(Sender: TObject);
+begin
+  Self.Caption := 'Height: ' + IntToStr(ClientHeight);
+
+  // Form Responsive Settings
+  if ClientHeight <= 508 then
+  begin
+    pForm.Align := TAlign.alTop;
+    pProfile.Width := 229;
+    pWrapper.Align := TAlign.alClient;
+  end
+  else
+  begin
+    pForm.Align := TAlign.alClient;
+    pProfile.Width := 350;
+    pWrapper.Align := TAlign.alNone;
+    pWrapper.Width := 1450;
+  end;
+end;
+
+procedure TfrmDCF.FormShow(Sender: TObject);
+begin
+  ClientHeight := 508;
+end;
+
+{----------------------------------SCROLLBOX-----------------------------------}
+// Mouse Wheel Sender
+procedure TfrmDCF.ScrollBoxMouseWheelHandler(Sender: TObject; Shift: TShiftState;
+  WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
+begin
+  HandleScrollBoxMouseWheel(TScrollBox(Sender), Shift, WheelDelta,
+    MousePos, Handled);
+end;
+
+end.

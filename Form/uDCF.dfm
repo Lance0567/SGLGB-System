@@ -19,7 +19,7 @@ object frmDCF: TfrmDCF
     Top = 0
     Width = 790
     Height = 508
-    ActivePage = tsDetails
+    ActivePage = tsFAS
     Align = alClient
     TabOrder = 0
     ExplicitWidth = 788
@@ -34,7 +34,7 @@ object frmDCF: TfrmDCF
         Height = 478
         Align = alClient
         TabOrder = 0
-        OnMouseWheel = ScrollBox2MouseWheel
+        OnMouseWheel = ScrollBoxMouseWheelHandler
         ExplicitWidth = 551
         ExplicitHeight = 475
         object pForm: TPanel
@@ -4867,14 +4867,15 @@ object frmDCF: TfrmDCF
                 Height = 345
                 Align = alClient
                 TabOrder = 3
+                OnMouseWheel = ScrollBoxMouseWheelHandler
                 object RelativePanel3: TRelativePanel
-                  Left = 3
+                  Left = 4
                   Top = 3
                   Width = 388
                   Height = 500
                   ControlCollection = <
                     item
-                      Control = chkboxC1
+                      Control = chkbC1
                       AlignBottomWithPanel = False
                       AlignHorizontalCenterWithPanel = False
                       AlignLeftWithPanel = True
@@ -4883,22 +4884,44 @@ object frmDCF: TfrmDCF
                       AlignVerticalCenterWithPanel = False
                     end
                     item
-                      Control = chkboxC2
+                      Control = chkbC2
                       AlignBottomWithPanel = False
                       AlignHorizontalCenterWithPanel = False
                       AlignLeftWithPanel = True
                       AlignRightWithPanel = True
-                      AlignTopWith = chkboxC1
+                      AlignTopWith = chkbC1
                       AlignTopWithPanel = True
                       AlignVerticalCenterWithPanel = False
-                      Below = chkboxC1
+                      Below = chkbC1
+                    end
+                    item
+                      Control = chkbC3
+                      AlignBottomWithPanel = False
+                      AlignHorizontalCenterWithPanel = False
+                      AlignLeftWithPanel = True
+                      AlignRightWithPanel = True
+                      AlignTopWith = chkbC2
+                      AlignTopWithPanel = True
+                      AlignVerticalCenterWithPanel = False
+                      Below = chkbC2
+                    end
+                    item
+                      Control = pPhotoDoc
+                      AlignBottomWithPanel = False
+                      AlignHorizontalCenterWithPanel = False
+                      AlignLeftWithPanel = True
+                      AlignRightWithPanel = True
+                      AlignTopWith = chkbC3
+                      AlignTopWithPanel = True
+                      AlignVerticalCenterWithPanel = False
+                      Below = chkbC3
                     end>
                   BevelOuter = bvNone
                   TabOrder = 0
                   DesignSize = (
                     388
                     500)
-                  object chkboxC1: TCheckBox
+                  object chkbC1: TCheckBox
                     AlignWithMargins = True
                     Left = 3
                     Top = 3
@@ -4912,7 +4935,7 @@ object frmDCF: TfrmDCF
                     TabOrder = 0
                     WordWrap = True
                   end
-                  object chkboxC2: TCheckBox
+                  object chkbC2: TCheckBox
                     AlignWithMargins = True
                     Left = 3
                     Top = 69
@@ -4925,6 +4948,30 @@ object frmDCF: TfrmDCF
                       'f the barangay'
                     TabOrder = 1
                     WordWrap = True
+                  end
+                  object chkbC3: TCheckBox
+                    AlignWithMargins = True
+                    Left = 3
+                    Top = 117
+                    Width = 382
+                    Height = 35
+                    Margins.Top = 10
+                    Anchors = []
+                    Caption = 
+                      'Two (2) Photo Documentation of the BFDP board showing the name o' +
+                      'f the barangay'
+                    TabOrder = 2
+                    WordWrap = True
+                  end
+                  object pPhotoDoc: TPanel
+                    AlignWithMargins = True
+                    Left = 3
+                    Top = 158
+                    Width = 382
+                    Height = 115
+                    Anchors = []
+                    BevelOuter = bvNone
+                    TabOrder = 3
                   end
                 end
               end
