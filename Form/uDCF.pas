@@ -5,13 +5,13 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls,
-  Vcl.WinXCtrls, Vcl.ExtCtrls, System.Skia, Vcl.Skia;
+  Vcl.WinXCtrls, Vcl.ExtCtrls, System.Skia, Vcl.Skia, Vcl.Mask, Vcl.DBCtrls,
+  Vcl.Imaging.pngimage;
 
 type
   TfrmDCF = class(TForm)
     PageControl1: TPageControl;
     tsFAS: TTabSheet;
-    tsDP: TTabSheet;
     PageControl2: TPageControl;
     RelativePanel1: TRelativePanel;
     SkLabel1: TSkLabel;
@@ -38,15 +38,50 @@ type
     SkLabel4: TSkLabel;
     tsDetails: TTabSheet;
     ScrollBox2: TScrollBox;
-    RelativePanel4: TRelativePanel;
-    pProfile: TPanel;
     pForm: TPanel;
+    pWrapper: TPanel;
+    pYear: TPanel;
+    Label1: TLabel;
+    edYear: TDBEdit;
+    pProfile: TPanel;
     Image1: TImage;
     pBtnHolder: TPanel;
     btnPrint: TButton;
     btnComplete: TButton;
     btnPublish: TButton;
-    Panel4: TPanel;
+    StatusPanel: TPanel;
+    Label2: TLabel;
+    DatesPanel: TPanel;
+    DateContactedPanel: TPanel;
+    Label9: TLabel;
+    dtpDateCompleted: TDateTimePicker;
+    DateCreatedPanel: TPanel;
+    Label8: TLabel;
+    dtpDateCreated: TDateTimePicker;
+    DateClosedPanel: TPanel;
+    dtpDatePublished: TDateTimePicker;
+    cbStatus: TComboBox;
+    tsDP: TTabSheet;
+    NotesPanel: TPanel;
+    Label10: TLabel;
+    NotesMemo: TMemo;
+    NamePanel: TPanel;
+    Label3: TLabel;
+    edBarangay: TDBEdit;
+    pCityMunicipality: TPanel;
+    Label4: TLabel;
+    edCM: TDBEdit;
+    pProvince: TPanel;
+    Label5: TLabel;
+    edProvince: TDBEdit;
+    pRegion: TPanel;
+    Label6: TLabel;
+    edRegion: TDBEdit;
+    Label7: TLabel;
+    procedure FormShow(Sender: TObject);
+    procedure FormResize(Sender: TObject);
+    procedure ScrollBox2MouseWheel(Sender: TObject; Shift: TShiftState;
+      WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
   private
     { Private declarations }
   public
@@ -59,5 +94,50 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TfrmDCF.FormResize(Sender: TObject);
+begin
+  Self.Caption := 'Height: ' + IntToStr(ClientHeight);
+  if ClientHeight <= 508 then
+  begin
+    pForm.Align := TAlign.alTop;
+  end
+  else
+  begin
+    pForm.Align := TAlign.alClient;
+  end;
+end;
+
+procedure TfrmDCF.FormShow(Sender: TObject);
+begin
+  ClientHeight := 508;
+end;
+
+procedure TfrmDCF.ScrollBox2MouseWheel(Sender: TObject; Shift: TShiftState;
+  WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
+const
+  ScrollAmount = 25; // Adjust this value to control the scroll speed
+begin
+  // Scroll up
+  if WheelDelta > 0 then
+  begin
+    if ScrollBox2.VertScrollBar.Position - ScrollAmount < 0 then
+      ScrollBox2.VertScrollBar.Position := 0
+    else
+      ScrollBox2.VertScrollBar.Position := ScrollBox2.VertScrollBar.Position - ScrollAmount;
+  end;
+
+  // Scroll down
+  if WheelDelta < 0 then
+  begin
+    if ScrollBox2.VertScrollBar.Position + ScrollAmount > ScrollBox2.VertScrollBar.Range then
+      ScrollBox2.VertScrollBar.Position := ScrollBox2.VertScrollBar.Range
+    else
+      ScrollBox2.VertScrollBar.Position := ScrollBox2.VertScrollBar.Position + ScrollAmount;
+  end;
+
+  // Indicate that the event was handled
+  Handled := True;
+end;
 
 end.

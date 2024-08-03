@@ -539,7 +539,7 @@ procedure TfrmMain.btnCreateDCFClick(Sender: TObject);
 var
   LYear: String;
 begin
-  LYear := InputBox('Create DCF', 'Year of DCF', '');
+  LYear := InputBox('Create DCF', 'Year', '');
   frmDCF.ShowModal;
 
 //  if SaveEmailsDialog.Execute then
