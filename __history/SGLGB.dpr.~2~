@@ -2,21 +2,28 @@ program SGLGB;
 
 uses
   Vcl.Forms,
-  uMainForm in 'Main\uMainForm.pas' {MainForm},
   uDataMod in 'Data Module\uDataMod.pas' {DM: TDataModule},
+  uMainForm in 'Main\uMainForm.pas' {frmMain},
   uDraftProposal in 'Modal\uDraftProposal.pas' {DraftProposalForm},
   uLeads in 'Modal\uLeads.pas' {LeadsForm},
-  uProposal in 'Modal\uProposal.pas' {ProposalForm};
+  uLogin in 'Modal\uLogin.pas' {frmLogin},
+  uProposal in 'Modal\uProposal.pas' {ProposalForm},
+  uSettings in 'Modal\uSettings.pas' {frmSettings},
+  Vcl.Themes,
+  Vcl.Styles;
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TMainForm, MainForm);
+  TStyleManager.TrySetStyle('Lavender Classico');
   Application.CreateForm(TDM, DM);
+  Application.CreateForm(TfrmMain, frmMain);
   Application.CreateForm(TDraftProposalForm, DraftProposalForm);
   Application.CreateForm(TLeadsForm, LeadsForm);
+  Application.CreateForm(TfrmLogin, frmLogin);
   Application.CreateForm(TProposalForm, ProposalForm);
+  Application.CreateForm(TfrmSettings, frmSettings);
   Application.Run;
 end.

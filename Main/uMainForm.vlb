@@ -289,15 +289,8 @@ Coordinates=1843,881,75,33
 [MainMenu1]
 Coordinates=1843,496,81,36
 
-[lbUserStatus]
-Coordinates=1011,484,88,36
-Visible=True
-
 [Exit1]
 Coordinates=1843,771,43,36
-
-[Panel1]
-Coordinates=10,212,55,58
 
 [N1]
 Coordinates=0,541,40,36
@@ -315,7 +308,7 @@ Coordinates=44,70,57,36
 Coordinates=121,690,55,36
 
 []
-Coordinates=916,10,108,58
+Coordinates=1011,484,88,36
 Visible=True
 
 [DM.]
@@ -348,4 +341,7 @@ Coordinates=1843,606,66,36
 
 [btnDCF]
 Coordinates=240,416,77,58
+
+[pToolbar]
+Coordinates=10,212,55,58
 

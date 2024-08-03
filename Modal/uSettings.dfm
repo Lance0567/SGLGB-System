@@ -19,7 +19,6 @@ object frmSettings: TfrmSettings
     Height = 9
     Caption = 'ToolBar1'
     TabOrder = 0
-    ExplicitWidth = 464
   end
   object PageControl1: TPageControl
     Left = 0
@@ -36,8 +35,6 @@ object frmSettings: TfrmSettings
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 464
-    ExplicitHeight = 548
     object TabSheet1: TTabSheet
       Caption = #9632'Regional Address Settings '
       object GroupBox1: TGroupBox
@@ -57,7 +54,6 @@ object frmSettings: TfrmSettings
         Font.Style = []
         ParentFont = False
         TabOrder = 0
-        ExplicitWidth = 460
         object DBEdit1: TDBEdit
           AlignWithMargins = True
           Left = 7
@@ -75,9 +71,6 @@ object frmSettings: TfrmSettings
           Font.Style = [fsBold]
           ParentFont = False
           TabOrder = 0
-          ExplicitLeft = 12
-          ExplicitTop = 16
-          ExplicitWidth = 414
           ExplicitHeight = 28
         end
       end
@@ -98,8 +91,6 @@ object frmSettings: TfrmSettings
         Font.Style = []
         ParentFont = False
         TabOrder = 1
-        ExplicitTop = 53
-        ExplicitWidth = 460
         object DBEdit2: TDBEdit
           AlignWithMargins = True
           Left = 7
@@ -117,9 +108,6 @@ object frmSettings: TfrmSettings
           Font.Style = [fsBold]
           ParentFont = False
           TabOrder = 0
-          ExplicitLeft = 12
-          ExplicitTop = 16
-          ExplicitWidth = 414
           ExplicitHeight = 28
         end
       end
@@ -140,8 +128,6 @@ object frmSettings: TfrmSettings
         Font.Style = []
         ParentFont = False
         TabOrder = 2
-        ExplicitTop = 103
-        ExplicitWidth = 460
         object DBEdit3: TDBEdit
           AlignWithMargins = True
           Left = 7
@@ -159,9 +145,6 @@ object frmSettings: TfrmSettings
           Font.Style = [fsBold]
           ParentFont = False
           TabOrder = 0
-          ExplicitLeft = 12
-          ExplicitTop = 16
-          ExplicitWidth = 414
           ExplicitHeight = 28
         end
       end
@@ -182,8 +165,6 @@ object frmSettings: TfrmSettings
         Font.Style = []
         ParentFont = False
         TabOrder = 4
-        ExplicitTop = 203
-        ExplicitWidth = 460
         object DBEdit5: TDBEdit
           AlignWithMargins = True
           Left = 7
@@ -201,9 +182,6 @@ object frmSettings: TfrmSettings
           Font.Style = [fsBold]
           ParentFont = False
           TabOrder = 0
-          ExplicitLeft = 12
-          ExplicitTop = 16
-          ExplicitWidth = 414
           ExplicitHeight = 28
         end
       end
@@ -222,9 +200,6 @@ object frmSettings: TfrmSettings
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 5
-        ExplicitTop = 253
-        ExplicitWidth = 460
-        ExplicitHeight = 222
         object gpLogoHolder: TGridPanel
           Left = 2
           Top = 17
@@ -266,10 +241,6 @@ object frmSettings: TfrmSettings
               SizeStyle = ssAuto
             end>
           TabOrder = 0
-          ExplicitLeft = 136
-          ExplicitTop = 88
-          ExplicitWidth = 185
-          ExplicitHeight = 41
           object Panel2: TPanel
             AlignWithMargins = True
             Left = 10
@@ -283,43 +254,41 @@ object frmSettings: TfrmSettings
             Align = alClient
             BevelOuter = bvNone
             TabOrder = 0
-            ExplicitLeft = 4
-            ExplicitTop = 60
-            ExplicitWidth = 185
-            ExplicitHeight = 41
-            object SkLabel1: TSkLabel
-              Left = 0
-              Top = 0
-              Width = 132
-              Height = 16
+            object Label4: TLabel
+              AlignWithMargins = True
+              Left = 3
+              Top = 3
+              Width = 126
+              Height = 17
+              Margins.Bottom = 0
               Align = alTop
-              TextSettings.Font.Size = 12.000000000000000000
-              TextSettings.Font.Weight = Bold
-              TextSettings.HorzAlign = Center
-              Words = <
-                item
-                  Caption = 'Barangay Logo'
-                end>
-              ExplicitLeft = 1
-              ExplicitTop = 16
-              ExplicitWidth = 185
+              Alignment = taCenter
+              BiDiMode = bdLeftToRight
+              Caption = 'Barangay Logo'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -13
+              Font.Name = 'Segoe UI Semibold'
+              Font.Style = [fsBold]
+              ParentBiDiMode = False
+              ParentFont = False
+              Layout = tlCenter
+              ExplicitWidth = 91
             end
             object DBImage1: TDBImage
               AlignWithMargins = True
               Left = 10
-              Top = 21
+              Top = 25
               Width = 112
-              Height = 95
+              Height = 91
               Margins.Left = 10
               Margins.Top = 5
               Margins.Right = 10
               Margins.Bottom = 0
               Align = alClient
               TabOrder = 0
-              ExplicitLeft = 11
-              ExplicitTop = 22
-              ExplicitWidth = 163
-              ExplicitHeight = 96
+              ExplicitTop = 35
+              ExplicitHeight = 81
             end
             object gpLogo1: TGridPanel
               Left = 0
@@ -351,9 +320,6 @@ object frmSettings: TfrmSettings
                   Value = 100.000000000000000000
                 end>
               TabOrder = 1
-              ExplicitLeft = 1
-              ExplicitTop = 118
-              ExplicitWidth = 183
               object btnUpload1: TButton
                 AlignWithMargins = True
                 Left = 5
@@ -375,10 +341,6 @@ object frmSettings: TfrmSettings
                 ParentFont = False
                 TabOrder = 0
                 TabStop = False
-                ExplicitLeft = 6
-                ExplicitTop = 6
-                ExplicitWidth = 55
-                ExplicitHeight = 29
               end
               object btnDelete1: TButton
                 AlignWithMargins = True
@@ -401,9 +363,6 @@ object frmSettings: TfrmSettings
                 ParentFont = False
                 TabOrder = 1
                 TabStop = False
-                ExplicitTop = 6
-                ExplicitWidth = 55
-                ExplicitHeight = 29
               end
             end
           end
@@ -420,43 +379,41 @@ object frmSettings: TfrmSettings
             Align = alClient
             BevelOuter = bvNone
             TabOrder = 1
-            ExplicitLeft = 207
-            ExplicitTop = 60
-            ExplicitWidth = 185
-            ExplicitHeight = 41
-            object SkLabel2: TSkLabel
-              Left = 0
-              Top = 0
-              Width = 133
-              Height = 16
+            object Label1: TLabel
+              AlignWithMargins = True
+              Left = 3
+              Top = 3
+              Width = 127
+              Height = 17
+              Margins.Bottom = 0
               Align = alTop
-              TextSettings.Font.Size = 12.000000000000000000
-              TextSettings.Font.Weight = Bold
-              TextSettings.HorzAlign = Center
-              Words = <
-                item
-                  Caption = 'LGU Logo'
-                end>
-              ExplicitLeft = 1
-              ExplicitTop = 16
-              ExplicitWidth = 185
+              Alignment = taCenter
+              BiDiMode = bdLeftToRight
+              Caption = 'LGU Logo'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -13
+              Font.Name = 'Segoe UI Semibold'
+              Font.Style = [fsBold]
+              ParentBiDiMode = False
+              ParentFont = False
+              Layout = tlCenter
+              ExplicitWidth = 58
             end
             object DBImage2: TDBImage
               AlignWithMargins = True
               Left = 10
-              Top = 21
+              Top = 25
               Width = 113
-              Height = 95
+              Height = 91
               Margins.Left = 10
               Margins.Top = 5
               Margins.Right = 10
               Margins.Bottom = 0
               Align = alClient
               TabOrder = 0
-              ExplicitLeft = 11
-              ExplicitTop = 22
-              ExplicitWidth = 148
-              ExplicitHeight = 96
+              ExplicitTop = 5
+              ExplicitHeight = 111
             end
             object gpLogo2: TGridPanel
               Left = 0
@@ -488,9 +445,6 @@ object frmSettings: TfrmSettings
                   Value = 100.000000000000000000
                 end>
               TabOrder = 1
-              ExplicitLeft = 1
-              ExplicitTop = 118
-              ExplicitWidth = 168
               object btnUpload2: TButton
                 AlignWithMargins = True
                 Left = 5
@@ -512,10 +466,6 @@ object frmSettings: TfrmSettings
                 ParentFont = False
                 TabOrder = 0
                 TabStop = False
-                ExplicitLeft = 6
-                ExplicitTop = 6
-                ExplicitWidth = 55
-                ExplicitHeight = 29
               end
               object btnDelete2: TButton
                 AlignWithMargins = True
@@ -538,9 +488,6 @@ object frmSettings: TfrmSettings
                 ParentFont = False
                 TabOrder = 1
                 TabStop = False
-                ExplicitTop = 6
-                ExplicitWidth = 55
-                ExplicitHeight = 29
               end
             end
           end
@@ -557,43 +504,44 @@ object frmSettings: TfrmSettings
             Align = alClient
             BevelOuter = bvNone
             TabOrder = 2
-            ExplicitLeft = 271
-            ExplicitTop = 1
-            ExplicitWidth = 185
-            ExplicitHeight = 160
-            object SkLabel3: TSkLabel
+            object Label2: TLabel
+              AlignWithMargins = True
               Left = 0
-              Top = 0
+              Top = 3
               Width = 133
-              Height = 16
+              Height = 17
+              Margins.Left = 0
+              Margins.Right = 0
+              Margins.Bottom = 0
               Align = alTop
-              TextSettings.Font.Size = 12.000000000000000000
-              TextSettings.Font.Weight = Bold
-              TextSettings.HorzAlign = Center
-              Words = <
-                item
-                  Caption = 'Bagong Pilipinas Logo'
-                end>
-              ExplicitLeft = 1
-              ExplicitTop = 16
-              ExplicitWidth = 185
+              Alignment = taCenter
+              BiDiMode = bdLeftToRight
+              Caption = 'Bagong Pilipinas Logo'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -13
+              Font.Name = 'Segoe UI Semibold'
+              Font.Style = [fsBold]
+              ParentBiDiMode = False
+              ParentFont = False
+              Layout = tlCenter
+              ExplicitLeft = 3
+              ExplicitWidth = 134
             end
             object DBImage3: TDBImage
               AlignWithMargins = True
               Left = 10
-              Top = 21
+              Top = 25
               Width = 113
-              Height = 95
+              Height = 91
               Margins.Left = 10
               Margins.Top = 5
               Margins.Right = 10
               Margins.Bottom = 0
               Align = alClient
               TabOrder = 0
-              ExplicitLeft = 74
-              ExplicitTop = 18
-              ExplicitWidth = 112
-              ExplicitHeight = 98
+              ExplicitTop = 5
+              ExplicitHeight = 111
             end
             object gpLogo3: TGridPanel
               Left = 0
@@ -625,9 +573,6 @@ object frmSettings: TfrmSettings
                   Value = 100.000000000000000000
                 end>
               TabOrder = 1
-              ExplicitLeft = 1
-              ExplicitTop = 118
-              ExplicitWidth = 183
               object btnUpload3: TButton
                 AlignWithMargins = True
                 Left = 5
@@ -649,10 +594,6 @@ object frmSettings: TfrmSettings
                 ParentFont = False
                 TabOrder = 0
                 TabStop = False
-                ExplicitLeft = 6
-                ExplicitTop = 6
-                ExplicitWidth = 55
-                ExplicitHeight = 29
               end
               object btnDelete3: TButton
                 AlignWithMargins = True
@@ -675,9 +616,6 @@ object frmSettings: TfrmSettings
                 ParentFont = False
                 TabOrder = 1
                 TabStop = False
-                ExplicitTop = 6
-                ExplicitWidth = 55
-                ExplicitHeight = 29
               end
             end
           end
@@ -706,7 +644,6 @@ object frmSettings: TfrmSettings
           Font.Style = [fsBold]
           ParentFont = False
           TabOrder = 1
-          ExplicitTop = 178
           DesignSize = (
             458
             45)
@@ -744,8 +681,6 @@ object frmSettings: TfrmSettings
         Font.Style = []
         ParentFont = False
         TabOrder = 3
-        ExplicitTop = 153
-        ExplicitWidth = 460
         object DBEdit4: TDBEdit
           AlignWithMargins = True
           Left = 7
@@ -763,9 +698,6 @@ object frmSettings: TfrmSettings
           Font.Style = [fsBold]
           ParentFont = False
           TabOrder = 0
-          ExplicitLeft = 12
-          ExplicitTop = 16
-          ExplicitWidth = 414
           ExplicitHeight = 28
         end
       end
@@ -776,8 +708,6 @@ object frmSettings: TfrmSettings
         Height = 39
         Align = alBottom
         TabOrder = 6
-        ExplicitTop = 477
-        ExplicitWidth = 456
         object btClose: TButton
           AlignWithMargins = True
           Left = 387
@@ -788,9 +718,6 @@ object frmSettings: TfrmSettings
           Align = alRight
           Caption = 'Close'
           TabOrder = 0
-          ExplicitLeft = 3
-          ExplicitTop = 7
-          ExplicitHeight = 25
         end
       end
     end
@@ -816,8 +743,6 @@ object frmSettings: TfrmSettings
         ParentFont = False
         ScrollBars = ssVertical
         TabOrder = 0
-        ExplicitWidth = 456
-        ExplicitHeight = 516
       end
     end
   end

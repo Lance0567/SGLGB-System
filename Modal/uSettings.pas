@@ -5,8 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls,
-  Vcl.ExtCtrls, Vcl.DBCtrls, Vcl.Mask, Vcl.ToolWin, System.Skia, Vcl.Skia,
-  Vcl.WinXCtrls;
+  Vcl.ExtCtrls, Vcl.DBCtrls, Vcl.Mask, Vcl.ToolWin, Vcl.WinXCtrls;
 
 type
   TfrmSettings = class(TForm)
@@ -30,25 +29,25 @@ type
     history: TRichEdit;
     gpLogoHolder: TGridPanel;
     Panel2: TPanel;
-    SkLabel1: TSkLabel;
     DBImage1: TDBImage;
     gpLogo1: TGridPanel;
     btnUpload1: TButton;
     btnDelete1: TButton;
     Panel4: TPanel;
-    SkLabel2: TSkLabel;
     DBImage2: TDBImage;
     gpLogo2: TGridPanel;
     btnUpload2: TButton;
     btnDelete2: TButton;
     Panel5: TPanel;
-    SkLabel3: TSkLabel;
     DBImage3: TDBImage;
     gpLogo3: TGridPanel;
     btnUpload3: TButton;
     btnDelete3: TButton;
     RelativePanel1: TRelativePanel;
     btSaveLogo: TButton;
+    Label4: TLabel;
+    Label1: TLabel;
+    Label2: TLabel;
   private
     { Private declarations }
   public

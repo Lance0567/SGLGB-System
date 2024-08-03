@@ -1,6 +1,6 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <ProjectGuid>{AE013B22-7384-4BE9-BFE4-2F1B1221F576}</ProjectGuid>
+        <ProjectGuid>{C876C632-A634-45B8-992B-1C11590B4A24}</ProjectGuid>
         <ProjectVersion>19.5</ProjectVersion>
         <FrameworkType>VCL</FrameworkType>
         <Base>True</Base>
@@ -101,25 +101,13 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="Main\uMainForm.pas">
-            <Form>frmMain</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
         <DCCReference Include="Data Module\uDataMod.pas">
             <Form>DM</Form>
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
-        <DCCReference Include="Modal\uDraftProposal.pas">
-            <Form>DraftProposalForm</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="Modal\uLeads.pas">
-            <Form>LeadsForm</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="Modal\uProposal.pas">
-            <Form>ProposalForm</Form>
+        <DCCReference Include="Main\uMainForm.pas">
+            <Form>frmMain</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Modal\uLogin.pas">

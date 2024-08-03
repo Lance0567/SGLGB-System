@@ -17,7 +17,7 @@ uses
   Vcl.WinXPanels, System.Actions, Vcl.ActnList, Vcl.Themes,
   Vcl.BaseImageCollection, Vcl.ImageCollection, System.ImageList, Vcl.ImgList,
   Vcl.VirtualImageList, Vcl.VirtualImage, System.IOUtils, Vcl.TitleBarCtrls,
-  System.Skia, Vcl.Skia, Vcl.Menus, uLogin, Vcl.DBGrids;
+  Vcl.Menus, uLogin, Vcl.DBGrids, System.Skia, Vcl.Skia;
 
 type
   TfrmMain = class(TForm)
@@ -123,8 +123,7 @@ type
     VirtualImage12: TVirtualImage;
     VirtualImage13: TVirtualImage;
     VirtualImage14: TVirtualImage;
-    Panel1: TPanel;
-    lbUserStatus: TSkLabel;
+    pToolbar: TPanel;
     MainMenu1: TMainMenu;
     File1: TMenuItem;
     Login: TMenuItem;
@@ -139,6 +138,7 @@ type
     Help1: TMenuItem;
     Backup1: TMenuItem;
     Backup2: TMenuItem;
+    lbUserStatus: TSkLabel;
     procedure CalendarView1DrawDayItem(Sender: TObject;
       DrawParams: TDrawViewInfoParams; CalendarViewViewInfo: TCellItemViewInfo);
     procedure AcctSearchBoxKeyPress(Sender: TObject; var Key: Char);
@@ -191,7 +191,6 @@ type
     { Private declarations }
     FRanOnce: Boolean;
     FMutex: THandle;
-    function IsAlreadyRunning: Boolean;
     procedure AppIdle(Sender: TObject; var Done: Boolean);
     procedure RefreshGrids;
     procedure UpdateNavButtons;
@@ -207,15 +206,25 @@ implementation
 
 {$R *.dfm}
 
-uses uDataMod, uLeads, uDraftProposal, uProposal;
+uses uDataMod;
 
 {-------------------------------Functions & Procedures-------------------------}
-function TfrmMain.IsAlreadyRunning: Boolean;
+function IsSingleInstance: Boolean;
+const
+  MUTEX_NAME = 'MyUniqueApplicationMutexName';
 begin
-  // Create a unique mutex name for your application
-  FMutex := CreateMutex(nil, False, 'MyUniqueApplicationMutex');
-  // Check if the mutex already exists
-  Result := (GetLastError = ERROR_ALREADY_EXISTS);
+  Result := False;
+  AppMutex := CreateMutex(nil, True, MUTEX_NAME);
+  if AppMutex <> 0 then
+  begin
+    if GetLastError = ERROR_ALREADY_EXISTS then
+    begin
+      CloseHandle(AppMutex);
+      AppMutex := 0;
+    end
+    else
+      Result := True;
+  end;
 end;
 
 procedure TfrmMain.RefreshGrids;
@@ -311,9 +320,9 @@ end;
 
 procedure TfrmMain.cbYearChange(Sender: TObject);
 begin
-  LeadsForm.Close;
-  DraftProposalForm.Close;
-  ProposalForm.Close;
+//  LeadsForm.Close;
+//  DraftProposalForm.Close;
+//  ProposalForm.Close;
 //  DM.SetUser(UsernameComboBox.Text);
 end;
 
@@ -354,7 +363,7 @@ end;
 
 procedure TfrmMain.ViewLeadButtonClick(Sender: TObject);
 begin
-  LeadsForm.Show;
+//  LeadsForm.Show;
 end;
 
 procedure TfrmMain.MenuVirtualImageClick(Sender: TObject);
@@ -403,7 +412,7 @@ end;
 
 procedure TfrmMain.CreateLeadButtonClick(Sender: TObject);
 begin
-  LeadsForm.Show;
+//  LeadsForm.Show;
 end;
 
 procedure TfrmMain.CreateUserButtonClick(Sender: TObject);
@@ -506,7 +515,7 @@ begin
   else
   begin
     VirtualImage8.ImageName := 'open';
-    lbUserStatus.Caption := 'You are logged in system activated';
+    lbUserStatus.Caption := 'You are logged in, system activated';
     Self.Caption := 'SGLGB System | SEAL OF GOOD LOCAL GOVERNANCE FOR BARANGAY | 2024 | ' ;
     Login.Visible := False;
     LogOut.Visible := True;
@@ -516,7 +525,7 @@ end;
 procedure TfrmMain.LogOutClick(Sender: TObject);
 begin
   VirtualImage8.ImageName := 'close';
-  lbUserStatus.Caption := 'You have logout system deactivated';
+  lbUserStatus.Caption := 'You have logout, system deactivated';
   Login.Visible := True;
   LogOut.Visible := False;
 end;
@@ -565,13 +574,23 @@ procedure TfrmMain.FormCreate(Sender: TObject);
 var
   StyleName: string;
 begin
-  Application.OnIdle := AppIdle;
-
-  if IsAlreadyRunning then
-  begin
-    MessageBox(0, 'The application is already running!', 'Information', MB_OK or MB_ICONINFORMATION);
-    Application.Terminate;
+  try
+    if not IsSingleInstance then
+    begin
+      ShowMessage('The application is already running.');
+      Application.Terminate;
+      Exit;
+    end;
+  except
+    on E: Exception do
+    begin
+      ShowMessage('An error occurred: ' + E.Message);
+      Application.Terminate;
+      Exit;
+    end;
   end;
+
+  Application.OnIdle := AppIdle;
 
   for StyleName in TStyleManager.StyleNames do
     VCLStylesCB.Items.Add(StyleName);
@@ -584,10 +603,8 @@ end;
 procedure TfrmMain.FormDestroy(Sender: TObject);
 begin
   // Release the mutex
-  if FMutex <> 0 then
-  begin
+  if AppMutex <> 0 then
     CloseHandle(AppMutex);
-  end;
 end;
 
 procedure TfrmMain.UpdateNavButtons;
