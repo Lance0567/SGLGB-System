@@ -7,7 +7,8 @@ uses
   uLogin in 'Modal\uLogin.pas' {frmLogin},
   uSettings in 'Modal\uSettings.pas' {frmSettings},
   Vcl.Themes,
-  Vcl.Styles;
+  Vcl.Styles,
+  uDCF in 'Form\uDCF.pas' {frmDCF};
 
 {$R *.res}
 
@@ -19,5 +20,6 @@ begin
   Application.CreateForm(TfrmSettings, frmSettings);
   Application.CreateForm(TDM, DM);
   Application.CreateForm(TfrmLogin, frmLogin);
+  Application.CreateForm(TfrmDCF, frmDCF);
   Application.Run;
 end.

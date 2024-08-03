@@ -3,20 +3,36 @@
 	<Transactions>
     <Transaction>2024/08/02 21:26:43.000.228,=C:\Users\pc\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2024/08/02 21:59:02.000.994,=C:\Users\pc\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2024/08/02 21:59:14.000.381,C:\Users\pc\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\pc\Documents\Embarcadero\Studio\Projects\SGLGB.dproj</Transaction>
     <Transaction>2024/08/02 21:59:14.000.350,C:\Users\pc\Documents\Embarcadero\Studio\Projects\SGLGB.dproj=C:\Users\pc\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2024/08/02 21:59:14.000.381,C:\Users\pc\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\pc\Documents\Embarcadero\Studio\Projects\SGLGB.dproj</Transaction>
     <Transaction>2024/08/02 22:00:53.000.775,C:\Users\pc\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\pc\Documents\Embarcadero\Studio\Projects\SGLGB.dproj</Transaction>
     <Transaction>2024/08/02 22:00:53.000.745,C:\Users\pc\Documents\Embarcadero\Studio\Projects\SGLGB.dproj=C:\Users\pc\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
     <Transaction>2024/08/02 22:02:10.000.206,C:\Users\pc\Documents\Delphi\Development\MCS Project\SGLGB VCL\New Version\SGLGB.dproj=C:\Users\pc\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
     <Transaction>2024/08/02 22:02:36.000.472,=C:\Users\pc\Documents\Delphi\Development\MCS Project\SGLGB VCL\New Version\Data Module\uDataMod.pas</Transaction>
     <Transaction>2024/08/02 22:02:51.000.772,=C:\Users\pc\Documents\Delphi\Development\MCS Project\SGLGB VCL\New Version\Main\uMainForm.pas</Transaction>
+    <Transaction>2024/08/02 22:03:00.000.506,=C:\Users\pc\Documents\Delphi\Development\MCS Project\SGLGB VCL\New Version\Modal\uLogin.pas</Transaction>
     <Transaction>2024/08/02 22:03:00.000.687,=C:\Users\pc\Documents\Delphi\Development\MCS Project\SGLGB VCL\New Version\Modal\uSettings.pas</Transaction>
     <Transaction>2024/08/02 22:03:00.000.601,=C:\Users\pc\Documents\Delphi\Development\MCS Project\SGLGB VCL\New Version\Modal\uProposal.pas</Transaction>
-    <Transaction>2024/08/02 22:03:00.000.320,=C:\Users\pc\Documents\Delphi\Development\MCS Project\SGLGB VCL\New Version\Modal\uDraftProposal.pas</Transaction>
-    <Transaction>2024/08/02 22:03:00.000.506,=C:\Users\pc\Documents\Delphi\Development\MCS Project\SGLGB VCL\New Version\Modal\uLogin.pas</Transaction>
     <Transaction>2024/08/02 22:03:00.000.425,=C:\Users\pc\Documents\Delphi\Development\MCS Project\SGLGB VCL\New Version\Modal\uLeads.pas</Transaction>
+    <Transaction>2024/08/02 22:03:00.000.320,=C:\Users\pc\Documents\Delphi\Development\MCS Project\SGLGB VCL\New Version\Modal\uDraftProposal.pas</Transaction>
     <Transaction>2024/08/03 10:37:33.000.123,C:\Users\pc\Documents\Delphi\Development\MCS Project\SGLGB VCL\New Version\Modal\uDraftProposal.pas=</Transaction>
     <Transaction>2024/08/03 10:37:35.000.474,C:\Users\pc\Documents\Delphi\Development\MCS Project\SGLGB VCL\New Version\Modal\uProposal.pas=</Transaction>
     <Transaction>2024/08/03 10:37:38.000.439,C:\Users\pc\Documents\Delphi\Development\MCS Project\SGLGB VCL\New Version\Modal\uLeads.pas=</Transaction>
-  </Transactions>
+    <Transaction>2024/08/03 12:30:57.000.606,=C:\Users\pc\Documents\Delphi\Development\MCS Project\SGLGB VCL\New Version\Form\uDCF.pas</Transaction>
+  </Transactions>  <ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Data Module"/>
+    <File Path="Data Module\uDataMod.pas"/>
+    <File Path="Data Module\uDataMod.dfm"/>
+    <File Path="Form"/>
+    <File Path="Form\uDCF.pas"/>
+    <File Path="Form\uDCF.dfm"/>
+    <File Path="Main"/>
+    <File Path="Main\uMainForm.pas"/>
+    <File Path="Main\uMainForm.dfm"/>
+    <File Path="Modal"/>
+    <File Path="Modal\uLogin.pas"/>
+    <File Path="Modal\uLogin.dfm"/>
+    <File Path="Modal\uSettings.pas"/>
+    <File Path="Modal\uSettings.dfm"/>
+  </ProjectSortOrder>
 </BorlandProject>

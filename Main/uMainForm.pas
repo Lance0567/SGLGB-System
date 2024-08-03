@@ -574,6 +574,7 @@ procedure TfrmMain.FormCreate(Sender: TObject);
 var
   StyleName: string;
 begin
+  // Prevent from opening dublicate application
   try
     if not IsSingleInstance then
     begin
