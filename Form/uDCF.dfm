@@ -20,9 +20,23 @@ object frmDCF: TfrmDCF
     ActivePage = tsDetails
     Align = alClient
     TabOrder = 0
+    ExplicitWidth = 771
+    ExplicitHeight = 505
     object tsDetails: TTabSheet
       Caption = 'Details'
       ImageIndex = 2
+      object ScrollBox2: TScrollBox
+        Left = 0
+        Top = 0
+        Width = 765
+        Height = 478
+        Align = alClient
+        TabOrder = 0
+        ExplicitLeft = 288
+        ExplicitTop = 216
+        ExplicitWidth = 185
+        ExplicitHeight = 41
+      end
     end
     object tsFAS: TTabSheet
       Caption = 'FAS'
@@ -35,8 +49,6 @@ object frmDCF: TfrmDCF
         Align = alClient
         MultiLine = True
         TabOrder = 0
-        ExplicitWidth = 763
-        ExplicitHeight = 426
         object tsCompliance: TTabSheet
           Caption = '1.1'
           object Panel1: TPanel
@@ -46,8 +58,6 @@ object frmDCF: TfrmDCF
             Height = 399
             Align = alClient
             TabOrder = 0
-            ExplicitWidth = 755
-            ExplicitHeight = 396
             object SkLabel2: TSkLabel
               AlignWithMargins = True
               Left = 4
@@ -115,8 +125,6 @@ object frmDCF: TfrmDCF
                   Value = 94.696516794283770000
                 end>
               TabOrder = 0
-              ExplicitWidth = 747
-              ExplicitHeight = 363
               object Panel2: TPanel
                 Left = 1
                 Top = 1
@@ -491,7 +499,6 @@ object frmDCF: TfrmDCF
           end>
         Align = alTop
         TabOrder = 1
-        ExplicitWidth = 763
         object SkLabel1: TSkLabel
           Left = 0
           Top = 0

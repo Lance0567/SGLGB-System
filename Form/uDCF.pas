@@ -37,6 +37,7 @@ type
     SkLabel3: TSkLabel;
     SkLabel4: TSkLabel;
     tsDetails: TTabSheet;
+    ScrollBox2: TScrollBox;
   private
     { Private declarations }
   public

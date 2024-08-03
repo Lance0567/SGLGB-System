@@ -37,10 +37,6 @@ type
     SkLabel3: TSkLabel;
     SkLabel4: TSkLabel;
     tsDetails: TTabSheet;
-    RelativePanel4: TRelativePanel;
-    pForm: TPanel;
-    pProfile: TPanel;
-    Image1: TImage;
   private
     { Private declarations }
   public
