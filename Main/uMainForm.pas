@@ -17,7 +17,7 @@ uses
   Vcl.WinXPanels, System.Actions, Vcl.ActnList, Vcl.Themes,
   Vcl.BaseImageCollection, Vcl.ImageCollection, System.ImageList, Vcl.ImgList,
   Vcl.VirtualImageList, Vcl.VirtualImage, System.IOUtils, Vcl.TitleBarCtrls,
-  Vcl.Menus, uLogin, Vcl.DBGrids, System.Skia, Vcl.Skia;
+  Vcl.Menus, uLogin, Vcl.DBGrids, System.Skia, Vcl.Skia, uDCF;
 
 type
   TfrmMain = class(TForm)
@@ -536,8 +536,11 @@ begin
 end;
 
 procedure TfrmMain.btnCreateDCFClick(Sender: TObject);
+var
+  LYear: String;
 begin
-  dm.DCF.rec := InputBox('Create DCF', 'Barangay', '');
+  LYear := InputBox('Create DCF', 'Year of DCF', '');
+  frmDCF.ShowModal;
 
 //  if SaveEmailsDialog.Execute then
 //  begin

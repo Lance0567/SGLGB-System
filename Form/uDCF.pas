@@ -38,6 +38,15 @@ type
     SkLabel4: TSkLabel;
     tsDetails: TTabSheet;
     ScrollBox2: TScrollBox;
+    RelativePanel4: TRelativePanel;
+    pProfile: TPanel;
+    pForm: TPanel;
+    Image1: TImage;
+    pBtnHolder: TPanel;
+    btnPrint: TButton;
+    btnComplete: TButton;
+    btnPublish: TButton;
+    Panel4: TPanel;
   private
     { Private declarations }
   public

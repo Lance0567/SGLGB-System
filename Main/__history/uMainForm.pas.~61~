@@ -17,7 +17,7 @@ uses
   Vcl.WinXPanels, System.Actions, Vcl.ActnList, Vcl.Themes,
   Vcl.BaseImageCollection, Vcl.ImageCollection, System.ImageList, Vcl.ImgList,
   Vcl.VirtualImageList, Vcl.VirtualImage, System.IOUtils, Vcl.TitleBarCtrls,
-  System.Skia, Vcl.Skia, Vcl.Menus, uLogin, Vcl.DBGrids;
+  Vcl.Menus, uLogin, Vcl.DBGrids, System.Skia, Vcl.Skia;
 
 type
   TfrmMain = class(TForm)
@@ -123,8 +123,7 @@ type
     VirtualImage12: TVirtualImage;
     VirtualImage13: TVirtualImage;
     VirtualImage14: TVirtualImage;
-    Panel1: TPanel;
-    lbUserStatus: TSkLabel;
+    pToolbar: TPanel;
     MainMenu1: TMainMenu;
     File1: TMenuItem;
     Login: TMenuItem;
@@ -139,6 +138,7 @@ type
     Help1: TMenuItem;
     Backup1: TMenuItem;
     Backup2: TMenuItem;
+    lbUserStatus: TSkLabel;
     procedure CalendarView1DrawDayItem(Sender: TObject;
       DrawParams: TDrawViewInfoParams; CalendarViewViewInfo: TCellItemViewInfo);
     procedure AcctSearchBoxKeyPress(Sender: TObject; var Key: Char);
@@ -206,7 +206,7 @@ implementation
 
 {$R *.dfm}
 
-uses uDataMod, uLeads, uDraftProposal, uProposal;
+uses uDataMod;
 
 {-------------------------------Functions & Procedures-------------------------}
 function IsSingleInstance: Boolean;
@@ -215,9 +215,15 @@ const
 begin
   Result := False;
   AppMutex := CreateMutex(nil, True, MUTEX_NAME);
-  if (AppMutex <> 0) and (GetLastError <> ERROR_ALREADY_EXISTS) then
+  if AppMutex <> 0 then
   begin
-    Result := True;
+    if GetLastError = ERROR_ALREADY_EXISTS then
+    begin
+      CloseHandle(AppMutex);
+      AppMutex := 0;
+    end
+    else
+      Result := True;
   end;
 end;
 
@@ -314,9 +320,9 @@ end;
 
 procedure TfrmMain.cbYearChange(Sender: TObject);
 begin
-  LeadsForm.Close;
-  DraftProposalForm.Close;
-  ProposalForm.Close;
+//  LeadsForm.Close;
+//  DraftProposalForm.Close;
+//  ProposalForm.Close;
 //  DM.SetUser(UsernameComboBox.Text);
 end;
 
@@ -357,7 +363,7 @@ end;
 
 procedure TfrmMain.ViewLeadButtonClick(Sender: TObject);
 begin
-  LeadsForm.Show;
+//  LeadsForm.Show;
 end;
 
 procedure TfrmMain.MenuVirtualImageClick(Sender: TObject);
@@ -406,7 +412,7 @@ end;
 
 procedure TfrmMain.CreateLeadButtonClick(Sender: TObject);
 begin
-  LeadsForm.Show;
+//  LeadsForm.Show;
 end;
 
 procedure TfrmMain.CreateUserButtonClick(Sender: TObject);
@@ -509,7 +515,7 @@ begin
   else
   begin
     VirtualImage8.ImageName := 'open';
-    lbUserStatus.Caption := 'You are logged in system activated';
+    lbUserStatus.Caption := 'You are logged in, system activated';
     Self.Caption := 'SGLGB System | SEAL OF GOOD LOCAL GOVERNANCE FOR BARANGAY | 2024 | ' ;
     Login.Visible := False;
     LogOut.Visible := True;
@@ -519,7 +525,7 @@ end;
 procedure TfrmMain.LogOutClick(Sender: TObject);
 begin
   VirtualImage8.ImageName := 'close';
-  lbUserStatus.Caption := 'You have logout system deactivated';
+  lbUserStatus.Caption := 'You have logout, system deactivated';
   Login.Visible := True;
   LogOut.Visible := False;
 end;
@@ -568,10 +574,21 @@ procedure TfrmMain.FormCreate(Sender: TObject);
 var
   StyleName: string;
 begin
-  if not IsSingleInstance then
-  begin
-    ShowMessage('The application is already running.');
-    Application.Terminate;
+  // Prevent from opening dublicate application
+  try
+    if not IsSingleInstance then
+    begin
+      ShowMessage('The application is already running.');
+      Application.Terminate;
+      Exit;
+    end;
+  except
+    on E: Exception do
+    begin
+      ShowMessage('An error occurred: ' + E.Message);
+      Application.Terminate;
+      Exit;
+    end;
   end;
 
   Application.OnIdle := AppIdle;

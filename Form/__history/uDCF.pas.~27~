@@ -37,11 +37,12 @@ type
     SkLabel3: TSkLabel;
     SkLabel4: TSkLabel;
     tsDetails: TTabSheet;
+    ScrollBox2: TScrollBox;
     RelativePanel4: TRelativePanel;
-    pForm: TPanel;
     pProfile: TPanel;
+    pForm: TPanel;
     Image1: TImage;
-    Panel4: TPanel;
+    pBtnHolder: TPanel;
     btnPrint: TButton;
     btnComplete: TButton;
     btnPublish: TButton;

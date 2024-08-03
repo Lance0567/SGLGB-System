@@ -72,7 +72,7 @@ begin
 //            qTemp.Refresh;
 //
 //            // show Main form
-//            Self.Tag := 1; // logged
+//            frmLogin.Tag := 1; // logged
 //            dm.User.id := qTemp.FieldByName('id').asInteger;
 //            dm.User.username := qTemp.FieldByName('username').AsString;
 //            dm.User.isAdmin := ((qTemp.FieldByName('is_admin').AsString = '1') or (LowerCase(qTemp.FieldByName('is_admin').AsString) = 'true'));

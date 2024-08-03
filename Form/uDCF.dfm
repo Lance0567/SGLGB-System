@@ -32,10 +32,129 @@ object frmDCF: TfrmDCF
         Height = 478
         Align = alClient
         TabOrder = 0
-        ExplicitLeft = 288
-        ExplicitTop = 216
-        ExplicitWidth = 185
-        ExplicitHeight = 41
+        object RelativePanel4: TRelativePanel
+          Left = 0
+          Top = 0
+          Width = 761
+          Height = 474
+          ControlCollection = <
+            item
+              Control = pProfile
+              AlignBottomWithPanel = True
+              AlignHorizontalCenterWithPanel = False
+              AlignLeftWithPanel = False
+              AlignRightWithPanel = True
+              AlignTopWithPanel = True
+              AlignVerticalCenterWithPanel = False
+              RightOf = pForm
+            end
+            item
+              Control = pForm
+              AlignBottomWithPanel = True
+              AlignHorizontalCenterWithPanel = False
+              AlignLeftWithPanel = True
+              AlignRightWithPanel = False
+              AlignTopWithPanel = True
+              AlignVerticalCenterWithPanel = False
+            end>
+          Align = alTop
+          TabOrder = 0
+          ExplicitWidth = 744
+          object pProfile: TPanel
+            Left = 529
+            Top = 1
+            Width = 232
+            Height = 472
+            TabOrder = 0
+            object Image1: TImage
+              AlignWithMargins = True
+              Left = 25
+              Top = 16
+              Width = 182
+              Height = 166
+              Margins.Left = 24
+              Margins.Top = 15
+              Margins.Right = 24
+              Align = alTop
+              ExplicitTop = 11
+            end
+            object pBtnHolder: TPanel
+              AlignWithMargins = True
+              Left = 36
+              Top = 195
+              Width = 160
+              Height = 200
+              Margins.Left = 35
+              Margins.Top = 10
+              Margins.Right = 35
+              Align = alTop
+              BevelOuter = bvNone
+              TabOrder = 0
+              ExplicitTop = 185
+              object btnPrint: TButton
+                Left = 0
+                Top = 0
+                Width = 160
+                Height = 35
+                Align = alTop
+                Caption = 'Print Document'
+                TabOrder = 0
+              end
+              object btnComplete: TButton
+                AlignWithMargins = True
+                Left = 0
+                Top = 40
+                Width = 160
+                Height = 35
+                Margins.Left = 0
+                Margins.Top = 5
+                Margins.Right = 0
+                Align = alTop
+                Caption = 'Complete SGLGB'
+                TabOrder = 1
+              end
+              object btnPublish: TButton
+                AlignWithMargins = True
+                Left = 0
+                Top = 83
+                Width = 160
+                Height = 35
+                Margins.Left = 0
+                Margins.Top = 5
+                Margins.Right = 0
+                Align = alTop
+                Caption = 'Publish SGLGB'
+                TabOrder = 2
+                ExplicitLeft = -8
+                ExplicitTop = 126
+              end
+            end
+          end
+          object pForm: TPanel
+            Left = 1
+            Top = 1
+            Width = 528
+            Height = 472
+            Margins.Right = 0
+            Margins.Bottom = 0
+            TabOrder = 1
+            object Panel4: TPanel
+              AlignWithMargins = True
+              Left = 11
+              Top = 16
+              Width = 506
+              Height = 452
+              Margins.Left = 10
+              Margins.Top = 15
+              Margins.Right = 10
+              Align = alClient
+              BevelOuter = bvNone
+              TabOrder = 0
+              ExplicitLeft = 13
+              ExplicitTop = 10
+            end
+          end
+        end
       end
     end
     object tsFAS: TTabSheet
