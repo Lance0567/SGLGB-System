@@ -17,11 +17,13 @@ object frmDCF: TfrmDCF
     Top = 0
     Width = 773
     Height = 508
-    ActivePage = tsFAS
+    ActivePage = tsDetails
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 771
-    ExplicitHeight = 505
+    object tsDetails: TTabSheet
+      Caption = 'Details'
+      ImageIndex = 2
+    end
     object tsFAS: TTabSheet
       Caption = 'FAS'
       object PageControl2: TPageControl
@@ -122,7 +124,6 @@ object frmDCF: TfrmDCF
                 Height = 19
                 Align = alClient
                 TabOrder = 0
-                ExplicitWidth = 334
                 object SkLabel3: TSkLabel
                   Left = 1
                   Top = 1
@@ -148,8 +149,6 @@ object frmDCF: TfrmDCF
                 Height = 19
                 Align = alClient
                 TabOrder = 1
-                ExplicitLeft = 335
-                ExplicitWidth = 411
                 object SkLabel4: TSkLabel
                   Left = 1
                   Top = 1
@@ -254,8 +253,6 @@ object frmDCF: TfrmDCF
                   end>
                 Align = alClient
                 TabOrder = 2
-                ExplicitWidth = 334
-                ExplicitHeight = 342
                 DesignSize = (
                   335
                   345)
@@ -408,9 +405,6 @@ object frmDCF: TfrmDCF
                 Height = 345
                 Align = alClient
                 TabOrder = 3
-                ExplicitLeft = 335
-                ExplicitWidth = 411
-                ExplicitHeight = 342
                 object RelativePanel3: TRelativePanel
                   Left = 3
                   Top = 3

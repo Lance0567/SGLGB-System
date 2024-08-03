@@ -36,6 +36,7 @@ type
     chkboxC2: TCheckBox;
     SkLabel3: TSkLabel;
     SkLabel4: TSkLabel;
+    tsDetails: TTabSheet;
   private
     { Private declarations }
   public

@@ -36,10 +36,6 @@ type
     chkboxC2: TCheckBox;
     SkLabel3: TSkLabel;
     SkLabel4: TSkLabel;
-    tsDetails: TTabSheet;
-    RelativePanel4: TRelativePanel;
-    pForm: TPanel;
-    pProfile: TPanel;
   private
     { Private declarations }
   public

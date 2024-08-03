@@ -17,128 +17,11 @@ object frmDCF: TfrmDCF
     Top = 0
     Width = 773
     Height = 508
-    ActivePage = tsDetails
+    ActivePage = tsFAS
     Align = alClient
     TabOrder = 0
-    object tsDetails: TTabSheet
-      Caption = 'Details'
-      ImageIndex = 2
-      object RelativePanel4: TRelativePanel
-        Left = 0
-        Top = 0
-        Width = 765
-        Height = 478
-        ControlCollection = <
-          item
-            Control = pForm
-            AlignBottomWithPanel = True
-            AlignHorizontalCenterWithPanel = False
-            AlignLeftWithPanel = True
-            AlignRightWithPanel = False
-            AlignTopWithPanel = True
-            AlignVerticalCenterWithPanel = False
-            LeftOf = pProfile
-          end
-          item
-            Control = pProfile
-            AlignBottomWithPanel = True
-            AlignHorizontalCenterWithPanel = False
-            AlignLeftWithPanel = False
-            AlignRightWithPanel = True
-            AlignTopWithPanel = True
-            AlignVerticalCenterWithPanel = False
-          end>
-        Align = alClient
-        TabOrder = 0
-        ExplicitWidth = 465
-        object pForm: TPanel
-          Left = 0
-          Top = 1
-          Width = 524
-          Height = 476
-          BevelOuter = bvNone
-          TabOrder = 0
-        end
-        object pProfile: TPanel
-          Left = 524
-          Top = 1
-          Width = 240
-          Height = 476
-          TabOrder = 1
-          object Image1: TImage
-            AlignWithMargins = True
-            Left = 26
-            Top = 26
-            Width = 188
-            Height = 167
-            Margins.Left = 25
-            Margins.Top = 25
-            Margins.Right = 25
-            Align = alTop
-            Proportional = True
-          end
-          object Panel4: TPanel
-            AlignWithMargins = True
-            Left = 36
-            Top = 206
-            Width = 168
-            Height = 259
-            Margins.Left = 35
-            Margins.Top = 10
-            Margins.Right = 35
-            Margins.Bottom = 10
-            Align = alClient
-            BevelOuter = bvNone
-            TabOrder = 0
-            ExplicitLeft = 38
-            object btnPrint: TButton
-              Left = 0
-              Top = 0
-              Width = 168
-              Height = 35
-              Margins.Left = 0
-              Margins.Top = 5
-              Margins.Right = 0
-              Margins.Bottom = 0
-              Align = alTop
-              Caption = 'Print Documents'
-              TabOrder = 0
-              ExplicitTop = 38
-            end
-            object btnComplete: TButton
-              AlignWithMargins = True
-              Left = 0
-              Top = 40
-              Width = 168
-              Height = 35
-              Margins.Left = 0
-              Margins.Top = 5
-              Margins.Right = 0
-              Align = alTop
-              Caption = 'Complete SGLGB'
-              TabOrder = 1
-              ExplicitLeft = -40
-              ExplicitTop = 136
-            end
-            object btnPublish: TButton
-              AlignWithMargins = True
-              Left = 0
-              Top = 83
-              Width = 168
-              Height = 35
-              Margins.Left = 0
-              Margins.Top = 5
-              Margins.Right = 0
-              Align = alTop
-              Caption = 'Publish SGLGB'
-              TabOrder = 2
-              ExplicitLeft = -16
-              ExplicitTop = 152
-            end
-          end
-        end
-      end
-    end
+    ExplicitWidth = 771
+    ExplicitHeight = 505
     object tsFAS: TTabSheet
       Caption = 'FAS'
       object PageControl2: TPageControl
@@ -239,6 +122,7 @@ object frmDCF: TfrmDCF
                 Height = 19
                 Align = alClient
                 TabOrder = 0
+                ExplicitWidth = 334
                 object SkLabel3: TSkLabel
                   Left = 1
                   Top = 1
@@ -264,6 +148,8 @@ object frmDCF: TfrmDCF
                 Height = 19
                 Align = alClient
                 TabOrder = 1
+                ExplicitLeft = 335
+                ExplicitWidth = 411
                 object SkLabel4: TSkLabel
                   Left = 1
                   Top = 1
@@ -368,6 +254,8 @@ object frmDCF: TfrmDCF
                   end>
                 Align = alClient
                 TabOrder = 2
+                ExplicitWidth = 334
+                ExplicitHeight = 342
                 DesignSize = (
                   335
                   345)
@@ -520,6 +408,9 @@ object frmDCF: TfrmDCF
                 Height = 345
                 Align = alClient
                 TabOrder = 3
+                ExplicitLeft = 335
+                ExplicitWidth = 411
+                ExplicitHeight = 342
                 object RelativePanel3: TRelativePanel
                   Left = 3
                   Top = 3
