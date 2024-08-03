@@ -242,12 +242,20 @@ end;
 
 procedure TLeadsForm.CancelProposalButtonClick(Sender: TObject);
 begin
+<<<<<<< HEAD
 //
+=======
+  DM.UpdateProposalStatus(LeadsBindSourceDB.DataSet.FieldByName('LeadId').AsInteger,'Canceled');
+>>>>>>> a31e146c8b34da2f20a9a18bc4c7e196c43eaf18
 end;
 
 procedure TLeadsForm.CompleteProposalButtonClick(Sender: TObject);
 begin
+<<<<<<< HEAD
 //
+=======
+  DM.CompleteProposal(LeadsBindSourceDB.DataSet.FieldByName('LeadId').AsInteger);
+>>>>>>> a31e146c8b34da2f20a9a18bc4c7e196c43eaf18
 end;
 
 procedure TLeadsForm.CreateProposalButtonClick(Sender: TObject);
