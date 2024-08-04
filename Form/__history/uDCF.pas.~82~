@@ -96,10 +96,11 @@ type
     chkbC5: TCheckBox;
     chkbC6: TCheckBox;
     chkbC7: TCheckBox;
+    CheckBox1: TCheckBox;
     pQuarterlyReport: TPanel;
     pMonthReport: TPanel;
-    pItemizedMonthlyDoc: TPanel;
-    lbItemizedMonthlyCol: TLabel;
+    Panel2: TPanel;
+    Label16: TLabel;
     Panel5: TPanel;
     Button1: TButton;
     Button2: TButton;
@@ -122,9 +123,6 @@ type
     Panel4: TPanel;
     sListOfNoticesBac: TShape;
     Label15: TLabel;
-    PAnnexB: TPanel;
-    chkbC10: TCheckBox;
-    pBFDP: TPanel;
     procedure FormShow(Sender: TObject);
     procedure FormResize(Sender: TObject);
     procedure ScrollBoxMouseWheelHandler(Sender: TObject; Shift: TShiftState;
