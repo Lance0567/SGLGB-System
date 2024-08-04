@@ -17,7 +17,6 @@ type
     SkLabel1: TSkLabel;
     tsCompliance: TTabSheet;
     tsInnovations: TTabSheet;
-    Panel1: TPanel;
     sklSection1: TSkLabel;
     gpForm1: TGridPanel;
     pMinimumReq: TPanel;
@@ -32,8 +31,6 @@ type
     SkLabel11: TSkLabel;
     ScrollBox1: TScrollBox;
     rpMeansOfVer: TRelativePanel;
-    chkbC1: TCheckBox;
-    chkbC2: TCheckBox;
     SkLabel3: TSkLabel;
     SkLabel4: TSkLabel;
     tsDetails: TTabSheet;
@@ -78,17 +75,7 @@ type
     Label6: TLabel;
     edRegion: TDBEdit;
     Label7: TLabel;
-    pPhotoDoc: TPanel;
-    pPhotoDocs: TPanel;
-    dbgPhotoDoc: TDBGrid;
-    btnAddPhotoDoc: TButton;
-    btnViewPhotoDoc: TButton;
-    btnDeletePhotoDoc: TButton;
     SkLabel12: TSkLabel;
-    sPhotoDocBac: TShape;
-    pPhotoDocHeader: TPanel;
-    lbTotalBFDP: TLabel;
-    Label11: TLabel;
     pAnnualReport: TPanel;
     Label12: TLabel;
     chkbC3: TCheckBox;
@@ -106,7 +93,7 @@ type
     Button4: TButton;
     DBGrid1: TDBGrid;
     Panel6: TPanel;
-    Shape1: TShape;
+    sItemizedMonthly: TShape;
     Label17: TLabel;
     chkbC9: TCheckBox;
     Label14: TLabel;
@@ -122,9 +109,38 @@ type
     Panel4: TPanel;
     sListOfNoticesBac: TShape;
     Label15: TLabel;
-    PAnnexB: TPanel;
+    pAnnexB: TPanel;
     chkbC10: TCheckBox;
     pBFDP: TPanel;
+    chkbC1: TCheckBox;
+    chkbC2: TCheckBox;
+    pPhotoDoc: TPanel;
+    lbTotalBFDP: TLabel;
+    pPhotoDocs: TPanel;
+    btnAddPhotoDoc: TButton;
+    btnViewPhotoDoc: TButton;
+    btnDeletePhotoDoc: TButton;
+    dbgPhotoDoc: TDBGrid;
+    pPhotoDocHeader: TPanel;
+    sPhotoDocBac: TShape;
+    Label11: TLabel;
+    pStatus1: TPanel;
+    Label16: TLabel;
+    dbmRemarks1: TDBMemo;
+    pRemarks: TPanel;
+    lbRemarks: TLabel;
+    SkLabel2: TSkLabel;
+    gpPR1: TGridPanel;
+    Label18: TLabel;
+    RelativePanel2: TRelativePanel;
+    chkbYes1: TCheckBox;
+    lbYes1: TLabel;
+    pPSToolbar: TPanel;
+    chkbNo1: TCheckBox;
+    lbNo1: TLabel;
+    gpForm2: TGridPanel;
+    sklSection2: TSkLabel;
+    SkLabel13: TSkLabel;
     procedure FormShow(Sender: TObject);
     procedure FormResize(Sender: TObject);
     procedure ScrollBoxMouseWheelHandler(Sender: TObject; Shift: TShiftState;
@@ -177,7 +193,9 @@ end;
 
 procedure TfrmDCF.ShapeBackgrounds;
 begin
-  sPhotoDocBac.Width := ScrollBox1.Width - 40;
+  sPhotoDocBac.Width := ScrollBox1.Width - 50;
+  sItemizedMonthly.Width := ScrollBox1.Width - 50;
+  sListOfNoticesBac.Width := ScrollBox1.Width - 50;
 end;
 
 {------------------------------------FORM--------------------------------------}
@@ -188,6 +206,16 @@ begin
   // Form Responsive Settings
   ShapeBackgrounds;
   rpMeansOfVer.Width := ScrollBox1.Width - 30;
+
+  if ClientHeight > 569 then
+  begin
+    dbmRemarks1.Height := rpMinimumReq.Height - 600;
+    gpPR1.ColumnCollection.Items[0].Value := 5;
+  end
+  else
+  begin
+    dbmRemarks1.Height := rpMinimumReq.Height - 300;
+  end;
 
   if ClientHeight <= 750 then         // Optional 508
   begin
@@ -205,7 +233,7 @@ procedure TfrmDCF.FormShow(Sender: TObject);
 begin
   // Shape Color Responsive
   ShapeBackgrounds;
-  ClientHeight := 508;
+  ClientHeight := 569;
 end;
 
 {----------------------------------SCROLLBOX-----------------------------------}
