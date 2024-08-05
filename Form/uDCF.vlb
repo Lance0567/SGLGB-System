@@ -22,9 +22,6 @@ Coordinates=10,10,101,124
 [DateCreatedPanel]
 Coordinates=597,280,120,58
 
-[tsCompliance]
-Coordinates=177,644,92,36
-
 [edProvince]
 Coordinates=88,644,79,36
 
@@ -33,9 +30,6 @@ Coordinates=964,212,53,58
 
 [btnComplete]
 Coordinates=816,416,87,58
-
-[gpForm1]
-Coordinates=10,212,66,58
 
 [NotesPanel]
 Coordinates=803,212,81,58
@@ -100,9 +94,6 @@ Coordinates=797,348,53,58
 [Label9]
 Coordinates=141,348,53,58
 
-[SkLabel4]
-Coordinates=378,598,68,36
-
 [tsFAS]
 Coordinates=319,598,49,36
 
@@ -121,9 +112,6 @@ Coordinates=734,348,53,58
 [btnPrint]
 Coordinates=463,280,59,58
 
-[PageControl2]
-Coordinates=1059,552,93,36
-
 [pProvince]
 Coordinates=204,484,72,58
 
@@ -136,19 +124,19 @@ Coordinates=10,484,112,58
 [edBarangay]
 Coordinates=482,552,84,36
 
-[pMOV]
-Coordinates=692,416,51,58
-
 [NamePanel]
 Coordinates=783,10,81,58
-
-[tsInnovations]
-Coordinates=225,552,91,36
 
 [NotesMemo]
 Coordinates=370,280,83,58
 
 []
-Coordinates=727,280,101,58
+Coordinates=1059,552,93,36
 Visible=True
+
+[pHeader]
+Coordinates=66,77,64,58
+
+[slTitle]
+Coordinates=481,596,68,36
 

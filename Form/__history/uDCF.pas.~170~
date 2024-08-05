@@ -150,6 +150,8 @@ type
     Label23: TLabel;
     chkbNo2: TCheckBox;
     pSRE: TPanel;
+    chkbC11: TCheckBox;
+    chkbC12: TCheckBox;
     Panel7: TPanel;
     lbTotalAO: TLabel;
     Panel9: TPanel;
@@ -240,8 +242,6 @@ type
     chkbC8: TDBCheckBox;
     chkbC9: TDBCheckBox;
     chkbC10: TDBCheckBox;
-    chkbC11: TDBCheckBox;
-    chkbC12: TDBCheckBox;
     procedure FormShow(Sender: TObject);
     procedure FormResize(Sender: TObject);
     procedure ScrollBoxMouseWheelHandler(Sender: TObject; Shift: TShiftState;
@@ -369,25 +369,18 @@ begin
   ShapeBackgrounds;
 end;
 
-{-----------------------------------CheckBox-----------------------------------}
 procedure TfrmDCF.chkbNo1Click(Sender: TObject);
-var
-  value: String;
 begin
   if chkbNo1.Checked then
   begin
-    value := 'No';
     chkbYes1.Checked := False; 
   end;
 end;
 
 procedure TfrmDCF.chkbYes1Click(Sender: TObject);
-var
-  value: String;
 begin
   if chkbYes1.Checked then
   begin    
-    value := 'Yes';
     chkbNo1.Checked := False;
   end;
 end;

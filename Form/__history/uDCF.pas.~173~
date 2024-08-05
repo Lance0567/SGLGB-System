@@ -150,6 +150,7 @@ type
     Label23: TLabel;
     chkbNo2: TCheckBox;
     pSRE: TPanel;
+    chkbC12: TCheckBox;
     Panel7: TPanel;
     lbTotalAO: TLabel;
     Panel9: TPanel;
@@ -241,7 +242,6 @@ type
     chkbC9: TDBCheckBox;
     chkbC10: TDBCheckBox;
     chkbC11: TDBCheckBox;
-    chkbC12: TDBCheckBox;
     procedure FormShow(Sender: TObject);
     procedure FormResize(Sender: TObject);
     procedure ScrollBoxMouseWheelHandler(Sender: TObject; Shift: TShiftState;

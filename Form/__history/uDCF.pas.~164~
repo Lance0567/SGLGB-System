@@ -79,8 +79,14 @@ type
     lbRem1: TLabel;
     ScrollBox1: TScrollBox;
     gbAnnex: TGroupBox;
+    chkbC10: TCheckBox;
     gbAnnual: TGroupBox;
     Label12: TLabel;
+    chkbC3: TCheckBox;
+    chkbC4: TCheckBox;
+    chkbC5: TCheckBox;
+    chkbC6: TCheckBox;
+    chkbC7: TCheckBox;
     gbPR1: TGroupBox;
     Label16: TLabel;
     pPR1: TPanel;
@@ -103,6 +109,7 @@ type
     Label11: TLabel;
     pQuarterlyReport: TPanel;
     Label13: TLabel;
+    chkbC8: TCheckBox;
     pListOfNoticesDoc: TPanel;
     lbListOfNotices: TLabel;
     Panel3: TPanel;
@@ -125,6 +132,7 @@ type
     Panel6: TPanel;
     sItemizedMonthly: TShape;
     Label17: TLabel;
+    chkbC9: TCheckBox;
     pFooter1: TPanel;
     stSection1: TStaticText;
     tsInnovations: TTabSheet;
@@ -150,6 +158,8 @@ type
     Label23: TLabel;
     chkbNo2: TCheckBox;
     pSRE: TPanel;
+    chkbC11: TCheckBox;
+    chkbC12: TCheckBox;
     Panel7: TPanel;
     lbTotalAO: TLabel;
     Panel9: TPanel;
@@ -232,16 +242,6 @@ type
     CheckBox4: TCheckBox;
     chkbC1: TDBCheckBox;
     chkbC2: TDBCheckBox;
-    chkbC3: TDBCheckBox;
-    chkbC4: TDBCheckBox;
-    chkbC5: TDBCheckBox;
-    chkbC6: TDBCheckBox;
-    chkbC7: TDBCheckBox;
-    chkbC8: TDBCheckBox;
-    chkbC9: TDBCheckBox;
-    chkbC10: TDBCheckBox;
-    chkbC11: TDBCheckBox;
-    chkbC12: TDBCheckBox;
     procedure FormShow(Sender: TObject);
     procedure FormResize(Sender: TObject);
     procedure ScrollBoxMouseWheelHandler(Sender: TObject; Shift: TShiftState;
@@ -255,8 +255,6 @@ type
     procedure ComplianceTab;
     procedure InnovationsTab;
     procedure ApprovalTab;
-    procedure chkbYes1Click(Sender: TObject);
-    procedure chkbNo1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -367,29 +365,6 @@ begin
   gpForm3.Visible := True;
   stSection3.Visible := True;
   ShapeBackgrounds;
-end;
-
-{-----------------------------------CheckBox-----------------------------------}
-procedure TfrmDCF.chkbNo1Click(Sender: TObject);
-var
-  value: String;
-begin
-  if chkbNo1.Checked then
-  begin
-    value := 'No';
-    chkbYes1.Checked := False; 
-  end;
-end;
-
-procedure TfrmDCF.chkbYes1Click(Sender: TObject);
-var
-  value: String;
-begin
-  if chkbYes1.Checked then
-  begin    
-    value := 'Yes';
-    chkbNo1.Checked := False;
-  end;
 end;
 
 {------------------------------------FORM--------------------------------------}
