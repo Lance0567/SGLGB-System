@@ -150,8 +150,6 @@ type
     Label23: TLabel;
     chkbNo2: TCheckBox;
     pSRE: TPanel;
-    chkbC11: TCheckBox;
-    chkbC12: TCheckBox;
     Panel7: TPanel;
     lbTotalAO: TLabel;
     Panel9: TPanel;
@@ -189,7 +187,6 @@ type
     Label28: TLabel;
     chkbNo3: TCheckBox;
     Panel11: TPanel;
-    chkbC13: TCheckBox;
     Panel12: TPanel;
     Label19: TLabel;
     Panel14: TPanel;
@@ -198,7 +195,7 @@ type
     dtpDateOfApproval: TDateTimePicker;
     Panel15: TPanel;
     tsAllocation: TTabSheet;
-    StaticText1: TStaticText;
+    stSection4: TStaticText;
     GridPanel1: TGridPanel;
     Panel16: TPanel;
     SkLabel7: TSkLabel;
@@ -206,7 +203,6 @@ type
     SkLabel8: TSkLabel;
     GroupBox4: TGroupBox;
     SkLabel9: TSkLabel;
-    SkLabel10: TSkLabel;
     DBMemo1: TDBMemo;
     GroupBox5: TGroupBox;
     SkLabel11: TSkLabel;
@@ -222,7 +218,6 @@ type
     Label35: TLabel;
     CheckBox2: TCheckBox;
     Panel19: TPanel;
-    chkbC14: TCheckBox;
     Panel20: TPanel;
     Label37: TLabel;
     Panel22: TPanel;
@@ -230,8 +225,6 @@ type
     Label38: TLabel;
     DateTimePicker1: TDateTimePicker;
     Panel23: TPanel;
-    CheckBox3: TCheckBox;
-    CheckBox4: TCheckBox;
     chkbC1: TDBCheckBox;
     chkbC2: TDBCheckBox;
     chkbC3: TDBCheckBox;
@@ -242,6 +235,23 @@ type
     chkbC8: TDBCheckBox;
     chkbC9: TDBCheckBox;
     chkbC10: TDBCheckBox;
+    chkbC11: TDBCheckBox;
+    chkbC12: TDBCheckBox;
+    edCYYear1: TDBEdit;
+    lbCYYear1: TLabel;
+    lbCYYear2: TLabel;
+    edCYYear2: TDBEdit;
+    chkbC13: TDBCheckBox;
+    chkbC14: TDBCheckBox;
+    chkbC15: TDBCheckBox;
+    chkbC16: TDBCheckBox;
+    chkbC17: TDBCheckBox;
+    chkbC18: TDBCheckBox;
+    chkbC19: TDBCheckBox;
+    chkbC20: TDBCheckBox;
+    chkbC21: TDBCheckBox;
+    chkbC22: TDBCheckBox;
+    chkbC23: TDBCheckBox;
     procedure FormShow(Sender: TObject);
     procedure FormResize(Sender: TObject);
     procedure ScrollBoxMouseWheelHandler(Sender: TObject; Shift: TShiftState;
@@ -257,6 +267,10 @@ type
     procedure ApprovalTab;
     procedure chkbYes1Click(Sender: TObject);
     procedure chkbNo1Click(Sender: TObject);
+    procedure chkbYes2Click(Sender: TObject);
+    procedure chkbNo2Click(Sender: TObject);
+    procedure chkbYes3Click(Sender: TObject);
+    procedure chkbNo3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -369,6 +383,7 @@ begin
   ShapeBackgrounds;
 end;
 
+{-----------------------------------CheckBox-----------------------------------}
 procedure TfrmDCF.chkbNo1Click(Sender: TObject);
 var
   value: String;
@@ -376,7 +391,29 @@ begin
   if chkbNo1.Checked then
   begin
     value := 'No';
-    chkbYes1.Checked := False; 
+    chkbYes1.Checked := False;
+  end;
+end;
+
+procedure TfrmDCF.chkbNo2Click(Sender: TObject);
+var
+  value: String;
+begin
+  if chkbNo2.Checked then
+  begin
+    value := 'No';
+    chkbYes2.Checked := False;
+  end;
+end;
+
+procedure TfrmDCF.chkbNo3Click(Sender: TObject);
+var
+  value: String;
+begin
+  if chkbNo3.Checked then
+  begin
+    value := 'No';
+    chkbYes3.Checked := False;
   end;
 end;
 
@@ -385,9 +422,31 @@ var
   value: String;
 begin
   if chkbYes1.Checked then
-  begin    
+  begin
     value := 'Yes';
     chkbNo1.Checked := False;
+  end;
+end;
+
+procedure TfrmDCF.chkbYes2Click(Sender: TObject);
+var
+  value: String;
+begin
+  if chkbYes2.Checked then
+  begin
+    value := 'Yes';
+    chkbNo2.Checked := False;
+  end;
+end;
+
+procedure TfrmDCF.chkbYes3Click(Sender: TObject);
+var
+  value: String;
+begin
+  if chkbYes3.Checked then
+  begin
+    value := 'Yes';
+    chkbNo3.Checked := False;
   end;
 end;
 

@@ -211,7 +211,7 @@ uses uDataMod;
 {-------------------------------Functions & Procedures-------------------------}
 function IsSingleInstance: Boolean;
 const
-  MUTEX_NAME = 'MyUniqueApplicationMutexName';
+  MUTEX_NAME = 'MyUniqueApplicationMutexName_YourAppID';
 begin
   Result := False;
   AppMutex := CreateMutex(nil, True, MUTEX_NAME);
