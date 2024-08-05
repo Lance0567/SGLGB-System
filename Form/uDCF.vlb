@@ -1,20 +1,11 @@
-﻿[btnDeletePhotoDoc]
-Coordinates=966,144,126,58
-
-[dtpDateCreated]
+﻿[dtpDateCreated]
 Coordinates=792,484,105,58
 
 [edYear]
 Coordinates=465,644,56,36
 
-[SkLabel1]
-Coordinates=387,644,68,36
-
 [Image1]
 Coordinates=899,144,57,58
-
-[chkbC1]
-Coordinates=907,484,114,58
 
 [dtpDatePublished]
 Coordinates=204,348,116,58
@@ -22,35 +13,14 @@ Coordinates=204,348,116,58
 [StatusPanel]
 Coordinates=434,484,84,58
 
-[pRemarks]
-Coordinates=10,416,73,58
-
-[pListOfNoticesDoc]
-Coordinates=10,348,121,58
-
-[rpMinimumReq]
-Coordinates=727,280,101,58
-
-[Button3]
-Coordinates=591,484,59,58
-
 [pYear]
 Coordinates=121,280,49,58
 
 [cbStatus]
 Coordinates=10,10,101,124
 
-[chkbC3]
-Coordinates=325,144,114,58
-
-[dbmRemarks1]
-Coordinates=279,644,98,36
-
 [DateCreatedPanel]
 Coordinates=597,280,120,58
-
-[Panel5]
-Coordinates=464,416,55,58
 
 [tsCompliance]
 Coordinates=177,644,92,36
@@ -58,50 +28,17 @@ Coordinates=177,644,92,36
 [edProvince]
 Coordinates=88,644,79,36
 
-[pPhotoDocHeader]
-Coordinates=244,212,120,58
-
 [Label3]
 Coordinates=964,212,53,58
-
-[pQuarterlyReport]
-Coordinates=981,280,113,58
-
-[btnAddPhotoDoc]
-Coordinates=1102,144,111,58
-
-[Label13]
-Coordinates=894,212,60,58
-
-[pAnnualReport]
-Coordinates=215,144,100,58
-
-[Panel6]
-Coordinates=532,280,55,58
 
 [btnComplete]
 Coordinates=816,416,87,58
 
-[SkLabel6]
-Coordinates=10,644,68,36
-
-[lbListOfNotices]
-Coordinates=540,144,102,58
-
 [gpForm1]
 Coordinates=10,212,66,58
 
-[Button1]
-Coordinates=734,212,59,58
-
-[chkbC5]
-Coordinates=439,212,114,58
-
 [NotesPanel]
 Coordinates=803,212,81,58
-
-[Label12]
-Coordinates=913,416,60,58
 
 [pForm]
 Coordinates=983,416,51,58
@@ -109,17 +46,8 @@ Coordinates=983,416,51,58
 [Label7]
 Coordinates=874,10,53,58
 
-[sItemizedMonthly]
-Coordinates=1119,598,115,36
-
-[lbItemizedMonthlyCol]
-Coordinates=241,416,138,58
-
 [pBtnHolder]
 Coordinates=448,10,79,58
-
-[pMonthReport]
-Coordinates=1044,416,96,58
 
 [btnPublish]
 Coordinates=286,484,75,58
@@ -127,47 +55,17 @@ Coordinates=286,484,75,58
 [DateClosedPanel]
 Coordinates=609,348,115,58
 
-[pStatus1]
-Coordinates=389,416,65,58
-
 [edCM]
 Coordinates=1061,598,48,36
-
-[SkLabel3]
-Coordinates=983,598,68,36
-
-[pMinimumReq]
-Coordinates=722,144,97,58
-
-[chkbC9]
-Coordinates=1153,10,114,58
 
 [edRegion]
 Coordinates=904,598,69,36
 
-[btnViewListDocs]
-Coordinates=1031,484,110,58
-
 [Label6]
 Coordinates=371,484,53,58
 
-[DBGrid1]
-Coordinates=830,598,64,36
-
-[lbRemarks]
-Coordinates=523,348,76,58
-
-[pPhotoDocs]
-Coordinates=529,416,84,58
-
-[chkbC10]
-Coordinates=1054,348,114,58
-
 [Label1]
 Coordinates=753,416,53,58
-
-[SkLabel11]
-Coordinates=745,598,75,36
 
 [tsDP]
 Coordinates=693,598,42,36
@@ -181,14 +79,8 @@ Coordinates=838,280,133,58
 [pWrapper]
 Coordinates=134,144,71,58
 
-[pAnnexB]
-Coordinates=1007,10,66,58
-
 [DatesPanel]
 Coordinates=449,144,81,58
-
-[SkLabel9]
-Coordinates=541,598,68,36
 
 [dtpDateCompleted]
 Coordinates=660,484,122,58
@@ -196,53 +88,17 @@ Coordinates=660,484,122,58
 [pProfile]
 Coordinates=330,348,59,58
 
-[pBFDP]
-Coordinates=180,280,56,58
-
-[Label17]
-Coordinates=829,144,60,58
-
-[btnViewPhotoDoc]
-Coordinates=1174,280,117,58
-
-[chkbC8]
-Coordinates=399,348,114,58
-
-[Label16]
-Coordinates=1151,212,60,58
-
-[RelativePanel1]
-Coordinates=10,280,101,58
-
-[chkbC6]
-Coordinates=1178,348,114,58
-
-[lbTotalBFDP]
-Coordinates=1151,484,87,58
-
 [Label10]
 Coordinates=652,144,60,58
 
 [Label8]
 Coordinates=528,484,53,58
 
-[Button4]
-Coordinates=1150,416,59,58
-
-[SkLabel12]
-Coordinates=456,598,75,36
-
-[Button2]
-Coordinates=623,416,59,58
-
 [Label4]
 Coordinates=797,348,53,58
 
 [Label9]
 Coordinates=141,348,53,58
-
-[chkbC4]
-Coordinates=246,280,114,58
 
 [SkLabel4]
 Coordinates=378,598,68,36
@@ -253,32 +109,11 @@ Coordinates=319,598,49,36
 [Label2]
 Coordinates=563,212,53,58
 
-[SkLabel7]
-Coordinates=241,598,68,36
-
 [ScrollBox2]
 Coordinates=155,598,76,36
 
-[dbgListOfNoticesDoc]
-Coordinates=10,598,135,36
-
 [pRegion]
 Coordinates=132,484,62,58
-
-[ScrollBox1]
-Coordinates=1162,552,76,36
-
-[chkbC7]
-Coordinates=1027,212,114,58
-
-[chkbC2]
-Coordinates=860,348,114,58
-
-[Label15]
-Coordinates=984,348,60,58
-
-[pPhotoDoc]
-Coordinates=86,212,78,58
 
 [Label5]
 Coordinates=734,348,53,58
@@ -286,26 +121,11 @@ Coordinates=734,348,53,58
 [btnPrint]
 Coordinates=463,280,59,58
 
-[Label11]
-Coordinates=174,212,60,58
-
 [PageControl2]
 Coordinates=1059,552,93,36
 
-[sklSection1]
-Coordinates=968,552,81,36
-
 [pProvince]
 Coordinates=204,484,72,58
-
-[sPhotoDocBac]
-Coordinates=859,552,99,36
-
-[dbgPhotoDoc]
-Coordinates=757,552,92,36
-
-[rpMeansOfVer]
-Coordinates=251,10,98,58
 
 [PageControl1]
 Coordinates=654,552,93,36
@@ -313,29 +133,11 @@ Coordinates=654,552,93,36
 [pCityMunicipality]
 Coordinates=10,484,112,58
 
-[SkLabel8]
-Coordinates=576,552,68,36
-
 [edBarangay]
 Coordinates=482,552,84,36
 
 [pMOV]
 Coordinates=692,416,51,58
-
-[Panel4]
-Coordinates=374,212,55,58
-
-[btnAddListDoc]
-Coordinates=626,212,98,58
-
-[SkLabel2]
-Coordinates=404,552,68,36
-
-[SkLabel5]
-Coordinates=326,552,68,36
-
-[Panel3]
-Coordinates=607,10,55,58
 
 [NamePanel]
 Coordinates=783,10,81,58
@@ -343,28 +145,10 @@ Coordinates=783,10,81,58
 [tsInnovations]
 Coordinates=225,552,91,36
 
-[Label14]
-Coordinates=1104,280,60,58
-
-[sListOfNoticesBac]
-Coordinates=95,552,120,36
-
 [NotesMemo]
 Coordinates=370,280,83,58
 
-[pItemizedMonthlyDoc]
-Coordinates=93,416,138,58
-
-[SkLabel10]
-Coordinates=10,552,75,36
-
-[Label18]
-Coordinates=537,10,60,58
-
 []
-Coordinates=186,10,55,58
+Coordinates=727,280,101,58
 Visible=True
-
-[gpPR1]
-Coordinates=359,10,79,58
 

@@ -22,6 +22,7 @@ object frmDCF: TfrmDCF
     ActivePage = tsFAS
     Align = alClient
     TabOrder = 0
+    OnChange = PageControl1Change
     ExplicitWidth = 794
     ExplicitHeight = 530
     object tsDetails: TTabSheet
@@ -43,13 +44,14 @@ object frmDCF: TfrmDCF
           Margins.Right = 0
           Margins.Bottom = 0
           Align = alTop
+          BevelOuter = bvNone
           TabOrder = 0
           object pWrapper: TPanel
             AlignWithMargins = True
-            Left = 11
-            Top = 16
-            Width = 516
-            Height = 730
+            Left = 10
+            Top = 15
+            Width = 518
+            Height = 732
             Margins.Left = 10
             Margins.Top = 15
             Margins.Right = 10
@@ -59,7 +61,7 @@ object frmDCF: TfrmDCF
             object pYear: TPanel
               Left = 0
               Top = 0
-              Width = 516
+              Width = 518
               Height = 33
               Align = alTop
               BevelOuter = bvNone
@@ -102,7 +104,7 @@ object frmDCF: TfrmDCF
               AlignWithMargins = True
               Left = 0
               Top = 38
-              Width = 516
+              Width = 518
               Height = 70
               Margins.Left = 0
               Margins.Top = 5
@@ -116,7 +118,7 @@ object frmDCF: TfrmDCF
                 AlignWithMargins = True
                 Left = 3
                 Top = 3
-                Width = 510
+                Width = 512
                 Height = 23
                 Align = alTop
                 Caption = 'Status'
@@ -156,7 +158,7 @@ object frmDCF: TfrmDCF
               AlignWithMargins = True
               Left = 0
               Top = 113
-              Width = 516
+              Width = 518
               Height = 70
               Margins.Left = 0
               Margins.Top = 5
@@ -305,7 +307,7 @@ object frmDCF: TfrmDCF
               AlignWithMargins = True
               Left = 0
               Top = 488
-              Width = 516
+              Width = 518
               Height = 185
               Margins.Left = 0
               Margins.Top = 5
@@ -318,7 +320,7 @@ object frmDCF: TfrmDCF
                 AlignWithMargins = True
                 Left = 3
                 Top = 3
-                Width = 510
+                Width = 512
                 Height = 30
                 Align = alTop
                 AutoSize = False
@@ -336,7 +338,7 @@ object frmDCF: TfrmDCF
                 AlignWithMargins = True
                 Left = 3
                 Top = 39
-                Width = 510
+                Width = 512
                 Height = 143
                 Align = alClient
                 ScrollBars = ssVertical
@@ -347,7 +349,7 @@ object frmDCF: TfrmDCF
               AlignWithMargins = True
               Left = 0
               Top = 188
-              Width = 516
+              Width = 518
               Height = 70
               Margins.Left = 0
               Margins.Top = 5
@@ -361,7 +363,7 @@ object frmDCF: TfrmDCF
                 AlignWithMargins = True
                 Left = 3
                 Top = 3
-                Width = 510
+                Width = 512
                 Height = 21
                 Align = alTop
                 Caption = 'Barangay'
@@ -377,7 +379,7 @@ object frmDCF: TfrmDCF
                 AlignWithMargins = True
                 Left = 3
                 Top = 37
-                Width = 510
+                Width = 512
                 Height = 30
                 Margins.Top = 10
                 Align = alClient
@@ -395,7 +397,7 @@ object frmDCF: TfrmDCF
               AlignWithMargins = True
               Left = 0
               Top = 263
-              Width = 516
+              Width = 518
               Height = 70
               Margins.Left = 0
               Margins.Top = 5
@@ -409,7 +411,7 @@ object frmDCF: TfrmDCF
                 AlignWithMargins = True
                 Left = 3
                 Top = 3
-                Width = 510
+                Width = 512
                 Height = 21
                 Align = alTop
                 Caption = 'City/Municipality'
@@ -425,7 +427,7 @@ object frmDCF: TfrmDCF
                 AlignWithMargins = True
                 Left = 3
                 Top = 37
-                Width = 510
+                Width = 512
                 Height = 30
                 Margins.Top = 10
                 Align = alClient
@@ -443,7 +445,7 @@ object frmDCF: TfrmDCF
               AlignWithMargins = True
               Left = 0
               Top = 338
-              Width = 516
+              Width = 518
               Height = 70
               Margins.Left = 0
               Margins.Top = 5
@@ -457,7 +459,7 @@ object frmDCF: TfrmDCF
                 AlignWithMargins = True
                 Left = 3
                 Top = 3
-                Width = 510
+                Width = 512
                 Height = 21
                 Align = alTop
                 Caption = 'Province'
@@ -473,7 +475,7 @@ object frmDCF: TfrmDCF
                 AlignWithMargins = True
                 Left = 3
                 Top = 37
-                Width = 510
+                Width = 512
                 Height = 30
                 Margins.Top = 10
                 Align = alClient
@@ -491,7 +493,7 @@ object frmDCF: TfrmDCF
               AlignWithMargins = True
               Left = 0
               Top = 413
-              Width = 516
+              Width = 518
               Height = 70
               Margins.Left = 0
               Margins.Top = 5
@@ -505,7 +507,7 @@ object frmDCF: TfrmDCF
                 AlignWithMargins = True
                 Left = 3
                 Top = 3
-                Width = 510
+                Width = 512
                 Height = 21
                 Align = alTop
                 Caption = 'Region'
@@ -521,7 +523,7 @@ object frmDCF: TfrmDCF
                 AlignWithMargins = True
                 Left = 3
                 Top = 37
-                Width = 510
+                Width = 512
                 Height = 30
                 Margins.Top = 10
                 Align = alClient
@@ -4485,6 +4487,7 @@ object frmDCF: TfrmDCF
         Align = alClient
         MultiLine = True
         TabOrder = 0
+        OnChange = PageControl2Change
         ExplicitWidth = 786
         ExplicitHeight = 451
         object tsCompliance: TTabSheet
@@ -4498,20 +4501,10 @@ object frmDCF: TfrmDCF
             Align = alTop
             Words = <
               item
-                Caption = '1.1.1 '
+                Caption = '1.1 Compliance with the Barangay Full Disclosure Policy (BFDP)'
                 Font.Weight = Semibold
-                Name = 'Item 0'
                 StyledSettings = [Family, Size, FontColor]
-              end
-              item
-                Caption = 
-                  'Posted the following CY 2023 financial documenets in the BFDP bo' +
-                  'ard:'
-                Name = 'Item 1'
               end>
-            ExplicitLeft = 4
-            ExplicitTop = 4
-            ExplicitWidth = 757
           end
           object gpForm1: TGridPanel
             AlignWithMargins = True
@@ -4564,7 +4557,7 @@ object frmDCF: TfrmDCF
               Top = 0
               Width = 347
               Height = 21
-              Align = alClient
+              Align = alTop
               TabOrder = 0
               object SkLabel3: TSkLabel
                 Left = 1
@@ -4588,7 +4581,7 @@ object frmDCF: TfrmDCF
               Top = 0
               Width = 427
               Height = 21
-              Align = alClient
+              Align = alTop
               TabOrder = 1
               object SkLabel4: TSkLabel
                 Left = 1
@@ -4620,6 +4613,15 @@ object frmDCF: TfrmDCF
               Margins.Bottom = 0
               ControlCollection = <
                 item
+                  Control = SkLabel13
+                  AlignBottomWithPanel = False
+                  AlignHorizontalCenterWithPanel = False
+                  AlignLeftWithPanel = True
+                  AlignRightWithPanel = True
+                  AlignTopWithPanel = True
+                  AlignVerticalCenterWithPanel = False
+                end
+                item
                   Control = SkLabel5
                   AlignBottomWithPanel = False
                   AlignHorizontalCenterWithPanel = False
@@ -4627,6 +4629,7 @@ object frmDCF: TfrmDCF
                   AlignRightWithPanel = True
                   AlignTopWithPanel = True
                   AlignVerticalCenterWithPanel = False
+                  Below = SkLabel13
                 end
                 item
                   Control = SkLabel6
@@ -4723,13 +4726,39 @@ object frmDCF: TfrmDCF
               DesignSize = (
                 347
                 372)
-              object SkLabel5: TSkLabel
+              object SkLabel13: TSkLabel
                 AlignWithMargins = True
                 Left = 6
                 Top = 4
-                Width = 178
-                Height = 19
+                Width = 320
+                Height = 34
                 Margins.Left = 5
+                Anchors = []
+                Words = <
+                  item
+                    Caption = '1.1.1 '
+                    Font.Size = 13.000000000000000000
+                    Font.Weight = Bold
+                    Name = 'Item 0'
+                    StyledSettings = [Family, FontColor]
+                  end
+                  item
+                    Caption = 
+                      'Posted the following CY 2023 financial documents'#13#10' in the BFDP b' +
+                      'oard:'
+                    Font.Size = 13.000000000000000000
+                    Name = 'Item 1'
+                    StyledSettings = [Family, Style, FontColor]
+                  end>
+              end
+              object SkLabel5: TSkLabel
+                AlignWithMargins = True
+                Left = 6
+                Top = 44
+                Width = 166
+                Height = 17
+                Margins.Left = 5
+                TextSettings.Font.Size = 13.000000000000000000
                 Words = <
                   item
                     Caption = 'a.'
@@ -4745,11 +4774,12 @@ object frmDCF: TfrmDCF
               object SkLabel6: TSkLabel
                 AlignWithMargins = True
                 Left = 6
-                Top = 29
-                Width = 125
-                Height = 19
+                Top = 67
+                Width = 116
+                Height = 17
                 Margins.Left = 5
                 Anchors = []
+                TextSettings.Font.Size = 13.000000000000000000
                 Words = <
                   item
                     Caption = 'b.'
@@ -4765,11 +4795,12 @@ object frmDCF: TfrmDCF
               object SkLabel7: TSkLabel
                 AlignWithMargins = True
                 Left = 6
-                Top = 54
-                Width = 252
-                Height = 19
+                Top = 90
+                Width = 234
+                Height = 17
                 Margins.Left = 5
                 Anchors = []
+                TextSettings.Font.Size = 13.000000000000000000
                 Words = <
                   item
                     Caption = 'c.'
@@ -4785,11 +4816,12 @@ object frmDCF: TfrmDCF
               object SkLabel8: TSkLabel
                 AlignWithMargins = True
                 Left = 6
-                Top = 79
-                Width = 260
-                Height = 19
+                Top = 113
+                Width = 241
+                Height = 17
                 Margins.Left = 5
                 Anchors = []
+                TextSettings.Font.Size = 13.000000000000000000
                 Words = <
                   item
                     Caption = 'd.'
@@ -4805,11 +4837,12 @@ object frmDCF: TfrmDCF
               object SkLabel9: TSkLabel
                 AlignWithMargins = True
                 Left = 6
-                Top = 104
-                Width = 300
-                Height = 19
+                Top = 136
+                Width = 279
+                Height = 17
                 Margins.Left = 5
                 Anchors = []
+                TextSettings.Font.Size = 13.000000000000000000
                 Words = <
                   item
                     Caption = 'e.'
@@ -4825,11 +4858,12 @@ object frmDCF: TfrmDCF
               object SkLabel10: TSkLabel
                 AlignWithMargins = True
                 Left = 6
-                Top = 129
-                Width = 308
-                Height = 38
+                Top = 159
+                Width = 321
+                Height = 17
                 Margins.Left = 5
                 Anchors = []
+                TextSettings.Font.Size = 13.000000000000000000
                 Words = <
                   item
                     Caption = 'f.'
@@ -4838,18 +4872,19 @@ object frmDCF: TfrmDCF
                     StyledSettings = [Family, Size, FontColor]
                   end
                   item
-                    Caption = ' List of Notices of Award (1st - 3rd Quarter of CY'#13#10' 2023)'
+                    Caption = ' List of Notices of Award (1st - 3rd Quarter of CY 2023)'
                     Name = 'Item 1'
                   end>
               end
               object SkLabel11: TSkLabel
                 AlignWithMargins = True
                 Left = 6
-                Top = 173
-                Width = 307
-                Height = 38
+                Top = 182
+                Width = 340
+                Height = 34
                 Margins.Left = 5
                 Anchors = []
+                TextSettings.Font.Size = 13.000000000000000000
                 Words = <
                   item
                     Caption = 'g.'
@@ -4859,20 +4894,21 @@ object frmDCF: TfrmDCF
                   end
                   item
                     Caption = 
-                      ' Itemized Monthly Collections & Disbursements'#13#10' (January to Sept' +
-                      'ember 2023)'
+                      ' Itemized Monthly Collections & Disbursements (January '#13#10' to Sep' +
+                      'tember 2023)'
                     Name = 'Item 1'
                   end>
               end
               object SkLabel12: TSkLabel
                 AlignWithMargins = True
                 Left = 6
-                Top = 219
-                Width = 307
-                Height = 19
+                Top = 234
+                Width = 285
+                Height = 17
                 Margins.Left = 5
-                Margins.Top = 5
+                Margins.Top = 15
                 Margins.Bottom = 5
+                TextSettings.Font.Size = 13.000000000000000000
                 Words = <
                   item
                     Caption = '1.1.2 '
@@ -4888,7 +4924,7 @@ object frmDCF: TfrmDCF
               object pRemarks: TPanel
                 AlignWithMargins = True
                 Left = 6
-                Top = 248
+                Top = 261
                 Width = 334
                 Height = 27
                 Margins.Left = 5
@@ -4936,9 +4972,9 @@ object frmDCF: TfrmDCF
               object dbmRemarks1: TDBMemo
                 AlignWithMargins = True
                 Left = 6
-                Top = 277
+                Top = 290
                 Width = 335
-                Height = 85
+                Height = 75
                 Margins.Left = 5
                 Margins.Top = 2
                 Margins.Right = 5
@@ -4953,7 +4989,6 @@ object frmDCF: TfrmDCF
               Top = 21
               Width = 427
               Height = 372
-              VertScrollBar.Position = 8
               Align = alClient
               BevelInner = bvNone
               BevelOuter = bvRaised
@@ -4962,8 +4997,8 @@ object frmDCF: TfrmDCF
               object rpMeansOfVer: TRelativePanel
                 AlignWithMargins = True
                 Left = 5
-                Top = -7
-                Width = 398
+                Top = 0
+                Width = 396
                 Height = 1230
                 Margins.Left = 5
                 Margins.Top = 0
@@ -5029,16 +5064,17 @@ object frmDCF: TfrmDCF
                     AlignVerticalCenterWithPanel = False
                     Below = pAnnexB
                   end>
+                Align = alTop
                 BevelOuter = bvNone
                 TabOrder = 0
                 DesignSize = (
-                  398
+                  396
                   1230)
                 object pAnnualReport: TPanel
                   AlignWithMargins = True
                   Left = 5
                   Top = 320
-                  Width = 393
+                  Width = 391
                   Height = 183
                   Margins.Left = 5
                   Margins.Top = 10
@@ -5050,7 +5086,7 @@ object frmDCF: TfrmDCF
                     AlignWithMargins = True
                     Left = 4
                     Top = 4
-                    Width = 385
+                    Width = 383
                     Height = 15
                     Align = alTop
                     Caption = 'ANNUAL REPORT'
@@ -5066,7 +5102,7 @@ object frmDCF: TfrmDCF
                     AlignWithMargins = True
                     Left = 4
                     Top = 25
-                    Width = 385
+                    Width = 383
                     Height = 25
                     Align = alTop
                     Caption = 'a. Barangay Financial Report;'
@@ -5083,7 +5119,7 @@ object frmDCF: TfrmDCF
                     AlignWithMargins = True
                     Left = 4
                     Top = 56
-                    Width = 385
+                    Width = 383
                     Height = 25
                     Align = alTop
                     Caption = 'b. Barangay Budget;'
@@ -5100,7 +5136,7 @@ object frmDCF: TfrmDCF
                     AlignWithMargins = True
                     Left = 4
                     Top = 87
-                    Width = 385
+                    Width = 383
                     Height = 25
                     Align = alTop
                     Caption = 'c. Summary of Income and Expenditures;'
@@ -5117,7 +5153,7 @@ object frmDCF: TfrmDCF
                     AlignWithMargins = True
                     Left = 4
                     Top = 118
-                    Width = 385
+                    Width = 383
                     Height = 25
                     Align = alTop
                     Caption = 'd. 20% Component of the NTA Utilization;'
@@ -5134,7 +5170,7 @@ object frmDCF: TfrmDCF
                     AlignWithMargins = True
                     Left = 4
                     Top = 149
-                    Width = 385
+                    Width = 383
                     Height = 25
                     Align = alTop
                     Caption = 'e. Annual Procurement Plan or Procurement List;'
@@ -5152,7 +5188,7 @@ object frmDCF: TfrmDCF
                   AlignWithMargins = True
                   Left = 5
                   Top = 513
-                  Width = 393
+                  Width = 391
                   Height = 254
                   Margins.Left = 5
                   Margins.Top = 10
@@ -5163,7 +5199,7 @@ object frmDCF: TfrmDCF
                     AlignWithMargins = True
                     Left = 4
                     Top = 11
-                    Width = 385
+                    Width = 383
                     Height = 15
                     Margins.Top = 10
                     Align = alTop
@@ -5180,7 +5216,7 @@ object frmDCF: TfrmDCF
                     AlignWithMargins = True
                     Left = 4
                     Top = 32
-                    Width = 385
+                    Width = 383
                     Height = 25
                     Align = alTop
                     Caption = 'f. List of Notices of Award (1st - 3rd Quarter of CY 2023)'
@@ -5197,7 +5233,7 @@ object frmDCF: TfrmDCF
                     AlignWithMargins = True
                     Left = 6
                     Top = 70
-                    Width = 381
+                    Width = 379
                     Height = 163
                     Margins.Left = 5
                     Margins.Top = 10
@@ -5210,7 +5246,7 @@ object frmDCF: TfrmDCF
                       AlignWithMargins = True
                       Left = 4
                       Top = 144
-                      Width = 373
+                      Width = 371
                       Height = 15
                       Align = alBottom
                       Caption = 'List of Notices of Award were submitted:'
@@ -5281,7 +5317,7 @@ object frmDCF: TfrmDCF
                     object dbgListOfNoticesDoc: TDBGrid
                       Left = 114
                       Top = 31
-                      Width = 266
+                      Width = 264
                       Height = 110
                       Margins.Left = 0
                       Margins.Top = 0
@@ -5297,7 +5333,7 @@ object frmDCF: TfrmDCF
                     object Panel4: TPanel
                       Left = 1
                       Top = 1
-                      Width = 379
+                      Width = 377
                       Height = 30
                       Align = alTop
                       TabOrder = 2
@@ -5311,7 +5347,7 @@ object frmDCF: TfrmDCF
                       object Label15: TLabel
                         Left = 1
                         Top = 1
-                        Width = 377
+                        Width = 375
                         Height = 28
                         Margins.Top = 0
                         Margins.Right = 0
@@ -5339,7 +5375,7 @@ object frmDCF: TfrmDCF
                   AlignWithMargins = True
                   Left = 5
                   Top = 780
-                  Width = 393
+                  Width = 391
                   Height = 267
                   Margins.Left = 5
                   Margins.Top = 10
@@ -5351,7 +5387,7 @@ object frmDCF: TfrmDCF
                     AlignWithMargins = True
                     Left = 4
                     Top = 11
-                    Width = 385
+                    Width = 383
                     Height = 15
                     Margins.Top = 10
                     Align = alTop
@@ -5368,7 +5404,7 @@ object frmDCF: TfrmDCF
                     AlignWithMargins = True
                     Left = 6
                     Top = 82
-                    Width = 381
+                    Width = 379
                     Height = 163
                     Margins.Left = 5
                     Margins.Top = 10
@@ -5381,7 +5417,7 @@ object frmDCF: TfrmDCF
                       AlignWithMargins = True
                       Left = 4
                       Top = 144
-                      Width = 373
+                      Width = 371
                       Height = 15
                       Align = alBottom
                       Caption = 'Itemized Monthly Collections and Disbursements were submitted:'
@@ -5451,7 +5487,7 @@ object frmDCF: TfrmDCF
                     object DBGrid1: TDBGrid
                       Left = 114
                       Top = 31
-                      Width = 266
+                      Width = 264
                       Height = 110
                       Margins.Left = 0
                       Margins.Top = 0
@@ -5467,7 +5503,7 @@ object frmDCF: TfrmDCF
                     object Panel6: TPanel
                       Left = 1
                       Top = 1
-                      Width = 379
+                      Width = 377
                       Height = 30
                       Align = alTop
                       TabOrder = 2
@@ -5481,7 +5517,7 @@ object frmDCF: TfrmDCF
                       object Label17: TLabel
                         Left = 1
                         Top = 1
-                        Width = 377
+                        Width = 375
                         Height = 28
                         Margins.Top = 0
                         Margins.Right = 0
@@ -5508,7 +5544,7 @@ object frmDCF: TfrmDCF
                     AlignWithMargins = True
                     Left = 4
                     Top = 39
-                    Width = 385
+                    Width = 383
                     Height = 30
                     Margins.Top = 10
                     Align = alTop
@@ -5529,7 +5565,7 @@ object frmDCF: TfrmDCF
                   AlignWithMargins = True
                   Left = 5
                   Top = 1057
-                  Width = 393
+                  Width = 391
                   Height = 46
                   Margins.Left = 5
                   Margins.Top = 10
@@ -5541,7 +5577,7 @@ object frmDCF: TfrmDCF
                     AlignWithMargins = True
                     Left = 4
                     Top = 11
-                    Width = 385
+                    Width = 383
                     Height = 31
                     Margins.Top = 10
                     Align = alClient
@@ -5560,7 +5596,7 @@ object frmDCF: TfrmDCF
                   AlignWithMargins = True
                   Left = 5
                   Top = 5
-                  Width = 393
+                  Width = 391
                   Height = 305
                   Margins.Left = 5
                   Margins.Top = 5
@@ -5572,8 +5608,9 @@ object frmDCF: TfrmDCF
                     AlignWithMargins = True
                     Left = 4
                     Top = 4
-                    Width = 385
+                    Width = 383
                     Height = 53
+                    Margins.Bottom = 0
                     Align = alTop
                     Caption = 
                       'BFDP Monitoring Form A of the DILG Advisory covering the 1st to ' +
@@ -5591,10 +5628,9 @@ object frmDCF: TfrmDCF
                   object chkbC2: TCheckBox
                     AlignWithMargins = True
                     Left = 4
-                    Top = 70
-                    Width = 385
+                    Top = 60
+                    Width = 383
                     Height = 35
-                    Margins.Top = 10
                     Align = alTop
                     Caption = 
                       'Two (2) Photo Documentation of the BFDP board showing the name o' +
@@ -5611,8 +5647,8 @@ object frmDCF: TfrmDCF
                   object pPhotoDoc: TPanel
                     AlignWithMargins = True
                     Left = 6
-                    Top = 118
-                    Width = 381
+                    Top = 108
+                    Width = 379
                     Height = 163
                     Margins.Left = 5
                     Margins.Top = 10
@@ -5625,7 +5661,7 @@ object frmDCF: TfrmDCF
                       AlignWithMargins = True
                       Left = 4
                       Top = 144
-                      Width = 373
+                      Width = 371
                       Height = 15
                       Align = alBottom
                       Caption = 'BFDP Monitoring Form A were submitted:'
@@ -5695,7 +5731,7 @@ object frmDCF: TfrmDCF
                     object dbgPhotoDoc: TDBGrid
                       Left = 114
                       Top = 31
-                      Width = 266
+                      Width = 264
                       Height = 110
                       Margins.Left = 0
                       Margins.Top = 0
@@ -5711,7 +5747,7 @@ object frmDCF: TfrmDCF
                     object pPhotoDocHeader: TPanel
                       Left = 1
                       Top = 1
-                      Width = 379
+                      Width = 377
                       Height = 30
                       Align = alTop
                       TabOrder = 2
@@ -5725,7 +5761,7 @@ object frmDCF: TfrmDCF
                       object Label11: TLabel
                         Left = 1
                         Top = 1
-                        Width = 377
+                        Width = 375
                         Height = 28
                         Margins.Top = 0
                         Margins.Right = 0
@@ -5752,7 +5788,7 @@ object frmDCF: TfrmDCF
                 object pStatus1: TPanel
                   Left = 0
                   Top = 1112
-                  Width = 398
+                  Width = 396
                   Height = 105
                   Anchors = []
                   TabOrder = 5
@@ -5760,7 +5796,7 @@ object frmDCF: TfrmDCF
                     AlignWithMargins = True
                     Left = 4
                     Top = 6
-                    Width = 390
+                    Width = 388
                     Height = 15
                     Margins.Top = 5
                     Margins.Bottom = 0
@@ -5773,7 +5809,7 @@ object frmDCF: TfrmDCF
                     AlignWithMargins = True
                     Left = 11
                     Top = 24
-                    Width = 376
+                    Width = 374
                     Height = 70
                     Margins.Left = 10
                     Margins.Right = 10
@@ -5802,12 +5838,11 @@ object frmDCF: TfrmDCF
                         Value = 100.000000000000000000
                       end>
                     TabOrder = 0
-                    ExplicitHeight = 85
                     object Label18: TLabel
                       AlignWithMargins = True
-                      Left = 100
+                      Left = 99
                       Top = 4
-                      Width = 272
+                      Width = 271
                       Height = 62
                       Margins.Left = 10
                       Align = alClient
@@ -5822,15 +5857,12 @@ object frmDCF: TfrmDCF
                       ParentFont = False
                       Layout = tlCenter
                       WordWrap = True
-                      ExplicitLeft = 93
-                      ExplicitTop = 0
-                      ExplicitWidth = 279
-                      ExplicitHeight = 57
+                      ExplicitHeight = 30
                     end
                     object RelativePanel2: TRelativePanel
                       Left = 1
                       Top = 1
-                      Width = 89
+                      Width = 88
                       Height = 68
                       ControlCollection = <
                         item
@@ -5888,17 +5920,13 @@ object frmDCF: TfrmDCF
                         end>
                       Align = alClient
                       TabOrder = 0
-                      ExplicitLeft = 96
-                      ExplicitTop = 24
-                      ExplicitWidth = 185
-                      ExplicitHeight = 41
                       DesignSize = (
-                        89
+                        88
                         68)
                       object pPSToolbar: TPanel
                         Left = 1
                         Top = 1
-                        Width = 87
+                        Width = 86
                         Height = 29
                         Anchors = []
                         TabOrder = 1
@@ -5907,8 +5935,8 @@ object frmDCF: TfrmDCF
                         AlignWithMargins = True
                         Left = 21
                         Top = 4
-                        Width = 25
-                        Height = 29
+                        Width = 20
+                        Height = 17
                         Margins.Left = 20
                         Anchors = []
                         Caption = 'Yes'
@@ -5922,8 +5950,8 @@ object frmDCF: TfrmDCF
                       object chkbYes1: TCheckBox
                         AlignWithMargins = True
                         Left = 21
-                        Top = 46
-                        Width = 25
+                        Top = 34
+                        Width = 20
                         Height = 17
                         Margins.Top = 10
                         Anchors = []
@@ -5931,10 +5959,10 @@ object frmDCF: TfrmDCF
                       end
                       object lbNo1: TLabel
                         AlignWithMargins = True
-                        Left = 54
+                        Left = 49
                         Top = 4
-                        Width = 25
-                        Height = 29
+                        Width = 18
+                        Height = 17
                         Margins.Left = 5
                         Margins.Right = 10
                         Anchors = []
@@ -5948,9 +5976,9 @@ object frmDCF: TfrmDCF
                       end
                       object chkbNo1: TCheckBox
                         AlignWithMargins = True
-                        Left = 54
-                        Top = 46
-                        Width = 25
+                        Left = 49
+                        Top = 34
+                        Width = 18
                         Height = 17
                         Margins.Top = 10
                         Margins.Right = 5
@@ -5967,6 +5995,101 @@ object frmDCF: TfrmDCF
         object tsInnovations: TTabSheet
           Caption = '1.2'
           ImageIndex = 1
+          object sklSection2: TSkLabel
+            AlignWithMargins = True
+            Left = 3
+            Top = 3
+            Width = 774
+            Height = 19
+            Align = alTop
+            Words = <
+              item
+                Caption = 
+                  '1.2 Innovations on revenue generation or exercise of corporate p' +
+                  'owers'
+                Font.Weight = Semibold
+                StyledSettings = [Family, Size, FontColor]
+              end>
+            ExplicitLeft = 6
+            ExplicitTop = 11
+          end
+          object gpForm2: TGridPanel
+            Left = 0
+            Top = 25
+            Width = 780
+            Height = 399
+            Align = alClient
+            ColumnCollection = <
+              item
+                Value = 50.000000000000000000
+              end
+              item
+                Value = 50.000000000000000000
+              end>
+            ControlCollection = <
+              item
+                Column = 0
+                Control = Panel1
+                Row = 0
+              end
+              item
+                Column = 1
+                Control = Panel2
+                Row = 0
+              end>
+            RowCollection = <
+              item
+                Value = 100.000000000000000000
+              end>
+            TabOrder = 0
+            object Panel1: TPanel
+              Left = 1
+              Top = 1
+              Width = 389
+              Height = 397
+              Align = alClient
+              TabOrder = 0
+              object SkLabel14: TSkLabel
+                Left = 1
+                Top = 1
+                Width = 387
+                Height = 395
+                Align = alClient
+                TextSettings.Font.Weight = Bold
+                TextSettings.HorzAlign = Center
+                Words = <
+                  item
+                    Caption = 'MINIMUM REQUIREMENT'
+                  end>
+                ExplicitHeight = 280
+              end
+            end
+            object Panel2: TPanel
+              Left = 390
+              Top = 1
+              Width = 389
+              Height = 397
+              Align = alClient
+              TabOrder = 1
+              object SkLabel15: TSkLabel
+                Left = 1
+                Top = 1
+                Width = 387
+                Height = 395
+                Align = alClient
+                TextSettings.Font.Weight = Bold
+                TextSettings.HorzAlign = Center
+                Words = <
+                  item
+                    Caption = 'MEANS OF VERIFICATION'
+                  end>
+                ExplicitLeft = 2
+                ExplicitTop = 2
+                ExplicitWidth = 410
+                ExplicitHeight = 17
+              end
+            end
+          end
         end
       end
       object RelativePanel1: TRelativePanel

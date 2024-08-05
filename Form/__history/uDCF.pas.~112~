@@ -138,11 +138,22 @@ type
     pPSToolbar: TPanel;
     chkbNo1: TCheckBox;
     lbNo1: TLabel;
+    gpForm2: TGridPanel;
+    sklSection2: TSkLabel;
+    SkLabel13: TSkLabel;
+    Panel1: TPanel;
+    SkLabel14: TSkLabel;
+    Panel2: TPanel;
+    SkLabel15: TSkLabel;
     procedure FormShow(Sender: TObject);
     procedure FormResize(Sender: TObject);
     procedure ScrollBoxMouseWheelHandler(Sender: TObject; Shift: TShiftState;
       WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
     procedure ShapeBackgrounds;
+    procedure PageControl1Change(Sender: TObject);
+    procedure DetailsTab;
+    procedure FASTab;
+    procedure DPTab;
   private
     { Private declarations }
   public
@@ -195,34 +206,58 @@ begin
   sListOfNoticesBac.Width := ScrollBox1.Width - 50;
 end;
 
+procedure TfrmDCF.DetailsTab;
+begin
+  pProfile.Visible := True;
+  ScrollBox2.Visible := True;
+  PageControl2.Visible := False;
+end;
+
+procedure TfrmDCF.FASTab;
+begin
+  pProfile.Visible := False;
+  ScrollBox2.Visible := False;
+  PageControl2.Visible := True;
+end;
+
+procedure TfrmDCF.DPTab;
+begin
+  pProfile.Visible := False;
+  ScrollBox2.Visible := False;
+  PageControl2.Visible := False;
+end;
+
 {------------------------------------FORM--------------------------------------}
 procedure TfrmDCF.FormResize(Sender: TObject);
 begin
   Self.Caption := 'Height: ' + IntToStr(ClientHeight) + ' ' + 'Width: ' + IntToStr(ClientWidth);
 
-  // Form Responsive Settings
+  //-------Form Responsive Settings-------//
+
+  // Details Tab
+  pForm.Width := ScrollBox2.Width - 20;
+
+  // FAS Tab
   ShapeBackgrounds;
   rpMeansOfVer.Width := ScrollBox1.Width - 30;
+
+  // Grid item Responsive Settings
+  if ClientWidth > 1000 then
+  begin
+    gpPR1.ColumnCollection.Items[0].Value := 25;
+  end;
 
   if ClientHeight > 569 then
   begin
     dbmRemarks1.Height := rpMinimumReq.Height - 600;
+    // Grid item
     gpPR1.ColumnCollection.Items[0].Value := 5;
   end
   else
   begin
-    dbmRemarks1.Height := rpMinimumReq.Height - 280;
-  end;
-
-  if ClientHeight <= 750 then         // Optional 508
-  begin
-    pForm.Align := TAlign.alTop;
-    pForm.Height := 750;
-    pProfile.Width := 229;
-  end
-  else
-  begin
-    pForm.Align := TAlign.alClient;
+    dbmRemarks1.Height := rpMinimumReq.Height - 300;
+    // Grid item
+    gpPR1.ColumnCollection.Items[0].Value := 25;
   end;
 end;
 
@@ -231,6 +266,15 @@ begin
   // Shape Color Responsive
   ShapeBackgrounds;
   ClientHeight := 569;
+end;
+
+procedure TfrmDCF.PageControl1Change(Sender: TObject);
+begin
+  case PageControl1.ActivePageIndex of
+  0: DetailsTab;
+  1:
+
+  end;
 end;
 
 {----------------------------------SCROLLBOX-----------------------------------}

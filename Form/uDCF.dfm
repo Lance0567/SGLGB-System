@@ -2,9 +2,10 @@ object frmDCF: TfrmDCF
   Left = 0
   Top = 0
   Caption = 'Data Capture Form (DCF)'
-  ClientHeight = 533
-  ClientWidth = 796
+  ClientHeight = 588
+  ClientWidth = 801
   Color = clBtnFace
+  DoubleBuffered = True
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -17,12 +18,13 @@ object frmDCF: TfrmDCF
   object PageControl1: TPageControl
     Left = 0
     Top = 0
-    Width = 796
-    Height = 533
+    Width = 801
+    Height = 588
     ActivePage = tsFAS
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 794
+    OnChange = PageControl1Change
+    ExplicitWidth = 799
     ExplicitHeight = 530
     object tsDetails: TTabSheet
       Caption = 'Details'
@@ -30,26 +32,28 @@ object frmDCF: TfrmDCF
       object ScrollBox2: TScrollBox
         Left = 229
         Top = 0
-        Width = 559
-        Height = 503
+        Width = 564
+        Height = 558
         Align = alClient
         TabOrder = 0
         OnMouseWheel = ScrollBoxMouseWheelHandler
+        ExplicitHeight = 503
         object pForm: TPanel
           Left = 0
           Top = 0
-          Width = 538
+          Width = 543
           Height = 750
           Margins.Right = 0
           Margins.Bottom = 0
           Align = alTop
+          BevelOuter = bvNone
           TabOrder = 0
           object pWrapper: TPanel
             AlignWithMargins = True
-            Left = 11
-            Top = 16
-            Width = 516
-            Height = 730
+            Left = 10
+            Top = 15
+            Width = 523
+            Height = 732
             Margins.Left = 10
             Margins.Top = 15
             Margins.Right = 10
@@ -59,7 +63,7 @@ object frmDCF: TfrmDCF
             object pYear: TPanel
               Left = 0
               Top = 0
-              Width = 516
+              Width = 523
               Height = 33
               Align = alTop
               BevelOuter = bvNone
@@ -102,7 +106,7 @@ object frmDCF: TfrmDCF
               AlignWithMargins = True
               Left = 0
               Top = 38
-              Width = 516
+              Width = 523
               Height = 70
               Margins.Left = 0
               Margins.Top = 5
@@ -116,7 +120,7 @@ object frmDCF: TfrmDCF
                 AlignWithMargins = True
                 Left = 3
                 Top = 3
-                Width = 510
+                Width = 517
                 Height = 23
                 Align = alTop
                 Caption = 'Status'
@@ -156,7 +160,7 @@ object frmDCF: TfrmDCF
               AlignWithMargins = True
               Left = 0
               Top = 113
-              Width = 516
+              Width = 523
               Height = 70
               Margins.Left = 0
               Margins.Top = 5
@@ -305,7 +309,7 @@ object frmDCF: TfrmDCF
               AlignWithMargins = True
               Left = 0
               Top = 488
-              Width = 516
+              Width = 523
               Height = 185
               Margins.Left = 0
               Margins.Top = 5
@@ -318,7 +322,7 @@ object frmDCF: TfrmDCF
                 AlignWithMargins = True
                 Left = 3
                 Top = 3
-                Width = 510
+                Width = 517
                 Height = 30
                 Align = alTop
                 AutoSize = False
@@ -336,7 +340,7 @@ object frmDCF: TfrmDCF
                 AlignWithMargins = True
                 Left = 3
                 Top = 39
-                Width = 510
+                Width = 517
                 Height = 143
                 Align = alClient
                 ScrollBars = ssVertical
@@ -347,7 +351,7 @@ object frmDCF: TfrmDCF
               AlignWithMargins = True
               Left = 0
               Top = 188
-              Width = 516
+              Width = 523
               Height = 70
               Margins.Left = 0
               Margins.Top = 5
@@ -361,7 +365,7 @@ object frmDCF: TfrmDCF
                 AlignWithMargins = True
                 Left = 3
                 Top = 3
-                Width = 510
+                Width = 517
                 Height = 21
                 Align = alTop
                 Caption = 'Barangay'
@@ -377,7 +381,7 @@ object frmDCF: TfrmDCF
                 AlignWithMargins = True
                 Left = 3
                 Top = 37
-                Width = 510
+                Width = 517
                 Height = 30
                 Margins.Top = 10
                 Align = alClient
@@ -395,7 +399,7 @@ object frmDCF: TfrmDCF
               AlignWithMargins = True
               Left = 0
               Top = 263
-              Width = 516
+              Width = 523
               Height = 70
               Margins.Left = 0
               Margins.Top = 5
@@ -409,7 +413,7 @@ object frmDCF: TfrmDCF
                 AlignWithMargins = True
                 Left = 3
                 Top = 3
-                Width = 510
+                Width = 517
                 Height = 21
                 Align = alTop
                 Caption = 'City/Municipality'
@@ -425,7 +429,7 @@ object frmDCF: TfrmDCF
                 AlignWithMargins = True
                 Left = 3
                 Top = 37
-                Width = 510
+                Width = 517
                 Height = 30
                 Margins.Top = 10
                 Align = alClient
@@ -443,7 +447,7 @@ object frmDCF: TfrmDCF
               AlignWithMargins = True
               Left = 0
               Top = 338
-              Width = 516
+              Width = 523
               Height = 70
               Margins.Left = 0
               Margins.Top = 5
@@ -457,7 +461,7 @@ object frmDCF: TfrmDCF
                 AlignWithMargins = True
                 Left = 3
                 Top = 3
-                Width = 510
+                Width = 517
                 Height = 21
                 Align = alTop
                 Caption = 'Province'
@@ -473,7 +477,7 @@ object frmDCF: TfrmDCF
                 AlignWithMargins = True
                 Left = 3
                 Top = 37
-                Width = 510
+                Width = 517
                 Height = 30
                 Margins.Top = 10
                 Align = alClient
@@ -491,7 +495,7 @@ object frmDCF: TfrmDCF
               AlignWithMargins = True
               Left = 0
               Top = 413
-              Width = 516
+              Width = 523
               Height = 70
               Margins.Left = 0
               Margins.Top = 5
@@ -505,7 +509,7 @@ object frmDCF: TfrmDCF
                 AlignWithMargins = True
                 Left = 3
                 Top = 3
-                Width = 510
+                Width = 517
                 Height = 21
                 Align = alTop
                 Caption = 'Region'
@@ -521,7 +525,7 @@ object frmDCF: TfrmDCF
                 AlignWithMargins = True
                 Left = 3
                 Top = 37
-                Width = 510
+                Width = 517
                 Height = 30
                 Margins.Top = 10
                 Align = alClient
@@ -542,9 +546,10 @@ object frmDCF: TfrmDCF
         Left = 0
         Top = 0
         Width = 229
-        Height = 503
+        Height = 558
         Align = alLeft
         TabOrder = 1
+        ExplicitHeight = 503
         object Image1: TImage
           AlignWithMargins = True
           Left = 25
@@ -4478,37 +4483,25 @@ object frmDCF: TfrmDCF
       Caption = 'FAS'
       object PageControl2: TPageControl
         Left = 0
-        Top = 49
-        Width = 788
-        Height = 454
+        Top = 40
+        Width = 793
+        Height = 518
         ActivePage = tsCompliance
         Align = alClient
         MultiLine = True
         TabOrder = 0
-        ExplicitWidth = 786
+        OnChange = PageControl2Change
+        ExplicitTop = 49
+        ExplicitWidth = 791
         ExplicitHeight = 451
         object tsCompliance: TTabSheet
           Caption = '1.1'
-          object sklSection1: TSkLabel
-            AlignWithMargins = True
-            Left = 3
-            Top = 3
-            Width = 774
-            Height = 19
-            Align = alTop
-            Words = <
-              item
-                Caption = '1.1 Compliance with the Barangay Full Disclosure Policy (BFDP)'
-                Font.Weight = Semibold
-                StyledSettings = [Family, Size, FontColor]
-              end>
-          end
           object gpForm1: TGridPanel
             AlignWithMargins = True
             Left = 3
-            Top = 28
-            Width = 774
-            Height = 393
+            Top = 24
+            Width = 779
+            Height = 461
             Align = alClient
             BevelOuter = bvNone
             ColumnCollection = <
@@ -4531,7 +4524,7 @@ object frmDCF: TfrmDCF
               end
               item
                 Column = 0
-                Control = rpMinimumReq
+                Control = gbMinimumReq
                 Row = 1
               end
               item
@@ -4541,26 +4534,29 @@ object frmDCF: TfrmDCF
               end>
             RowCollection = <
               item
-                Value = 5.303483205716226000
+                Value = 5.276882775879895000
               end
               item
-                Value = 94.696516794283770000
+                Value = 94.723117224120100000
               end>
             TabOrder = 0
-            ExplicitWidth = 772
-            ExplicitHeight = 390
+            ExplicitWidth = 777
+            ExplicitHeight = 394
             object pMinimumReq: TPanel
               Left = 0
               Top = 0
-              Width = 347
-              Height = 21
+              Width = 349
+              Height = 24
               Align = alClient
               TabOrder = 0
+              ExplicitLeft = 8
+              ExplicitTop = 8
+              ExplicitHeight = 41
               object SkLabel3: TSkLabel
                 Left = 1
                 Top = 1
-                Width = 345
-                Height = 19
+                Width = 347
+                Height = 22
                 Align = alClient
                 TextSettings.Font.Weight = Bold
                 TextSettings.HorzAlign = Center
@@ -4568,23 +4564,28 @@ object frmDCF: TfrmDCF
                   item
                     Caption = 'MINIMUM REQUIREMENT'
                   end>
-                ExplicitLeft = 144
-                ExplicitTop = 0
-                ExplicitWidth = 55
+                ExplicitLeft = -29
+                ExplicitTop = 10
+                ExplicitWidth = 422
+                ExplicitHeight = 21
               end
             end
             object pMOV: TPanel
-              Left = 347
+              Left = 349
               Top = 0
-              Width = 427
-              Height = 21
+              Width = 430
+              Height = 24
               Align = alClient
               TabOrder = 1
+              ExplicitLeft = 1
+              ExplicitTop = 1
+              ExplicitWidth = 428
+              ExplicitHeight = 23
               object SkLabel4: TSkLabel
                 Left = 1
                 Top = 1
-                Width = 425
-                Height = 19
+                Width = 428
+                Height = 22
                 Align = alClient
                 TextSettings.Font.Weight = Bold
                 TextSettings.HorzAlign = Center
@@ -4592,274 +4593,31 @@ object frmDCF: TfrmDCF
                   item
                     Caption = 'MEANS OF VERIFICATION'
                   end>
-                ExplicitLeft = 2
-                ExplicitTop = 2
-                ExplicitWidth = 410
-                ExplicitHeight = 17
+                ExplicitWidth = 426
+                ExplicitHeight = 216
               end
             end
-            object rpMinimumReq: TRelativePanel
-              AlignWithMargins = True
+            object gbMinimumReq: TGroupBox
               Left = 0
-              Top = 21
-              Width = 347
-              Height = 372
-              Margins.Left = 0
+              Top = 24
+              Width = 349
+              Height = 437
+              Margins.Left = 2
               Margins.Top = 0
-              Margins.Right = 0
-              Margins.Bottom = 0
-              ControlCollection = <
-                item
-                  Control = SkLabel13
-                  AlignBottomWithPanel = False
-                  AlignHorizontalCenterWithPanel = False
-                  AlignLeftWithPanel = True
-                  AlignRightWithPanel = True
-                  AlignTopWithPanel = True
-                  AlignVerticalCenterWithPanel = False
-                end
-                item
-                  Control = SkLabel5
-                  AlignBottomWithPanel = False
-                  AlignHorizontalCenterWithPanel = False
-                  AlignLeftWithPanel = True
-                  AlignRightWithPanel = True
-                  AlignTopWithPanel = True
-                  AlignVerticalCenterWithPanel = False
-                  Below = SkLabel13
-                end
-                item
-                  Control = SkLabel6
-                  AlignBottomWithPanel = False
-                  AlignHorizontalCenterWithPanel = False
-                  AlignLeftWithPanel = True
-                  AlignRightWithPanel = True
-                  AlignTopWithPanel = True
-                  AlignVerticalCenterWithPanel = False
-                  Below = SkLabel5
-                end
-                item
-                  Control = SkLabel7
-                  AlignBottomWithPanel = False
-                  AlignHorizontalCenterWithPanel = False
-                  AlignLeftWithPanel = True
-                  AlignRightWithPanel = True
-                  AlignTopWithPanel = True
-                  AlignVerticalCenterWithPanel = False
-                  Below = SkLabel6
-                end
-                item
-                  Control = SkLabel8
-                  AlignBottomWithPanel = False
-                  AlignHorizontalCenterWithPanel = False
-                  AlignLeftWithPanel = True
-                  AlignRightWithPanel = True
-                  AlignTopWithPanel = True
-                  AlignVerticalCenterWithPanel = False
-                  Below = SkLabel7
-                end
-                item
-                  Control = SkLabel9
-                  AlignBottomWithPanel = False
-                  AlignHorizontalCenterWithPanel = False
-                  AlignLeftWithPanel = True
-                  AlignRightWithPanel = True
-                  AlignTopWithPanel = True
-                  AlignVerticalCenterWithPanel = False
-                  Below = SkLabel8
-                end
-                item
-                  Control = SkLabel10
-                  AlignBottomWithPanel = False
-                  AlignHorizontalCenterWithPanel = False
-                  AlignLeftWithPanel = True
-                  AlignRightWithPanel = True
-                  AlignTopWithPanel = True
-                  AlignVerticalCenterWithPanel = False
-                  Below = SkLabel9
-                end
-                item
-                  Control = SkLabel11
-                  AlignBottomWithPanel = False
-                  AlignHorizontalCenterWithPanel = False
-                  AlignLeftWithPanel = True
-                  AlignRightWithPanel = True
-                  AlignTopWithPanel = True
-                  AlignVerticalCenterWithPanel = False
-                  Below = SkLabel10
-                end
-                item
-                  Control = SkLabel12
-                  AlignBottomWithPanel = False
-                  AlignHorizontalCenterWithPanel = False
-                  AlignLeftWithPanel = True
-                  AlignRightWithPanel = True
-                  AlignTopWithPanel = True
-                  AlignVerticalCenterWithPanel = False
-                  Below = SkLabel11
-                end
-                item
-                  Control = pRemarks
-                  AlignBottomWithPanel = False
-                  AlignHorizontalCenterWithPanel = False
-                  AlignLeftWithPanel = True
-                  AlignRightWithPanel = True
-                  AlignTopWithPanel = False
-                  AlignVerticalCenterWithPanel = False
-                  Below = SkLabel12
-                end
-                item
-                  Control = dbmRemarks1
-                  AlignBottomWithPanel = True
-                  AlignHorizontalCenterWithPanel = False
-                  AlignLeftWithPanel = True
-                  AlignRightWithPanel = True
-                  AlignTopWithPanel = False
-                  AlignVerticalCenterWithPanel = False
-                  Below = pRemarks
-                end>
               Align = alClient
               TabOrder = 2
-              DesignSize = (
-                347
-                372)
-              object SkLabel13: TSkLabel
-                AlignWithMargins = True
-                Left = 6
-                Top = 4
-                Width = 320
-                Height = 34
-                Margins.Left = 5
-                Anchors = []
-                Words = <
-                  item
-                    Caption = '1.1.1 '
-                    Font.Size = 13.000000000000000000
-                    Font.Weight = Bold
-                    Name = 'Item 0'
-                    StyledSettings = [Family, FontColor]
-                  end
-                  item
-                    Caption = 
-                      'Posted the following CY 2023 financial documents'#13#10' in the BFDP b' +
-                      'oard:'
-                    Font.Size = 13.000000000000000000
-                    Name = 'Item 1'
-                    StyledSettings = [Family, Style, FontColor]
-                  end>
-              end
-              object SkLabel5: TSkLabel
-                AlignWithMargins = True
-                Left = 6
-                Top = 44
-                Width = 166
-                Height = 17
-                Margins.Left = 5
-                TextSettings.Font.Size = 13.000000000000000000
-                Words = <
-                  item
-                    Caption = 'a.'
-                    Font.Weight = Bold
-                    Name = 'Item 0'
-                    StyledSettings = [Family, Size, FontColor]
-                  end
-                  item
-                    Caption = ' Barangay Financial Report;'
-                    Name = 'Item 1'
-                  end>
-              end
-              object SkLabel6: TSkLabel
-                AlignWithMargins = True
-                Left = 6
-                Top = 67
-                Width = 116
-                Height = 17
-                Margins.Left = 5
-                Anchors = []
-                TextSettings.Font.Size = 13.000000000000000000
-                Words = <
-                  item
-                    Caption = 'b.'
-                    Font.Weight = Bold
-                    Name = 'Item 0'
-                    StyledSettings = [Family, Size, FontColor]
-                  end
-                  item
-                    Caption = ' Barangay Budget;'
-                    Name = 'Item 1'
-                  end>
-              end
-              object SkLabel7: TSkLabel
-                AlignWithMargins = True
-                Left = 6
-                Top = 90
-                Width = 234
-                Height = 17
-                Margins.Left = 5
-                Anchors = []
-                TextSettings.Font.Size = 13.000000000000000000
-                Words = <
-                  item
-                    Caption = 'c.'
-                    Font.Weight = Bold
-                    Name = 'Item 0'
-                    StyledSettings = [Family, Size, FontColor]
-                  end
-                  item
-                    Caption = ' Summary of Income and Expenditures;'
-                    Name = 'Item 1'
-                  end>
-              end
-              object SkLabel8: TSkLabel
-                AlignWithMargins = True
-                Left = 6
-                Top = 113
-                Width = 241
-                Height = 17
-                Margins.Left = 5
-                Anchors = []
-                TextSettings.Font.Size = 13.000000000000000000
-                Words = <
-                  item
-                    Caption = 'd.'
-                    Font.Weight = Bold
-                    Name = 'Item 0'
-                    StyledSettings = [Family, Size, FontColor]
-                  end
-                  item
-                    Caption = ' 20% Component of the NTA Utilization;'
-                    Name = 'Item 1'
-                  end>
-              end
-              object SkLabel9: TSkLabel
-                AlignWithMargins = True
-                Left = 6
-                Top = 136
-                Width = 279
-                Height = 17
-                Margins.Left = 5
-                Anchors = []
-                TextSettings.Font.Size = 13.000000000000000000
-                Words = <
-                  item
-                    Caption = 'e.'
-                    Font.Weight = Bold
-                    Name = 'Item 0'
-                    StyledSettings = [Family, Size, FontColor]
-                  end
-                  item
-                    Caption = ' Annual Procurement Plan or Procurement List;'
-                    Name = 'Item 1'
-                  end>
-              end
+              ExplicitLeft = 3
+              ExplicitTop = 1
+              ExplicitWidth = 337
+              ExplicitHeight = 435
               object SkLabel10: TSkLabel
                 AlignWithMargins = True
-                Left = 6
-                Top = 159
-                Width = 321
+                Left = 7
+                Top = 152
+                Width = 337
                 Height = 17
                 Margins.Left = 5
-                Anchors = []
+                Align = alTop
                 TextSettings.Font.Size = 13.000000000000000000
                 Words = <
                   item
@@ -4872,15 +4630,18 @@ object frmDCF: TfrmDCF
                     Caption = ' List of Notices of Award (1st - 3rd Quarter of CY 2023)'
                     Name = 'Item 1'
                   end>
+                ExplicitLeft = 23
+                ExplicitTop = 172
+                ExplicitWidth = 335
               end
               object SkLabel11: TSkLabel
                 AlignWithMargins = True
-                Left = 6
-                Top = 182
-                Width = 340
-                Height = 34
+                Left = 7
+                Top = 175
+                Width = 337
+                Height = 51
                 Margins.Left = 5
-                Anchors = []
+                Align = alTop
                 TextSettings.Font.Size = 13.000000000000000000
                 Words = <
                   item
@@ -4895,16 +4656,18 @@ object frmDCF: TfrmDCF
                       'tember 2023)'
                     Name = 'Item 1'
                   end>
+                ExplicitWidth = 325
               end
               object SkLabel12: TSkLabel
                 AlignWithMargins = True
-                Left = 6
-                Top = 234
-                Width = 285
+                Left = 7
+                Top = 244
+                Width = 337
                 Height = 17
                 Margins.Left = 5
                 Margins.Top = 15
                 Margins.Bottom = 5
+                Align = alTop
                 TextSettings.Font.Size = 13.000000000000000000
                 Words = <
                   item
@@ -4917,25 +4680,175 @@ object frmDCF: TfrmDCF
                     Caption = 'Accomplished and signed BFR with received'
                     Name = 'Item 1'
                   end>
+                ExplicitLeft = -8
+                ExplicitTop = 301
+                ExplicitWidth = 335
+              end
+              object SkLabel5: TSkLabel
+                AlignWithMargins = True
+                Left = 7
+                Top = 40
+                Width = 337
+                Height = 17
+                Margins.Left = 5
+                Align = alTop
+                TextSettings.Font.Size = 13.000000000000000000
+                Words = <
+                  item
+                    Caption = 'a.'
+                    Font.Weight = Bold
+                    Name = 'Item 0'
+                    StyledSettings = [Family, Size, FontColor]
+                  end
+                  item
+                    Caption = ' Barangay Financial Report;'
+                    Name = 'Item 1'
+                  end>
+                ExplicitLeft = 47
+                ExplicitTop = 5
+                ExplicitWidth = 335
+              end
+              object SkLabel6: TSkLabel
+                AlignWithMargins = True
+                Left = 7
+                Top = 63
+                Width = 337
+                Height = 17
+                Margins.Left = 5
+                Align = alTop
+                TextSettings.Font.Size = 13.000000000000000000
+                Words = <
+                  item
+                    Caption = 'b.'
+                    Font.Weight = Bold
+                    Name = 'Item 0'
+                    StyledSettings = [Family, Size, FontColor]
+                  end
+                  item
+                    Caption = ' Barangay Budget;'
+                    Name = 'Item 1'
+                  end>
+                ExplicitLeft = -12
+                ExplicitTop = 47
+                ExplicitWidth = 335
+              end
+              object SkLabel7: TSkLabel
+                AlignWithMargins = True
+                Left = 7
+                Top = 86
+                Width = 337
+                Height = 17
+                Margins.Left = 5
+                Align = alTop
+                TextSettings.Font.Size = 13.000000000000000000
+                Words = <
+                  item
+                    Caption = 'c.'
+                    Font.Weight = Bold
+                    Name = 'Item 0'
+                    StyledSettings = [Family, Size, FontColor]
+                  end
+                  item
+                    Caption = ' Summary of Income and Expenditures;'
+                    Name = 'Item 1'
+                  end>
+                ExplicitLeft = 23
+                ExplicitTop = 63
+                ExplicitWidth = 335
+              end
+              object SkLabel8: TSkLabel
+                AlignWithMargins = True
+                Left = 7
+                Top = 109
+                Width = 337
+                Height = 17
+                Margins.Left = 5
+                Align = alTop
+                TextSettings.Font.Size = 13.000000000000000000
+                Words = <
+                  item
+                    Caption = 'd.'
+                    Font.Weight = Bold
+                    Name = 'Item 0'
+                    StyledSettings = [Family, Size, FontColor]
+                  end
+                  item
+                    Caption = ' 20% Component of the NTA Utilization;'
+                    Name = 'Item 1'
+                  end>
+                ExplicitLeft = 23
+                ExplicitTop = 85
+                ExplicitWidth = 335
+              end
+              object SkLabel9: TSkLabel
+                AlignWithMargins = True
+                Left = 7
+                Top = 129
+                Width = 337
+                Height = 17
+                Margins.Left = 5
+                Margins.Top = 0
+                Align = alTop
+                TextSettings.Font.Size = 13.000000000000000000
+                Words = <
+                  item
+                    Caption = 'e.'
+                    Font.Weight = Bold
+                    Name = 'Item 0'
+                    StyledSettings = [Family, Size, FontColor]
+                  end
+                  item
+                    Caption = ' Annual Procurement Plan or Procurement List;'
+                    Name = 'Item 1'
+                  end>
+                ExplicitLeft = 6
+                ExplicitTop = 4
+                ExplicitWidth = 279
+              end
+              object SkLabel13: TSkLabel
+                AlignWithMargins = True
+                Left = 7
+                Top = 17
+                Width = 337
+                Height = 17
+                Margins.Left = 5
+                Margins.Top = 0
+                Align = alTop
+                TextSettings.Font.Size = 13.000000000000000000
+                Words = <
+                  item
+                    Caption = '1.1.1 '
+                    Font.Weight = Bold
+                    Name = 'Item 0'
+                    StyledSettings = [Family, Size, FontColor]
+                  end
+                  item
+                    Caption = 'Posted the following CY 2023 financial documents'
+                    Name = 'Item 1'
+                  end>
+                ExplicitLeft = 2
+                ExplicitWidth = 338
               end
               object pRemarks: TPanel
                 AlignWithMargins = True
-                Left = 6
-                Top = 261
+                Left = 7
+                Top = 276
                 Width = 334
                 Height = 27
                 Margins.Left = 5
-                Margins.Top = 5
+                Margins.Top = 10
                 Margins.Right = 6
                 Margins.Bottom = 0
-                Anchors = []
-                TabOrder = 1
+                Align = alTop
+                BevelOuter = bvNone
+                TabOrder = 0
+                ExplicitWidth = 322
                 object lbRemarks: TLabel
                   AlignWithMargins = True
-                  Left = 4
-                  Top = 4
+                  Left = 3
+                  Top = 3
                   Width = 56
-                  Height = 22
+                  Height = 24
                   Margins.Bottom = 0
                   Align = alLeft
                   Caption = 'REMARKS'
@@ -4951,10 +4864,10 @@ object frmDCF: TfrmDCF
                 end
                 object SkLabel2: TSkLabel
                   AlignWithMargins = True
-                  Left = 66
-                  Top = 4
+                  Left = 65
+                  Top = 3
                   Width = 196
-                  Height = 19
+                  Height = 21
                   Align = alLeft
                   TextSettings.Font.Size = 13.000000000000000000
                   TextSettings.FontColor = claDarkorange
@@ -4963,836 +4876,239 @@ object frmDCF: TfrmDCF
                       Caption = '- Complete the Processing Results'
                     end>
                   ExplicitLeft = 71
+                  ExplicitTop = 4
                   ExplicitHeight = 10
                 end
               end
               object dbmRemarks1: TDBMemo
                 AlignWithMargins = True
-                Left = 6
-                Top = 290
+                Left = 7
+                Top = 305
                 Width = 335
-                Height = 75
+                Height = 120
                 Margins.Left = 5
                 Margins.Top = 2
                 Margins.Right = 5
                 Margins.Bottom = 10
-                Anchors = []
+                Align = alClient
                 Enabled = False
-                TabOrder = 0
+                TabOrder = 1
+                ExplicitWidth = 323
+                ExplicitHeight = 118
               end
             end
             object ScrollBox1: TScrollBox
-              Left = 347
-              Top = 21
-              Width = 427
-              Height = 372
+              Left = 349
+              Top = 24
+              Width = 430
+              Height = 437
               Align = alClient
+              Anchors = []
               BevelInner = bvNone
-              BevelOuter = bvRaised
+              BevelOuter = bvNone
               TabOrder = 3
               OnMouseWheel = ScrollBoxMouseWheelHandler
-              object rpMeansOfVer: TRelativePanel
+              ExplicitLeft = 350
+              ExplicitTop = 41
+              object GroupBox3: TGroupBox
                 AlignWithMargins = True
                 Left = 5
-                Top = 1
-                Width = 398
-                Height = 1230
+                Top = 1054
+                Width = 399
+                Height = 63
                 Margins.Left = 5
-                Margins.Top = 0
                 Margins.Right = 5
-                Margins.Bottom = 0
-                ControlCollection = <
-                  item
-                    Control = pAnnualReport
-                    AlignBottomWithPanel = False
-                    AlignHorizontalCenterWithPanel = False
-                    AlignLeftWithPanel = True
-                    AlignRightWithPanel = True
-                    AlignTopWithPanel = True
-                    AlignVerticalCenterWithPanel = False
-                    Below = pBFDP
-                  end
-                  item
-                    Control = pQuarterlyReport
-                    AlignBottomWithPanel = False
-                    AlignHorizontalCenterWithPanel = False
-                    AlignLeftWithPanel = True
-                    AlignRightWithPanel = True
-                    AlignTopWithPanel = True
-                    AlignVerticalCenterWithPanel = False
-                    Below = pAnnualReport
-                  end
-                  item
-                    Control = pMonthReport
-                    AlignBottomWithPanel = False
-                    AlignHorizontalCenterWithPanel = False
-                    AlignLeftWithPanel = True
-                    AlignRightWithPanel = True
-                    AlignTopWithPanel = True
-                    AlignVerticalCenterWithPanel = False
-                    Below = pQuarterlyReport
-                  end
-                  item
-                    Control = pAnnexB
-                    AlignBottomWithPanel = False
-                    AlignHorizontalCenterWithPanel = False
-                    AlignLeftWithPanel = True
-                    AlignRightWithPanel = True
-                    AlignTopWithPanel = True
-                    AlignVerticalCenterWithPanel = False
-                    Below = pMonthReport
-                  end
-                  item
-                    Control = pBFDP
-                    AlignBottomWithPanel = False
-                    AlignHorizontalCenterWithPanel = False
-                    AlignLeftWithPanel = True
-                    AlignRightWithPanel = True
-                    AlignTopWithPanel = True
-                    AlignVerticalCenterWithPanel = False
-                  end
-                  item
-                    Control = pStatus1
-                    AlignBottomWithPanel = False
-                    AlignHorizontalCenterWithPanel = False
-                    AlignLeftWithPanel = True
-                    AlignRightWithPanel = True
-                    AlignTopWithPanel = True
-                    AlignVerticalCenterWithPanel = False
-                    Below = pAnnexB
-                  end>
-                BevelOuter = bvNone
+                Margins.Bottom = 10
+                Align = alTop
                 TabOrder = 0
-                DesignSize = (
-                  398
-                  1230)
-                object pAnnualReport: TPanel
+                object chkbC10: TCheckBox
                   AlignWithMargins = True
-                  Left = 5
-                  Top = 320
-                  Width = 393
-                  Height = 183
+                  Left = 7
+                  Top = 17
+                  Width = 387
+                  Height = 41
                   Margins.Left = 5
-                  Margins.Top = 10
-                  Margins.Right = 0
-                  Margins.Bottom = 0
-                  Anchors = []
+                  Margins.Top = 0
+                  Align = alClient
+                  Caption = 'Annex B of DBM-DOF-DILG JMC No. 2018-1'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -12
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  ParentFont = False
                   TabOrder = 0
-                  object Label12: TLabel
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 4
-                    Width = 385
-                    Height = 15
-                    Align = alTop
-                    Caption = 'ANNUAL REPORT'
-                    Font.Charset = ANSI_CHARSET
-                    Font.Color = clWindowText
-                    Font.Height = -12
-                    Font.Name = 'Segoe UI Semibold'
-                    Font.Style = [fsBold, fsUnderline]
-                    ParentFont = False
-                    ExplicitWidth = 94
-                  end
-                  object chkbC3: TCheckBox
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 25
-                    Width = 385
-                    Height = 25
-                    Align = alTop
-                    Caption = 'a. Barangay Financial Report;'
-                    Font.Charset = DEFAULT_CHARSET
-                    Font.Color = clWindowText
-                    Font.Height = -12
-                    Font.Name = 'Segoe UI'
-                    Font.Style = []
-                    ParentFont = False
-                    TabOrder = 0
-                    WordWrap = True
-                  end
-                  object chkbC4: TCheckBox
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 56
-                    Width = 385
-                    Height = 25
-                    Align = alTop
-                    Caption = 'b. Barangay Budget;'
-                    Font.Charset = DEFAULT_CHARSET
-                    Font.Color = clWindowText
-                    Font.Height = -12
-                    Font.Name = 'Segoe UI'
-                    Font.Style = []
-                    ParentFont = False
-                    TabOrder = 1
-                    WordWrap = True
-                  end
-                  object chkbC5: TCheckBox
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 87
-                    Width = 385
-                    Height = 25
-                    Align = alTop
-                    Caption = 'c. Summary of Income and Expenditures;'
-                    Font.Charset = DEFAULT_CHARSET
-                    Font.Color = clWindowText
-                    Font.Height = -12
-                    Font.Name = 'Segoe UI'
-                    Font.Style = []
-                    ParentFont = False
-                    TabOrder = 2
-                    WordWrap = True
-                  end
-                  object chkbC6: TCheckBox
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 118
-                    Width = 385
-                    Height = 25
-                    Align = alTop
-                    Caption = 'd. 20% Component of the NTA Utilization;'
-                    Font.Charset = DEFAULT_CHARSET
-                    Font.Color = clWindowText
-                    Font.Height = -12
-                    Font.Name = 'Segoe UI'
-                    Font.Style = []
-                    ParentFont = False
-                    TabOrder = 3
-                    WordWrap = True
-                  end
-                  object chkbC7: TCheckBox
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 149
-                    Width = 385
-                    Height = 25
-                    Align = alTop
-                    Caption = 'e. Annual Procurement Plan or Procurement List;'
-                    Font.Charset = DEFAULT_CHARSET
-                    Font.Color = clWindowText
-                    Font.Height = -12
-                    Font.Name = 'Segoe UI'
-                    Font.Style = []
-                    ParentFont = False
-                    TabOrder = 4
-                    WordWrap = True
-                  end
+                  WordWrap = True
+                  ExplicitLeft = 4
+                  ExplicitTop = 27
+                  ExplicitWidth = 399
+                  ExplicitHeight = 73
                 end
-                object pQuarterlyReport: TPanel
+              end
+              object GroupBox4: TGroupBox
+                AlignWithMargins = True
+                Left = 5
+                Top = 301
+                Width = 399
+                Height = 209
+                Margins.Left = 5
+                Margins.Right = 5
+                Align = alTop
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clBlack
+                Font.Height = -12
+                Font.Name = 'Segoe UI'
+                Font.Style = [fsUnderline]
+                ParentFont = False
+                TabOrder = 1
+                object Label12: TLabel
                   AlignWithMargins = True
-                  Left = 5
-                  Top = 513
-                  Width = 393
-                  Height = 254
+                  Left = 7
+                  Top = 17
+                  Width = 387
+                  Height = 15
                   Margins.Left = 5
-                  Margins.Top = 10
-                  Margins.Right = 0
-                  Anchors = []
+                  Margins.Top = 0
+                  Align = alTop
+                  Caption = 'ANNUAL REPORT'
+                  Font.Charset = ANSI_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -12
+                  Font.Name = 'Segoe UI Semibold'
+                  Font.Style = [fsBold, fsUnderline]
+                  ParentFont = False
+                  ExplicitLeft = 5
+                  ExplicitTop = 20
+                  ExplicitWidth = 94
+                end
+                object chkbC3: TCheckBox
+                  AlignWithMargins = True
+                  Left = 12
+                  Top = 38
+                  Width = 382
+                  Height = 25
+                  Margins.Left = 10
+                  Align = alTop
+                  Caption = 'a. Barangay Financial Report;'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -12
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  ParentFont = False
+                  TabOrder = 0
+                  WordWrap = True
+                  ExplicitLeft = 5
+                  ExplicitTop = 41
+                  ExplicitWidth = 394
+                end
+                object chkbC4: TCheckBox
+                  AlignWithMargins = True
+                  Left = 12
+                  Top = 162
+                  Width = 382
+                  Height = 25
+                  Margins.Left = 10
+                  Align = alTop
+                  Caption = 'b. Barangay Budget;'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -12
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  ParentFont = False
                   TabOrder = 1
-                  object Label13: TLabel
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 11
-                    Width = 385
-                    Height = 15
-                    Margins.Top = 10
-                    Align = alTop
-                    Caption = 'QUARTERLY REPORT'
-                    Font.Charset = ANSI_CHARSET
-                    Font.Color = clWindowText
-                    Font.Height = -12
-                    Font.Name = 'Segoe UI Semibold'
-                    Font.Style = [fsBold, fsUnderline]
-                    ParentFont = False
-                    ExplicitWidth = 110
-                  end
-                  object chkbC8: TCheckBox
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 32
-                    Width = 385
-                    Height = 25
-                    Align = alTop
-                    Caption = 'f. List of Notices of Award (1st - 3rd Quarter of CY 2023)'
-                    Font.Charset = DEFAULT_CHARSET
-                    Font.Color = clWindowText
-                    Font.Height = -12
-                    Font.Name = 'Segoe UI'
-                    Font.Style = []
-                    ParentFont = False
-                    TabOrder = 0
-                    WordWrap = True
-                  end
-                  object pListOfNoticesDoc: TPanel
-                    AlignWithMargins = True
-                    Left = 6
-                    Top = 70
-                    Width = 381
-                    Height = 163
-                    Margins.Left = 5
-                    Margins.Top = 10
-                    Margins.Right = 5
-                    Margins.Bottom = 0
-                    Align = alTop
-                    BevelOuter = bvLowered
-                    TabOrder = 1
-                    object lbListOfNotices: TLabel
-                      AlignWithMargins = True
-                      Left = 4
-                      Top = 144
-                      Width = 373
-                      Height = 15
-                      Align = alBottom
-                      Caption = 'List of Notices of Award were submitted:'
-                      Font.Charset = ANSI_CHARSET
-                      Font.Color = clWindowText
-                      Font.Height = -12
-                      Font.Name = 'Segoe UI Semibold'
-                      Font.Style = [fsBold]
-                      ParentFont = False
-                      WordWrap = True
-                      ExplicitWidth = 214
-                    end
-                    object Panel3: TPanel
-                      AlignWithMargins = True
-                      Left = 1
-                      Top = 31
-                      Width = 113
-                      Height = 109
-                      Margins.Left = 0
-                      Margins.Top = 0
-                      Margins.Right = 0
-                      Margins.Bottom = 1
-                      Align = alLeft
-                      BevelOuter = bvSpace
-                      TabOrder = 0
-                      object btnAddListDoc: TButton
-                        AlignWithMargins = True
-                        Left = 6
-                        Top = 4
-                        Width = 101
-                        Height = 25
-                        Margins.Left = 5
-                        Margins.Right = 5
-                        Margins.Bottom = 0
-                        Align = alTop
-                        Caption = 'Add Document'
-                        TabOrder = 0
-                      end
-                      object btnViewListDocs: TButton
-                        AlignWithMargins = True
-                        Left = 6
-                        Top = 34
-                        Width = 101
-                        Height = 25
-                        Margins.Left = 5
-                        Margins.Top = 5
-                        Margins.Right = 5
-                        Margins.Bottom = 0
-                        Align = alTop
-                        Caption = 'View Document'
-                        TabOrder = 1
-                      end
-                      object Button3: TButton
-                        AlignWithMargins = True
-                        Left = 6
-                        Top = 64
-                        Width = 101
-                        Height = 25
-                        Margins.Left = 5
-                        Margins.Top = 5
-                        Margins.Right = 5
-                        Margins.Bottom = 0
-                        Align = alTop
-                        Caption = 'Delete Document'
-                        TabOrder = 2
-                      end
-                    end
-                    object dbgListOfNoticesDoc: TDBGrid
-                      Left = 114
-                      Top = 31
-                      Width = 266
-                      Height = 110
-                      Margins.Left = 0
-                      Margins.Top = 0
-                      Margins.Bottom = 0
-                      Align = alClient
-                      TabOrder = 1
-                      TitleFont.Charset = DEFAULT_CHARSET
-                      TitleFont.Color = clWindowText
-                      TitleFont.Height = -12
-                      TitleFont.Name = 'Segoe UI'
-                      TitleFont.Style = []
-                    end
-                    object Panel4: TPanel
-                      Left = 1
-                      Top = 1
-                      Width = 379
-                      Height = 30
-                      Align = alTop
-                      TabOrder = 2
-                      object sListOfNoticesBac: TShape
-                        Left = 0
-                        Top = 0
-                        Width = 378
-                        Height = 27
-                        Brush.Color = clInfoBk
-                      end
-                      object Label15: TLabel
-                        Left = 1
-                        Top = 1
-                        Width = 377
-                        Height = 28
-                        Margins.Top = 0
-                        Margins.Right = 0
-                        Margins.Bottom = 5
-                        Align = alClient
-                        Alignment = taCenter
-                        BiDiMode = bdLeftToRight
-                        Caption = 'Please supply the number of docuements submitted:'
-                        Font.Charset = ANSI_CHARSET
-                        Font.Color = clWindowText
-                        Font.Height = -13
-                        Font.Name = 'Segoe UI Semibold'
-                        Font.Style = [fsBold, fsItalic]
-                        ParentBiDiMode = False
-                        ParentFont = False
-                        Layout = tlCenter
-                        WordWrap = True
-                        ExplicitWidth = 310
-                        ExplicitHeight = 17
-                      end
-                    end
-                  end
+                  WordWrap = True
+                  ExplicitLeft = 5
+                  ExplicitTop = 165
+                  ExplicitWidth = 394
                 end
-                object pMonthReport: TPanel
+                object chkbC5: TCheckBox
                   AlignWithMargins = True
-                  Left = 5
-                  Top = 780
-                  Width = 393
-                  Height = 267
-                  Margins.Left = 5
-                  Margins.Top = 10
-                  Margins.Right = 0
-                  Margins.Bottom = 0
-                  Anchors = []
+                  Left = 12
+                  Top = 131
+                  Width = 382
+                  Height = 25
+                  Margins.Left = 10
+                  Align = alTop
+                  Caption = 'c. Summary of Income and Expenditures;'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -12
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  ParentFont = False
                   TabOrder = 2
-                  object Label14: TLabel
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 11
-                    Width = 385
-                    Height = 15
-                    Margins.Top = 10
-                    Align = alTop
-                    Caption = 'MONTHLY REPORT'
-                    Font.Charset = ANSI_CHARSET
-                    Font.Color = clWindowText
-                    Font.Height = -12
-                    Font.Name = 'Segoe UI Semibold'
-                    Font.Style = [fsBold, fsUnderline]
-                    ParentFont = False
-                    ExplicitWidth = 103
-                  end
-                  object pItemizedMonthlyDoc: TPanel
-                    AlignWithMargins = True
-                    Left = 6
-                    Top = 82
-                    Width = 381
-                    Height = 163
-                    Margins.Left = 5
-                    Margins.Top = 10
-                    Margins.Right = 5
-                    Margins.Bottom = 0
-                    Align = alTop
-                    BevelOuter = bvLowered
-                    TabOrder = 0
-                    object lbItemizedMonthlyCol: TLabel
-                      AlignWithMargins = True
-                      Left = 4
-                      Top = 144
-                      Width = 373
-                      Height = 15
-                      Align = alBottom
-                      Caption = 'Itemized Monthly Collections and Disbursements were submitted:'
-                      Font.Charset = ANSI_CHARSET
-                      Font.Color = clWindowText
-                      Font.Height = -12
-                      Font.Name = 'Segoe UI Semibold'
-                      Font.Style = [fsBold]
-                      ParentFont = False
-                      WordWrap = True
-                      ExplicitWidth = 349
-                    end
-                    object Panel5: TPanel
-                      AlignWithMargins = True
-                      Left = 1
-                      Top = 31
-                      Width = 113
-                      Height = 109
-                      Margins.Left = 0
-                      Margins.Top = 0
-                      Margins.Right = 0
-                      Margins.Bottom = 1
-                      Align = alLeft
-                      TabOrder = 0
-                      object Button1: TButton
-                        AlignWithMargins = True
-                        Left = 6
-                        Top = 4
-                        Width = 101
-                        Height = 25
-                        Margins.Left = 5
-                        Margins.Right = 5
-                        Margins.Bottom = 0
-                        Align = alTop
-                        Caption = 'Add Document'
-                        TabOrder = 0
-                      end
-                      object Button2: TButton
-                        AlignWithMargins = True
-                        Left = 6
-                        Top = 34
-                        Width = 101
-                        Height = 25
-                        Margins.Left = 5
-                        Margins.Top = 5
-                        Margins.Right = 5
-                        Margins.Bottom = 0
-                        Align = alTop
-                        Caption = 'View Document'
-                        TabOrder = 1
-                      end
-                      object Button4: TButton
-                        AlignWithMargins = True
-                        Left = 6
-                        Top = 64
-                        Width = 101
-                        Height = 25
-                        Margins.Left = 5
-                        Margins.Top = 5
-                        Margins.Right = 5
-                        Margins.Bottom = 0
-                        Align = alTop
-                        Caption = 'Delete Document'
-                        TabOrder = 2
-                      end
-                    end
-                    object DBGrid1: TDBGrid
-                      Left = 114
-                      Top = 31
-                      Width = 266
-                      Height = 110
-                      Margins.Left = 0
-                      Margins.Top = 0
-                      Margins.Bottom = 0
-                      Align = alClient
-                      TabOrder = 1
-                      TitleFont.Charset = DEFAULT_CHARSET
-                      TitleFont.Color = clWindowText
-                      TitleFont.Height = -12
-                      TitleFont.Name = 'Segoe UI'
-                      TitleFont.Style = []
-                    end
-                    object Panel6: TPanel
-                      Left = 1
-                      Top = 1
-                      Width = 379
-                      Height = 30
-                      Align = alTop
-                      TabOrder = 2
-                      object sItemizedMonthly: TShape
-                        Left = 0
-                        Top = 0
-                        Width = 378
-                        Height = 27
-                        Brush.Color = clInfoBk
-                      end
-                      object Label17: TLabel
-                        Left = 1
-                        Top = 1
-                        Width = 377
-                        Height = 28
-                        Margins.Top = 0
-                        Margins.Right = 0
-                        Margins.Bottom = 5
-                        Align = alClient
-                        Alignment = taCenter
-                        BiDiMode = bdLeftToRight
-                        Caption = 'Please supply the number of docuements submitted:'
-                        Font.Charset = ANSI_CHARSET
-                        Font.Color = clWindowText
-                        Font.Height = -13
-                        Font.Name = 'Segoe UI Semibold'
-                        Font.Style = [fsBold, fsItalic]
-                        ParentBiDiMode = False
-                        ParentFont = False
-                        Layout = tlCenter
-                        WordWrap = True
-                        ExplicitWidth = 310
-                        ExplicitHeight = 17
-                      end
-                    end
-                  end
-                  object chkbC9: TCheckBox
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 39
-                    Width = 385
-                    Height = 30
-                    Margins.Top = 10
-                    Align = alTop
-                    Caption = 
-                      'g. Itemized Monthly Collections and Disbursements (January to Se' +
-                      'ptember 2023)'
-                    Font.Charset = DEFAULT_CHARSET
-                    Font.Color = clWindowText
-                    Font.Height = -12
-                    Font.Name = 'Segoe UI'
-                    Font.Style = []
-                    ParentFont = False
-                    TabOrder = 1
-                    WordWrap = True
-                  end
+                  WordWrap = True
+                  ExplicitLeft = 5
+                  ExplicitTop = 134
+                  ExplicitWidth = 394
                 end
-                object pAnnexB: TPanel
+                object chkbC6: TCheckBox
                   AlignWithMargins = True
-                  Left = 5
-                  Top = 1057
-                  Width = 393
-                  Height = 46
-                  Margins.Left = 5
-                  Margins.Top = 10
-                  Margins.Right = 0
-                  Margins.Bottom = 9
-                  Anchors = []
+                  Left = 12
+                  Top = 100
+                  Width = 382
+                  Height = 25
+                  Margins.Left = 10
+                  Align = alTop
+                  Caption = 'd. 20% Component of the NTA Utilization;'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -12
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  ParentFont = False
                   TabOrder = 3
-                  object chkbC10: TCheckBox
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 11
-                    Width = 385
-                    Height = 31
-                    Margins.Top = 10
-                    Align = alClient
-                    Caption = 'Annex B of DBM-DOF-DILG JMC No. 2018-1'
-                    Font.Charset = DEFAULT_CHARSET
-                    Font.Color = clWindowText
-                    Font.Height = -12
-                    Font.Name = 'Segoe UI'
-                    Font.Style = []
-                    ParentFont = False
-                    TabOrder = 0
-                    WordWrap = True
-                  end
+                  WordWrap = True
+                  ExplicitLeft = 5
+                  ExplicitTop = 103
+                  ExplicitWidth = 394
                 end
-                object pBFDP: TPanel
+                object chkbC7: TCheckBox
                   AlignWithMargins = True
-                  Left = 5
-                  Top = 5
-                  Width = 393
-                  Height = 305
-                  Margins.Left = 5
-                  Margins.Top = 5
-                  Margins.Right = 0
-                  Margins.Bottom = 0
-                  Anchors = []
+                  Left = 12
+                  Top = 69
+                  Width = 382
+                  Height = 25
+                  Margins.Left = 10
+                  Align = alTop
+                  Caption = 'e. Annual Procurement Plan or Procurement List;'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -12
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  ParentFont = False
                   TabOrder = 4
-                  object chkbC1: TCheckBox
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 4
-                    Width = 385
-                    Height = 53
-                    Margins.Bottom = 0
-                    Align = alTop
-                    Caption = 
-                      'BFDP Monitoring Form A of the DILG Advisory covering the 1st to ' +
-                      '3rd quarter monitoring data signed by the City Director/C/MLGOO,' +
-                      ' Punong Barangay and Barangay Secretary'
-                    Font.Charset = DEFAULT_CHARSET
-                    Font.Color = clWindowText
-                    Font.Height = -12
-                    Font.Name = 'Segoe UI'
-                    Font.Style = []
-                    ParentFont = False
-                    TabOrder = 0
-                    WordWrap = True
-                  end
-                  object chkbC2: TCheckBox
-                    AlignWithMargins = True
-                    Left = 4
-                    Top = 60
-                    Width = 385
-                    Height = 35
-                    Align = alTop
-                    Caption = 
-                      'Two (2) Photo Documentation of the BFDP board showing the name o' +
-                      'f the barangay'
-                    Font.Charset = DEFAULT_CHARSET
-                    Font.Color = clWindowText
-                    Font.Height = -12
-                    Font.Name = 'Segoe UI'
-                    Font.Style = []
-                    ParentFont = False
-                    TabOrder = 1
-                    WordWrap = True
-                  end
-                  object pPhotoDoc: TPanel
-                    AlignWithMargins = True
-                    Left = 6
-                    Top = 108
-                    Width = 381
-                    Height = 163
-                    Margins.Left = 5
-                    Margins.Top = 10
-                    Margins.Right = 5
-                    Margins.Bottom = 0
-                    Align = alTop
-                    BevelOuter = bvLowered
-                    TabOrder = 2
-                    object lbTotalBFDP: TLabel
-                      AlignWithMargins = True
-                      Left = 4
-                      Top = 144
-                      Width = 373
-                      Height = 15
-                      Align = alBottom
-                      Caption = 'BFDP Monitoring Form A were submitted:'
-                      Font.Charset = ANSI_CHARSET
-                      Font.Color = clWindowText
-                      Font.Height = -12
-                      Font.Name = 'Segoe UI Semibold'
-                      Font.Style = [fsBold]
-                      ParentFont = False
-                      WordWrap = True
-                      ExplicitWidth = 222
-                    end
-                    object pPhotoDocs: TPanel
-                      AlignWithMargins = True
-                      Left = 1
-                      Top = 31
-                      Width = 113
-                      Height = 109
-                      Margins.Left = 0
-                      Margins.Top = 0
-                      Margins.Right = 0
-                      Margins.Bottom = 1
-                      Align = alLeft
-                      TabOrder = 0
-                      object btnAddPhotoDoc: TButton
-                        AlignWithMargins = True
-                        Left = 6
-                        Top = 4
-                        Width = 101
-                        Height = 25
-                        Margins.Left = 5
-                        Margins.Right = 5
-                        Margins.Bottom = 0
-                        Align = alTop
-                        Caption = 'Add Document'
-                        TabOrder = 0
-                      end
-                      object btnViewPhotoDoc: TButton
-                        AlignWithMargins = True
-                        Left = 6
-                        Top = 34
-                        Width = 101
-                        Height = 25
-                        Margins.Left = 5
-                        Margins.Top = 5
-                        Margins.Right = 5
-                        Margins.Bottom = 0
-                        Align = alTop
-                        Caption = 'View Document'
-                        TabOrder = 1
-                      end
-                      object btnDeletePhotoDoc: TButton
-                        AlignWithMargins = True
-                        Left = 6
-                        Top = 64
-                        Width = 101
-                        Height = 25
-                        Margins.Left = 5
-                        Margins.Top = 5
-                        Margins.Right = 5
-                        Margins.Bottom = 0
-                        Align = alTop
-                        Caption = 'Delete Document'
-                        TabOrder = 2
-                      end
-                    end
-                    object dbgPhotoDoc: TDBGrid
-                      Left = 114
-                      Top = 31
-                      Width = 266
-                      Height = 110
-                      Margins.Left = 0
-                      Margins.Top = 0
-                      Margins.Bottom = 0
-                      Align = alClient
-                      TabOrder = 1
-                      TitleFont.Charset = DEFAULT_CHARSET
-                      TitleFont.Color = clWindowText
-                      TitleFont.Height = -12
-                      TitleFont.Name = 'Segoe UI'
-                      TitleFont.Style = []
-                    end
-                    object pPhotoDocHeader: TPanel
-                      Left = 1
-                      Top = 1
-                      Width = 379
-                      Height = 30
-                      Align = alTop
-                      TabOrder = 2
-                      object sPhotoDocBac: TShape
-                        Left = 0
-                        Top = 0
-                        Width = 378
-                        Height = 27
-                        Brush.Color = clInfoBk
-                      end
-                      object Label11: TLabel
-                        Left = 1
-                        Top = 1
-                        Width = 377
-                        Height = 28
-                        Margins.Top = 0
-                        Margins.Right = 0
-                        Margins.Bottom = 5
-                        Align = alClient
-                        Alignment = taCenter
-                        BiDiMode = bdLeftToRight
-                        Caption = 'Please supply the number of docuements submitted:'
-                        Font.Charset = ANSI_CHARSET
-                        Font.Color = clWindowText
-                        Font.Height = -13
-                        Font.Name = 'Segoe UI Semibold'
-                        Font.Style = [fsBold, fsItalic]
-                        ParentBiDiMode = False
-                        ParentFont = False
-                        Layout = tlCenter
-                        WordWrap = True
-                        ExplicitWidth = 310
-                        ExplicitHeight = 17
-                      end
-                    end
-                  end
+                  WordWrap = True
+                  ExplicitLeft = 5
+                  ExplicitTop = 72
+                  ExplicitWidth = 394
                 end
+              end
+              object GroupBox7: TGroupBox
+                AlignWithMargins = True
+                Left = 3
+                Top = 1130
+                Width = 403
+                Height = 105
+                Margins.Bottom = 0
+                Align = alTop
+                TabOrder = 2
                 object pStatus1: TPanel
-                  Left = 0
-                  Top = 1112
-                  Width = 398
-                  Height = 105
-                  Anchors = []
-                  TabOrder = 5
+                  Left = 2
+                  Top = 17
+                  Width = 399
+                  Height = 86
+                  Align = alClient
+                  TabOrder = 0
+                  ExplicitWidth = 400
                   object Label16: TLabel
                     AlignWithMargins = True
                     Left = 4
                     Top = 6
-                    Width = 390
+                    Width = 391
                     Height = 15
                     Margins.Top = 5
                     Margins.Bottom = 0
@@ -5805,8 +5121,8 @@ object frmDCF: TfrmDCF
                     AlignWithMargins = True
                     Left = 11
                     Top = 24
-                    Width = 376
-                    Height = 70
+                    Width = 377
+                    Height = 51
                     Margins.Left = 10
                     Margins.Right = 10
                     Margins.Bottom = 10
@@ -5834,12 +5150,13 @@ object frmDCF: TfrmDCF
                         Value = 100.000000000000000000
                       end>
                     TabOrder = 0
+                    ExplicitWidth = 378
                     object Label18: TLabel
                       AlignWithMargins = True
                       Left = 100
                       Top = 4
-                      Width = 272
-                      Height = 62
+                      Width = 273
+                      Height = 43
                       Margins.Left = 10
                       Align = alClient
                       Caption = 
@@ -5853,26 +5170,16 @@ object frmDCF: TfrmDCF
                       ParentFont = False
                       Layout = tlCenter
                       WordWrap = True
-                      ExplicitLeft = 93
-                      ExplicitTop = 0
-                      ExplicitWidth = 279
-                      ExplicitHeight = 57
+                      ExplicitLeft = 101
+                      ExplicitWidth = 271
+                      ExplicitHeight = 30
                     end
                     object RelativePanel2: TRelativePanel
                       Left = 1
                       Top = 1
                       Width = 89
-                      Height = 68
+                      Height = 49
                       ControlCollection = <
-                        item
-                          Control = pPSToolbar
-                          AlignBottomWithPanel = False
-                          AlignHorizontalCenterWithPanel = False
-                          AlignLeftWithPanel = True
-                          AlignRightWithPanel = True
-                          AlignTopWithPanel = True
-                          AlignVerticalCenterWithPanel = False
-                        end
                         item
                           Control = lbYes1
                           AlignBottomWithPanel = False
@@ -5921,21 +5228,13 @@ object frmDCF: TfrmDCF
                       TabOrder = 0
                       DesignSize = (
                         89
-                        68)
-                      object pPSToolbar: TPanel
-                        Left = 1
-                        Top = 1
-                        Width = 87
-                        Height = 29
-                        Anchors = []
-                        TabOrder = 1
-                      end
+                        49)
                       object lbYes1: TLabel
                         AlignWithMargins = True
                         Left = 21
                         Top = 4
-                        Width = 25
-                        Height = 29
+                        Width = 20
+                        Height = 17
                         Margins.Left = 20
                         Anchors = []
                         Caption = 'Yes'
@@ -5949,8 +5248,8 @@ object frmDCF: TfrmDCF
                       object chkbYes1: TCheckBox
                         AlignWithMargins = True
                         Left = 21
-                        Top = 46
-                        Width = 25
+                        Top = 34
+                        Width = 20
                         Height = 17
                         Margins.Top = 10
                         Anchors = []
@@ -5958,10 +5257,10 @@ object frmDCF: TfrmDCF
                       end
                       object lbNo1: TLabel
                         AlignWithMargins = True
-                        Left = 54
+                        Left = 49
                         Top = 4
-                        Width = 25
-                        Height = 29
+                        Width = 18
+                        Height = 17
                         Margins.Left = 5
                         Margins.Right = 10
                         Anchors = []
@@ -5975,20 +5274,619 @@ object frmDCF: TfrmDCF
                       end
                       object chkbNo1: TCheckBox
                         AlignWithMargins = True
-                        Left = 54
-                        Top = 46
-                        Width = 25
+                        Left = 49
+                        Top = 34
+                        Width = 18
                         Height = 17
                         Margins.Top = 10
                         Margins.Right = 5
                         Anchors = []
-                        TabOrder = 2
+                        TabOrder = 1
                       end
                     end
                   end
                 end
               end
+              object pBFDP: TPanel
+                AlignWithMargins = True
+                Left = 5
+                Top = 5
+                Width = 399
+                Height = 293
+                Margins.Left = 5
+                Margins.Top = 5
+                Margins.Right = 5
+                Margins.Bottom = 0
+                Align = alTop
+                TabOrder = 3
+                object chkbC1: TCheckBox
+                  AlignWithMargins = True
+                  Left = 6
+                  Top = 4
+                  Width = 389
+                  Height = 46
+                  Margins.Left = 5
+                  Margins.Bottom = 0
+                  Align = alTop
+                  Caption = 
+                    'BFDP Monitoring Form A of the DILG Advisory covering the 1st to ' +
+                    '3rd quarter monitoring data signed by the City Director/C/MLGOO,' +
+                    ' Punong Barangay and Barangay Secretary'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -12
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  ParentFont = False
+                  TabOrder = 0
+                  WordWrap = True
+                end
+                object chkbC2: TCheckBox
+                  AlignWithMargins = True
+                  Left = 6
+                  Top = 53
+                  Width = 389
+                  Height = 35
+                  Margins.Left = 5
+                  Align = alTop
+                  Caption = 
+                    'Two (2) Photo Documentation of the BFDP board showing the name o' +
+                    'f the barangay'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -12
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  ParentFont = False
+                  TabOrder = 1
+                  WordWrap = True
+                  ExplicitLeft = 4
+                  ExplicitTop = 60
+                  ExplicitWidth = 391
+                end
+                object pPhotoDoc: TPanel
+                  AlignWithMargins = True
+                  Left = 6
+                  Top = 101
+                  Width = 387
+                  Height = 163
+                  Margins.Left = 5
+                  Margins.Top = 10
+                  Margins.Right = 5
+                  Margins.Bottom = 0
+                  Align = alTop
+                  BevelOuter = bvLowered
+                  TabOrder = 2
+                  ExplicitTop = 108
+                  object lbTotalBFDP: TLabel
+                    AlignWithMargins = True
+                    Left = 4
+                    Top = 144
+                    Width = 379
+                    Height = 15
+                    Align = alBottom
+                    Caption = 'BFDP Monitoring Form A were submitted:'
+                    Font.Charset = ANSI_CHARSET
+                    Font.Color = clWindowText
+                    Font.Height = -12
+                    Font.Name = 'Segoe UI Semibold'
+                    Font.Style = [fsBold]
+                    ParentFont = False
+                    WordWrap = True
+                    ExplicitWidth = 222
+                  end
+                  object pPhotoDocs: TPanel
+                    AlignWithMargins = True
+                    Left = 1
+                    Top = 31
+                    Width = 113
+                    Height = 109
+                    Margins.Left = 0
+                    Margins.Top = 0
+                    Margins.Right = 0
+                    Margins.Bottom = 1
+                    Align = alLeft
+                    TabOrder = 0
+                    object btnAddPhotoDoc: TButton
+                      AlignWithMargins = True
+                      Left = 6
+                      Top = 4
+                      Width = 101
+                      Height = 25
+                      Margins.Left = 5
+                      Margins.Right = 5
+                      Margins.Bottom = 0
+                      Align = alTop
+                      Caption = 'Add Document'
+                      TabOrder = 0
+                    end
+                    object btnViewPhotoDoc: TButton
+                      AlignWithMargins = True
+                      Left = 6
+                      Top = 34
+                      Width = 101
+                      Height = 25
+                      Margins.Left = 5
+                      Margins.Top = 5
+                      Margins.Right = 5
+                      Margins.Bottom = 0
+                      Align = alTop
+                      Caption = 'View Document'
+                      TabOrder = 1
+                    end
+                    object btnDeletePhotoDoc: TButton
+                      AlignWithMargins = True
+                      Left = 6
+                      Top = 64
+                      Width = 101
+                      Height = 25
+                      Margins.Left = 5
+                      Margins.Top = 5
+                      Margins.Right = 5
+                      Margins.Bottom = 0
+                      Align = alTop
+                      Caption = 'Delete Document'
+                      TabOrder = 2
+                    end
+                  end
+                  object dbgPhotoDoc: TDBGrid
+                    Left = 114
+                    Top = 31
+                    Width = 272
+                    Height = 110
+                    Margins.Left = 0
+                    Margins.Top = 0
+                    Margins.Bottom = 0
+                    Align = alClient
+                    TabOrder = 1
+                    TitleFont.Charset = DEFAULT_CHARSET
+                    TitleFont.Color = clWindowText
+                    TitleFont.Height = -12
+                    TitleFont.Name = 'Segoe UI'
+                    TitleFont.Style = []
+                  end
+                  object pPhotoDocHeader: TPanel
+                    Left = 1
+                    Top = 1
+                    Width = 385
+                    Height = 30
+                    Align = alTop
+                    TabOrder = 2
+                    object sPhotoDocBac: TShape
+                      Left = 0
+                      Top = 0
+                      Width = 378
+                      Height = 27
+                      Brush.Color = clInfoBk
+                    end
+                    object Label11: TLabel
+                      Left = 1
+                      Top = 1
+                      Width = 383
+                      Height = 28
+                      Margins.Top = 0
+                      Margins.Right = 0
+                      Margins.Bottom = 5
+                      Align = alClient
+                      Alignment = taCenter
+                      BiDiMode = bdLeftToRight
+                      Caption = 'Please supply the number of docuements submitted:'
+                      Font.Charset = ANSI_CHARSET
+                      Font.Color = clWindowText
+                      Font.Height = -13
+                      Font.Name = 'Segoe UI Semibold'
+                      Font.Style = [fsBold, fsItalic]
+                      ParentBiDiMode = False
+                      ParentFont = False
+                      Layout = tlCenter
+                      WordWrap = True
+                      ExplicitWidth = 310
+                      ExplicitHeight = 17
+                    end
+                  end
+                end
+              end
+              object pQuarterlyReport: TPanel
+                AlignWithMargins = True
+                Left = 5
+                Top = 518
+                Width = 399
+                Height = 254
+                Margins.Left = 5
+                Margins.Top = 5
+                Margins.Right = 5
+                Margins.Bottom = 0
+                Align = alTop
+                TabOrder = 4
+                object Label13: TLabel
+                  AlignWithMargins = True
+                  Left = 4
+                  Top = 11
+                  Width = 391
+                  Height = 15
+                  Margins.Top = 10
+                  Align = alTop
+                  Caption = 'QUARTERLY REPORT'
+                  Font.Charset = ANSI_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -12
+                  Font.Name = 'Segoe UI Semibold'
+                  Font.Style = [fsBold, fsUnderline]
+                  ParentFont = False
+                  ExplicitWidth = 110
+                end
+                object chkbC8: TCheckBox
+                  AlignWithMargins = True
+                  Left = 4
+                  Top = 32
+                  Width = 391
+                  Height = 25
+                  Align = alTop
+                  Caption = 'f. List of Notices of Award (1st - 3rd Quarter of CY 2023)'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -12
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  ParentFont = False
+                  TabOrder = 0
+                  WordWrap = True
+                  ExplicitWidth = 392
+                end
+                object pListOfNoticesDoc: TPanel
+                  AlignWithMargins = True
+                  Left = 6
+                  Top = 70
+                  Width = 387
+                  Height = 163
+                  Margins.Left = 5
+                  Margins.Top = 10
+                  Margins.Right = 5
+                  Margins.Bottom = 0
+                  Align = alTop
+                  BevelOuter = bvLowered
+                  TabOrder = 1
+                  ExplicitWidth = 388
+                  object lbListOfNotices: TLabel
+                    AlignWithMargins = True
+                    Left = 4
+                    Top = 144
+                    Width = 379
+                    Height = 15
+                    Align = alBottom
+                    Caption = 'List of Notices of Award were submitted:'
+                    Font.Charset = ANSI_CHARSET
+                    Font.Color = clWindowText
+                    Font.Height = -12
+                    Font.Name = 'Segoe UI Semibold'
+                    Font.Style = [fsBold]
+                    ParentFont = False
+                    WordWrap = True
+                    ExplicitWidth = 214
+                  end
+                  object Panel3: TPanel
+                    AlignWithMargins = True
+                    Left = 1
+                    Top = 31
+                    Width = 113
+                    Height = 109
+                    Margins.Left = 0
+                    Margins.Top = 0
+                    Margins.Right = 0
+                    Margins.Bottom = 1
+                    Align = alLeft
+                    BevelOuter = bvSpace
+                    TabOrder = 0
+                    object btnAddListDoc: TButton
+                      AlignWithMargins = True
+                      Left = 6
+                      Top = 4
+                      Width = 101
+                      Height = 25
+                      Margins.Left = 5
+                      Margins.Right = 5
+                      Margins.Bottom = 0
+                      Align = alTop
+                      Caption = 'Add Document'
+                      TabOrder = 0
+                    end
+                    object btnViewListDocs: TButton
+                      AlignWithMargins = True
+                      Left = 6
+                      Top = 34
+                      Width = 101
+                      Height = 25
+                      Margins.Left = 5
+                      Margins.Top = 5
+                      Margins.Right = 5
+                      Margins.Bottom = 0
+                      Align = alTop
+                      Caption = 'View Document'
+                      TabOrder = 1
+                    end
+                    object Button3: TButton
+                      AlignWithMargins = True
+                      Left = 6
+                      Top = 64
+                      Width = 101
+                      Height = 25
+                      Margins.Left = 5
+                      Margins.Top = 5
+                      Margins.Right = 5
+                      Margins.Bottom = 0
+                      Align = alTop
+                      Caption = 'Delete Document'
+                      TabOrder = 2
+                    end
+                  end
+                  object dbgListOfNoticesDoc: TDBGrid
+                    Left = 114
+                    Top = 31
+                    Width = 272
+                    Height = 110
+                    Margins.Left = 0
+                    Margins.Top = 0
+                    Margins.Bottom = 0
+                    Align = alClient
+                    TabOrder = 1
+                    TitleFont.Charset = DEFAULT_CHARSET
+                    TitleFont.Color = clWindowText
+                    TitleFont.Height = -12
+                    TitleFont.Name = 'Segoe UI'
+                    TitleFont.Style = []
+                  end
+                  object Panel4: TPanel
+                    Left = 1
+                    Top = 1
+                    Width = 385
+                    Height = 30
+                    Align = alTop
+                    TabOrder = 2
+                    ExplicitWidth = 386
+                    object sListOfNoticesBac: TShape
+                      Left = 0
+                      Top = 0
+                      Width = 378
+                      Height = 27
+                      Brush.Color = clInfoBk
+                    end
+                    object Label15: TLabel
+                      Left = 1
+                      Top = 1
+                      Width = 383
+                      Height = 28
+                      Margins.Top = 0
+                      Margins.Right = 0
+                      Margins.Bottom = 5
+                      Align = alClient
+                      Alignment = taCenter
+                      BiDiMode = bdLeftToRight
+                      Caption = 'Please supply the number of docuements submitted:'
+                      Font.Charset = ANSI_CHARSET
+                      Font.Color = clWindowText
+                      Font.Height = -13
+                      Font.Name = 'Segoe UI Semibold'
+                      Font.Style = [fsBold, fsItalic]
+                      ParentBiDiMode = False
+                      ParentFont = False
+                      Layout = tlCenter
+                      WordWrap = True
+                      ExplicitWidth = 310
+                      ExplicitHeight = 17
+                    end
+                  end
+                end
+              end
+              object pMonthReport: TPanel
+                AlignWithMargins = True
+                Left = 5
+                Top = 782
+                Width = 404
+                Height = 269
+                Margins.Left = 5
+                Margins.Top = 10
+                Margins.Right = 0
+                Margins.Bottom = 0
+                Align = alTop
+                TabOrder = 5
+                object Label14: TLabel
+                  AlignWithMargins = True
+                  Left = 4
+                  Top = 11
+                  Width = 396
+                  Height = 15
+                  Margins.Top = 10
+                  Align = alTop
+                  Caption = 'MONTHLY REPORT'
+                  Font.Charset = ANSI_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -12
+                  Font.Name = 'Segoe UI Semibold'
+                  Font.Style = [fsBold, fsUnderline]
+                  ParentFont = False
+                  ExplicitWidth = 103
+                end
+                object pItemizedMonthlyDoc: TPanel
+                  AlignWithMargins = True
+                  Left = 6
+                  Top = 82
+                  Width = 392
+                  Height = 163
+                  Margins.Left = 5
+                  Margins.Top = 10
+                  Margins.Right = 5
+                  Margins.Bottom = 0
+                  Align = alTop
+                  BevelOuter = bvLowered
+                  TabOrder = 0
+                  ExplicitWidth = 388
+                  object lbItemizedMonthlyCol: TLabel
+                    AlignWithMargins = True
+                    Left = 4
+                    Top = 144
+                    Width = 384
+                    Height = 15
+                    Align = alBottom
+                    Caption = 'Itemized Monthly Collections and Disbursements were submitted:'
+                    Font.Charset = ANSI_CHARSET
+                    Font.Color = clWindowText
+                    Font.Height = -12
+                    Font.Name = 'Segoe UI Semibold'
+                    Font.Style = [fsBold]
+                    ParentFont = False
+                    WordWrap = True
+                    ExplicitWidth = 349
+                  end
+                  object Panel5: TPanel
+                    AlignWithMargins = True
+                    Left = 1
+                    Top = 31
+                    Width = 113
+                    Height = 109
+                    Margins.Left = 0
+                    Margins.Top = 0
+                    Margins.Right = 0
+                    Margins.Bottom = 1
+                    Align = alLeft
+                    TabOrder = 0
+                    object Button1: TButton
+                      AlignWithMargins = True
+                      Left = 6
+                      Top = 4
+                      Width = 101
+                      Height = 25
+                      Margins.Left = 5
+                      Margins.Right = 5
+                      Margins.Bottom = 0
+                      Align = alTop
+                      Caption = 'Add Document'
+                      TabOrder = 0
+                    end
+                    object Button2: TButton
+                      AlignWithMargins = True
+                      Left = 6
+                      Top = 34
+                      Width = 101
+                      Height = 25
+                      Margins.Left = 5
+                      Margins.Top = 5
+                      Margins.Right = 5
+                      Margins.Bottom = 0
+                      Align = alTop
+                      Caption = 'View Document'
+                      TabOrder = 1
+                    end
+                    object Button4: TButton
+                      AlignWithMargins = True
+                      Left = 6
+                      Top = 64
+                      Width = 101
+                      Height = 25
+                      Margins.Left = 5
+                      Margins.Top = 5
+                      Margins.Right = 5
+                      Margins.Bottom = 0
+                      Align = alTop
+                      Caption = 'Delete Document'
+                      TabOrder = 2
+                    end
+                  end
+                  object DBGrid1: TDBGrid
+                    Left = 114
+                    Top = 31
+                    Width = 277
+                    Height = 110
+                    Margins.Left = 0
+                    Margins.Top = 0
+                    Margins.Bottom = 0
+                    Align = alClient
+                    TabOrder = 1
+                    TitleFont.Charset = DEFAULT_CHARSET
+                    TitleFont.Color = clWindowText
+                    TitleFont.Height = -12
+                    TitleFont.Name = 'Segoe UI'
+                    TitleFont.Style = []
+                  end
+                  object Panel6: TPanel
+                    Left = 1
+                    Top = 1
+                    Width = 390
+                    Height = 30
+                    Align = alTop
+                    TabOrder = 2
+                    ExplicitWidth = 386
+                    object sItemizedMonthly: TShape
+                      Left = 0
+                      Top = 0
+                      Width = 378
+                      Height = 27
+                      Brush.Color = clInfoBk
+                    end
+                    object Label17: TLabel
+                      Left = 1
+                      Top = 1
+                      Width = 388
+                      Height = 28
+                      Margins.Top = 0
+                      Margins.Right = 0
+                      Margins.Bottom = 5
+                      Align = alClient
+                      Alignment = taCenter
+                      BiDiMode = bdLeftToRight
+                      Caption = 'Please supply the number of docuements submitted:'
+                      Font.Charset = ANSI_CHARSET
+                      Font.Color = clWindowText
+                      Font.Height = -13
+                      Font.Name = 'Segoe UI Semibold'
+                      Font.Style = [fsBold, fsItalic]
+                      ParentBiDiMode = False
+                      ParentFont = False
+                      Layout = tlCenter
+                      WordWrap = True
+                      ExplicitWidth = 310
+                      ExplicitHeight = 17
+                    end
+                  end
+                end
+                object chkbC9: TCheckBox
+                  AlignWithMargins = True
+                  Left = 4
+                  Top = 39
+                  Width = 396
+                  Height = 30
+                  Margins.Top = 10
+                  Align = alTop
+                  Caption = 
+                    'g. Itemized Monthly Collections and Disbursements (January to Se' +
+                    'ptember 2023)'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -12
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  ParentFont = False
+                  TabOrder = 1
+                  WordWrap = True
+                  ExplicitWidth = 392
+                end
+              end
             end
+          end
+          object StaticText1: TStaticText
+            Left = 0
+            Top = 0
+            Width = 785
+            Height = 21
+            Align = alTop
+            Caption = '1.1 Compliance with the Barangay Full Disclosure Policy (BFDP)'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -13
+            Font.Name = 'Segoe UI'
+            Font.Style = [fsBold]
+            ParentFont = False
+            TabOrder = 1
+            ExplicitWidth = 783
           end
         end
         object tsInnovations: TTabSheet
@@ -5998,7 +5896,7 @@ object frmDCF: TfrmDCF
             AlignWithMargins = True
             Left = 3
             Top = 3
-            Width = 774
+            Width = 779
             Height = 19
             Align = alTop
             Words = <
@@ -6011,12 +5909,13 @@ object frmDCF: TfrmDCF
               end>
             ExplicitLeft = 6
             ExplicitTop = 11
+            ExplicitWidth = 774
           end
           object gpForm2: TGridPanel
             Left = 0
             Top = 25
-            Width = 780
-            Height = 399
+            Width = 785
+            Height = 463
             Align = alClient
             ColumnCollection = <
               item
@@ -6025,42 +5924,119 @@ object frmDCF: TfrmDCF
               item
                 Value = 50.000000000000000000
               end>
-            ControlCollection = <>
+            ControlCollection = <
+              item
+                Column = 0
+                Control = Panel1
+                Row = 0
+              end
+              item
+                Column = 1
+                Control = Panel2
+                Row = 0
+              end>
             RowCollection = <
               item
                 Value = 100.000000000000000000
               end>
             TabOrder = 0
-            ExplicitLeft = 296
-            ExplicitTop = 192
-            ExplicitWidth = 185
-            ExplicitHeight = 41
+            ExplicitHeight = 399
+            object Panel1: TPanel
+              Left = 1
+              Top = 1
+              Width = 392
+              Height = 461
+              Align = alClient
+              TabOrder = 0
+              ExplicitHeight = 397
+              object SkLabel14: TSkLabel
+                Left = 1
+                Top = 1
+                Width = 390
+                Height = 459
+                Align = alClient
+                TextSettings.Font.Weight = Bold
+                TextSettings.HorzAlign = Center
+                Words = <
+                  item
+                    Caption = 'MINIMUM REQUIREMENT'
+                  end>
+                ExplicitWidth = 387
+                ExplicitHeight = 280
+              end
+            end
+            object Panel2: TPanel
+              Left = 393
+              Top = 1
+              Width = 391
+              Height = 461
+              Align = alClient
+              TabOrder = 1
+              ExplicitHeight = 397
+              object SkLabel15: TSkLabel
+                Left = 1
+                Top = 1
+                Width = 389
+                Height = 459
+                Align = alClient
+                TextSettings.Font.Weight = Bold
+                TextSettings.HorzAlign = Center
+                Words = <
+                  item
+                    Caption = 'MEANS OF VERIFICATION'
+                  end>
+                ExplicitLeft = 2
+                ExplicitTop = 2
+                ExplicitWidth = 410
+                ExplicitHeight = 17
+              end
+            end
+          end
+        end
+        object TabSheet1: TTabSheet
+          Caption = 'TabSheet1'
+          ImageIndex = 2
+          object CardPanel1: TCardPanel
+            Left = 184
+            Top = 96
+            Width = 497
+            Height = 200
+            ActiveCard = Card2
+            Caption = 'CardPanel1'
+            TabOrder = 0
+            object Card1: TCard
+              Left = 1
+              Top = 1
+              Width = 495
+              Height = 198
+              Caption = 'Card1'
+              CardIndex = 0
+              TabOrder = 0
+            end
+            object Card2: TCard
+              Left = 1
+              Top = 1
+              Width = 495
+              Height = 198
+              Caption = 'Card2'
+              CardIndex = 1
+              TabOrder = 1
+            end
           end
         end
       end
-      object RelativePanel1: TRelativePanel
+      object pHeader: TPanel
         Left = 0
         Top = 0
-        Width = 788
-        Height = 49
-        ControlCollection = <
-          item
-            Control = SkLabel1
-            AlignBottomWithPanel = True
-            AlignHorizontalCenterWithPanel = True
-            AlignLeftWithPanel = True
-            AlignRightWithPanel = True
-            AlignTopWithPanel = True
-            AlignVerticalCenterWithPanel = True
-          end>
+        Width = 793
+        Height = 40
         Align = alTop
         TabOrder = 1
-        ExplicitWidth = 786
         object SkLabel1: TSkLabel
-          Left = 0
-          Top = 0
-          Width = 786
-          Height = 47
+          Left = 1
+          Top = 1
+          Width = 791
+          Height = 38
           Align = alClient
           TextSettings.Font.Weight = Bold
           TextSettings.HorzAlign = Center
@@ -6070,6 +6046,9 @@ object frmDCF: TfrmDCF
                 'Core Governance Area No. 1:'#13#10'Financial Administration and Sustai' +
                 'nability'
             end>
+          ExplicitLeft = 2
+          ExplicitTop = 2
+          ExplicitHeight = 39
         end
       end
     end
