@@ -14,8 +14,6 @@ type
     tsFAS: TTabSheet;
     tsDetails: TTabSheet;
     ScrollBox2: TScrollBox;
-    pForm: TPanel;
-    pWrapper: TPanel;
     pYear: TPanel;
     Label1: TLabel;
     edYear: TDBEdit;
@@ -59,11 +57,11 @@ type
     PageControl2: TPageControl;
     tsCompliance: TTabSheet;
     gpForm1: TGridPanel;
-    pMinimumReq1: TPanel;
+    pMR1: TPanel;
     SkLabel3: TSkLabel;
     pMOV1: TPanel;
     SkLabel4: TSkLabel;
-    gbMinimumReq: TGroupBox;
+    gbMR1: TGroupBox;
     slCMR7: TSkLabel;
     slCMR8: TSkLabel;
     slCMR9: TSkLabel;
@@ -129,11 +127,11 @@ type
     stSection1: TStaticText;
     tsInnovations: TTabSheet;
     gpForm2: TGridPanel;
-    pMinimumReq2: TPanel;
+    pMR2: TPanel;
     SkLabel14: TSkLabel;
     pMOV2: TPanel;
     SkLabel15: TSkLabel;
-    gbMinimumReq2: TGroupBox;
+    gbMR2: TGroupBox;
     slIMR1: TSkLabel;
     dbmRemarks2: TDBMemo;
     GroupBox8: TGroupBox;
@@ -165,12 +163,12 @@ type
     tbApproval: TTabSheet;
     stSection3: TStaticText;
     gpForm3: TGridPanel;
-    Panel1: TPanel;
+    pMR3: TPanel;
     SkLabel2: TSkLabel;
-    Panel2: TPanel;
+    pMOV3: TPanel;
     SkLabel5: TSkLabel;
-    GroupBox1: TGroupBox;
-    SkLabel6: TSkLabel;
+    gbMR3: TGroupBox;
+    slAMR1: TSkLabel;
     slConsideration: TSkLabel;
     dbmRemarks3: TDBMemo;
     GroupBox2: TGroupBox;
@@ -192,21 +190,21 @@ type
     Panel14: TPanel;
     sApproved: TShape;
     Label30: TLabel;
-    dtpDateOfApproval: TDateTimePicker;
+    dtpDateOfApproval1: TDateTimePicker;
     Panel15: TPanel;
     tsAllocation: TTabSheet;
     stSection4: TStaticText;
-    GridPanel1: TGridPanel;
-    Panel16: TPanel;
+    gpForm4: TGridPanel;
+    pMR4: TPanel;
     SkLabel7: TSkLabel;
-    Panel17: TPanel;
+    pMOV4: TPanel;
     SkLabel8: TSkLabel;
-    GroupBox4: TGroupBox;
-    SkLabel9: TSkLabel;
-    DBMemo1: TDBMemo;
+    gbMR4: TGroupBox;
+    slAMR2: TSkLabel;
+    dbmRemarks4: TDBMemo;
     GroupBox5: TGroupBox;
-    SkLabel11: TSkLabel;
-    Label31: TLabel;
+    slRemWarning4: TSkLabel;
+    lbRem4: TLabel;
     ScrollBox5: TScrollBox;
     gbPR4: TGroupBox;
     Label32: TLabel;
@@ -214,16 +212,16 @@ type
     Label33: TLabel;
     RelativePanel4: TRelativePanel;
     Label34: TLabel;
-    CheckBox1: TCheckBox;
+    chkbYes4: TCheckBox;
     Label35: TLabel;
-    CheckBox2: TCheckBox;
+    chkbNo4: TCheckBox;
     Panel19: TPanel;
     Panel20: TPanel;
     Label37: TLabel;
     Panel22: TPanel;
-    Shape1: TShape;
+    sBarangay: TShape;
     Label38: TLabel;
-    DateTimePicker1: TDateTimePicker;
+    dtpDateOfApproval2: TDateTimePicker;
     Panel23: TPanel;
     chkbC1: TDBCheckBox;
     chkbC2: TDBCheckBox;
@@ -252,26 +250,143 @@ type
     chkbC21: TDBCheckBox;
     chkbC22: TDBCheckBox;
     chkbC23: TDBCheckBox;
+    tsPosting: TTabSheet;
+    stSection5: TStaticText;
+    gpForm5: TGridPanel;
+    pMR5: TPanel;
+    SkLabel1: TSkLabel;
+    pMOV5: TPanel;
+    SkLabel6: TSkLabel;
+    gbMR5: TGroupBox;
+    slPMR1: TSkLabel;
+    dbmRemarks5: TDBMemo;
+    GroupBox7: TGroupBox;
+    slRemWarning5: TSkLabel;
+    lbRem5: TLabel;
+    ScrollBox6: TScrollBox;
+    gbPR5: TGroupBox;
+    Label31: TLabel;
+    Panel24: TPanel;
+    Label36: TLabel;
+    RelativePanel5: TRelativePanel;
+    Label39: TLabel;
+    chkbYes5: TCheckBox;
+    Label40: TLabel;
+    chkbNo5: TCheckBox;
+    Panel25: TPanel;
+    chkbC24: TDBCheckBox;
+    Panel28: TPanel;
+    tsRelease: TTabSheet;
+    stSection6: TStaticText;
+    gpForm6: TGridPanel;
+    pMR6: TPanel;
+    SkLabel9: TSkLabel;
+    pMOV6: TPanel;
+    SkLabel10: TSkLabel;
+    gbMR6: TGroupBox;
+    slRMR1: TSkLabel;
+    dbmRemarks6: TDBMemo;
+    GroupBox9: TGroupBox;
+    slRemWarning6: TSkLabel;
+    lbRem6: TLabel;
+    ScrollBox7: TScrollBox;
+    gbPR6: TGroupBox;
+    Label41: TLabel;
+    Panel29: TPanel;
+    Label42: TLabel;
+    RelativePanel6: TRelativePanel;
+    Label43: TLabel;
+    chkbYes6: TCheckBox;
+    Label44: TLabel;
+    chkbNo6: TCheckBox;
+    Panel30: TPanel;
+    chkbC25: TDBCheckBox;
+    Panel31: TPanel;
+    slRMR2: TSkLabel;
+    slRMR3: TSkLabel;
+    slRMR4: TSkLabel;
+    ScrollBox8: TScrollBox;
+    slRMR5: TSkLabel;
+    slRMR6: TSkLabel;
+    pFooter: TPanel;
+    slMOV1: TSkLabel;
+    chkbC26: TDBCheckBox;
+    slMOV2: TSkLabel;
+    slMOV3: TSkLabel;
+    slMOV4: TSkLabel;
+    chkbC27: TDBCheckBox;
+    slMOV5: TSkLabel;
+    chkbC28: TDBCheckBox;
+    chkbC29: TDBCheckBox;
+    slMOV6: TSkLabel;
+    chkbC30: TDBCheckBox;
+    chkbC31: TDBCheckBox;
+    slMOV7: TSkLabel;
+    chkbC32: TDBCheckBox;
+    tsConduct: TTabSheet;
+    gpForm7: TGridPanel;
+    Panel1: TPanel;
+    SkLabel11: TSkLabel;
+    Panel2: TPanel;
+    SkLabel12: TSkLabel;
+    GroupBox1: TGroupBox;
+    ScrollBox9: TScrollBox;
+    slCMR10: TSkLabel;
+    dbmRemarks7: TDBMemo;
+    GroupBox3: TGroupBox;
+    slRemWarning: TSkLabel;
+    lbRem7: TLabel;
+    Panel13: TPanel;
+    ScrollBox10: TScrollBox;
+    GroupBox4: TGroupBox;
+    Label45: TLabel;
+    Panel16: TPanel;
+    Label46: TLabel;
+    RelativePanel7: TRelativePanel;
+    Label47: TLabel;
+    chkbYes7: TCheckBox;
+    Label48: TLabel;
+    chkbNo7: TCheckBox;
+    Panel17: TPanel;
+    SkLabel22: TSkLabel;
+    chkbC33: TDBCheckBox;
+    Panel21: TPanel;
+    pFooterEnd: TPanel;
+    Shape2: TShape;
+    lbFooterEnd: TLabel;
+    stSection7: TStaticText;
     procedure FormShow(Sender: TObject);
     procedure FormResize(Sender: TObject);
+    // ScrollBox
     procedure ScrollBoxMouseWheelHandler(Sender: TObject; Shift: TShiftState;
       WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
-    procedure ShapeBackgrounds;
+    // Shape Responsive
+//    procedure ShapeBackgrounds;
+    // Page Control 1
     procedure PageControl1Change(Sender: TObject);
+    // Tabs Reset 1
+
+    // Tabs
     procedure DetailsTab;
     procedure FASTab;
     procedure DPTab;
+    // Page Control 2
     procedure PageControl2Change(Sender: TObject);
+    // Tabs Reset 2
+    procedure TabsReset2;
+    // Tabs
     procedure ComplianceTab;
     procedure InnovationsTab;
     procedure ApprovalTab;
-    procedure chkbYes1Click(Sender: TObject);
-    procedure chkbNo1Click(Sender: TObject);
-    procedure chkbYes2Click(Sender: TObject);
-    procedure chkbNo2Click(Sender: TObject);
-    procedure chkbYes3Click(Sender: TObject);
-    procedure chkbNo3Click(Sender: TObject);
+    procedure AllocationTab;
+    procedure PostingTab;
+    procedure ReleaseTab;
+    procedure ConductTab;
+    // CheckBox
+    procedure CheckBoxYesClick(Sender: TObject);
+    procedure CheckBoxNoClick(Sender: TObject);
   private
+    FCheckboxValue: string;
     { Private declarations }
   public
     { Public declarations }
@@ -317,14 +432,15 @@ begin
 end;
 
 //-------Shape background Responsive-------//
-procedure TfrmDCF.ShapeBackgrounds;
-begin
-  sPhotoDocBac.Width := ScrollBox1.Width - 45;
-  sItemizedMonthly.Width := ScrollBox1.Width - 45;
-  sListOfNoticesBac.Width := ScrollBox1.Width - 45;
-  sTotalAmount.Width := Panel10.Width - 2;
-  sApproved.Width := Panel12.Width - 2;
-end;
+//procedure TfrmDCF.ShapeBackgrounds;
+//begin
+//  sPhotoDocBac.Width := ScrollBox1.Width - 45;
+//  sItemizedMonthly.Width := ScrollBox1.Width - 45;
+//  sListOfNoticesBac.Width := ScrollBox1.Width - 45;
+//  sTotalAmount.Width := Panel10.Width - 2;
+//  sApproved.Width := Panel12.Width - 2;
+//  sBarangay.Width := Panel22.Width - 2;
+//end;
 
 //-------Details Tab-------//
 procedure TfrmDCF.DetailsTab;
@@ -340,7 +456,6 @@ begin
   pProfile.Visible := False;
   ScrollBox2.Visible := False;
   PageControl2.Visible := True;
-  ShapeBackgrounds;
 end;
 
 procedure TfrmDCF.DPTab;
@@ -350,103 +465,99 @@ begin
   PageControl2.Visible := False;
 end;
 
+// Tabs Reset
+procedure TfrmDCF.TabsReset2;
+begin
+  gpForm1.Visible := False;
+  stSection1.Visible := False;
+  gpForm2.Visible := False;
+  stSection2.Visible := False;
+  gpForm3.Visible := False;
+  stSection3.Visible := False;
+  gpForm4.Visible := False;
+  stSection4.Visible := False;
+  gpForm5.Visible := False;
+  stSection5.Visible := False;
+  gpForm6.Visible := False;
+  stSection6.Visible := False;
+  gpForm7.Visible := False;
+  stSection7.Visible := False;
+  pFooterEnd.Visible := False;
+end;
+
 procedure TfrmDCF.ComplianceTab;
 begin
   gpForm1.Visible := True;
   stSection1.Visible := True;
-  gpForm2.Visible := False;
-  stSection2.Visible := False;
-  gpForm3.Visible := False;
-  stSection3.Visible := False;
-  ShapeBackgrounds;
 end;
 
 procedure TfrmDCF.InnovationsTab;
 begin
-  gpForm1.Visible := False;
-  stSection1.Visible := False;
   gpForm2.Visible := True;
   stSection2.Visible := True;
-  gpForm3.Visible := False;
-  stSection3.Visible := False;
-  ShapeBackgrounds;
 end;
 
 procedure TfrmDCF.ApprovalTab;
 begin
-  gpForm1.Visible := False;
-  stSection1.Visible := False;
-  gpForm2.Visible := False;
-  stSection2.Visible := False;
   gpForm3.Visible := True;
   stSection3.Visible := True;
-  ShapeBackgrounds;
+end;
+
+procedure TfrmDCF.AllocationTab;
+begin
+  gpForm4.Visible := True;
+  stSection4.Visible := True;
+end;
+
+procedure TfrmDCF.PostingTab;
+begin
+  gpForm5.Visible := True;
+  stSection5.Visible := True;
+end;
+
+procedure TfrmDCF.ReleaseTab;
+begin
+  gpForm6.Visible := True;
+  stSection6.Visible := True;
+end;
+
+procedure TfrmDCF.ConductTab;
+begin
+  gpForm7.Visible := True;
+  stSection7.Visible := True;
+  pFooterEnd.Visible := True;
 end;
 
 {-----------------------------------CheckBox-----------------------------------}
-procedure TfrmDCF.chkbNo1Click(Sender: TObject);
+procedure TfrmDCF.CheckBoxYesClick(Sender: TObject);
 var
-  value: String;
+  CheckBoxYes, CheckBoxNo: TCheckBox;
+  CheckBoxNoName: string;
 begin
-  if chkbNo1.Checked then
+  CheckBoxYes := Sender as TCheckBox;
+  CheckBoxNoName := StringReplace(CheckBoxYes.Name, 'Yes', 'No', []);
+  CheckBoxNo := FindComponent(CheckBoxNoName) as TCheckBox;
+
+  if CheckBoxYes.Checked then
   begin
-    value := 'No';
-    chkbYes1.Checked := False;
+    CheckBoxNo.Checked := False;
+    FCheckboxValue := 'Yes';
   end;
 end;
 
-procedure TfrmDCF.chkbNo2Click(Sender: TObject);
+procedure TfrmDCF.CheckBoxNoClick(Sender: TObject);
 var
-  value: String;
+  CheckBoxNo, CheckBoxYes: TCheckBox;
+  CheckBoxYesName: string;
 begin
-  if chkbNo2.Checked then
-  begin
-    value := 'No';
-    chkbYes2.Checked := False;
-  end;
-end;
+  CheckBoxNo := Sender as TCheckBox;
+  CheckBoxYesName := StringReplace(CheckBoxNo.Name, 'No', 'Yes', []);
+  CheckBoxYes := FindComponent(CheckBoxYesName) as TCheckBox;
 
-procedure TfrmDCF.chkbNo3Click(Sender: TObject);
-var
-  value: String;
-begin
-  if chkbNo3.Checked then
+  if CheckBoxNo.Checked then
   begin
-    value := 'No';
-    chkbYes3.Checked := False;
-  end;
-end;
-
-procedure TfrmDCF.chkbYes1Click(Sender: TObject);
-var
-  value: String;
-begin
-  if chkbYes1.Checked then
-  begin
-    value := 'Yes';
-    chkbNo1.Checked := False;
-  end;
-end;
-
-procedure TfrmDCF.chkbYes2Click(Sender: TObject);
-var
-  value: String;
-begin
-  if chkbYes2.Checked then
-  begin
-    value := 'Yes';
-    chkbNo2.Checked := False;
-  end;
-end;
-
-procedure TfrmDCF.chkbYes3Click(Sender: TObject);
-var
-  value: String;
-begin
-  if chkbYes3.Checked then
-  begin
-    value := 'Yes';
-    chkbNo3.Checked := False;
+    CheckBoxYes.Checked := False;
+    FCheckboxValue := 'No';
   end;
 end;
 
@@ -458,16 +569,13 @@ begin
   //-------Form Responsive Settings-------//
 
   // Details Tab
-  pForm.Width := ScrollBox2.Width - 20;
+//  pForm.Width := ScrollBox2.Width - 20;
 
   // FAS Tab
-  ShapeBackgrounds;
 end;
 
 procedure TfrmDCF.FormShow(Sender: TObject);
 begin
-  // Shape Color Responsive
-  ShapeBackgrounds;
   ClientHeight := 569;
 end;
 
@@ -486,6 +594,10 @@ begin
     0: ComplianceTab;
     1: InnovationsTab;
     2: ApprovalTab;
+    3: AllocationTab;
+    4: PostingTab;
+    5: ReleaseTab;
+    6: ComplianceTab;
   end;
 end;
 

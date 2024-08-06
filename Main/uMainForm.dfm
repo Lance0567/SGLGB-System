@@ -2,8 +2,8 @@ object frmMain: TfrmMain
   Left = 10
   Top = 0
   Caption = 'SGLGB System | SEAL OF GOOD LOCAL GOVERNANCE FOR BARANGAY | 2024'
-  ClientHeight = 587
-  ClientWidth = 1120
+  ClientHeight = 584
+  ClientWidth = 1118
   Color = clBtnFace
   Constraints.MinHeight = 575
   Constraints.MinWidth = 550
@@ -26,7 +26,7 @@ object frmMain: TfrmMain
     Left = 0
     Top = 41
     Width = 200
-    Height = 546
+    Height = 543
     CloseStyle = svcCompact
     FullRepaint = False
     OpenedWidth = 200
@@ -76,7 +76,7 @@ object frmMain: TfrmMain
       Left = 5
       Top = 53
       Width = 192
-      Height = 490
+      Height = 487
       Margins.Left = 5
       Align = alClient
       BevelOuter = bvNone
@@ -899,10 +899,10 @@ object frmMain: TfrmMain
     AlignWithMargins = True
     Left = 203
     Top = 41
-    Width = 914
-    Height = 543
+    Width = 912
+    Height = 540
     Margins.Top = 0
-    ActivePage = DCFTab
+    ActivePage = DashboardTab
     Align = alClient
     MultiLine = True
     TabHeight = 30
@@ -916,20 +916,19 @@ object frmMain: TfrmMain
         AlignWithMargins = True
         Left = 25
         Top = 3
-        Width = 878
+        Width = 876
         Height = 67
         Margins.Left = 25
         Align = alTop
         BevelOuter = bvNone
         FullRepaint = False
         TabOrder = 0
-        ExplicitWidth = 880
         object Label4: TLabel
           AlignWithMargins = True
           Left = 108
           Top = 5
           Width = 164
-          Height = 45
+          Height = 57
           Margins.Top = 5
           Margins.Bottom = 5
           Align = alLeft
@@ -941,6 +940,7 @@ object frmMain: TfrmMain
           Font.Style = [fsBold]
           ParentFont = False
           Layout = tlCenter
+          ExplicitHeight = 45
         end
         object VirtualImage1: TVirtualImage
           Left = 0
@@ -961,8 +961,8 @@ object frmMain: TfrmMain
         AlignWithMargins = True
         Left = 25
         Top = 76
-        Width = 866
-        Height = 424
+        Width = 864
+        Height = 421
         Margins.Left = 25
         Margins.Right = 15
         Align = alClient
@@ -1654,7 +1654,7 @@ object frmMain: TfrmMain
         AlignWithMargins = True
         Left = 25
         Top = 3
-        Width = 878
+        Width = 876
         Height = 67
         Margins.Left = 25
         Align = alTop
@@ -1696,7 +1696,7 @@ object frmMain: TfrmMain
         object MarketingRelativePanel: TRelativePanel
           Left = 396
           Top = 0
-          Width = 482
+          Width = 480
           Height = 67
           ControlCollection = <
             item
@@ -1724,11 +1724,11 @@ object frmMain: TfrmMain
           TabOrder = 0
           OnResize = MarketingRelativePanelResize
           DesignSize = (
-            482
+            480
             67)
           object EmailsSearchBox: TSearchBox
             AlignWithMargins = True
-            Left = 296
+            Left = 294
             Top = 15
             Width = 163
             Height = 36
@@ -1746,7 +1746,7 @@ object frmMain: TfrmMain
             OnKeyPress = EmailsSearchBoxKeyPress
           end
           object btnCreateDCF: TSpeedButton
-            Left = 172
+            Left = 170
             Top = 14
             Width = 121
             Height = 38
@@ -1770,8 +1770,8 @@ object frmMain: TfrmMain
         AlignWithMargins = True
         Left = 25
         Top = 76
-        Width = 856
-        Height = 417
+        Width = 854
+        Height = 414
         Margins.Left = 25
         Margins.Right = 25
         Margins.Bottom = 10
@@ -1789,24 +1789,24 @@ object frmMain: TfrmMain
       object Splitter1: TSplitter
         Left = 261
         Top = 73
-        Height = 399
+        Height = 396
         ExplicitLeft = 624
         ExplicitTop = 272
         ExplicitHeight = 100
       end
       object Splitter2: TSplitter
-        Left = 462
+        Left = 460
         Top = 73
-        Height = 399
+        Height = 396
         Align = alRight
         ExplicitLeft = 688
         ExplicitTop = 70
         ExplicitHeight = 452
       end
       object Splitter3: TSplitter
-        Left = 674
+        Left = 672
         Top = 73
-        Height = 399
+        Height = 396
         Align = alRight
         ExplicitLeft = 717
         ExplicitTop = 76
@@ -1815,8 +1815,8 @@ object frmMain: TfrmMain
       object BindNavigator1: TBindNavigator
         AlignWithMargins = True
         Left = 25
-        Top = 475
-        Width = 856
+        Top = 472
+        Width = 854
         Height = 25
         Margins.Left = 25
         Margins.Right = 25
@@ -1831,7 +1831,7 @@ object frmMain: TfrmMain
         AlignWithMargins = True
         Left = 25
         Top = 3
-        Width = 878
+        Width = 876
         Height = 67
         Margins.Left = 25
         Align = alTop
@@ -1874,7 +1874,7 @@ object frmMain: TfrmMain
           AlignWithMargins = True
           Left = 211
           Top = 3
-          Width = 642
+          Width = 640
           Height = 61
           Margins.Right = 25
           ControlCollection = <
@@ -1923,10 +1923,10 @@ object frmMain: TfrmMain
           TabOrder = 0
           OnResize = LeadsRelativePanelResize
           DesignSize = (
-            642
+            640
             61)
           object CreateLeadButton: TSpeedButton
-            Left = 320
+            Left = 318
             Top = 11
             Width = 153
             Height = 38
@@ -1945,7 +1945,7 @@ object frmMain: TfrmMain
             OnClick = CreateLeadButtonClick
           end
           object ExportLeadsButton: TSpeedButton
-            Left = 14
+            Left = 12
             Top = 11
             Width = 153
             Height = 38
@@ -1965,7 +1965,7 @@ object frmMain: TfrmMain
           end
           object LeadsSearchBox: TSearchBox
             AlignWithMargins = True
-            Left = 476
+            Left = 474
             Top = 12
             Width = 163
             Height = 36
@@ -1981,7 +1981,7 @@ object frmMain: TfrmMain
             OnKeyPress = LeadsSearchBoxKeyPress
           end
           object ViewLeadButton: TSpeedButton
-            Left = 167
+            Left = 165
             Top = 11
             Width = 153
             Height = 38
@@ -2007,7 +2007,7 @@ object frmMain: TfrmMain
         Left = 25
         Top = 76
         Width = 233
-        Height = 393
+        Height = 390
         Margins.Left = 25
         Align = alLeft
         Caption = 'NewLeadsPanel'
@@ -2059,8 +2059,8 @@ object frmMain: TfrmMain
         AlignWithMargins = True
         Left = 267
         Top = 76
-        Width = 192
-        Height = 393
+        Width = 190
+        Height = 390
         Align = alClient
         Caption = 'ActiveLeadsPanel'
         Constraints.MinWidth = 194
@@ -2109,10 +2109,10 @@ object frmMain: TfrmMain
       object ProposalSentPanel: TPanel
         Tag = 3
         AlignWithMargins = True
-        Left = 468
+        Left = 466
         Top = 76
         Width = 203
-        Height = 393
+        Height = 390
         Align = alRight
         Caption = 'ProposalSentPanel'
         TabOrder = 4
@@ -2162,10 +2162,10 @@ object frmMain: TfrmMain
       object ClosedPanel: TPanel
         Tag = 4
         AlignWithMargins = True
-        Left = 680
+        Left = 678
         Top = 76
         Width = 201
-        Height = 393
+        Height = 390
         Margins.Right = 25
         Align = alRight
         Caption = 'ClosedPanel'
@@ -2221,8 +2221,8 @@ object frmMain: TfrmMain
         AlignWithMargins = True
         Left = 25
         Top = 76
-        Width = 858
-        Height = 405
+        Width = 856
+        Height = 402
         Margins.Left = 25
         Margins.Right = 25
         Margins.Bottom = 25
@@ -2253,13 +2253,14 @@ object frmMain: TfrmMain
         AlignWithMargins = True
         Left = 25
         Top = 3
-        Width = 880
+        Width = 878
         Height = 67
         Margins.Left = 25
         Align = alTop
         BevelOuter = bvNone
         FullRepaint = False
         TabOrder = 1
+        ExplicitWidth = 880
         object Label3: TLabel
           AlignWithMargins = True
           Left = 108
@@ -2301,7 +2302,7 @@ object frmMain: TfrmMain
         AlignWithMargins = True
         Left = 25
         Top = 3
-        Width = 878
+        Width = 876
         Height = 67
         Margins.Left = 25
         Align = alTop
@@ -2343,7 +2344,7 @@ object frmMain: TfrmMain
         object UsersRelativePanel: TRelativePanel
           Left = 192
           Top = 0
-          Width = 686
+          Width = 684
           Height = 67
           ControlCollection = <
             item
@@ -2391,11 +2392,11 @@ object frmMain: TfrmMain
           TabOrder = 0
           OnResize = UsersRelativePanelResize
           DesignSize = (
-            686
+            684
             67)
           object SearchBox7: TSearchBox
             AlignWithMargins = True
-            Left = 500
+            Left = 498
             Top = 15
             Width = 163
             Height = 36
@@ -2412,7 +2413,7 @@ object frmMain: TfrmMain
             TextHint = 'Search'
           end
           object CreateUserButton: TSpeedButton
-            Left = 376
+            Left = 374
             Top = 14
             Width = 121
             Height = 38
@@ -2431,7 +2432,7 @@ object frmMain: TfrmMain
             OnClick = CreateUserButtonClick
           end
           object RemoveUserButton: TSpeedButton
-            Left = 134
+            Left = 132
             Top = 14
             Width = 121
             Height = 38
@@ -2450,7 +2451,7 @@ object frmMain: TfrmMain
             OnClick = RemoveUserButtonClick
           end
           object btnEdit: TSpeedButton
-            Left = 255
+            Left = 253
             Top = 14
             Width = 121
             Height = 38
@@ -2473,8 +2474,8 @@ object frmMain: TfrmMain
         AlignWithMargins = True
         Left = 25
         Top = 76
-        Width = 856
-        Height = 393
+        Width = 854
+        Height = 390
         Margins.Left = 25
         Margins.Right = 25
         Align = alClient
@@ -2495,8 +2496,8 @@ object frmMain: TfrmMain
       object BindNavigator5: TBindNavigator
         AlignWithMargins = True
         Left = 25
-        Top = 475
-        Width = 856
+        Top = 472
+        Width = 854
         Height = 25
         Margins.Left = 25
         Margins.Right = 25
@@ -2514,7 +2515,7 @@ object frmMain: TfrmMain
   object pToolbar: TPanel
     Left = 0
     Top = 0
-    Width = 1120
+    Width = 1118
     Height = 41
     Align = alTop
     TabOrder = 2
@@ -2551,7 +2552,7 @@ object frmMain: TfrmMain
     object RelativePanel7: TRelativePanel
       Left = 181
       Top = 1
-      Width = 938
+      Width = 936
       Height = 39
       ControlCollection = <
         item
@@ -2579,7 +2580,7 @@ object frmMain: TfrmMain
       TabOrder = 0
       object cbYear: TComboBox
         AlignWithMargins = True
-        Left = 642
+        Left = 640
         Top = 9
         Width = 138
         Height = 21
@@ -2598,7 +2599,7 @@ object frmMain: TfrmMain
       end
       object VCLStylesCB: TComboBox
         AlignWithMargins = True
-        Left = 789
+        Left = 787
         Top = 9
         Width = 145
         Height = 21

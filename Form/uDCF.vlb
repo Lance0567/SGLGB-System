@@ -34,9 +34,6 @@ Coordinates=816,416,87,58
 [NotesPanel]
 Coordinates=803,212,81,58
 
-[pForm]
-Coordinates=983,416,51,58
-
 [Label7]
 Coordinates=874,10,53,58
 
@@ -69,9 +66,6 @@ Coordinates=619,598,64,36
 
 [DateContactedPanel]
 Coordinates=838,280,133,58
-
-[pWrapper]
-Coordinates=134,144,71,58
 
 [DatesPanel]
 Coordinates=449,144,81,58
@@ -131,7 +125,7 @@ Coordinates=783,10,81,58
 Coordinates=370,280,83,58
 
 []
-Coordinates=1059,552,93,36
+Coordinates=983,416,51,58
 Visible=True
 
 [pHeader]
