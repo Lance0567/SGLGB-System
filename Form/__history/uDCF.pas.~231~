@@ -61,7 +61,6 @@ type
     SkLabel3: TSkLabel;
     pMOV1: TPanel;
     SkLabel4: TSkLabel;
-    gbMR1: TGroupBox;
     slCMR7: TSkLabel;
     slCMR8: TSkLabel;
     slCMR9: TSkLabel;
@@ -217,11 +216,9 @@ type
     chkbNo4: TCheckBox;
     Panel19: TPanel;
     Panel20: TPanel;
-    Label37: TLabel;
     Panel22: TPanel;
     sBarangay: TShape;
     Label38: TLabel;
-    dtpDateOfApproval2: TDateTimePicker;
     Panel23: TPanel;
     chkbC1: TDBCheckBox;
     chkbC2: TDBCheckBox;
@@ -283,7 +280,6 @@ type
     SkLabel9: TSkLabel;
     pMOV6: TPanel;
     SkLabel10: TSkLabel;
-    gbMR6: TGroupBox;
     slRMR1: TSkLabel;
     dbmRemarks6: TDBMemo;
     GroupBox9: TGroupBox;
@@ -305,7 +301,7 @@ type
     slRMR2: TSkLabel;
     slRMR3: TSkLabel;
     slRMR4: TSkLabel;
-    ScrollBox8: TScrollBox;
+    gbMR6: TScrollBox;
     slRMR5: TSkLabel;
     slRMR6: TSkLabel;
     pFooter: TPanel;
@@ -355,6 +351,13 @@ type
     Shape2: TShape;
     lbFooterEnd: TLabel;
     stSection7: TStaticText;
+    GroupBox10: TGroupBox;
+    Label37: TLabel;
+    dtpDateOfApproval2: TDateTimePicker;
+    pButtonToolbar: TPanel;
+    sbMR1: TScrollBox;
+    Panel26: TPanel;
+    btnSave: TButton;
     procedure FormShow(Sender: TObject);
     procedure FormResize(Sender: TObject);
     // ScrollBox
@@ -569,7 +572,6 @@ begin
   //-------Form Responsive Settings-------//
 
   // Details Tab
-//  pForm.Width := ScrollBox2.Width - 20;
 
   // FAS Tab
 end;
@@ -606,8 +608,7 @@ end;
 procedure TfrmDCF.ScrollBoxMouseWheelHandler(Sender: TObject; Shift: TShiftState;
   WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
 begin
-  HandleScrollBoxMouseWheel(TScrollBox(Sender), Shift, WheelDelta,
-    MousePos, Handled);
+  HandleScrollBoxMouseWheel(TScrollBox(Sender), Shift, WheelDelta,MousePos, Handled);
 end;
 
 end.

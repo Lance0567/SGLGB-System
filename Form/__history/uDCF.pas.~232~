@@ -61,7 +61,6 @@ type
     SkLabel3: TSkLabel;
     pMOV1: TPanel;
     SkLabel4: TSkLabel;
-    gbMR1: TGroupBox;
     slCMR7: TSkLabel;
     slCMR8: TSkLabel;
     slCMR9: TSkLabel;
@@ -217,11 +216,9 @@ type
     chkbNo4: TCheckBox;
     Panel19: TPanel;
     Panel20: TPanel;
-    Label37: TLabel;
     Panel22: TPanel;
     sBarangay: TShape;
     Label38: TLabel;
-    dtpDateOfApproval2: TDateTimePicker;
     Panel23: TPanel;
     chkbC1: TDBCheckBox;
     chkbC2: TDBCheckBox;
@@ -283,7 +280,6 @@ type
     SkLabel9: TSkLabel;
     pMOV6: TPanel;
     SkLabel10: TSkLabel;
-    gbMR6: TGroupBox;
     slRMR1: TSkLabel;
     dbmRemarks6: TDBMemo;
     GroupBox9: TGroupBox;
@@ -305,7 +301,7 @@ type
     slRMR2: TSkLabel;
     slRMR3: TSkLabel;
     slRMR4: TSkLabel;
-    ScrollBox8: TScrollBox;
+    gbMR6: TScrollBox;
     slRMR5: TSkLabel;
     slRMR6: TSkLabel;
     pFooter: TPanel;
@@ -331,7 +327,7 @@ type
     SkLabel12: TSkLabel;
     GroupBox1: TGroupBox;
     ScrollBox9: TScrollBox;
-    SkLabel16: TSkLabel;
+    slCMR10: TSkLabel;
     dbmRemarks7: TDBMemo;
     GroupBox3: TGroupBox;
     slRemWarning: TSkLabel;
@@ -344,9 +340,9 @@ type
     Label46: TLabel;
     RelativePanel7: TRelativePanel;
     Label47: TLabel;
-    CheckBox1: TCheckBox;
+    chkbYes7: TCheckBox;
     Label48: TLabel;
-    CheckBox2: TCheckBox;
+    chkbNo7: TCheckBox;
     Panel17: TPanel;
     SkLabel22: TSkLabel;
     chkbC33: TDBCheckBox;
@@ -355,17 +351,22 @@ type
     Shape2: TShape;
     lbFooterEnd: TLabel;
     stSection7: TStaticText;
+    GroupBox10: TGroupBox;
+    Label37: TLabel;
+    dtpDateOfApproval2: TDateTimePicker;
+    pButtonToolbar: TPanel;
+    sbMR1: TScrollBox;
+    Panel26: TPanel;
+    btnSave: TButton;
     procedure FormShow(Sender: TObject);
     procedure FormResize(Sender: TObject);
     // ScrollBox
     procedure ScrollBoxMouseWheelHandler(Sender: TObject; Shift: TShiftState;
       WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
-    // Shape Responsive
-//    procedure ShapeBackgrounds;
     // Page Control 1
     procedure PageControl1Change(Sender: TObject);
     // Tabs Reset 1
-
+    procedure TabsReset1;
     // Tabs
     procedure DetailsTab;
     procedure FASTab;
@@ -431,41 +432,37 @@ begin
   Handled := True;
 end;
 
-//-------Shape background Responsive-------//
-//procedure TfrmDCF.ShapeBackgrounds;
-//begin
-//  sPhotoDocBac.Width := ScrollBox1.Width - 45;
-//  sItemizedMonthly.Width := ScrollBox1.Width - 45;
-//  sListOfNoticesBac.Width := ScrollBox1.Width - 45;
-//  sTotalAmount.Width := Panel10.Width - 2;
-//  sApproved.Width := Panel12.Width - 2;
-//  sBarangay.Width := Panel22.Width - 2;
-//end;
+// Tabs Reset for PageControl1
+procedure TfrmDCF.TabsReset1;
+begin
+  pProfile.Visible := False;
+  ScrollBox2.Visible := False;
+  PageControl2.Visible := False;
+  pHeader.Visible := False;
+  pButtonToolbar.Visible := False;
+end;
 
 //-------Details Tab-------//
 procedure TfrmDCF.DetailsTab;
 begin
   pProfile.Visible := True;
   ScrollBox2.Visible := True;
-  PageControl2.Visible := False;
 end;
 
 //-------FAS Tabs-------//
 procedure TfrmDCF.FASTab;
 begin
-  pProfile.Visible := False;
-  ScrollBox2.Visible := False;
   PageControl2.Visible := True;
+  pHeader.Visible := True;
+  pButtonToolbar.Visible := True;
 end;
 
 procedure TfrmDCF.DPTab;
 begin
-  pProfile.Visible := False;
-  ScrollBox2.Visible := False;
-  PageControl2.Visible := False;
+  //
 end;
 
-// Tabs Reset
+// Tabs Reset for PageControl2
 procedure TfrmDCF.TabsReset2;
 begin
   gpForm1.Visible := False;
@@ -480,6 +477,9 @@ begin
   stSection5.Visible := False;
   gpForm6.Visible := False;
   stSection6.Visible := False;
+  gpForm7.Visible := False;
+  stSection7.Visible := False;
+  pFooterEnd.Visible := False;
 end;
 
 procedure TfrmDCF.ComplianceTab;
@@ -522,6 +522,7 @@ procedure TfrmDCF.ConductTab;
 begin
   gpForm7.Visible := True;
   stSection7.Visible := True;
+  pFooterEnd.Visible := True;
 end;
 
 {-----------------------------------CheckBox-----------------------------------}
@@ -565,7 +566,6 @@ begin
   //-------Form Responsive Settings-------//
 
   // Details Tab
-//  pForm.Width := ScrollBox2.Width - 20;
 
   // FAS Tab
 end;
@@ -602,8 +602,7 @@ end;
 procedure TfrmDCF.ScrollBoxMouseWheelHandler(Sender: TObject; Shift: TShiftState;
   WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
 begin
-  HandleScrollBoxMouseWheel(TScrollBox(Sender), Shift, WheelDelta,
-    MousePos, Handled);
+  HandleScrollBoxMouseWheel(TScrollBox(Sender), Shift, WheelDelta,MousePos, Handled);
 end;
 
 end.

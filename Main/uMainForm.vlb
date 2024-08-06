@@ -295,9 +295,6 @@ Coordinates=1843,771,43,36
 [N1]
 Coordinates=0,541,40,36
 
-[VirtualImage8]
-Coordinates=954,598,94,36
-
 [Login]
 Coordinates=1843,551,46,36
 
@@ -344,4 +341,7 @@ Coordinates=240,416,77,58
 
 [pToolbar]
 Coordinates=10,212,55,58
+
+[viUserStatus]
+Coordinates=954,598,94,36
 
