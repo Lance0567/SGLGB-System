@@ -125,7 +125,7 @@ Coordinates=783,10,81,58
 Coordinates=370,280,83,58
 
 []
-Coordinates=2537,1266,75,36
+Coordinates=0,756,60,36
 Visible=True
 
 [pHeader1]
@@ -157,9 +157,6 @@ Coordinates=585,540,58,36
 
 [chkbC23]
 Coordinates=1009,155,65,36
-
-[SkLabel4]
-Coordinates=1009,520,68,36
 
 [chkbC1]
 Coordinates=845,626,58,36
@@ -338,12 +335,6 @@ Coordinates=441,318,66,58
 [pMR4]
 Coordinates=1123,868,49,58
 
-[pFooter1]
-Coordinates=649,772,66,58
-
-[slCMR1]
-Coordinates=0,756,60,36
-
 [Panel9]
 Coordinates=139,251,55,58
 
@@ -361,9 +352,6 @@ Coordinates=307,676,79,58
 
 [stSection1]
 Coordinates=1430,727,75,36
-
-[slCMR5]
-Coordinates=1430,782,60,36
 
 [Label13]
 Coordinates=1182,868,60,58
@@ -425,9 +413,6 @@ Coordinates=857,886,68,36
 [lbTotalBFDP]
 Coordinates=115,444,87,58
 
-[slCMR7]
-Coordinates=1411,886,60,36
-
 [lbRem2]
 Coordinates=383,772,59,58
 
@@ -440,20 +425,11 @@ Coordinates=941,1,98,58
 [btnViewListDoc]
 Coordinates=941,289,103,58
 
-[slCMR2]
-Coordinates=1342,886,60,36
-
 [chkbC2]
 Coordinates=729,886,58,36
 
-[slCMR9]
-Coordinates=660,886,60,36
-
 [btnAddItemizedDoc]
 Coordinates=593,155,127,58
-
-[pMOV1]
-Coordinates=718,772,58,58
 
 [dbmRemarks1]
 Coordinates=561,886,98,36
@@ -536,9 +512,6 @@ Coordinates=1251,463,101,58
 [Label28]
 Coordinates=267,155,60,58
 
-[slCMR6]
-Coordinates=1588,166,60,36
-
 [PageControl2]
 Coordinates=1588,221,93,36
 
@@ -554,9 +527,6 @@ Coordinates=1009,443,72,58
 [chkbC14]
 Coordinates=1292,964,65,36
 
-[slCMR3]
-Coordinates=1588,386,60,36
-
 [tsCompliance]
 Coordinates=1588,441,92,36
 
@@ -565,9 +535,6 @@ Coordinates=624,580,62,58
 
 [pMonthReport]
 Coordinates=1430,155,96,58
-
-[ScrollBox1]
-Coordinates=1588,496,76,36
 
 [btnViewPhotoDoc]
 Coordinates=1430,78,117,58
@@ -629,14 +596,8 @@ Coordinates=1519,964,59,36
 [gbPR3]
 Coordinates=96,580,54,58
 
-[slCMR4]
-Coordinates=1154,964,60,36
-
 [gpForm4]
 Coordinates=762,570,66,58
-
-[slCMR8]
-Coordinates=1085,964,60,36
 
 [gpForm1]
 Coordinates=196,772,66,58

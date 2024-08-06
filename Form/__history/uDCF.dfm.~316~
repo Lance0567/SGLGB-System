@@ -20,7 +20,7 @@ object frmDCF: TfrmDCF
     Top = 0
     Width = 870
     Height = 569
-    ActivePage = tsDP
+    ActivePage = tsDetails
     Align = alClient
     TabOrder = 0
     OnChange = PageControl1Change
@@ -4635,7 +4635,7 @@ object frmDCF: TfrmDCF
               object gbAnnex: TGroupBox
                 AlignWithMargins = True
                 Left = 5
-                Top = 1055
+                Top = 1047
                 Width = 393
                 Height = 53
                 Margins.Left = 5
@@ -4644,6 +4644,7 @@ object frmDCF: TfrmDCF
                 Margins.Bottom = 0
                 Align = alTop
                 TabOrder = 0
+                ExplicitTop = 1055
                 object chkbC10: TDBCheckBox
                   AlignWithMargins = True
                   Left = 12
@@ -4669,7 +4670,7 @@ object frmDCF: TfrmDCF
               object gbAnnual: TGroupBox
                 AlignWithMargins = True
                 Left = 5
-                Top = 318
+                Top = 310
                 Width = 393
                 Height = 207
                 Margins.Left = 5
@@ -4684,6 +4685,7 @@ object frmDCF: TfrmDCF
                 Font.Style = [fsUnderline]
                 ParentFont = False
                 TabOrder = 1
+                ExplicitTop = 318
                 object Label12: TLabel
                   AlignWithMargins = True
                   Left = 12
@@ -4808,7 +4810,7 @@ object frmDCF: TfrmDCF
               object gbPR1: TGroupBox
                 AlignWithMargins = True
                 Left = 5
-                Top = 1113
+                Top = 1105
                 Width = 393
                 Height = 114
                 Margins.Left = 5
@@ -4817,6 +4819,7 @@ object frmDCF: TfrmDCF
                 Margins.Bottom = 0
                 Align = alTop
                 TabOrder = 2
+                ExplicitTop = 1113
                 object Label16: TLabel
                   AlignWithMargins = True
                   Left = 5
@@ -4983,7 +4986,7 @@ object frmDCF: TfrmDCF
                 Left = 5
                 Top = 5
                 Width = 393
-                Height = 308
+                Height = 300
                 Margins.Left = 5
                 Margins.Top = 5
                 Margins.Right = 5
@@ -5176,7 +5179,7 @@ object frmDCF: TfrmDCF
               object pQuarterlyReport: TPanel
                 AlignWithMargins = True
                 Left = 5
-                Top = 530
+                Top = 522
                 Width = 393
                 Height = 254
                 Margins.Left = 5
@@ -5185,6 +5188,7 @@ object frmDCF: TfrmDCF
                 Margins.Bottom = 0
                 Align = alTop
                 TabOrder = 4
+                ExplicitTop = 530
                 object Label13: TLabel
                   AlignWithMargins = True
                   Left = 11
@@ -5372,7 +5376,7 @@ object frmDCF: TfrmDCF
               object pMonthReport: TPanel
                 AlignWithMargins = True
                 Left = 5
-                Top = 789
+                Top = 781
                 Width = 393
                 Height = 261
                 Margins.Left = 5
@@ -5381,6 +5385,7 @@ object frmDCF: TfrmDCF
                 Margins.Bottom = 0
                 Align = alTop
                 TabOrder = 5
+                ExplicitTop = 789
                 object Label14: TLabel
                   AlignWithMargins = True
                   Left = 11
@@ -5569,12 +5574,13 @@ object frmDCF: TfrmDCF
               end
               object pFooter1: TPanel
                 Left = 0
-                Top = 1227
+                Top = 1219
                 Width = 403
                 Height = 10
                 Align = alTop
                 BevelOuter = bvNone
                 TabOrder = 6
+                ExplicitTop = 1227
               end
             end
             object sbMR1: TScrollBox
@@ -9279,7 +9285,7 @@ object frmDCF: TfrmDCF
                   TabOrder = 1
                   ExplicitTop = 395
                   ExplicitWidth = 386
-                  object slRemWarning: TSkLabel
+                  object slRemWarning7: TSkLabel
                     AlignWithMargins = True
                     Left = 64
                     Top = 17
@@ -9615,7 +9621,7 @@ object frmDCF: TfrmDCF
                 'End of Core Governance Area No. 1:  Financial Administration and' +
                 ' Sustainability'
               Font.Charset = DEFAULT_CHARSET
-              Font.Color = clWindowText
+              Font.Color = clBlack
               Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = [fsBold]
@@ -9776,6 +9782,8 @@ object frmDCF: TfrmDCF
               Width = 424
               Height = 21
               Align = alClient
+              Color = clTeal
+              ParentBackground = False
               TabOrder = 0
               object SkLabel16: TSkLabel
                 Left = 1
@@ -9831,7 +9839,7 @@ object frmDCF: TfrmDCF
               object GroupBox11: TGroupBox
                 AlignWithMargins = True
                 Left = 5
-                Top = 1055
+                Top = 1047
                 Width = 393
                 Height = 53
                 Margins.Left = 5
@@ -9865,7 +9873,7 @@ object frmDCF: TfrmDCF
               object GroupBox12: TGroupBox
                 AlignWithMargins = True
                 Left = 5
-                Top = 318
+                Top = 310
                 Width = 393
                 Height = 207
                 Margins.Left = 5
@@ -10004,7 +10012,7 @@ object frmDCF: TfrmDCF
               object GroupBox13: TGroupBox
                 AlignWithMargins = True
                 Left = 5
-                Top = 1113
+                Top = 1105
                 Width = 393
                 Height = 114
                 Margins.Left = 5
@@ -10179,7 +10187,7 @@ object frmDCF: TfrmDCF
                 Left = 5
                 Top = 5
                 Width = 393
-                Height = 308
+                Height = 300
                 Margins.Left = 5
                 Margins.Top = 5
                 Margins.Right = 5
@@ -10317,7 +10325,7 @@ object frmDCF: TfrmDCF
                       BiDiMode = bdLeftToRight
                       Caption = 'Please supply the number of docuements submitted:'
                       Font.Charset = ANSI_CHARSET
-                      Font.Color = clWindowText
+                      Font.Color = clBlack
                       Font.Height = -13
                       Font.Name = 'Segoe UI Semibold'
                       Font.Style = [fsBold, fsItalic]
@@ -10371,7 +10379,7 @@ object frmDCF: TfrmDCF
               object Panel40: TPanel
                 AlignWithMargins = True
                 Left = 5
-                Top = 530
+                Top = 522
                 Width = 393
                 Height = 254
                 Margins.Left = 5
@@ -10530,7 +10538,7 @@ object frmDCF: TfrmDCF
                       BiDiMode = bdLeftToRight
                       Caption = 'Please supply the number of docuements submitted:'
                       Font.Charset = ANSI_CHARSET
-                      Font.Color = clWindowText
+                      Font.Color = clBlack
                       Font.Height = -13
                       Font.Name = 'Segoe UI Semibold'
                       Font.Style = [fsBold, fsItalic]
@@ -10567,7 +10575,7 @@ object frmDCF: TfrmDCF
               object Panel44: TPanel
                 AlignWithMargins = True
                 Left = 5
-                Top = 789
+                Top = 781
                 Width = 393
                 Height = 261
                 Margins.Left = 5
@@ -10725,7 +10733,7 @@ object frmDCF: TfrmDCF
                       BiDiMode = bdLeftToRight
                       Caption = 'Please supply the number of docuements submitted:'
                       Font.Charset = ANSI_CHARSET
-                      Font.Color = clWindowText
+                      Font.Color = clBlack
                       Font.Height = -13
                       Font.Name = 'Segoe UI Semibold'
                       Font.Style = [fsBold, fsItalic]
@@ -10764,7 +10772,7 @@ object frmDCF: TfrmDCF
               end
               object Panel48: TPanel
                 Left = 0
-                Top = 1227
+                Top = 1219
                 Width = 403
                 Height = 10
                 Align = alTop
@@ -10777,7 +10785,6 @@ object frmDCF: TfrmDCF
               Top = 21
               Width = 424
               Height = 386
-              VertScrollBar.Position = 352
               Align = alClient
               Anchors = []
               BorderStyle = bsNone
@@ -10786,12 +10793,13 @@ object frmDCF: TfrmDCF
               object slFMR1: TSkLabel
                 AlignWithMargins = True
                 Left = 10
-                Top = -337
+                Top = 15
                 Width = 394
                 Height = 17
                 Margins.Left = 10
                 Margins.Top = 15
                 Align = alTop
+                OnClick = slFMR1Click
                 TextSettings.Font.Size = 13.000000000000000000
                 Words = <
                   item
@@ -10799,12 +10807,11 @@ object frmDCF: TfrmDCF
                     Font.Weight = Bold
                     StyledSettings = [Family, Size, FontColor]
                   end>
-                ExplicitTop = 15
               end
               object slFMR3: TSkLabel
                 AlignWithMargins = True
                 Left = 40
-                Top = -270
+                Top = 82
                 Width = 364
                 Height = 136
                 Margins.Left = 40
@@ -10828,7 +10835,7 @@ object frmDCF: TfrmDCF
               object slFMR4: TSkLabel
                 AlignWithMargins = True
                 Left = 10
-                Top = -111
+                Top = 241
                 Width = 394
                 Height = 17
                 Margins.Left = 10
@@ -10846,7 +10853,7 @@ object frmDCF: TfrmDCF
               object slFMR6: TSkLabel
                 AlignWithMargins = True
                 Left = 10
-                Top = -17
+                Top = 335
                 Width = 394
                 Height = 17
                 Margins.Left = 10
@@ -10864,7 +10871,7 @@ object frmDCF: TfrmDCF
               object SkLabel23: TSkLabel
                 AlignWithMargins = True
                 Left = 10
-                Top = 60
+                Top = 412
                 Width = 394
                 Height = 51
                 Margins.Left = 10
@@ -10889,7 +10896,7 @@ object frmDCF: TfrmDCF
               object SkLabel24: TSkLabel
                 AlignWithMargins = True
                 Left = 10
-                Top = 134
+                Top = 486
                 Width = 394
                 Height = 17
                 Margins.Left = 10
@@ -10907,7 +10914,7 @@ object frmDCF: TfrmDCF
               object SkLabel25: TSkLabel
                 AlignWithMargins = True
                 Left = 10
-                Top = 174
+                Top = 526
                 Width = 394
                 Height = 51
                 Margins.Left = 10
@@ -10932,7 +10939,7 @@ object frmDCF: TfrmDCF
               object SkLabel26: TSkLabel
                 AlignWithMargins = True
                 Left = 10
-                Top = 248
+                Top = 600
                 Width = 394
                 Height = 68
                 Margins.Left = 10
@@ -10953,36 +10960,12 @@ object frmDCF: TfrmDCF
                       'nt of CY 2023 BDRRMF)  x 100'
                     Name = 'Item 1'
                   end>
-              end
-              object SkLabel27: TSkLabel
-                AlignWithMargins = True
-                Left = 10
-                Top = 334
-                Width = 394
-                Height = 17
-                Margins.Left = 10
-                Margins.Top = 15
-                Margins.Bottom = 5
-                Align = alTop
-                TextSettings.Font.Size = 13.000000000000000000
-                Words = <
-                  item
-                    Caption = '1.1.2 '
-                    Font.Weight = Bold
-                    Name = 'Item 0'
-                    StyledSettings = [Family, Size, FontColor]
-                  end
-                  item
-                    Caption = 'Accomplished and signed BFR with received'
-                    Name = 'Item 1'
-                  end>
-                ExplicitLeft = 24
-                ExplicitTop = 247
+                ExplicitTop = 248
               end
               object slFMR2: TSkLabel
                 AlignWithMargins = True
                 Left = 43
-                Top = -317
+                Top = 35
                 Width = 361
                 Height = 34
                 Margins.Left = 43
@@ -10996,13 +10979,12 @@ object frmDCF: TfrmDCF
                       's of NDRRMC, DILG, DBM, and CSC JMC No. 2014-01.'
                   end>
                 ExplicitLeft = 10
-                ExplicitTop = 35
                 ExplicitWidth = 394
               end
               object slFMR5: TSkLabel
                 AlignWithMargins = True
                 Left = 43
-                Top = -91
+                Top = 261
                 Width = 361
                 Height = 51
                 Margins.Left = 43
@@ -11017,13 +10999,12 @@ object frmDCF: TfrmDCF
                     StyledSettings = [Family, Size, FontColor]
                   end>
                 ExplicitLeft = 10
-                ExplicitTop = 261
                 ExplicitWidth = 394
               end
               object slFMR7: TSkLabel
                 AlignWithMargins = True
                 Left = 43
-                Top = 3
+                Top = 355
                 Width = 361
                 Height = 34
                 Margins.Left = 43
@@ -11040,10 +11021,10 @@ object frmDCF: TfrmDCF
                 ExplicitTop = 121
                 ExplicitWidth = 364
               end
-              object DBMemo1: TDBMemo
+              object dbmRemarks8: TDBMemo
                 AlignWithMargins = True
                 Left = 10
-                Top = 406
+                Top = 721
                 Width = 382
                 Height = 105
                 Margins.Left = 10
@@ -11053,12 +11034,11 @@ object frmDCF: TfrmDCF
                 Align = alTop
                 Enabled = False
                 TabOrder = 0
-                ExplicitTop = 355
               end
               object GroupBox14: TGroupBox
                 AlignWithMargins = True
                 Left = 10
-                Top = 359
+                Top = 674
                 Width = 392
                 Height = 45
                 Margins.Left = 10
@@ -11067,8 +11047,7 @@ object frmDCF: TfrmDCF
                 Align = alTop
                 ShowFrame = False
                 TabOrder = 1
-                ExplicitTop = 308
-                object SkLabel28: TSkLabel
+                object slRemWarning8: TSkLabel
                   AlignWithMargins = True
                   Left = 64
                   Top = 20
@@ -11085,7 +11064,7 @@ object frmDCF: TfrmDCF
                   ExplicitTop = 4
                   ExplicitHeight = 10
                 end
-                object Label61: TLabel
+                object lbRem8: TLabel
                   AlignWithMargins = True
                   Left = 2
                   Top = 20
@@ -11108,13 +11087,12 @@ object frmDCF: TfrmDCF
               end
               object Panel49: TPanel
                 Left = 0
-                Top = 516
+                Top = 831
                 Width = 407
                 Height = 30
                 Align = alTop
                 BevelOuter = bvNone
                 TabOrder = 2
-                ExplicitTop = 465
               end
             end
           end

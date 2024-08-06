@@ -59,22 +59,10 @@ type
     gpForm1: TGridPanel;
     pMR1: TPanel;
     SkLabel3: TSkLabel;
-    pMOV1: TPanel;
-    SkLabel4: TSkLabel;
-    slCMR7: TSkLabel;
-    slCMR8: TSkLabel;
-    slCMR9: TSkLabel;
-    slCMR2: TSkLabel;
-    slCMR3: TSkLabel;
-    slCMR4: TSkLabel;
-    slCMR5: TSkLabel;
-    slCMR6: TSkLabel;
-    slCMR1: TSkLabel;
     dbmRemarks1: TDBMemo;
     GroupBox6: TGroupBox;
     slRemWarning1: TSkLabel;
     lbRem1: TLabel;
-    ScrollBox1: TScrollBox;
     gbAnnex: TGroupBox;
     gbAnnual: TGroupBox;
     Label12: TLabel;
@@ -122,7 +110,6 @@ type
     Panel6: TPanel;
     sItemizedMonthly: TShape;
     Label17: TLabel;
-    pFooter1: TPanel;
     stSection1: TStaticText;
     tsInnovations: TTabSheet;
     gpForm2: TGridPanel;
@@ -666,6 +653,8 @@ type
     slFMR2: TSkLabel;
     slFMR5: TSkLabel;
     slFMR7: TSkLabel;
+    slCMR9: TSkLabel;
+    slCMR1: TSkLabel;
     procedure FormShow(Sender: TObject);
     procedure FormResize(Sender: TObject);
     // ScrollBox
@@ -849,7 +838,6 @@ begin
   CheckBoxYes := Sender as TCheckBox;
   CheckBoxNoName := StringReplace(CheckBoxYes.Name, 'Yes', 'No', []);
   CheckBoxNo := FindComponent(CheckBoxNoName) as TCheckBox;
-
   if CheckBoxYes.Checked then
   begin
     CheckBoxNo.Checked := False;
@@ -865,7 +853,6 @@ begin
   CheckBoxNo := Sender as TCheckBox;
   CheckBoxYesName := StringReplace(CheckBoxNo.Name, 'No', 'Yes', []);
   CheckBoxYes := FindComponent(CheckBoxYesName) as TCheckBox;
-
   if CheckBoxNo.Checked then
   begin
     CheckBoxYes.Checked := False;
