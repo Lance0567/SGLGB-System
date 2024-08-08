@@ -552,6 +552,7 @@ type
     Label82: TLabel;
     CheckBox2: TCheckBox;
     Panel54: TPanel;
+    Label83: TLabel;
     Panel55: TPanel;
     Label84: TLabel;
     Panel56: TPanel;
@@ -562,6 +563,7 @@ type
     Panel58: TPanel;
     Shape8: TShape;
     Label85: TLabel;
+    DBCheckBox9: TDBCheckBox;
     GroupBox23: TGroupBox;
     SkLabel15: TSkLabel;
     DBCheckBox10: TDBCheckBox;
@@ -802,28 +804,13 @@ type
     SkLabel65: TSkLabel;
     SkLabel66: TSkLabel;
     DBCheckBox3: TDBCheckBox;
-    DBCheckBox4: TDBCheckBox;
-    Panel92: TPanel;
-    Label140: TLabel;
-    Label141: TLabel;
-    RelativePanel20: TRelativePanel;
-    Label142: TLabel;
-    CheckBox17: TCheckBox;
-    Label143: TLabel;
-    CheckBox18: TCheckBox;
-    GroupBox55: TGroupBox;
-    SkLabel67: TSkLabel;
-    DBCheckBox5: TDBCheckBox;
-    SkLabel68: TSkLabel;
-    DBCheckBox6: TDBCheckBox;
-    SkLabel69: TSkLabel;
     procedure FormShow(Sender: TObject);
     procedure FormResize(Sender: TObject);
     // ScrollBox
     procedure ScrollBoxMouseWheelHandler(Sender: TObject; Shift: TShiftState;
       WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
 
-    { Page Control 1 }
+    // Page Control 1
     procedure PageControl1Change(Sender: TObject);
     // Tabs Reset 1
     procedure TabsReset1;
@@ -831,9 +818,8 @@ type
     procedure DetailsTab;
     procedure FASTab;
     procedure DPTab;
-    {---------------}
 
-    { Page Control 2 }
+    // Page Control 2
     procedure PageControl2Change(Sender: TObject);
     // Tabs Reset 2
     procedure TabsReset2;
@@ -845,9 +831,8 @@ type
     procedure PostingTab;
     procedure ReleaseTab;
     procedure ConductTab;
-    {---------------}
 
-    { Page Control 3 }
+    // Page Control 3
     procedure PageControl3Change(Sender: TObject);
     //Tabs Reset 3
     procedure TabsReset3;
@@ -855,11 +840,11 @@ type
     procedure FunctionalityTab;
     procedure ExtentRiskTab;
     procedure ExtentPrepTab;
-    {----------------}
 
     // CheckBox
     procedure CheckBoxYesClick(Sender: TObject);
     procedure CheckBoxNoClick(Sender: TObject);
+    procedure slFMR1Click(Sender: TObject);
   private
     FCheckboxValue: string;
     { Private declarations }
@@ -948,8 +933,6 @@ begin
   pButtonToolbar2.Visible := True;
 end;
 
-//--------SPO Tabs--------//
-
 // Tabs Reset for PageControl2  - FAS
 procedure TfrmDCF.TabsReset2;
 begin
@@ -1029,7 +1012,6 @@ begin
   stSection9.Visible := False;
   gpForm10.Visible := False;
   stSection10.Visible := False;
-  pFooterEnd2.Visible := False;
 end;
 
 procedure TfrmDCF.FunctionalityTab;
@@ -1051,7 +1033,6 @@ begin
   TabsReset3;
   gpForm10.Visible := True;
   stSection10.Visible := True;
-  pFooterEnd2.Visible := True;
 end;
 
 {-----------------------------------CheckBox-----------------------------------}
@@ -1143,6 +1124,11 @@ procedure TfrmDCF.ScrollBoxMouseWheelHandler(Sender: TObject; Shift: TShiftState
   WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
 begin
   HandleScrollBoxMouseWheel(TScrollBox(Sender), Shift, WheelDelta,MousePos, Handled);
+end;
+
+procedure TfrmDCF.slFMR1Click(Sender: TObject);
+begin
+  ShowMessage('Click');
 end;
 
 end.

@@ -552,6 +552,7 @@ type
     Label82: TLabel;
     CheckBox2: TCheckBox;
     Panel54: TPanel;
+    Label83: TLabel;
     Panel55: TPanel;
     Label84: TLabel;
     Panel56: TPanel;
@@ -562,6 +563,7 @@ type
     Panel58: TPanel;
     Shape8: TShape;
     Label85: TLabel;
+    DBCheckBox9: TDBCheckBox;
     GroupBox23: TGroupBox;
     SkLabel15: TSkLabel;
     DBCheckBox10: TDBCheckBox;
@@ -814,9 +816,9 @@ type
     GroupBox55: TGroupBox;
     SkLabel67: TSkLabel;
     DBCheckBox5: TDBCheckBox;
+    GroupBox56: TGroupBox;
     SkLabel68: TSkLabel;
     DBCheckBox6: TDBCheckBox;
-    SkLabel69: TSkLabel;
     procedure FormShow(Sender: TObject);
     procedure FormResize(Sender: TObject);
     // ScrollBox
