@@ -520,10 +520,10 @@ type
     Panel23: TPanel;
     SkLabel7: TSkLabel;
     ScrollBox1: TScrollBox;
-    DBMemo1: TDBMemo;
+    dbmRemarks11: TDBMemo;
     GroupBox20: TGroupBox;
-    SkLabel10: TSkLabel;
-    Label72: TLabel;
+    slRemWarning11: TSkLabel;
+    lbRem11: TLabel;
     Panel30: TPanel;
     Panel31: TPanel;
     SkLabel12: TSkLabel;
@@ -548,13 +548,12 @@ type
     Label80: TLabel;
     RelativePanel10: TRelativePanel;
     Label81: TLabel;
-    CheckBox1: TCheckBox;
+    chkbYes11: TCheckBox;
     Label82: TLabel;
-    CheckBox2: TCheckBox;
+    chkbNo11: TCheckBox;
     Panel54: TPanel;
-    Label83: TLabel;
     Panel55: TPanel;
-    Label84: TLabel;
+    lbTransmittals: TLabel;
     Panel56: TPanel;
     Button11: TButton;
     Button12: TButton;
@@ -563,7 +562,6 @@ type
     Panel58: TPanel;
     Shape8: TShape;
     Label85: TLabel;
-    DBCheckBox9: TDBCheckBox;
     GroupBox23: TGroupBox;
     SkLabel15: TSkLabel;
     DBCheckBox10: TDBCheckBox;
@@ -581,22 +579,9 @@ type
     SkLabel19: TSkLabel;
     Panel62: TPanel;
     Label87: TLabel;
-    GroupBox25: TGroupBox;
-    Label88: TLabel;
-    DBEdit1: TDBEdit;
-    Panel63: TPanel;
-    Button14: TButton;
-    Button15: TButton;
-    Button16: TButton;
-    DBGrid6: TDBGrid;
     Panel65: TPanel;
     Shape10: TShape;
     Label89: TLabel;
-    GroupBox26: TGroupBox;
-    Label90: TLabel;
-    DBEdit2: TDBEdit;
-    DBCheckBox11: TDBCheckBox;
-    DBCheckBox12: TDBCheckBox;
     GroupBox27: TGroupBox;
     Label91: TLabel;
     Panel66: TPanel;
@@ -607,7 +592,7 @@ type
     Label94: TLabel;
     CheckBox4: TCheckBox;
     Panel67: TPanel;
-    StaticText2: TStaticText;
+    stSection12: TStaticText;
     TabSheet3: TTabSheet;
     StaticText3: TStaticText;
     GridPanel3: TGridPanel;
@@ -804,13 +789,87 @@ type
     SkLabel65: TSkLabel;
     SkLabel66: TSkLabel;
     DBCheckBox3: TDBCheckBox;
+    DBCheckBox4: TDBCheckBox;
+    Panel92: TPanel;
+    Label140: TLabel;
+    Label141: TLabel;
+    RelativePanel20: TRelativePanel;
+    Label142: TLabel;
+    CheckBox17: TCheckBox;
+    Label143: TLabel;
+    CheckBox18: TCheckBox;
+    GroupBox55: TGroupBox;
+    SkLabel67: TSkLabel;
+    DBCheckBox5: TDBCheckBox;
+    SkLabel68: TSkLabel;
+    DBCheckBox6: TDBCheckBox;
+    SkLabel69: TSkLabel;
+    DBCheckBox9: TDBCheckBox;
+    Panel93: TPanel;
+    Panel96: TPanel;
+    Label83: TLabel;
+    Panel97: TPanel;
+    Button2: TButton;
+    Button3: TButton;
+    Button4: TButton;
+    DBGrid3: TDBGrid;
+    Panel98: TPanel;
+    Shape16: TShape;
+    Label84: TLabel;
+    DBCheckBox33: TDBCheckBox;
+    SkLabel70: TSkLabel;
+    SkLabel10: TSkLabel;
+    DateTimePicker8: TDateTimePicker;
+    GroupBox25: TGroupBox;
+    SkLabel71: TSkLabel;
+    SkLabel72: TSkLabel;
+    DBCheckBox11: TDBCheckBox;
+    GroupBox26: TGroupBox;
+    SkLabel73: TSkLabel;
+    DBCheckBox12: TDBCheckBox;
+    Panel63: TPanel;
+    Label72: TLabel;
+    Label88: TLabel;
+    RelativePanel21: TRelativePanel;
+    Label90: TLabel;
+    CheckBox1: TCheckBox;
+    Label144: TLabel;
+    CheckBox2: TCheckBox;
+    SkLabel74: TSkLabel;
+    Panel99: TPanel;
+    SkLabel75: TSkLabel;
+    Label145: TLabel;
+    SkLabel76: TSkLabel;
+    Panel100: TPanel;
+    Label146: TLabel;
+    Panel101: TPanel;
+    Shape17: TShape;
+    Label147: TLabel;
+    DBEdit1: TDBEdit;
+    Panel102: TPanel;
+    Label148: TLabel;
+    Label149: TLabel;
+    Panel103: TPanel;
+    Shape18: TShape;
+    Label150: TLabel;
+    DBEdit2: TDBEdit;
+    DBEdit3: TDBEdit;
+    Panel104: TPanel;
+    RelativePanel22: TRelativePanel;
+    Label152: TLabel;
+    CheckBox19: TCheckBox;
+    Label153: TLabel;
+    CheckBox20: TCheckBox;
+    DBCheckBox34: TDBCheckBox;
+    DBCheckBox35: TDBCheckBox;
+    Label151: TLabel;
     procedure FormShow(Sender: TObject);
     procedure FormResize(Sender: TObject);
     // ScrollBox
     procedure ScrollBoxMouseWheelHandler(Sender: TObject; Shift: TShiftState;
       WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
 
-    // Page Control 1
+    { Page Control 1 }
     procedure PageControl1Change(Sender: TObject);
     // Tabs Reset 1
     procedure TabsReset1;
@@ -818,8 +877,9 @@ type
     procedure DetailsTab;
     procedure FASTab;
     procedure DPTab;
+    {---------------}
 
-    // Page Control 2
+    { Page Control 2 }
     procedure PageControl2Change(Sender: TObject);
     // Tabs Reset 2
     procedure TabsReset2;
@@ -831,8 +891,9 @@ type
     procedure PostingTab;
     procedure ReleaseTab;
     procedure ConductTab;
+    {---------------}
 
-    // Page Control 3
+    { Page Control 3 }
     procedure PageControl3Change(Sender: TObject);
     //Tabs Reset 3
     procedure TabsReset3;
@@ -840,11 +901,11 @@ type
     procedure FunctionalityTab;
     procedure ExtentRiskTab;
     procedure ExtentPrepTab;
+    {----------------}
 
     // CheckBox
     procedure CheckBoxYesClick(Sender: TObject);
     procedure CheckBoxNoClick(Sender: TObject);
-    procedure slFMR1Click(Sender: TObject);
   private
     FCheckboxValue: string;
     { Private declarations }
@@ -1014,6 +1075,7 @@ begin
   stSection9.Visible := False;
   gpForm10.Visible := False;
   stSection10.Visible := False;
+  pFooterEnd2.Visible := False;
 end;
 
 procedure TfrmDCF.FunctionalityTab;
@@ -1035,6 +1097,7 @@ begin
   TabsReset3;
   gpForm10.Visible := True;
   stSection10.Visible := True;
+  pFooterEnd2.Visible := True;
 end;
 
 {-----------------------------------CheckBox-----------------------------------}
@@ -1126,11 +1189,6 @@ procedure TfrmDCF.ScrollBoxMouseWheelHandler(Sender: TObject; Shift: TShiftState
   WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
 begin
   HandleScrollBoxMouseWheel(TScrollBox(Sender), Shift, WheelDelta,MousePos, Handled);
-end;
-
-procedure TfrmDCF.slFMR1Click(Sender: TObject);
-begin
-  ShowMessage('Click');
 end;
 
 end.

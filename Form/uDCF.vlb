@@ -1,1497 +1,2542 @@
 ﻿[dtpDateCreated]
-Coordinates=144,620,105,58
+Coordinates=711,144,105,58
 
 [edYear]
-Coordinates=10,1258,56,36
+Coordinates=1515,1578,56,36
 
 [Image1]
-Coordinates=935,892,57,58
+Coordinates=1628,416,57,58
 
 [dtpDatePublished]
-Coordinates=1976,144,116,58
+Coordinates=359,688,116,58
 
 [StatusPanel]
-Coordinates=1218,892,84,58
+Coordinates=1648,756,84,58
 
 [pYear]
-Coordinates=1804,756,49,58
+Coordinates=2595,892,49,58
 
 [cbStatus]
 Coordinates=10,10,101,124
 
 [DateCreatedPanel]
-Coordinates=1976,552,120,58
+Coordinates=2687,10,120,58
 
 [edProvince]
-Coordinates=1178,1258,79,36
+Coordinates=2703,1440,79,36
 
 [Label3]
-Coordinates=544,484,53,58
+Coordinates=643,1028,53,58
 
 [btnComplete]
-Coordinates=1280,960,87,58
+Coordinates=276,1028,87,58
 
 [NotesPanel]
-Coordinates=702,552,81,58
+Coordinates=2279,688,81,58
 
 [Label7]
-Coordinates=1948,892,53,58
+Coordinates=1084,1028,53,58
 
 [pBtnHolder]
-Coordinates=1370,484,79,58
+Coordinates=815,960,79,58
 
 [btnPublish]
-Coordinates=552,10,75,58
+Coordinates=1535,1096,75,58
 
 [DateClosedPanel]
-Coordinates=391,960,115,58
+Coordinates=2455,620,115,58
 
 [edCM]
-Coordinates=1413,1212,48,36
+Coordinates=2500,1348,48,36
 
 [edRegion]
-Coordinates=2117,1212,69,36
+Coordinates=10,1578,69,36
 
 [Label6]
-Coordinates=607,484,53,58
+Coordinates=1452,756,53,58
 
 [Label1]
-Coordinates=2103,620,53,58
+Coordinates=1077,960,53,58
 
 [tsDP]
-Coordinates=1897,1304,42,36
+Coordinates=2137,1348,42,36
 
 [tsDetails]
-Coordinates=1755,1304,64,36
+Coordinates=1386,1486,64,36
 
 [DateContactedPanel]
-Coordinates=547,348,133,58
+Coordinates=1852,144,133,58
 
 [DatesPanel]
-Coordinates=106,960,81,58
+Coordinates=1310,416,81,58
 
 [dtpDateCompleted]
-Coordinates=10,280,122,58
+Coordinates=2147,688,122,58
 
 [pProfile]
-Coordinates=1006,552,59,58
+Coordinates=134,552,59,58
 
 [Label10]
-Coordinates=1714,212,60,58
+Coordinates=277,824,60,58
 
 [Label8]
-Coordinates=226,144,53,58
+Coordinates=2547,416,53,58
 
 [Label4]
-Coordinates=887,280,53,58
+Coordinates=805,1096,53,58
 
 [Label9]
-Coordinates=2313,756,53,58
+Coordinates=1585,756,53,58
 
 [tsFAS]
-Coordinates=95,1350,49,36
+Coordinates=1841,1348,49,36
 
 [Label2]
-Coordinates=222,348,53,58
+Coordinates=1663,892,53,58
 
 [ScrollBox2]
-Coordinates=810,1212,76,36
+Coordinates=793,1532,76,36
 
 [pRegion]
-Coordinates=1783,688,62,58
+Coordinates=583,552,62,58
 
 [Label5]
-Coordinates=2180,756,53,58
+Coordinates=1359,1028,53,58
 
 [btnPrint]
-Coordinates=2413,620,59,58
+Coordinates=571,416,59,58
 
 [pProvince]
-Coordinates=883,824,72,58
+Coordinates=1175,892,72,58
 
 [PageControl1]
-Coordinates=154,1258,93,36
+Coordinates=1600,1348,93,36
 
 [pCityMunicipality]
-Coordinates=1508,892,112,58
+Coordinates=1730,144,112,58
 
 [edBarangay]
-Coordinates=342,1258,84,36
+Coordinates=1670,1486,84,36
 
 [NamePanel]
-Coordinates=2326,10,81,58
+Coordinates=2444,212,81,58
 
 [NotesMemo]
-Coordinates=85,892,83,58
+Coordinates=1465,620,83,58
 
 []
-Coordinates=142,280,82,58
+Coordinates=182,1256,105,36
 Visible=True
 
 [pHeader1]
-Coordinates=2169,824,71,58
+Coordinates=1949,960,71,58
 
 [chkbYes3]
-Coordinates=601,620,114,58
+Coordinates=663,484,114,58
 
 [dbmRemarks4]
-Coordinates=1856,1028,98,36
+Coordinates=89,1578,98,36
 
 [gbAnnual]
-Coordinates=1621,824,69,58
+Coordinates=2123,824,69,58
 
 [sTotalAmount]
-Coordinates=436,1258,94,36
+Coordinates=2633,1348,94,36
 
 [slRemWarning2]
-Coordinates=803,1304,106,36
+Coordinates=191,1624,106,36
 
 [chkbC4]
-Coordinates=334,1350,58,36
+Coordinates=873,1578,58,36
 
 [Label12]
-Coordinates=1449,552,60,58
+Coordinates=806,620,60,58
 
 [chkbC3]
-Coordinates=627,1258,58,36
+Coordinates=735,1578,58,36
 
 [chkbC23]
-Coordinates=88,1304,65,36
+Coordinates=718,1532,65,36
 
 [chkbC1]
-Coordinates=1102,1212,58,36
+Coordinates=1681,1532,58,36
 
 [chkbC18]
-Coordinates=2297,1304,65,36
+Coordinates=2397,1578,65,36
 
 [chkbNo1]
-Coordinates=670,484,114,58
+Coordinates=1984,892,114,58
 
 [Label19]
-Coordinates=2284,620,60,58
+Coordinates=2440,688,60,58
 
 [Label38]
-Coordinates=1300,484,60,58
+Coordinates=1212,960,60,58
 
 [btnDeletePhotoDoc]
-Coordinates=1469,144,126,58
+Coordinates=605,1096,126,58
 
 [Label22]
-Coordinates=1458,416,60,58
+Coordinates=1726,892,60,58
 
 [DBGrid1]
-Coordinates=1596,1304,64,36
+Coordinates=1301,1440,64,36
 
 [sBarangay]
-Coordinates=453,1166,76,36
+Coordinates=581,1578,76,36
 
 [Label18]
-Coordinates=1069,348,60,58
+Coordinates=1614,552,60,58
 
 [Panel20]
-Coordinates=438,892,62,58
+Coordinates=2207,756,62,58
 
 [pBFDP]
-Coordinates=1415,824,56,58
+Coordinates=2663,144,56,58
 
 [Panel4]
-Coordinates=1063,144,55,58
+Coordinates=2507,552,55,58
 
 [chkbC5]
-Coordinates=1147,1350,58,36
+Coordinates=2329,1578,58,36
 
 [GroupBox8]
-Coordinates=551,280,79,58
+Coordinates=875,688,79,58
 
 [btnAddPhotoDoc]
-Coordinates=455,144,111,58
+Coordinates=1965,1028,111,58
 
 [RelativePanel1]
-Coordinates=965,688,101,58
+Coordinates=2319,552,101,58
 
 [chkbYes4]
-Coordinates=1529,484,114,58
+Coordinates=1979,1096,114,58
 
 [GroupBox6]
-Coordinates=2340,212,79,58
+Coordinates=974,348,79,58
 
 [Label25]
-Coordinates=1273,824,60,58
+Coordinates=2634,688,60,58
 
 [stSection4]
-Coordinates=872,1350,75,36
+Coordinates=1848,1440,75,36
 
 [chkbNo4]
-Coordinates=2187,280,114,58
+Coordinates=485,688,114,58
 
 [pMR1]
-Coordinates=1541,280,49,58
+Coordinates=2196,348,49,58
 
 [stSection3]
-Coordinates=10,1396,75,36
+Coordinates=2621,1532,75,36
 
 [Label26]
-Coordinates=10,688,60,58
+Coordinates=939,892,60,58
 
 [lbListOfNotices]
-Coordinates=2106,552,102,58
+Coordinates=178,212,102,58
 
 [Label30]
-Coordinates=2218,552,60,58
+Coordinates=1009,892,60,58
 
 [chkbC22]
-Coordinates=797,1350,65,36
+Coordinates=2656,1486,65,36
 
 [pMR3]
-Coordinates=1968,620,49,58
+Coordinates=10,416,49,58
 
 [Label14]
-Coordinates=80,348,60,58
+Coordinates=2695,348,60,58
 
 [pMOV4]
-Coordinates=995,416,58,58
+Coordinates=10,824,58,58
 
 [chkbC13]
-Coordinates=780,1258,65,36
+Coordinates=1396,1394,65,36
 
 [chkbYes1]
-Coordinates=1038,10,114,58
+Coordinates=10,552,114,58
 
 [Label35]
-Coordinates=79,824,60,58
+Coordinates=2776,416,60,58
 
 [chkbC12]
-Coordinates=657,1350,65,36
+Coordinates=760,1486,65,36
 
 [lbYes1]
-Coordinates=1755,552,54,58
+Coordinates=1948,552,54,58
 
 [Button7]
-Coordinates=474,552,59,58
+Coordinates=594,484,59,58
 
 [chkbYes2]
-Coordinates=1730,416,114,58
+Coordinates=892,212,114,58
 
 [chkbC11]
-Coordinates=613,1304,65,36
+Coordinates=1020,1486,65,36
 
 [gbPR2]
-Coordinates=1841,824,54,58
+Coordinates=139,416,54,58
 
 [sListOfNoticesBac]
-Coordinates=1427,1396,120,36
+Coordinates=1981,1486,120,36
 
 [btnDeleteItemizedDoc]
-Coordinates=1146,688,141,58
+Coordinates=2374,892,141,58
 
 [Panel5]
-Coordinates=1054,756,55,58
+Coordinates=1470,1096,55,58
 
 [SkLabel8]
-Coordinates=855,1258,68,36
+Coordinates=1752,1394,68,36
 
 [chkbNo2]
-Coordinates=1723,484,114,58
+Coordinates=1104,1096,114,58
 
 [gbAnnex]
-Coordinates=10,892,65,58
+Coordinates=1282,960,65,58
 
 [tsAllocation]
-Coordinates=896,1212,81,36
+Coordinates=2245,1394,81,36
 
 [pQuarterlyReport]
-Coordinates=816,144,113,58
+Coordinates=227,892,113,58
 
 [chkbC9]
-Coordinates=1578,1350,58,36
+Coordinates=1130,1578,58,36
 
 [sApproved]
-Coordinates=163,1304,76,36
+Coordinates=2720,1394,76,36
 
 [gpForm2]
-Coordinates=588,756,66,58
+Coordinates=576,756,66,58
 
 [Panel9]
-Coordinates=10,484,55,58
+Coordinates=78,824,55,58
 
 [Label17]
-Coordinates=197,960,60,58
+Coordinates=780,348,60,58
 
 [dbmRemarks2]
-Coordinates=1660,1166,98,36
+Coordinates=1056,1440,98,36
 
 [GroupBox5]
-Coordinates=2315,348,79,58
+Coordinates=2652,620,79,58
 
 [stSection1]
-Coordinates=2049,1028,75,36
+Coordinates=1585,1486,75,36
 
 [Label13]
-Coordinates=1076,688,60,58
+Coordinates=1877,416,60,58
 
 [gbPR1]
-Coordinates=1492,756,54,58
+Coordinates=2352,1096,54,58
 
 [Panel12]
-Coordinates=337,688,62,58
+Coordinates=2430,960,62,58
 
 [Panel18]
-Coordinates=890,484,62,58
+Coordinates=375,416,62,58
 
 [lbRem4]
-Coordinates=1377,348,59,58
+Coordinates=450,1028,59,58
 
 [Label21]
-Coordinates=895,688,60,58
+Coordinates=1471,416,60,58
 
 [btnDeleteListDoc]
-Coordinates=1433,10,113,58
+Coordinates=1450,688,113,58
 
 [dbgListOfNoticesDoc]
-Coordinates=469,1396,135,36
+Coordinates=1832,1578,135,36
 
 [SkLabel2]
-Coordinates=933,1258,68,36
+Coordinates=470,1532,68,36
 
 [Panel14]
-Coordinates=1569,688,62,58
+Coordinates=1217,1028,62,58
 
 [chkbC20]
-Coordinates=996,1396,65,36
+Coordinates=2511,1486,65,36
 
 [SkLabel3]
-Coordinates=2433,1166,68,36
+Coordinates=1091,1532,68,36
 
 [lbTotalBFDP]
-Coordinates=2112,416,87,58
+Coordinates=2096,416,87,58
 
 [lbRem2]
-Coordinates=10,824,59,58
+Coordinates=723,280,59,58
 
 [btnAddListDoc]
-Coordinates=377,824,98,58
+Coordinates=1622,144,98,58
 
 [btnViewListDoc]
-Coordinates=439,10,103,58
+Coordinates=994,144,103,58
 
 [chkbC2]
-Coordinates=1731,1258,58,36
+Coordinates=667,1578,58,36
 
 [btnAddItemizedDoc]
-Coordinates=2156,688,127,58
+Coordinates=2740,960,127,58
 
 [dbmRemarks1]
-Coordinates=1671,1212,98,36
+Coordinates=1222,1394,98,36
 
 [chkbNo3]
-Coordinates=1824,892,114,58
+Coordinates=2499,824,114,58
 
 [chkbC6]
-Coordinates=1829,1304,58,36
+Coordinates=1239,1532,58,36
 
 [lbItemizedMonthlyCol]
-Coordinates=1635,620,138,58
+Coordinates=791,892,138,58
 
 [Label23]
-Coordinates=2243,756,60,58
+Coordinates=1696,1096,60,58
 
 [tsInnovations]
-Coordinates=1159,1166,91,36
+Coordinates=2259,1486,91,36
 
 [btnViewItemizedDoc]
-Coordinates=1855,688,132,58
+Coordinates=469,960,132,58
 
 [dbmRemarks3]
-Coordinates=1996,1166,98,36
+Coordinates=307,1624,98,36
 
 [chkbC8]
-Coordinates=95,1212,58,36
+Coordinates=1164,1440,58,36
 
 [Button6]
-Coordinates=2246,144,59,58
+Coordinates=339,756,59,58
 
 [gbPR4]
-Coordinates=374,892,54,58
+Coordinates=213,824,54,58
 
 [Label15]
-Coordinates=236,484,60,58
+Coordinates=938,1096,60,58
 
 [lbNo1]
-Coordinates=868,960,49,58
+Coordinates=2171,552,49,58
 
 [chkbC7]
-Coordinates=1928,1166,58,36
+Coordinates=1773,1348,58,36
 
 [Label33]
-Coordinates=2389,688,60,58
+Coordinates=80,892,60,58
 
 [Label24]
-Coordinates=1481,824,60,58
+Coordinates=2370,688,60,58
 
 [DBGrid2]
-Coordinates=1415,1350,64,36
+Coordinates=10,1624,64,36
 
 [slRemWarning3]
-Coordinates=2354,1350,106,36
+Coordinates=916,1394,106,36
 
 [chkbC19]
-Coordinates=1853,1166,65,36
+Coordinates=118,1440,65,36
 
 [pPhotoDoc]
-Coordinates=2153,484,78,58
+Coordinates=434,484,78,58
 
 [chkbC10]
-Coordinates=557,1212,65,36
+Coordinates=1930,1532,65,36
 
 [RelativePanel3]
-Coordinates=1347,416,101,58
+Coordinates=1307,824,101,58
 
 [Label28]
-Coordinates=2435,756,60,58
+Coordinates=920,756,60,58
 
 [PageControl2]
-Coordinates=1227,1304,93,36
+Coordinates=2712,1578,93,36
 
 [sPhotoDocBac]
-Coordinates=419,1304,99,36
+Coordinates=108,1532,99,36
 
 [slRemWarning1]
-Coordinates=1441,1258,106,36
+Coordinates=1749,1532,106,36
 
 [lbTotalAO]
-Coordinates=475,416,72,58
+Coordinates=1417,144,72,58
 
 [chkbC14]
-Coordinates=278,1212,65,36
+Coordinates=193,1440,65,36
 
 [tsCompliance]
-Coordinates=95,1396,92,36
+Coordinates=1638,1440,92,36
 
 [Panel10]
-Coordinates=2047,348,62,58
+Coordinates=2219,960,62,58
 
 [pMonthReport]
-Coordinates=482,756,96,58
+Coordinates=1422,1028,96,58
 
 [btnViewPhotoDoc]
-Coordinates=1855,348,117,58
+Coordinates=2080,212,117,58
 
 [chkbC21]
-Coordinates=1781,1028,65,36
+Coordinates=2264,1348,65,36
 
 [dbgPhotoDoc]
-Coordinates=2167,1350,92,36
+Coordinates=2183,1532,92,36
 
 [Panel3]
-Coordinates=1367,688,55,58
+Coordinates=1625,212,55,58
 
 [SkLabel14]
-Coordinates=1170,1212,75,36
+Coordinates=1345,1578,75,36
 
 [Label16]
-Coordinates=1297,688,60,58
+Coordinates=733,688,60,58
 
 [pSRE]
-Coordinates=1669,280,49,58
+Coordinates=1823,688,49,58
 
 [lbRem1]
-Coordinates=1600,280,59,58
+Coordinates=2770,824,59,58
 
 [gpForm3]
-Coordinates=919,416,66,58
+Coordinates=511,620,66,58
 
 [slRemWarning4]
-Coordinates=353,1396,106,36
+Coordinates=1452,1440,106,36
 
 [tbApproval]
-Coordinates=1071,1396,76,36
+Coordinates=2414,1348,76,36
 
 [Label11]
-Coordinates=1156,620,60,58
+Coordinates=399,960,60,58
 
 [Panel7]
-Coordinates=1982,348,55,58
+Coordinates=2154,960,55,58
 
 [stSection2]
-Coordinates=1949,1304,75,36
+Coordinates=484,1440,75,36
 
 [gbPR3]
-Coordinates=1281,280,54,58
+Coordinates=1695,416,54,58
 
 [gpForm4]
-Coordinates=1561,212,66,58
+Coordinates=1620,1096,66,58
 
 [gpForm1]
-Coordinates=204,552,66,58
+Coordinates=211,484,66,58
 
 [pPhotoDocHeader]
-Coordinates=1600,416,120,58
+Coordinates=661,892,120,58
 
 [Panel6]
-Coordinates=1667,756,55,58
+Coordinates=750,960,55,58
 
 [pItemizedMonthlyDoc]
-Coordinates=557,416,138,58
+Coordinates=2158,1028,138,58
 
 [Label20]
-Coordinates=1713,688,60,58
+Coordinates=2693,1096,60,58
 
 [lbRem3]
-Coordinates=1015,620,59,58
+Coordinates=1814,756,59,58
 
 [pListOfNoticesDoc]
-Coordinates=398,620,121,58
+Coordinates=1063,348,121,58
 
 [Button5]
-Coordinates=329,620,59,58
+Coordinates=2718,212,59,58
 
 [pPR1]
-Coordinates=2354,620,49,58
+Coordinates=1102,416,49,58
 
 [sItemizedMonthly]
-Coordinates=871,1396,115,36
+Coordinates=1460,1486,115,36
 
 [RelativePanel2]
-Coordinates=156,688,101,58
+Coordinates=178,688,101,58
 
 [Panel8]
-Coordinates=1432,688,55,58
+Coordinates=1838,824,55,58
 
 [RelativePanel4]
-Coordinates=1934,280,101,58
+Coordinates=2582,1096,101,58
 
 [dtpDateOfApproval1]
-Coordinates=503,688,131,58
+Coordinates=2303,212,131,58
 
 [Label27]
-Coordinates=2042,416,60,58
+Coordinates=870,1028,60,58
 
 [pMR2]
-Coordinates=1700,348,49,58
+Coordinates=1225,484,49,58
 
 [GroupBox2]
-Coordinates=825,10,79,58
+Coordinates=1280,620,79,58
 
 [Label34]
-Coordinates=280,552,60,58
+Coordinates=1289,1028,60,58
 
 [Label32]
-Coordinates=2333,416,60,58
+Coordinates=1147,1028,60,58
 
 [Panel22]
-Coordinates=1034,484,62,58
+Coordinates=757,824,62,58
 
 [pPR2]
-Coordinates=2435,280,49,58
+Coordinates=1087,280,49,58
 
 [pPhotoDocs]
-Coordinates=409,688,84,58
+Coordinates=1213,824,84,58
 
 [SkLabel6]
-Coordinates=10,1304,68,36
+Coordinates=217,1532,68,36
 
 [tsRelease]
-Coordinates=1779,1212,72,36
+Coordinates=435,1486,72,36
 
 [slRemWarning6]
-Coordinates=2384,1212,106,36
+Coordinates=115,1486,106,36
 
 [Panel33]
-Coordinates=962,484,62,58
+Coordinates=1756,552,62,58
 
 [Label40]
-Coordinates=1653,484,60,58
+Coordinates=143,824,60,58
 
 [GroupBox17]
-Coordinates=1139,348,86,58
+Coordinates=2610,416,86,58
 
 [RelativePanel5]
-Coordinates=927,960,101,58
+Coordinates=1690,212,101,58
 
 [pMR6]
-Coordinates=2376,756,49,58
+Coordinates=655,552,49,58
 
 [dtpDateOfApproval2]
-Coordinates=149,824,131,58
+Coordinates=1882,688,131,58
 
 [tsConduct]
-Coordinates=1414,1028,72,36
+Coordinates=2429,1486,72,36
 
 [pHeader2]
-Coordinates=2003,756,71,58
+Coordinates=2766,552,71,58
 
 [Label64]
-Coordinates=1975,824,60,58
+Coordinates=1401,416,60,58
 
 [gpForm7]
-Coordinates=646,824,66,58
+Coordinates=2423,824,66,58
 
 [Panel57]
-Coordinates=664,756,62,58
+Coordinates=848,756,62,58
 
 [gbMR6]
-Coordinates=2189,1166,56,36
+Coordinates=2806,1486,56,36
 
 [tsPosting]
-Coordinates=1100,1258,68,36
+Coordinates=2634,1578,68,36
 
 [pButtonToolbar1]
-Coordinates=2250,824,110,58
+Coordinates=391,620,110,58
 
 [lbRem6]
-Coordinates=1700,824,59,58
+Coordinates=801,1028,59,58
 
 [ScrollBox11]
-Coordinates=154,1350,83,36
+Coordinates=2472,1578,83,36
 
 [sbMR1]
-Coordinates=1348,1212,55,36
+Coordinates=1865,1532,55,36
 
 [Label65]
-Coordinates=259,620,60,58
+Coordinates=1833,348,60,58
 
 [pMOV5]
-Coordinates=1652,10,58,58
+Coordinates=2399,484,58,58
 
 [SkLabel34]
-Coordinates=1586,1212,75,36
+Coordinates=535,1394,75,36
 
 [Button1]
-Coordinates=516,960,59,58
+Coordinates=2361,960,59,58
 
 [Label63]
-Coordinates=2164,892,60,58
+Coordinates=10,892,60,58
 
 [chkbNo5]
-Coordinates=250,892,114,58
+Coordinates=1146,280,114,58
 
 [Panel64]
-Coordinates=178,892,62,58
+Coordinates=1495,348,62,58
 
 [SkLabel9]
-Coordinates=76,1258,68,36
+Coordinates=1095,1486,68,36
 
 [SkLabel11]
-Coordinates=1445,1304,75,36
+Coordinates=633,1532,75,36
 
 [SkLabel13]
-Coordinates=2269,1350,75,36
+Coordinates=2336,1394,75,36
 
 [GroupBox10]
-Coordinates=1199,552,86,58
+Coordinates=279,416,86,58
 
 [Label66]
-Coordinates=309,416,60,58
+Coordinates=203,552,60,58
 
 [stSection6]
-Coordinates=10,1350,75,36
+Coordinates=1667,1394,75,36
 
 [Label39]
-Coordinates=285,348,60,58
+Coordinates=563,824,60,58
 
 [GroupBox9]
-Coordinates=147,484,79,58
+Coordinates=751,416,79,58
 
 [Panel51]
-Coordinates=648,144,62,58
+Coordinates=1684,552,62,58
 
 [Panel26]
-Coordinates=655,960,62,58
+Coordinates=1140,960,62,58
 
 [gpForm6]
-Coordinates=406,756,66,58
+Coordinates=1514,824,66,58
 
 [gpForm5]
-Coordinates=157,416,66,58
+Coordinates=2202,824,66,58
 
 [Panel59]
-Coordinates=877,212,62,58
+Coordinates=1850,280,62,58
 
 [SkLabel16]
-Coordinates=1670,1304,75,36
+Coordinates=756,1394,75,36
 
 [chkbYes5]
-Coordinates=882,552,114,58
+Coordinates=2250,892,114,58
 
 [dbmRemarks7]
-Coordinates=1333,1258,98,36
+Coordinates=10,1440,98,36
 
 [Panel52]
-Coordinates=2243,348,62,58
+Coordinates=1892,484,62,58
 
 [lbRem7]
-Coordinates=770,892,59,58
+Coordinates=10,756,59,58
 
 [chkbC24]
-Coordinates=2270,1258,65,36
+Coordinates=1032,1394,65,36
 
 [GroupBox3]
-Coordinates=725,620,79,58
+Coordinates=840,416,79,58
 
 [pFooter]
-Coordinates=1211,960,59,58
+Coordinates=2697,280,59,58
 
 [stSection7]
-Coordinates=1377,960,75,36
+Coordinates=2370,1532,75,36
 
 [gbPR5]
-Coordinates=1870,280,54,58
+Coordinates=1920,892,54,58
 
 [ScrollBox12]
-Coordinates=1334,1396,83,36
+Coordinates=337,1578,83,36
 
 [stSection5]
-Coordinates=528,1304,75,36
+Coordinates=385,1532,75,36
 
 [Label31]
-Coordinates=1370,620,60,58
+Coordinates=566,348,60,58
 
 [SkLabel30]
-Coordinates=257,1258,75,36
+Coordinates=2052,1348,75,36
 
 [dbmRemarks6]
-Coordinates=1119,1304,98,36
+Coordinates=652,1486,98,36
 
 [PageControl3]
-Coordinates=2196,1212,93,36
+Coordinates=1564,1394,93,36
 
 [Label37]
-Coordinates=825,688,60,58
+Coordinates=2108,892,60,58
 
 [btnSave]
-Coordinates=1420,756,62,58
+Coordinates=420,892,62,58
 
 [ScrollBox13]
-Coordinates=1892,1258,83,36
+Coordinates=1471,1394,83,36
 
 [Panel24]
-Coordinates=355,348,62,58
+Coordinates=1821,1028,62,58
 
 [Panel49]
-Coordinates=2045,280,62,58
+Coordinates=2024,416,62,58
 
 [Label36]
-Coordinates=1307,348,60,58
+Coordinates=492,892,60,58
 
 [RelativePanel9]
-Coordinates=1556,756,101,58
+Coordinates=1630,620,101,58
 
 [pButtonToolbar2]
-Coordinates=427,348,110,58
+Coordinates=1828,552,110,58
 Visible=True
 
 [slTitle1]
-Coordinates=1093,1166,56,36
+Coordinates=1581,1578,56,36
 
 [stSection8]
-Coordinates=632,1212,75,36
+Coordinates=10,1394,75,36
 
 [gpForm8]
-Coordinates=2088,892,66,58
+Coordinates=2278,824,66,58
 
 [slRemWarning7]
-Coordinates=1557,1396,106,36
+Coordinates=2054,1394,106,36
 
 [pApproved]
-Coordinates=2365,484,76,58
+Coordinates=10,960,76,58
 
 [pFooter3]
-Coordinates=233,416,66,58
+Coordinates=2421,756,66,58
 
 [gbMR4]
-Coordinates=1267,1258,56,36
+Coordinates=1615,1532,56,36
 
 [chkbC17]
-Coordinates=957,1350,65,36
+Coordinates=1242,1486,65,36
 
 [chkbC16]
-Coordinates=1861,1212,65,36
+Coordinates=2628,1440,65,36
 
 [pAllocated]
-Coordinates=1819,552,75,58
+Coordinates=1864,960,75,58
 
 [pFooter4]
-Coordinates=2027,620,66,58
+Coordinates=2587,144,66,58
 
 [gbMR5]
-Coordinates=1530,1304,56,36
+Coordinates=1330,1394,56,36
 
 [pFooter5]
-Coordinates=993,348,66,58
+Coordinates=2467,484,66,58
 
 [pBarangay]
-Coordinates=1518,348,76,58
+Coordinates=2645,1028,76,58
 
 [pFooter7]
-Coordinates=80,688,66,58
+Coordinates=829,824,66,58
 
 [pMR7]
-Coordinates=710,280,49,58
+Coordinates=1082,824,49,58
 
 [sbMR7]
-Coordinates=732,1350,55,36
+Coordinates=231,1486,55,36
 
 [chkbYes9]
-Coordinates=1313,212,114,58
+Coordinates=10,484,114,58
 
 [chkbNo9]
-Coordinates=1345,280,114,58
+Coordinates=1654,280,114,58
 
 [stSection9]
-Coordinates=1236,1028,75,36
+Coordinates=724,1440,75,36
 
 [tsFunctionality]
-Coordinates=1830,1350,97,36
+Coordinates=84,1624,97,36
 
 [tsExtentPrep]
-Coordinates=1138,1028,88,36
+Coordinates=10,1532,88,36
 
 [tsExtentRisk]
-Coordinates=2021,1212,86,36
+Coordinates=2791,1532,86,36
 
 [stSection10]
-Coordinates=1242,1396,82,36
+Coordinates=260,1394,82,36
 
 [Shape1]
-Coordinates=269,1166,59,36
+Coordinates=1232,1440,59,36
 
 [Label108]
-Coordinates=1038,960,67,58
+Coordinates=2130,756,67,58
 
 [chkbCertification]
-Coordinates=149,1166,110,36
+Coordinates=2209,1578,110,36
 
 [Label43]
-Coordinates=10,756,60,58
+Coordinates=82,1096,60,58
 
 [slCMR1]
-Coordinates=79,1166,60,36
+Coordinates=1198,1578,60,36
 
 [slFMR7]
-Coordinates=10,1166,59,36
+Coordinates=879,1532,59,36
 
 [gbPR6]
-Coordinates=80,620,54,58
+Coordinates=741,1096,54,58
 
 [edAmountAllocated]
-Coordinates=2410,1120,126,36
+Coordinates=620,1394,126,36
 
 [Label56]
-Coordinates=1239,10,60,58
+Coordinates=318,1096,60,58
 
 [edAmountOfBDRRMF]
-Coordinates=2259,1120,141,36
+Coordinates=430,1578,141,36
 
 [GroupBox38]
-Coordinates=2084,756,86,58
+Coordinates=1184,620,86,58
 
 [Panel47]
-Coordinates=1074,892,62,58
+Coordinates=2731,1028,62,58
 
 [Label49]
-Coordinates=1459,484,60,58
+Coordinates=2479,1028,60,58
 
 [gbMR3]
-Coordinates=2193,1120,56,36
+Coordinates=268,1440,56,36
 
 [slFMR3]
-Coordinates=2124,1120,59,36
+Coordinates=2360,1486,59,36
 
 [Label105]
-Coordinates=814,620,67,58
+Coordinates=528,1096,67,58
 
 [Panel11]
-Coordinates=2288,552,62,58
+Coordinates=1600,1028,62,58
 
 [Panel16]
-Coordinates=1904,552,62,58
+Coordinates=1528,1028,62,58
 
 [Panel39]
-Coordinates=1469,280,62,58
+Coordinates=1012,1028,62,58
 
 [edPercentOfPrograms]
-Coordinates=1972,1120,142,36
+Coordinates=1900,1348,142,36
 
 [chkbNo6]
-Coordinates=1106,484,114,58
+Coordinates=519,1028,114,58
 
 [Shape3]
-Coordinates=1903,1120,59,36
+Coordinates=583,1486,59,36
 
 [Label52]
-Coordinates=1917,484,60,58
+Coordinates=753,212,60,58
 
 [Label50]
-Coordinates=1135,416,60,58
+Coordinates=82,1028,60,58
 
 [chkbC32]
-Coordinates=1828,1120,65,36
+Coordinates=912,1440,65,36
 
 [Panel41]
-Coordinates=2174,144,62,58
+Coordinates=10,1028,62,58
 
 [lbCYYear2]
-Coordinates=543,552,77,58
+Coordinates=2535,212,77,58
 
 [chkbYes8]
-Coordinates=2119,348,114,58
+Coordinates=1740,960,114,58
 
 [slCMR9]
-Coordinates=1758,1120,60,36
+Coordinates=2005,1532,60,36
 
 [dbmRemarks8]
-Coordinates=1650,1120,98,36
+Coordinates=2075,1532,98,36
 
 [GroupBox36]
-Coordinates=10,960,86,58
+Coordinates=2601,280,86,58
 
 [chkbAnnualBDRRMF]
-Coordinates=1504,1120,136,36
+Coordinates=2792,1440,136,36
 
 [GroupBox4]
-Coordinates=965,824,79,58
+Coordinates=1200,688,79,58
 
 [slRemWarning8]
-Coordinates=1388,1120,106,36
+Coordinates=415,1624,106,36
 
 [Panel13]
-Coordinates=1146,892,62,58
+Coordinates=1742,756,62,58
 
 [slRemWarning5]
-Coordinates=1272,1120,106,36
+Coordinates=1647,1578,106,36
 
 [Label46]
-Coordinates=2451,484,60,58
+Coordinates=680,960,60,58
 
 [GroupBox37]
-Coordinates=690,348,86,58
+Coordinates=303,960,86,58
 
 [RelativePanel16]
-Coordinates=441,212,108,58
+Coordinates=96,960,108,58
 
 [Label55]
-Coordinates=2086,688,60,58
+Coordinates=2726,892,60,58
 
 [Label42]
-Coordinates=2404,348,60,58
+Coordinates=2525,892,60,58
 
 [slRMR2]
-Coordinates=1202,1120,60,36
+Coordinates=1385,1532,60,36
 
 [chkbC27]
-Coordinates=1127,1120,65,36
+Coordinates=2189,1348,65,36
 
 [Label106]
-Coordinates=2345,892,67,58
+Coordinates=2626,484,67,58
 
 [Label57]
-Coordinates=336,756,60,58
+Coordinates=2435,280,60,58
 
 [chkbC31]
-Coordinates=1052,1120,65,36
+Coordinates=1055,1578,65,36
 
 [Panel29]
-Coordinates=1769,824,62,58
+Coordinates=419,824,62,58
 
 [GroupBox12]
-Coordinates=2174,212,86,58
+Coordinates=2704,688,86,58
 
 [chkbC30]
-Coordinates=977,1120,65,36
+Coordinates=409,1440,65,36
 
 [DateTimePicker3]
-Coordinates=1512,620,113,58
+Coordinates=1883,756,113,58
 
 [slConsideration]
-Coordinates=863,1120,104,36
+Coordinates=941,1578,104,36
 
 [edEstimatedRev]
-Coordinates=744,1120,109,36
+Coordinates=2356,1440,109,36
 
 [slAMR2]
-Coordinates=675,1120,59,36
+Coordinates=1317,1486,59,36
 
 [slRMR3]
-Coordinates=605,1120,60,36
+Coordinates=197,1578,60,36
 
 [chkbNoAcc]
-Coordinates=1075,552,114,58
+Coordinates=1114,756,114,58
 
 [slMOV3]
-Coordinates=535,1120,60,36
+Coordinates=1568,1440,60,36
 
 [Panel40]
-Coordinates=1002,892,62,58
+Coordinates=504,756,62,58
 
 [chkbC29]
-Coordinates=460,1120,65,36
+Coordinates=841,1394,65,36
 
 [slRMR1]
-Coordinates=390,1120,60,36
+Coordinates=2586,1486,60,36
 
 [slRMR6]
-Coordinates=320,1120,60,36
+Coordinates=1933,1440,60,36
 
 [CheckBox16]
-Coordinates=2045,824,114,58
+Coordinates=990,756,114,58
 
 [Label54]
-Coordinates=1208,756,60,58
+Coordinates=1107,144,60,58
 
 [Panel44]
-Coordinates=2440,824,62,58
+Coordinates=2178,892,62,58
 
 [Label102]
-Coordinates=1200,144,67,58
+Coordinates=1573,688,67,58
 
 [chkbC37]
-Coordinates=245,1120,65,36
+Coordinates=352,1394,65,36
 
 [GroupBox33]
-Coordinates=1759,348,86,58
+Coordinates=1034,688,86,58
 
 [chkbC36]
-Coordinates=170,1120,65,36
+Coordinates=2455,1532,65,36
 
 [Label107]
-Coordinates=2011,892,67,58
+Coordinates=2237,144,67,58
 
 [SkLabel26]
-Coordinates=85,1120,75,36
+Coordinates=2271,1440,75,36
 
 [chkbC38]
-Coordinates=10,1120,65,36
+Coordinates=2731,1486,65,36
 
 [lbRem5]
-Coordinates=2422,892,59,58
+Coordinates=611,960,59,58
 
 [chkbCertificationSub]
-Coordinates=2363,1074,133,36
+Coordinates=948,1532,133,36
 
 [slFMR2]
-Coordinates=2294,1074,59,36
+Coordinates=191,1394,59,36
 
 [GroupBox7]
-Coordinates=794,824,79,58
+Coordinates=2058,620,79,58
 
 [slMOV4]
-Coordinates=2224,1074,60,36
+Coordinates=1169,1532,60,36
 
 [Label61]
-Coordinates=134,212,60,58
+Coordinates=350,892,60,58
 
 [slPMR1]
-Coordinates=2155,1074,59,36
+Coordinates=1173,1486,59,36
 
 [Label60]
-Coordinates=10,620,60,58
+Coordinates=876,620,60,58
 
 [chkbAccRep]
-Coordinates=2059,1074,86,36
+Coordinates=95,1394,86,36
 
 [Panel35]
-Coordinates=705,416,62,58
+Coordinates=223,620,62,58
 
 [Label44]
-Coordinates=736,756,60,58
+Coordinates=2696,552,60,58
 
 [GroupBox34]
-Coordinates=306,484,86,58
+Coordinates=2505,280,86,58
 
 [SkLabel24]
-Coordinates=1974,1074,75,36
+Coordinates=1530,1532,75,36
 
 [Label47]
-Coordinates=10,348,60,58
+Coordinates=2012,552,60,58
 
 [chkbC33]
-Coordinates=1899,1074,65,36
+Coordinates=1830,1394,65,36
 
 [slMOV7]
-Coordinates=1829,1074,60,36
+Coordinates=2650,1394,60,36
 
 [Shape4]
-Coordinates=1760,1074,59,36
+Coordinates=366,1486,59,36
 
 [chkbC28]
-Coordinates=1685,1074,65,36
+Coordinates=2475,1440,65,36
 
 [Panel2]
-Coordinates=271,756,55,58
+Coordinates=446,552,55,58
 
 [gbMR2]
-Coordinates=1619,1074,56,36
+Coordinates=517,1486,56,36
 
 [Panel17]
-Coordinates=1343,824,62,58
+Coordinates=2780,484,62,58
 
 [SkLabel23]
-Coordinates=1534,1074,75,36
+Coordinates=548,1532,75,36
 
 [Label48]
-Coordinates=1905,824,60,58
+Coordinates=2087,484,60,58
 
 [Panel36]
-Coordinates=630,552,62,58
+Coordinates=106,688,62,58
 
 [Label59]
-Coordinates=1350,756,60,58
+Coordinates=248,1096,60,58
 
 [Label41]
-Coordinates=777,416,60,58
+Coordinates=1608,484,60,58
 
 [chkbC26]
-Coordinates=1459,1074,65,36
+Coordinates=2170,1394,65,36
 
 [slRMR5]
-Coordinates=1389,1074,60,36
+Coordinates=2189,1486,60,36
 
 [edCYYear2]
-Coordinates=1298,1074,81,36
+Coordinates=1764,1486,81,36
 
 [Label53]
-Coordinates=1933,756,60,58
+Coordinates=2400,416,60,58
 
 [RelativePanel6]
-Coordinates=644,688,101,58
+Coordinates=2289,416,101,58
 
 [Panel43]
-Coordinates=479,280,62,58
+Coordinates=2363,280,62,58
 
 [slMOV5]
-Coordinates=1228,1074,60,36
+Coordinates=1703,1348,60,36
 
 [lbCYYear1]
-Coordinates=290,824,77,58
+Coordinates=1541,416,77,58
 
 [slFMR6]
-Coordinates=1159,1074,59,36
+Coordinates=1763,1578,59,36
 
 [slFMR4]
-Coordinates=1090,1074,59,36
+Coordinates=2565,1578,59,36
 
 [Label45]
-Coordinates=267,688,60,58
+Coordinates=388,1096,60,58
 
 [chkbC25]
-Coordinates=1015,1074,65,36
+Coordinates=334,1440,65,36
 
 [SkLabel25]
-Coordinates=930,1074,75,36
+Coordinates=2285,1532,75,36
 
 [GroupBox13]
-Coordinates=839,892,86,58
+Coordinates=1006,416,86,58
 
 [Panel1]
-Coordinates=581,824,55,58
+Coordinates=859,484,55,58
 
 [RelativePanel7]
-Coordinates=2234,892,101,58
+Coordinates=640,416,101,58
 
 [slMOV6]
-Coordinates=860,1074,60,36
+Coordinates=296,1486,60,36
 
 [CheckBox15]
-Coordinates=80,552,114,58
+Coordinates=447,416,114,58
 
 [chkbYesAcc]
-Coordinates=2311,280,114,58
+Coordinates=2030,960,114,58
 
 [Label103]
-Coordinates=1372,552,67,58
+Coordinates=2119,348,67,58
 
 [slMOV2]
-Coordinates=790,1074,60,36
+Coordinates=2003,1440,60,36
 
 [Panel37]
-Coordinates=1226,620,62,58
+Coordinates=1567,348,62,58
 
 [slRMR4]
-Coordinates=720,1074,60,36
+Coordinates=267,1578,60,36
 
 [Shape9]
-Coordinates=651,1074,59,36
+Coordinates=2506,1394,59,36
 
 [edAmountUtilized]
-Coordinates=525,1074,116,36
+Coordinates=1855,1486,116,36
 
 [slFMR1]
-Coordinates=456,1074,59,36
+Coordinates=951,1486,59,36
 
 [GroupBox14]
-Coordinates=379,416,86,58
+Coordinates=587,212,86,58
 
 [chkbYes6]
-Coordinates=1729,144,114,58
+Coordinates=2239,280,114,58
 
 [Label29]
-Coordinates=80,144,60,58
+Coordinates=2045,280,60,58
 
 [Label51]
-Coordinates=1854,416,60,58
+Coordinates=964,688,60,58
 
 [GroupBox35]
-Coordinates=794,484,86,58
+Coordinates=2572,960,86,58
 
 [chkbNo8]
-Coordinates=1630,892,114,58
+Coordinates=1590,824,114,58
 
 [RelativePanel8]
-Coordinates=1074,280,101,58
+Coordinates=1471,280,101,58
 
 [slIMR1]
-Coordinates=391,1074,55,36
+Coordinates=2069,1578,55,36
 
 [chkbC34]
-Coordinates=316,1074,65,36
+Coordinates=2339,1348,65,36
 
 [slFMR5]
-Coordinates=247,1074,59,36
+Coordinates=987,1440,59,36
 
 [SkLabel22]
-Coordinates=162,1074,75,36
+Coordinates=2421,1394,75,36
 
 [Label104]
-Coordinates=10,416,67,58
+Coordinates=288,280,67,58
 
 [slCMR10]
-Coordinates=85,1074,67,36
+Coordinates=647,1440,67,36
 
 [chkbYes7]
-Coordinates=891,620,114,58
+Coordinates=152,348,114,58
 
 [Panel45]
-Coordinates=1732,756,62,58
+Coordinates=2279,756,62,58
 
 [chkbC35]
-Coordinates=10,1074,65,36
+Coordinates=2134,1578,65,36
 
 [GroupBox39]
-Coordinates=1783,620,86,58
+Coordinates=1418,824,86,58
 
 [Label58]
-Coordinates=640,280,60,58
+Coordinates=269,756,60,58
 
 [Label101]
-Coordinates=234,280,67,58
+Coordinates=1016,212,67,58
 
 [lbRem8]
-Coordinates=727,960,59,58
+Coordinates=823,212,59,58
 
 [edCYYear1]
-Coordinates=2381,1028,81,36
+Coordinates=2530,1532,81,36
 
 [dbmRemarks5]
-Coordinates=2273,1028,98,36
+Coordinates=427,1394,98,36
 
 [Panel27]
-Coordinates=1854,212,62,58
+Coordinates=922,144,62,58
 
 [chkbNo7]
-Coordinates=267,960,114,58
+Coordinates=1796,892,114,58
 
 [GroupBox1]
-Coordinates=289,144,79,58
+Coordinates=498,144,79,58
 
 [slAMR1]
-Coordinates=2204,1028,59,36
+Coordinates=2737,1348,59,36
 
 [RelativePanel15]
-Coordinates=769,280,108,58
+Coordinates=168,144,108,58
 
 [slMOV1]
-Coordinates=2134,1028,60,36
+Coordinates=803,1578,60,36
 
 [chkbNoRes]
-Coordinates=1117,212,114,58
+Coordinates=1222,552,114,58
 
 [dbmRemarks9]
-Coordinates=945,1028,98,36
+Coordinates=1740,1440,98,36
 
 [chkbC40]
-Coordinates=870,1028,65,36
+Coordinates=531,1624,65,36
 
 [chkbYesFir]
-Coordinates=1605,144,114,58
+Coordinates=463,212,114,58
 
 [Panel19]
-Coordinates=2102,144,62,58
+Coordinates=803,688,62,58
 
 [chkbYesRes]
-Coordinates=1309,10,114,58
+Coordinates=2497,756,114,58
 
 [chkbNo10]
-Coordinates=10,212,114,58
+Coordinates=850,348,114,58
 
 [chkbNoPer]
-Coordinates=914,10,114,58
+Coordinates=904,552,114,58
 
 [Label62]
-Coordinates=2270,212,60,58
+Coordinates=1437,212,60,58
 
 [skRescueVec]
-Coordinates=767,1028,93,36
+Coordinates=809,1440,93,36
 
 [slGenerator]
-Coordinates=675,1028,82,36
+Coordinates=1977,1578,82,36
 
 [Label70]
-Coordinates=807,212,60,58
+Coordinates=2502,960,60,58
 
 [chkbYes10]
-Coordinates=2202,10,114,58
+Coordinates=587,144,114,58
 
 [Label109]
-Coordinates=2029,10,67,58
+Coordinates=1341,348,67,58
 
 [chkbYesPer]
-Coordinates=1437,212,114,58
+Coordinates=724,756,114,58
 
 [GroupBox16]
-Coordinates=345,212,86,58
+Coordinates=2306,1028,86,58
 
 [GroupBox40]
-Coordinates=949,212,86,58
+Coordinates=2416,1096,86,58
 
 [Label68]
-Coordinates=755,10,60,58
+Coordinates=1257,892,60,58
 
 [gpMultiCheckbox]
-Coordinates=1853,144,113,58
+Coordinates=2327,348,113,58
 
 [skCommunicaitonEqu]
-Coordinates=526,1028,139,36
+Coordinates=1905,1394,139,36
 
 [Label69]
-Coordinates=1784,212,60,58
+Coordinates=1445,892,60,58
 
 [lbRem10]
-Coordinates=150,144,66,58
+Coordinates=2091,144,66,58
 
 [Panel15]
-Coordinates=1128,144,62,58
+Coordinates=2255,348,62,58
 
 [SkLabel1]
-Coordinates=448,1028,68,36
+Coordinates=2111,1486,68,36
 
 [Panel25]
-Coordinates=576,144,62,58
+Coordinates=522,484,62,58
 
 [lbRem9]
-Coordinates=204,212,59,58
+Coordinates=2354,824,59,58
 
 [slRemWarning10]
-Coordinates=325,1028,113,36
+Coordinates=2148,1440,113,36
 
 [chkbYesCom]
-Coordinates=121,10,114,58
+Coordinates=1418,552,114,58
 
 [edTopH1]
-Coordinates=248,1028,67,36
+Coordinates=1375,1440,67,36
 
 [chkbC43]
-Coordinates=173,1028,65,36
+Coordinates=1455,1532,65,36
 
 [SkLabel5]
-Coordinates=95,1028,68,36
+Coordinates=2550,1440,68,36
 
 [GroupBox41]
-Coordinates=2315,144,86,58
+Coordinates=10,212,86,58
 
 [SkLabel31]
-Coordinates=10,1028,75,36
+Coordinates=1430,1578,75,36
 
 [Label67]
-Coordinates=10,144,60,58
+Coordinates=2512,1096,60,58
 
 [chkbC44]
-Coordinates=2401,960,65,36
+Coordinates=2558,1348,65,36
 
 [edTopH2]
-Coordinates=2324,960,67,36
+Coordinates=1268,1578,67,36
 
 [chkbC41]
-Coordinates=2249,960,65,36
+Coordinates=2815,1578,65,36
 
 [chkbC42]
-Coordinates=2174,960,65,36
+Coordinates=2073,1440,65,36
 
 [Label111]
-Coordinates=1162,10,67,58
+Coordinates=134,280,67,58
 
 [Label114]
-Coordinates=378,144,67,58
+Coordinates=1000,960,67,58
 
 [SkLabel4]
-Coordinates=2096,960,68,36
+Coordinates=1307,1532,68,36
 
 [GroupBox19]
-Coordinates=1277,144,86,58
+Coordinates=2103,1096,86,58
 
 [GroupBox18]
-Coordinates=720,144,86,58
+Coordinates=367,212,86,58
 
 [RelativePanel17]
-Coordinates=637,10,108,58
+Coordinates=1327,892,108,58
 
 [GroupBox11]
-Coordinates=1556,10,86,58
+Coordinates=2193,416,86,58
 
 [slFlashlight]
-Coordinates=1921,960,80,36
+Coordinates=295,1532,80,36
 
 [Panel21]
-Coordinates=1241,212,62,58
+Coordinates=2086,1028,62,58
 
 [chkbNoGen]
-Coordinates=1926,212,114,58
+Coordinates=609,688,114,58
 
 [GroupBox15]
-Coordinates=1720,10,86,58
+Coordinates=1962,620,86,58
 
 [chkbYesGen]
-Coordinates=315,10,114,58
+Coordinates=152,1028,114,58
 
 [slRemWarning9]
-Coordinates=1805,960,106,36
+Coordinates=835,1486,106,36
 
 [chkbNoFla]
-Coordinates=2050,212,114,58
+Coordinates=99,620,114,58
 
 [Panel28]
-Coordinates=2429,212,62,58
+Coordinates=869,280,62,58
 
 [SkLabel35]
-Coordinates=1720,960,75,36
+Coordinates=2706,1532,75,36
 
 [chkbNoCom]
-Coordinates=939,144,114,58
+Coordinates=2763,1096,114,58
 
 [slFirstAid]
-Coordinates=1642,960,68,36
+Coordinates=569,1440,68,36
 
 [chkbC39]
-Coordinates=1567,960,65,36
+Coordinates=2575,1394,65,36
 
 [chkbNoFir]
-Coordinates=559,212,114,58
+Coordinates=1228,1096,114,58
 
 [slPersonalPro]
-Coordinates=1462,960,95,36
+Coordinates=10,1486,95,36
 
 [chkbYesFla]
-Coordinates=1905,10,114,58
+Coordinates=1639,348,114,58
 
 [Label110]
-Coordinates=1637,212,67,58
+Coordinates=1813,620,67,58
 
 [dbmRemarks10]
-Coordinates=2011,960,75,36
+Coordinates=1107,1394,105,36
 Visible=True
 
 [gpForm9]
-Coordinates=793,552,79,58
+Coordinates=1587,892,66,58
 
 [gpForm10]
-Coordinates=1119,756,79,58
+Coordinates=2543,484,73,58
+
+[Label113]
+Coordinates=2430,552,67,58
+
+[Panel65]
+Coordinates=708,348,62,58
+
+[Panel50]
+Coordinates=79,756,62,58
+
+[Shape12]
+Coordinates=1524,1348,66,36
+
+[Panel97]
+Coordinates=1801,212,62,58
+
+[DBCheckBox1]
+Coordinates=1416,1348,98,36
+
+[Panel79]
+Coordinates=1582,280,62,58
+
+[Label137]
+Coordinates=929,416,67,58
+
+[Button4]
+Coordinates=2330,484,59,58
+
+[DBCheckBox3]
+Coordinates=1308,1348,98,36
+
+[Button11]
+Coordinates=1093,212,66,58
+
+[Panel62]
+Coordinates=509,280,62,58
+
+[Panel94]
+Coordinates=1169,212,62,58
+
+[Label86]
+Coordinates=69,416,60,58
+
+[Panel76]
+Coordinates=2580,620,62,58
+
+[DBCheckBox9]
+Coordinates=1026,1348,98,36
+
+[Panel30]
+Coordinates=1678,484,62,58
+
+[CheckBox17]
+Coordinates=2463,144,114,58
+
+[Label87]
+Coordinates=2219,620,60,58
+
+[CheckBox18]
+Coordinates=1484,484,114,58
+
+[DateTimePicker4]
+Coordinates=1499,144,113,58
+
+[GridPanel2]
+Coordinates=2230,552,79,58
+
+[GridPanel1]
+Coordinates=1766,1096,79,58
+
+[DBCheckBox14]
+Coordinates=911,1348,105,36
+
+[SkLabel46]
+Coordinates=826,1348,75,36
+
+[DBCheckBox4]
+Coordinates=718,1348,98,36
+
+[Label91]
+Coordinates=1515,756,60,58
+
+[RelativePanel10]
+Coordinates=1759,416,108,58
+
+[GroupBox31]
+Coordinates=408,756,86,58
+
+[SkLabel15]
+Coordinates=633,1348,75,36
+
+[pFooterEnd]
+Coordinates=286,144,82,58
+
+[Label92]
+Coordinates=1357,960,60,58
+
+[Label78]
+Coordinates=496,348,60,58
+
+[DBCheckBox19]
+Coordinates=518,1348,105,36
+
+[Panel96]
+Coordinates=636,348,62,58
+
+[DBCheckBox5]
+Coordinates=410,1348,98,36
+
+[DBCheckBox16]
+Coordinates=295,1348,105,36
+
+[DBCheckBox20]
+Coordinates=180,1348,105,36
+
+[CheckBox5]
+Coordinates=2023,688,114,58
+
+[Label122]
+Coordinates=2729,144,67,58
+
+[SkLabel49]
+Coordinates=95,1348,75,36
+
+[RelativePanel19]
+Coordinates=1352,1096,108,58
+
+[SkLabel48]
+Coordinates=10,1348,75,36
+
+[Panel58]
+Coordinates=652,756,62,58
+
+[GridPanel3]
+Coordinates=214,960,79,58
+
+[Panel84]
+Coordinates=1365,212,62,58
+
+[Label93]
+Coordinates=289,688,60,58
+
+[Button3]
+Coordinates=2741,620,59,58
+
+[SkLabel70]
+Coordinates=2724,1302,75,36
+
+[Panel38]
+Coordinates=940,1028,62,58
+
+[Label132]
+Coordinates=1233,416,67,58
+
+[PageControl4]
+Coordinates=2621,1302,93,36
+
+[SkLabel61]
+Coordinates=2536,1302,75,36
+
+[Shape7]
+Coordinates=2467,1302,59,36
+
+[Label120]
+Coordinates=2522,348,67,58
+
+[StaticText6]
+Coordinates=2378,1302,79,36
+
+[GroupBox43]
+Coordinates=2207,212,86,58
+
+[SkLabel69]
+Coordinates=2293,1302,75,36
+
+[StaticText4]
+Coordinates=2204,1302,79,36
+
+[chkbC45]
+Coordinates=2129,1302,65,36
+
+[Panel87]
+Coordinates=2314,144,62,58
+
+[Panel82]
+Coordinates=1893,1028,62,58
+
+[Label125]
+Coordinates=1746,688,67,58
+
+[DBCheckBox24]
+Coordinates=1927,1302,105,36
+
+[GridPanel4]
+Coordinates=2082,552,79,58
+
+[SkLabel36]
+Coordinates=1842,1302,75,36
+
+[Label139]
+Coordinates=10,144,67,58
+
+[SkLabel41]
+Coordinates=1757,1302,75,36
+
+[SkLabel56]
+Coordinates=1672,1302,75,36
+
+[stSection11]
+Coordinates=1580,1302,82,36
+
+[SkLabel57]
+Coordinates=1495,1302,75,36
+
+[SkLabel19]
+Coordinates=1410,1302,75,36
+
+[GroupBox23]
+Coordinates=1177,144,86,58
+
+[SkLabel64]
+Coordinates=1325,1302,75,36
+
+[Label74]
+Coordinates=1130,688,60,58
+
+[DBCheckBox18]
+Coordinates=1210,1302,105,36
+
+[GridPanel7]
+Coordinates=1361,688,79,58
+
+[chkbYes11]
+Coordinates=633,824,114,58
+
+[TabSheet7]
+Coordinates=1123,1302,77,36
+
+[CheckBox7]
+Coordinates=1347,280,114,58
+
+[DBCheckBox17]
+Coordinates=1008,1302,105,36
+
+[Label71]
+Coordinates=2291,960,60,58
+
+[DBCheckBox32]
+Coordinates=893,1302,105,36
+
+[SkLabel28]
+Coordinates=808,1302,75,36
+
+[Label130]
+Coordinates=1947,416,67,58
+
+[lbFooterEnd]
+Coordinates=706,1028,85,58
+
+[DBCheckBox21]
+Coordinates=693,1302,105,36
+
+[Shape5]
+Coordinates=624,1302,59,36
+
+[Shape13]
+Coordinates=548,1302,66,36
+
+[Panel71]
+Coordinates=2147,620,62,58
+
+[Label119]
+Coordinates=2766,280,67,58
+
+[DBCheckBox29]
+Coordinates=433,1302,105,36
+
+[DBCheckBox6]
+Coordinates=325,1302,98,36
+
+[DBCheckBox27]
+Coordinates=210,1302,105,36
+
+[DBCheckBox31]
+Coordinates=95,1302,105,36
+
+[SkLabel38]
+Coordinates=10,1302,75,36
+
+[pFooterEnd2]
+Coordinates=562,892,89,58
+
+[Panel77]
+Coordinates=2047,348,62,58
+
+[SkLabel62]
+Coordinates=2759,1256,75,36
+
+[SkLabel12]
+Coordinates=2674,1256,75,36
+
+[Button13]
+Coordinates=1000,484,66,58
+
+[SkLabel40]
+Coordinates=2589,1256,75,36
+
+[Shape14]
+Coordinates=2513,1256,66,36
+
+[Label118]
+Coordinates=369,552,67,58
+
+[DBMemo7]
+Coordinates=2428,1256,75,36
+
+[DBCheckBox28]
+Coordinates=2313,1256,105,36
+
+[SkLabel65]
+Coordinates=2228,1256,75,36
+
+[Panel32]
+Coordinates=10,348,62,58
+
+[Panel95]
+Coordinates=1668,960,62,58
+
+[DBCheckBox8]
+Coordinates=2120,1256,98,36
+
+[GroupBox47]
+Coordinates=1369,620,86,58
+
+[SkLabel52]
+Coordinates=2035,1256,75,36
+
+[SkLabel39]
+Coordinates=1950,1256,75,36
+
+[GroupBox20]
+Coordinates=10,688,86,58
+
+[Label98]
+Coordinates=287,484,60,58
+
+[lbTransmittals]
+Coordinates=905,824,95,58
+
+[Shape15]
+Coordinates=1874,1256,66,36
+
+[Panel89]
+Coordinates=1346,552,62,58
+
+[Panel92]
+Coordinates=1010,824,62,58
+
+[GroupBox24]
+Coordinates=2157,484,86,58
+
+[Panel67]
+Coordinates=1141,824,62,58
+
+[DBCheckBox7]
+Coordinates=1766,1256,98,36
+
+[Label96]
+Coordinates=2351,756,60,58
+
+[GroupBox27]
+Coordinates=152,1096,86,58
+
+[DBCheckBox15]
+Coordinates=1651,1256,105,36
+
+[Panel66]
+Coordinates=1778,280,62,58
+
+[Label133]
+Coordinates=1010,280,67,58
+
+[GroupBox30]
+Coordinates=295,620,86,58
+
+[Label121]
+Coordinates=2623,824,67,58
+
+[SkLabel50]
+Coordinates=1566,1256,75,36
+
+[DateTimePicker7]
+Coordinates=1545,960,113,58
+
+[Label76]
+Coordinates=2700,824,60,58
+
+[GroupBox53]
+Coordinates=1903,824,86,58
+
+[Panel31]
+Coordinates=1741,620,62,58
+
+[GroupBox51]
+Coordinates=1995,144,86,58
+
+[pHeader3]
+Coordinates=87,144,71,58
+
+[ScrollBox4]
+Coordinates=1480,1256,76,36
+
+[Panel55]
+Coordinates=832,552,62,58
+
+[Label123]
+Coordinates=1270,280,67,58
+
+[Shape8]
+Coordinates=1411,1256,59,36
+
+[Panel85]
+Coordinates=2450,348,62,58
+
+[Label80]
+Coordinates=1114,620,60,58
+
+[Panel48]
+Coordinates=365,280,62,58
+
+[Panel93]
+Coordinates=2668,960,62,58
+
+[GroupBox22]
+Coordinates=2796,892,86,58
+
+[Panel78]
+Coordinates=2654,892,62,58
+
+[Panel54]
+Coordinates=437,280,62,58
+
+[lbRem11]
+Coordinates=924,484,66,58
+
+[SkLabel43]
+Coordinates=1326,1256,75,36
+
+[Label141]
+Coordinates=2470,416,67,58
+
+[SkLabel27]
+Coordinates=1241,1256,75,36
+
+[Panel34]
+Coordinates=347,824,62,58
+
+[Panel61]
+Coordinates=1515,892,62,58
+
+[Panel42]
+Coordinates=787,484,62,58
+
+[Label143]
+Coordinates=357,484,67,58
+
+[SkLabel54]
+Coordinates=1156,1256,75,36
+
+[Panel60]
+Coordinates=2803,1028,62,58
+
+[DBCheckBox30]
+Coordinates=1041,1256,105,36
+
+[Label117]
+Coordinates=2386,144,67,58
+
+[ScrollBox6]
+Coordinates=955,1256,76,36
+
+[Panel90]
+Coordinates=511,552,62,58
+
+[CheckBox12]
+Coordinates=1999,824,114,58
+
+[Label81]
+Coordinates=581,280,60,58
+
+[DBGrid3]
+Coordinates=881,1256,64,36
+
+[Shape2]
+Coordinates=812,1256,59,36
+
+[SkLabel67]
+Coordinates=727,1256,75,36
+
+[SkLabel60]
+Coordinates=642,1256,75,36
+
+[GroupBox42]
+Coordinates=826,144,86,58
+
+[Label140]
+Coordinates=792,280,67,58
+
+[Label73]
+Coordinates=1763,348,60,58
+
+[tsSPO]
+Coordinates=581,1256,51,36
+
+[slRemWarning11]
+Coordinates=458,1256,113,36
+
+[Shape16]
+Coordinates=382,1256,66,36
+
+[SkLabel63]
+Coordinates=297,1256,75,36
+
+[TabSheet6]
+Coordinates=95,1256,77,36
+
+[RelativePanel18]
+Coordinates=1962,212,108,58
+
+[SkLabel55]
+Coordinates=10,1256,75,36
+
+[SkLabel68]
+Coordinates=2762,1210,75,36
+
+[Label82]
+Coordinates=1750,484,60,58
+
+[Label135]
+Coordinates=2402,1028,67,58
+
+[Label136]
+Coordinates=134,484,67,58
+
+[GridPanel5]
+Coordinates=1873,212,79,58
+
+[Panel86]
+Coordinates=1345,144,62,58
+
+[Label127]
+Coordinates=2275,1096,67,58
+
+[Label79]
+Coordinates=2621,756,60,58
+
+[DBMemo2]
+Coordinates=2677,1210,75,36
+
+[Button2]
+Coordinates=941,280,59,58
+
+[SkLabel33]
+Coordinates=2592,1210,75,36
+
+[GroupBox54]
+Coordinates=904,960,86,58
+
+[SkLabel21]
+Coordinates=2507,1210,75,36
+
+[Panel88]
+Coordinates=1273,144,62,58
+
+[CheckBox11]
+Coordinates=1098,552,114,58
+
+[dbmRemarks11]
+Coordinates=2392,1210,105,36
+
+[Panel53]
+Coordinates=1289,688,62,58
+
+[GroupBox29]
+Coordinates=2599,348,86,58
+
+[GroupBox45]
+Coordinates=1008,1096,86,58
+
+[Panel68]
+Coordinates=651,280,62,58
+
+[CheckBox8]
+Coordinates=372,348,114,58
+
+[Button12]
+Coordinates=2199,1096,66,58
+
+[StaticText7]
+Coordinates=2303,1210,79,36
+
+[DBCheckBox10]
+Coordinates=2188,1210,105,36
+
+[Panel23]
+Coordinates=1890,620,62,58
+
+[GroupBox52]
+Coordinates=2549,1028,86,58
+
+[Panel74]
+Coordinates=1903,348,62,58
+
+[Label115]
+Coordinates=1284,484,67,58
+
+[SkLabel47]
+Coordinates=2103,1210,75,36
+
+[GroupBox50]
+Coordinates=1356,756,86,58
+
+[CheckBox4]
+Coordinates=2006,756,114,58
+
+[Label97]
+Coordinates=1028,552,60,58
+
+[GroupBox55]
+Coordinates=2622,212,86,58
+
+[StaticText3]
+Coordinates=2014,1210,79,36
+
+[GroupBox44]
+Coordinates=946,620,86,58
+
+[GridPanel6]
+Coordinates=10,620,79,58
+
+[DateTimePicker2]
+Coordinates=1922,280,113,58
+
+[SkLabel7]
+Coordinates=1936,1210,68,36
+
+[Shape10]
+Coordinates=1860,1210,66,36
+
+[SkLabel53]
+Coordinates=1775,1210,75,36
+
+[SkLabel51]
+Coordinates=1690,1210,75,36
+
+[Label77]
+Coordinates=2706,416,60,58
+
+[Label89]
+Coordinates=2289,620,60,58
+
+[SkLabel59]
+Coordinates=1605,1210,75,36
+
+[SkLabel29]
+Coordinates=1520,1210,75,36
+
+[Label84]
+Coordinates=683,212,60,58
+
+[CheckBox10]
+Coordinates=1855,1096,114,58
+
+[chkbNo11]
+Coordinates=10,280,114,58
+
+[SkLabel17]
+Coordinates=1435,1210,75,36
+
+[DateTimePicker6]
+Coordinates=1361,484,113,58
+
+[DBCheckBox2]
+Coordinates=1327,1210,98,36
+
+[Label99]
+Coordinates=82,348,60,58
+
+[Label142]
+Coordinates=2253,484,67,58
+
+[RelativePanel20]
+Coordinates=1238,756,108,58
+
+[GroupBox46]
+Coordinates=276,348,86,58
+
+[DBGrid5]
+Coordinates=1253,1210,64,36
+
+[CheckBox6]
+Coordinates=2572,552,114,58
+
+[Label116]
+Coordinates=2703,484,67,58
+
+[Shape6]
+Coordinates=1184,1210,59,36
+
+[Label95]
+Coordinates=1194,348,60,58
+
+[DBCheckBox25]
+Coordinates=1069,1210,105,36
+
+[Label128]
+Coordinates=373,1028,67,58
+
+[Label94]
+Coordinates=2691,756,60,58
+
+[Label85]
+Coordinates=2167,144,60,58
+
+[SkLabel58]
+Coordinates=984,1210,75,36
+
+[CheckBox9]
+Coordinates=2510,688,114,58
+
+[CheckBox14]
+Coordinates=1714,824,114,58
+
+[DBCheckBox33]
+Coordinates=869,1210,105,36
+
+[Button17]
+Coordinates=203,416,66,58
+
+[Panel56]
+Coordinates=1820,484,62,58
+
+[ScrollBox7]
+Coordinates=783,1210,76,36
+
+[Panel70]
+Coordinates=1542,552,62,58
+
+[GroupBox21]
+Coordinates=273,552,86,58
+
+[Panel91]
+Coordinates=2761,756,62,58
+
+[RelativePanel11]
+Coordinates=1507,212,108,58
+
+[Panel80]
+Coordinates=1749,1028,62,58
+
+[DBMemo4]
+Coordinates=698,1210,75,36
+
+[RelativePanel14]
+Coordinates=1427,960,108,58
+
+[Panel75]
+Coordinates=1558,620,62,58
+
+[SkLabel37]
+Coordinates=613,1210,75,36
+
+[DBMemo6]
+Coordinates=528,1210,75,36
+
+[SkLabel18]
+Coordinates=443,1210,75,36
+
+[ScrollBox3]
+Coordinates=357,1210,76,36
+
+[ScrollBox8]
+Coordinates=271,1210,76,36
+
+[TabSheet4]
+Coordinates=184,1210,77,36
+
+[SkLabel45]
+Coordinates=99,1210,75,36
+
+[DateTimePicker5]
+Coordinates=1964,484,113,58
+
+[StaticText5]
+Coordinates=10,1210,79,36
+
+[Label138]
+Coordinates=1672,1028,67,58
+
+[GroupBox49]
+Coordinates=2359,620,86,58
+
+[pButtonToolbar3]
+Coordinates=378,144,110,58
+
+[stSection12]
+Coordinates=2708,1164,82,36
+
+[Label75]
+Coordinates=868,1096,60,58
+
+[Label124]
+Coordinates=290,212,67,58
+
+[Label131]
+Coordinates=211,280,67,58
+
+[TabSheet5]
+Coordinates=2621,1164,77,36
+
+[DBCheckBox22]
+Coordinates=2430,1164,105,36
+
+[Panel81]
+Coordinates=491,824,62,58
+
+[SkLabel32]
+Coordinates=2345,1164,75,36
+
+[CheckBox13]
+Coordinates=1241,212,114,58
+
+[Panel83]
+Coordinates=106,212,62,58
+
+[Panel69]
+Coordinates=1161,416,62,58
+
+[Panel46]
+Coordinates=1042,620,62,58
+
+[DBMemo3]
+Coordinates=2260,1164,75,36
+
+[DBCheckBox23]
+Coordinates=2145,1164,105,36
+
+[SkLabel20]
+Coordinates=2060,1164,75,36
+
+[Panel98]
+Coordinates=10,1096,62,58
+
+[GroupBox32]
+Coordinates=1650,688,86,58
+
+[DBMemo5]
+Coordinates=1975,1164,75,36
+
+[RelativePanel13]
+Coordinates=714,552,108,58
+
+[RelativePanel12]
+Coordinates=151,756,108,58
+
+[Label126]
+Coordinates=2765,348,67,58
+
+[ScrollBox5]
+Coordinates=1889,1164,76,36
+
+[DBCheckBox26]
+Coordinates=1774,1164,105,36
+
+[GroupBox28]
+Coordinates=587,620,86,58
+
+[CheckBox3]
+Coordinates=2115,280,114,58
+
+[SkLabel44]
+Coordinates=1689,1164,75,36
+
+[SkLabel66]
+Coordinates=1604,1164,75,36
+
+[Label129]
+Coordinates=1264,348,67,58
+
+[Label83]
+Coordinates=458,1096,60,58
+
+[ScrollBox1]
+Coordinates=1518,1164,76,36
+
+[SkLabel42]
+Coordinates=1433,1164,75,36
+
+[Label134]
+Coordinates=1148,484,67,58
+
+[GroupBox48]
+Coordinates=1079,892,86,58
+
+[Panel63]
+Coordinates=754,10,62,58
+
+[Label145]
+Coordinates=826,10,67,58
+
+[GroupBox26]
+Coordinates=2440,10,86,58
+
+[DBCheckBox34]
+Coordinates=1318,1164,105,36
+Visible=True
+
+[Panel103]
+Coordinates=1426,10,69,58
+
+[Panel104]
+Coordinates=2284,10,69,58
+
+[SkLabel71]
+Coordinates=1233,1164,75,36
+
+[Label149]
+Coordinates=121,10,67,58
+
+[Label152]
+Coordinates=2111,10,67,58
+
+[SkLabel72]
+Coordinates=1148,1164,75,36
+
+[Label150]
+Coordinates=2363,10,67,58
+
+[DBEdit3]
+Coordinates=1076,1164,62,36
+
+[Label151]
+Coordinates=1817,10,67,58
+
+[SkLabel74]
+Coordinates=991,1164,75,36
+
+[Label90]
+Coordinates=1971,10,60,58
+
+[CheckBox19]
+Coordinates=553,10,114,58
+
+[Panel100]
+Coordinates=1027,10,69,58
+
+[DBEdit2]
+Coordinates=919,1164,62,36
+
+[GroupBox25]
+Coordinates=2188,10,86,58
+
+[CheckBox1]
+Coordinates=903,10,114,58
+
+[Label146]
+Coordinates=198,10,67,58
+
+[DateTimePicker8]
+Coordinates=1106,10,113,58
+
+[RelativePanel22]
+Coordinates=1575,10,108,58
+
+[CheckBox2]
+Coordinates=1693,10,114,58
+
+[Label88]
+Coordinates=2041,10,60,58
+
+[Label72]
+Coordinates=1505,10,60,58
+
+[RelativePanel21]
+Coordinates=1308,10,108,58
+
+[Panel99]
+Coordinates=2536,10,62,58
+
+[DBCheckBox11]
+Coordinates=804,1164,105,36
+
+[Shape18]
+Coordinates=728,1164,66,36
+
+[SkLabel73]
+Coordinates=643,1164,75,36
+
+[Label144]
+Coordinates=275,10,67,58
+
+[CheckBox20]
+Coordinates=352,10,114,58
+
+[Panel101]
+Coordinates=2608,10,69,58
+
+[Label148]
+Coordinates=677,10,67,58
+
+[DBEdit1]
+Coordinates=456,1164,62,36
+
+[SkLabel75]
+Coordinates=371,1164,75,36
+
+[Label147]
+Coordinates=476,10,67,58
+
+[Label153]
+Coordinates=1894,10,67,58
+
+[DBCheckBox12]
+Coordinates=256,1164,105,36
+
+[SkLabel10]
+Coordinates=171,1164,75,36
+
+[Shape17]
+Coordinates=95,1164,66,36
+
+[Panel102]
+Coordinates=1229,10,69,58
+
+[SkLabel76]
+Coordinates=10,1164,75,36
+
+[tsFunctionalityBADAC]
+Coordinates=2042,1302,77,36
+
+[tsFunctionalityBPOC]
+Coordinates=1134,1348,77,36
+
+[tsFunctionalityLT]
+Coordinates=1221,1348,77,36
 
