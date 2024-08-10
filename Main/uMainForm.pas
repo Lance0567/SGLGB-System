@@ -540,6 +540,10 @@ var
   LYear: String;
 begin
   LYear := InputBox('Create DCF', 'Year', '');
+  frmDCF.PageControl1.ActivePageIndex := 0;
+  frmDCF.PageControl2.ActivePageIndex := 0;
+  frmDCF.PageControl3.ActivePageIndex := 0;
+  frmDCF.PageControl4.ActivePageIndex := 0;
   frmDCF.ShowModal;
 
 //  if SaveEmailsDialog.Execute then
