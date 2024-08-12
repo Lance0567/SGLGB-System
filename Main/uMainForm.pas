@@ -649,6 +649,8 @@ begin
   VCLStylesCB.AutoComplete := True;
   Self.Caption := 'Height: ' + IntToStr(ClientHeight) + ' ' + 'Width: ' + IntToStr(ClientWidth);
 
+
+
   if dm.User.username = 'admin' then
   begin
 

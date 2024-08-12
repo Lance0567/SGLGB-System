@@ -17,7 +17,7 @@ uses
   Vcl.WinXPanels, System.Actions, Vcl.ActnList, Vcl.Themes,
   Vcl.BaseImageCollection, Vcl.ImageCollection, System.ImageList, Vcl.ImgList,
   Vcl.VirtualImageList, Vcl.VirtualImage, System.IOUtils, Vcl.TitleBarCtrls,
-  Vcl.Menus, uLogin, Vcl.DBGrids, System.Skia, Vcl.Skia;
+  Vcl.Menus, uLogin, Vcl.DBGrids, System.Skia, Vcl.Skia, uDCF;
 
 type
   TfrmMain = class(TForm)
@@ -129,7 +129,7 @@ type
     Login: TMenuItem;
     N1: TMenuItem;
     Exit1: TMenuItem;
-    VirtualImage8: TVirtualImage;
+    viUserStatus: TVirtualImage;
     LogOut: TMenuItem;
     btnEdit: TSpeedButton;
     RelativePanel7: TRelativePanel;
@@ -138,7 +138,7 @@ type
     Help1: TMenuItem;
     Backup1: TMenuItem;
     Backup2: TMenuItem;
-    lbUserStatus: TSkLabel;
+    lbUserStatus: TLabel;
     procedure CalendarView1DrawDayItem(Sender: TObject;
       DrawParams: TDrawViewInfoParams; CalendarViewViewInfo: TCellItemViewInfo);
     procedure AcctSearchBoxKeyPress(Sender: TObject; var Key: Char);
@@ -211,7 +211,7 @@ uses uDataMod;
 {-------------------------------Functions & Procedures-------------------------}
 function IsSingleInstance: Boolean;
 const
-  MUTEX_NAME = 'MyUniqueApplicationMutexName';
+  MUTEX_NAME = 'MyUniqueApplicationMutexName_YourAppID';
 begin
   Result := False;
   AppMutex := CreateMutex(nil, True, MUTEX_NAME);
@@ -514,7 +514,7 @@ begin
   end
   else
   begin
-    VirtualImage8.ImageName := 'open';
+    viUserStatus.ImageName := 'open';
     lbUserStatus.Caption := 'You are logged in, system activated';
     Self.Caption := 'SGLGB System | SEAL OF GOOD LOCAL GOVERNANCE FOR BARANGAY | 2024 | ' ;
     Login.Visible := False;
@@ -524,7 +524,7 @@ end;
 
 procedure TfrmMain.LogOutClick(Sender: TObject);
 begin
-  VirtualImage8.ImageName := 'close';
+  viUserStatus.ImageName := 'close';
   lbUserStatus.Caption := 'You have logout, system deactivated';
   Login.Visible := True;
   LogOut.Visible := False;
@@ -536,8 +536,15 @@ begin
 end;
 
 procedure TfrmMain.btnCreateDCFClick(Sender: TObject);
+var
+  LYear: String;
 begin
-  dm.DCF.rec := InputBox('Create DCF', 'Barangay', '');
+  LYear := InputBox('Create DCF', 'Year', '');
+  frmDCF.PageControl1.ActivePageIndex := 0;
+  frmDCF.PageControl2.ActivePageIndex := 0;
+  frmDCF.PageControl3.ActivePageIndex := 0;
+  frmDCF.PageControl4.ActivePageIndex := 0;
+  frmDCF.ShowModal;
 
 //  if SaveEmailsDialog.Execute then
 //  begin
