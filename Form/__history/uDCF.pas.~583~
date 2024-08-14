@@ -936,7 +936,7 @@ type
     GroupBox74: TGroupBox;
     SkLabel105: TSkLabel;
     DBCheckBox45: TDBCheckBox;
-    tsImplementation: TTabSheet;
+    tsImplementationKL: TTabSheet;
     stSection20: TStaticText;
     gpForm20: TGridPanel;
     Panel141: TPanel;
@@ -1389,7 +1389,7 @@ type
     ScrollBox19: TScrollBox;
     dbmRemarks25: TDBMemo;
     GroupBox102: TGroupBox;
-    skRemWarning25: TSkLabel;
+    slRemWarning25: TSkLabel;
     lbRem25: TLabel;
     Panel185: TPanel;
     GroupBox103: TGroupBox;
@@ -1438,13 +1438,261 @@ type
     pFooterEnd4: TPanel;
     Shape36: TShape;
     Label207: TLabel;
+    tsBFC: TTabSheet;
+    pHeader5: TPanel;
+    SkLabel133: TSkLabel;
+    pButtonToolbar5: TPanel;
+    Button18: TButton;
+    PageControl6: TPageControl;
+    tsPower: TTabSheet;
+    gpForm26: TGridPanel;
+    Panel195: TPanel;
+    SkLabel139: TSkLabel;
+    ScrollBox20: TScrollBox;
+    dbmRemarks26: TDBMemo;
+    GroupBox109: TGroupBox;
+    slRemWarning26: TSkLabel;
+    lbRem26: TLabel;
+    Panel196: TPanel;
+    GroupBox110: TGroupBox;
+    GroupBox111: TGroupBox;
+    Label281: TLabel;
+    Panel200: TPanel;
+    Label282: TLabel;
+    RelativePanel49: TRelativePanel;
+    Label283: TLabel;
+    CheckBox71: TCheckBox;
+    Label284: TLabel;
+    CheckBox72: TCheckBox;
+    stSection26: TStaticText;
+    tsComplianceSec: TTabSheet;
+    gpForm27: TGridPanel;
+    Panel220: TPanel;
+    SkLabel153: TSkLabel;
+    ScrollBox21: TScrollBox;
+    dbmRemarks27: TDBMemo;
+    GroupBox117: TGroupBox;
+    slRemWarning27: TSkLabel;
+    lbRem27: TLabel;
+    GroupBox118: TGroupBox;
+    Label308: TLabel;
+    Panel221: TPanel;
+    Label309: TLabel;
+    RelativePanel52: TRelativePanel;
+    Label310: TLabel;
+    CheckBox77: TCheckBox;
+    Label311: TLabel;
+    CheckBox78: TCheckBox;
+    Panel222: TPanel;
+    GroupBox119: TGroupBox;
+    SkLabel155: TSkLabel;
+    DBCheckBox83: TDBCheckBox;
+    stSection27: TStaticText;
+    tsIssuance: TTabSheet;
+    gpForm28: TGridPanel;
+    Panel229: TPanel;
+    SkLabel161: TSkLabel;
+    ScrollBox22: TScrollBox;
+    dbmRemarks28: TDBMemo;
+    GroupBox123: TGroupBox;
+    slRemWarning28: TSkLabel;
+    lbRem28: TLabel;
+    GroupBox124: TGroupBox;
+    Label325: TLabel;
+    Panel230: TPanel;
+    Label326: TLabel;
+    RelativePanel59: TRelativePanel;
+    Label327: TLabel;
+    CheckBox91: TCheckBox;
+    Label328: TLabel;
+    CheckBox92: TCheckBox;
+    Panel231: TPanel;
+    GroupBox128: TGroupBox;
+    SkLabel168: TSkLabel;
+    SkLabel169: TSkLabel;
+    DBCheckBox93: TDBCheckBox;
+    SkLabel141: TSkLabel;
+    DBCheckBox73: TDBCheckBox;
+    GroupBox112: TGroupBox;
+    SkLabel142: TSkLabel;
+    DBCheckBox74: TDBCheckBox;
+    stSection28: TLabel;
+    pFooterEnd5: TPanel;
+    Shape53: TShape;
+    Label414: TLabel;
+    tsEM: TTabSheet;
+    PageControl7: TPageControl;
+    tsFunctionalityBESWMC: TTabSheet;
+    gpForm29: TGridPanel;
+    Panel193: TPanel;
+    SkLabel140: TSkLabel;
+    ScrollBox23: TScrollBox;
+    dbmRemarks29: TDBMemo;
+    GroupBox113: TGroupBox;
+    slRemWarning29: TSkLabel;
+    lbRem29: TLabel;
+    Panel194: TPanel;
+    GroupBox114: TGroupBox;
+    SkLabel145: TSkLabel;
+    Label280: TLabel;
+    DBCheckBox76: TDBCheckBox;
+    GroupBox115: TGroupBox;
+    Label285: TLabel;
+    Panel201: TPanel;
+    Label286: TLabel;
+    RelativePanel50: TRelativePanel;
+    Label287: TLabel;
+    CheckBox73: TCheckBox;
+    Label288: TLabel;
+    CheckBox74: TCheckBox;
+    GroupBox116: TGroupBox;
+    SkLabel146: TSkLabel;
+    Label289: TLabel;
+    DBCheckBox77: TDBCheckBox;
+    GroupBox120: TGroupBox;
+    SkLabel147: TSkLabel;
+    Label290: TLabel;
+    DBCheckBox78: TDBCheckBox;
+    Panel215: TPanel;
+    SkLabel156: TSkLabel;
+    Label302: TLabel;
+    SkLabel157: TSkLabel;
+    Panel216: TPanel;
+    Label303: TLabel;
+    Panel217: TPanel;
+    Shape40: TShape;
+    Label304: TLabel;
+    DBEdit16: TDBEdit;
+    Panel218: TPanel;
+    Label305: TLabel;
+    Label306: TLabel;
+    Panel219: TPanel;
+    Shape41: TShape;
+    Label307: TLabel;
+    DBEdit17: TDBEdit;
+    DBEdit18: TDBEdit;
+    Panel223: TPanel;
+    Label312: TLabel;
+    RelativePanel53: TRelativePanel;
+    Label313: TLabel;
+    CheckBox79: TCheckBox;
+    Label314: TLabel;
+    CheckBox80: TCheckBox;
+    DBCheckBox85: TDBCheckBox;
+    stSection29: TStaticText;
+    tsExistence: TTabSheet;
+    gpForm30: TGridPanel;
+    Panel224: TPanel;
+    SkLabel158: TSkLabel;
+    ScrollBox24: TScrollBox;
+    dbmRemarks30: TDBMemo;
+    GroupBox126: TGroupBox;
+    slRemWarning30: TSkLabel;
+    lbRem30: TLabel;
+    GroupBox127: TGroupBox;
+    Label316: TLabel;
+    Panel225: TPanel;
+    Label317: TLabel;
+    RelativePanel54: TRelativePanel;
+    Label318: TLabel;
+    CheckBox81: TCheckBox;
+    Label319: TLabel;
+    CheckBox82: TCheckBox;
+    Panel226: TPanel;
+    GroupBox129: TGroupBox;
+    SkLabel160: TSkLabel;
+    stSection30: TStaticText;
+    tsProvision: TTabSheet;
+    stSection31: TStaticText;
+    gpForm31: TGridPanel;
+    Panel236: TPanel;
+    SkLabel167: TSkLabel;
+    ScrollBox25: TScrollBox;
+    dbmRemarks31: TDBMemo;
+    GroupBox133: TGroupBox;
+    slRemWarning31: TSkLabel;
+    lbRem31: TLabel;
+    GroupBox134: TGroupBox;
+    Label337: TLabel;
+    Panel237: TPanel;
+    Label338: TLabel;
+    RelativePanel62: TRelativePanel;
+    Label339: TLabel;
+    CheckBox97: TCheckBox;
+    Label340: TLabel;
+    CheckBox98: TCheckBox;
+    Panel238: TPanel;
+    GroupBox138: TGroupBox;
+    SkLabel176: TSkLabel;
+    DBCheckBox97: TDBCheckBox;
+    pButtonToolbar6: TPanel;
+    Button53: TButton;
+    pHeader6: TPanel;
+    SkLabel224: TSkLabel;
+    Panel197: TPanel;
+    Label277: TLabel;
+    Panel198: TPanel;
+    Shape37: TShape;
+    Label278: TLabel;
+    DateTimePicker14: TDateTimePicker;
+    GroupBox170: TGroupBox;
+    SkLabel144: TSkLabel;
+    DBCheckBox75: TDBCheckBox;
+    Panel199: TPanel;
+    Label279: TLabel;
+    Panel202: TPanel;
+    Button19: TButton;
+    Button20: TButton;
+    Button21: TButton;
+    DBGrid7: TDBGrid;
+    Panel203: TPanel;
+    Shape38: TShape;
+    Label291: TLabel;
+    Panel204: TPanel;
+    Label292: TLabel;
+    Label293: TLabel;
+    RelativePanel51: TRelativePanel;
+    Label294: TLabel;
+    CheckBox75: TCheckBox;
+    Label295: TLabel;
+    CheckBox76: TCheckBox;
+    SkLabel143: TSkLabel;
+    Panel205: TPanel;
+    Label296: TLabel;
+    Panel206: TPanel;
+    Shape39: TShape;
+    Label297: TLabel;
+    CheckBox83: TCheckBox;
+    CheckBox84: TCheckBox;
+    Label276: TLabel;
+    Label298: TLabel;
+    CheckBox85: TCheckBox;
+    CheckBox86: TCheckBox;
+    Label299: TLabel;
+    Label300: TLabel;
+    CheckBox129: TCheckBox;
+    CheckBox130: TCheckBox;
+    Panel207: TPanel;
+    Label301: TLabel;
+    Panel208: TPanel;
+    Shape42: TShape;
+    Label315: TLabel;
+    DateTimePicker19: TDateTimePicker;
+    pFooterEnd6: TPanel;
+    Shape43: TShape;
+    Label320: TLabel;
+
+    // CheckBox Reusable
+    procedure CheckBoxYesClick(Sender: TObject);
+    procedure CheckBoxNoClick(Sender: TObject);
+
     procedure FormShow(Sender: TObject);
     procedure FormResize(Sender: TObject);
     // ScrollBox Reusable
     procedure ScrollBoxMouseWheelHandler(Sender: TObject; Shift: TShiftState;
       WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
 
-    { Page Control 1 }
+    { Page Control 1 } // - Main Tab
     procedure PageControl1Change(Sender: TObject);
     // Tabs Reset 1
     procedure TabsReset1;
@@ -1453,9 +1701,12 @@ type
     procedure FASTab;
     procedure DPTab;
     procedure SPOTab;
+    procedure SPSTab;
+    procedure BFCTab;
+    procedure EMTab;
     {---------------}
 
-    { Page Control 2 }
+    { Page Control 2 } // - Start of Sub tab
     procedure PageControl2Change(Sender: TObject);
     // Tabs Reset 2
     procedure TabsReset2;
@@ -1491,9 +1742,44 @@ type
     procedure Barangay;
     procedure ConductBaRCO;
 
-    // CheckBox Reusable
-    procedure CheckBoxYesClick(Sender: TObject);
-    procedure CheckBoxNoClick(Sender: TObject);
+    { Page Control 5 }
+    procedure PageControl5Change(Sender: TObject);
+
+    // Tabs Reset 5
+    procedure TabsReset5;
+
+    // Tabs
+    procedure FunctionalityVAWTab;
+    procedure AccessHealthTab;
+    procedure FunctionalityBDCTab;
+    procedure ImplementationKLTab;
+    procedure FunctionalityBCPCTab;
+    procedure GADTab;
+    procedure RBIsTab;
+    procedure FunctionalityBNCTab;
+    procedure HAPAGTab;
+
+    { Page Control 6 }
+    procedure PageControl6Change(Sender: TObject);
+
+    // Tabs Reset 6
+    procedure TabsReset6;
+
+    // Tabs
+    procedure PowerTab;
+    procedure ComplianceSectab;
+    procedure IssuanceTab;
+
+    { Page Control 7 }
+    procedure PageControl7Change(Sender: TObject);
+
+    // Tabs Reset 7
+    procedure TabsReset7;
+
+    // Tabs
+    procedure FunctionalityBESWMCTab;
+    procedure ExistenceTab;
+    procedure ProvisionTab;
   private
     FCheckboxValue: string;
     { Private declarations }
@@ -1509,6 +1795,7 @@ implementation
 {$R *.dfm}
 
 {-----------------------------FUNCTIONS & PROCEDURES---------------------------}
+
 //-------Mouse Wheel-------//
 procedure HandleScrollBoxMouseWheel(ScrollBox: TScrollBox; Shift: TShiftState;
   WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
@@ -1543,17 +1830,29 @@ end;
 // Tabs Reset for PageControl1  - Main tab
 procedure TfrmDCF.TabsReset1;
 begin
+  // Details tab
   pProfile.Visible := False;
   ScrollBox2.Visible := False;
+
+  // FAS tab
   PageControl2.Visible := False;
   pHeader1.Visible := False;
   pButtonToolbar1.Visible := False;
+
+  // DP tab
   PageControl3.Visible := False;
   pHeader2.Visible := False;
   pButtonToolbar2.Visible := False;
+
+  // SPO tab
   PageControl4.Visible := False;
   pHeader3.Visible := False;
   pButtonToolbar3.Visible := False;
+
+  // SPS tab
+  PageControl5.Visible := False;
+  pHeader4.Visible := False;
+  pButtonToolbar4.Visible := False;
 end;
 
 //-------Details Tab-------//
@@ -1595,6 +1894,39 @@ begin
   pButtonToolbar3.Visible := True;
   gpForm11.Visible := True;
   stSection11.Visible := True;
+end;
+
+//--------SPS Tabs--------//
+procedure TfrmDCF.SPSTab;
+begin
+  TabsReset1;
+  PageControl5.Visible := True;
+  pHeader4.Visible := True;
+  pButtonToolbar4.Visible := True;
+  gpForm17.Visible := True;
+  stSection17.Visible := True;
+end;
+
+//--------BFC Tabs--------//
+procedure TfrmDCF.BFCTab;
+begin
+  TabsReset1;
+  PageControl6.Visible := True;
+  pHeader5.Visible := True;
+  pButtonToolbar5.Visible := True;
+  gpForm26.Visible := True;
+  stSection26.Visible := True;
+end;
+
+//--------EM Tabs--------//
+procedure TfrmDCF.EMTab;
+begin
+  TabsReset1;
+  PageControl7.Visible := True;
+  pHeader6.Visible := True;
+  pButtonToolbar6.Visible := True;
+  gpForm29.Visible := True;
+  stSection29.Visible := True;
 end;
 
 // Tabs Reset for PageControl2  - FAS
@@ -1716,6 +2048,7 @@ begin
   stSection15.Visible := False;
   gpForm16.Visible := False;
   stSection16.Visible := False;
+  pFooterEnd3.Visible := False;
 end;
 
 procedure TfrmDCF.FunctionalityBADAC;
@@ -1758,6 +2091,163 @@ begin
   TabsReset4;
   gpForm16.Visible := True;
   stSection16.Visible := True;
+  pFooterEnd3.Visible := True;
+end;
+
+// Tabs Reset for PageControl5  - SPS
+procedure TfrmDCF.TabsReset5;
+begin
+  gpForm17.Visible := False;
+  stSection17.Visible := False;
+  gpForm18.Visible := False;
+  stSection18.Visible := False;
+  gpForm19.Visible := False;
+  stSection19.Visible := False;
+  gpForm20.Visible := False;
+  stSection20.Visible := False;
+  gpForm21.Visible := False;
+  stSection21.Visible := False;
+  gpForm22.Visible := False;
+  stSection22.Visible := False;
+  gpForm23.Visible := False;
+  stSection23.Visible := False;
+  gpForm24.Visible := False;
+  stSection24.Visible := False;
+  gpForm25.Visible := False;
+  stSection25.Visible := False;
+  pFooterEnd4.Visible := False;
+end;
+
+procedure TfrmDCF.FunctionalityVAWTab;
+begin
+  TabsReset5;
+  gpForm17.Visible := True;
+  stSection17.Visible := True;
+end;
+
+procedure TfrmDCF.AccessHealthTab;
+begin
+  TabsReset5;
+  gpForm18.Visible := True;
+  stSection18.Visible := True;
+end;
+
+procedure TfrmDCF.FunctionalityBDCTab;
+begin
+  TabsReset5;
+  gpForm19.Visible := True;
+  stSection19.Visible := True;
+end;
+
+procedure TfrmDCF.ImplementationKLTab;
+begin
+  TabsReset5;
+  gpForm20.Visible := True;
+  stSection20.Visible := True;
+end;
+
+procedure TfrmDCF.FunctionalityBCPCTab;
+begin
+  TabsReset5;
+  gpForm21.Visible := True;
+  stSection21.Visible := True;
+end;
+
+procedure TfrmDCF.GADTab;
+begin
+  TabsReset5;
+  gpForm22.Visible := True;
+  stSection22.Visible := True;
+end;
+
+procedure TfrmDCF.RBIsTab;
+begin
+  TabsReset5;
+  gpForm23.Visible := True;
+  stSection23.Visible := True;
+end;
+
+procedure TfrmDCF.FunctionalityBNCTab;
+begin
+  TabsReset5;
+  gpForm24.Visible := True;
+  stSection24.Visible := True;
+end;
+
+procedure TfrmDCF.HAPAGTab;
+begin
+  TabsReset5;
+  gpForm25.Visible := True;
+  stSection25.Visible := True;
+  pFooterEnd4.Visible := True;
+end;
+
+// Tabs Reset for PageControl6  - BFC
+procedure TfrmDCF.TabsReset6;
+begin
+  gpForm26.Visible := False;
+  stSection26.Visible := False;
+  gpForm27.Visible := False;
+  stSection27.Visible := False;
+  gpForm28.Visible := False;
+  stSection28.Visible := False;
+  pFooterEnd5.Visible := False;
+end;
+
+procedure TfrmDCF.PowerTab;
+begin
+  TabsReset6;
+  gpForm26.Visible := True;
+  stSection26.Visible := True;
+end;
+
+procedure TfrmDCF.ComplianceSectab;
+begin
+  TabsReset6;
+  gpForm27.Visible := True;
+  stSection27.Visible := True;
+end;
+
+procedure TfrmDCF.IssuanceTab;
+begin
+  TabsReset6;
+  gpForm28.Visible := True;
+  stSection28.Visible := True;
+  pFooterEnd5.Visible := True;
+end;
+
+// Tabs Reset for PageControl6  - BFC
+procedure TfrmDCF.TabsReset7;
+begin
+  gpForm29.Visible := False;
+  stSection29.Visible := False;
+  gpForm30.Visible := False;
+  stSection30.Visible := False;
+  gpForm31.Visible := False;
+  stSection31.Visible := False;
+  pFooterEnd6.Visible := False;
+end;
+
+procedure TfrmDCF.FunctionalityBESWMCTab;
+begin
+  TabsReset7;
+  gpForm29.Visible := True;
+  stSection29.Visible := True;
+end;
+
+procedure TfrmDCF.ExistenceTab;
+begin
+  TabsReset7;
+  gpForm30.Visible := True;
+  stSection30.Visible := True;
+end;
+
+procedure TfrmDCF.ProvisionTab;
+begin
+  TabsReset7;
+  gpForm31.Visible := True;
+  stSection31.Visible := True;
+  pFooterEnd6.Visible := True;
 end;
 
 {-----------------------------------CheckBox-----------------------------------}
@@ -1795,26 +2285,21 @@ end;
 procedure TfrmDCF.FormResize(Sender: TObject);
 begin
   Self.Caption := 'Height: ' + IntToStr(ClientHeight) + ' ' + 'Width: ' + IntToStr(ClientWidth);
-
-  //-------Form Responsive Settings-------//
-
-  // Details Tab
-
-  // FAS Tab
-
-  // DP Tab
-
 end;
 
 procedure TfrmDCF.FormShow(Sender: TObject);
 begin
-  DetailsTab;
-//  ClientHeight := 569;
+//  ClientHeight := 722;
+  TabsReset1;
   TabsReset2;
   TabsReset3;
   TabsReset4;
+
+  // Show the first tab
+  DetailsTab;
 end;
 
+//-------Main PageControl-------//
 procedure TfrmDCF.PageControl1Change(Sender: TObject);
 begin
   case PageControl1.ActivePageIndex of
@@ -1822,9 +2307,13 @@ begin
     1: FASTab;
     2: DPTab;
     3: SPOTab;
+    4: SPSTab;
+    5: BFCTab;
+    6: EMTab;
   end;
 end;
 
+//-------FAS PageControl-------//
 procedure TfrmDCF.PageControl2Change(Sender: TObject);
 begin
   case PageControl2.ActivePageIndex of
@@ -1838,6 +2327,7 @@ begin
   end;
 end;
 
+//-------DP PageControl-------//
 procedure TfrmDCF.PageControl3Change(Sender: TObject);
 begin
   case PageControl3.ActivePageIndex of
@@ -1847,6 +2337,7 @@ begin
   end;
 end;
 
+//-------SPO PageControl-------//
 procedure TfrmDCF.PageControl4Change(Sender: TObject);
 begin
   case PageControl4.ActivePageIndex of
@@ -1859,7 +2350,44 @@ begin
   end;
 end;
 
+//-------SPS PageControl-------//
+procedure TfrmDCF.PageControl5Change(Sender: TObject);
+begin
+  case PageControl5.ActivePageIndex of
+    1: FunctionalityVAWTab;
+    2: AccessHealthTab;
+    3: FunctionalityBDCTab;
+    4: ImplementationKLTab;
+    5: FunctionalityBCPCTab;
+    6: GADTab;
+    7: RBIsTab;
+    8: FunctionalityBNCTab;
+    9: HAPAGTab;
+  end;
+end;
+
+//-------BFC PageControl-------//
+procedure TfrmDCF.PageControl6Change(Sender: TObject);
+begin
+  case PageControl6.ActivePageIndex of
+    1: PowerTab;
+    2: ComplianceTab;
+    3: IssuanceTab;
+  end;
+end;
+
+//-------EM PageControl-------//
+procedure TfrmDCF.PageControl7Change(Sender: TObject);
+begin
+  case PageControl7.ActivePageIndex of
+    1: FunctionalityBESWMCTab;
+    2: ExistenceTab;
+    3: ProvisionTab;
+  end;
+end;
+
 {----------------------------------SCROLLBOX-----------------------------------}
+
 //-------Mouse Wheel Sender-------//
 procedure TfrmDCF.ScrollBoxMouseWheelHandler(Sender: TObject; Shift: TShiftState;
   WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
