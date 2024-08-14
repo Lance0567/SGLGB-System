@@ -22,10 +22,12 @@ object frmDCF: TfrmDCF
     Width = 873
     Height = 686
     Margins.Right = 5
-    ActivePage = tsSPS
+    ActivePage = tsSPO
     Align = alClient
     TabOrder = 0
     OnChange = PageControl1Change
+    ExplicitWidth = 871
+    ExplicitHeight = 683
     object tsDetails: TTabSheet
       Caption = #9632' Details'
       ImageIndex = 2
@@ -18388,6 +18390,8 @@ object frmDCF: TfrmDCF
         MultiLine = True
         TabOrder = 0
         OnChange = PageControl5Change
+        ExplicitWidth = 863
+        ExplicitHeight = 578
         object tsFunctionalityVAW: TTabSheet
           Caption = #9632' 4.1'
           object gpForm17: TGridPanel
@@ -20715,6 +20719,8 @@ object frmDCF: TfrmDCF
                 Value = 94.723117224120100000
               end>
             TabOrder = 0
+            ExplicitWidth = 855
+            ExplicitHeight = 527
             object Panel124: TPanel
               Left = 0
               Top = 0
@@ -22077,6 +22083,7 @@ object frmDCF: TfrmDCF
             Font.Style = [fsBold]
             ParentFont = False
             TabOrder = 1
+            ExplicitWidth = 855
           end
         end
         object tsFunctionalityBDC: TTabSheet
@@ -22096,6 +22103,7 @@ object frmDCF: TfrmDCF
             Font.Style = [fsBold]
             ParentFont = False
             TabOrder = 0
+            ExplicitWidth = 390
           end
           object gpForm19: TGridPanel
             Left = 0
@@ -22211,7 +22219,7 @@ object frmDCF: TfrmDCF
                   Left = 2
                   Top = 17
                   Width = 56
-                  Height = 18
+                  Height = 15
                   Margins.Left = 0
                   Margins.Top = 0
                   Margins.Bottom = 0
@@ -22225,7 +22233,6 @@ object frmDCF: TfrmDCF
                   Font.Style = [fsBold]
                   ParentFont = False
                   Layout = tlCenter
-                  ExplicitHeight = 15
                 end
               end
               object GroupBox71: TGroupBox
@@ -23027,7 +23034,7 @@ object frmDCF: TfrmDCF
                     AlignWithMargins = True
                     Left = 11
                     Top = 41
-                    Width = 793
+                    Width = 275
                     Height = 15
                     Margins.Left = 10
                     Margins.Top = 10
@@ -23041,7 +23048,6 @@ object frmDCF: TfrmDCF
                     Font.Style = [fsBold]
                     ParentFont = False
                     WordWrap = True
-                    ExplicitWidth = 275
                   end
                   object Panel122: TPanel
                     Left = 1
@@ -23064,8 +23070,8 @@ object frmDCF: TfrmDCF
                     object Label179: TLabel
                       Left = 0
                       Top = 0
-                      Width = 806
-                      Height = 30
+                      Width = 235
+                      Height = 17
                       Margins.Top = 0
                       Margins.Right = 0
                       Margins.Bottom = 5
@@ -23082,8 +23088,6 @@ object frmDCF: TfrmDCF
                       ParentFont = False
                       Layout = tlCenter
                       WordWrap = True
-                      ExplicitWidth = 235
-                      ExplicitHeight = 17
                     end
                   end
                   object DBEdit4: TDBEdit
@@ -23117,7 +23121,7 @@ object frmDCF: TfrmDCF
                     AlignWithMargins = True
                     Left = 11
                     Top = 101
-                    Width = 793
+                    Width = 204
                     Height = 15
                     Margins.Left = 10
                     Margins.Top = 45
@@ -23131,13 +23135,12 @@ object frmDCF: TfrmDCF
                     Font.Style = [fsBold]
                     ParentFont = False
                     WordWrap = True
-                    ExplicitWidth = 204
                   end
                   object Label181: TLabel
                     AlignWithMargins = True
                     Left = 11
                     Top = 41
-                    Width = 793
+                    Width = 201
                     Height = 15
                     Margins.Left = 10
                     Margins.Top = 10
@@ -23151,7 +23154,6 @@ object frmDCF: TfrmDCF
                     Font.Style = [fsBold]
                     ParentFont = False
                     WordWrap = True
-                    ExplicitWidth = 201
                   end
                   object Panel125: TPanel
                     Left = 1
@@ -23174,8 +23176,8 @@ object frmDCF: TfrmDCF
                     object Label182: TLabel
                       Left = 0
                       Top = 0
-                      Width = 806
-                      Height = 30
+                      Width = 235
+                      Height = 17
                       Margins.Top = 10
                       Margins.Right = 0
                       Margins.Bottom = 5
@@ -23192,8 +23194,6 @@ object frmDCF: TfrmDCF
                       ParentFont = False
                       Layout = tlCenter
                       WordWrap = True
-                      ExplicitWidth = 235
-                      ExplicitHeight = 17
                     end
                   end
                   object DBEdit5: TDBEdit
@@ -23401,7 +23401,7 @@ object frmDCF: TfrmDCF
             end
           end
         end
-        object tsImplementation: TTabSheet
+        object tsImplementationKL: TTabSheet
           Caption = #9632' 4.4'
           ImageIndex = 3
           object stSection20: TStaticText
@@ -23418,6 +23418,7 @@ object frmDCF: TfrmDCF
             Font.Style = [fsBold]
             ParentFont = False
             TabOrder = 0
+            ExplicitWidth = 279
           end
           object gpForm20: TGridPanel
             Left = 0
@@ -23719,7 +23720,7 @@ object frmDCF: TfrmDCF
                   Left = 2
                   Top = 17
                   Width = 56
-                  Height = 18
+                  Height = 15
                   Margins.Left = 0
                   Margins.Top = 0
                   Margins.Bottom = 0
@@ -23733,7 +23734,6 @@ object frmDCF: TfrmDCF
                   Font.Style = [fsBold]
                   ParentFont = False
                   Layout = tlCenter
-                  ExplicitHeight = 15
                 end
               end
               object GroupBox78: TGroupBox
@@ -23897,7 +23897,7 @@ object frmDCF: TfrmDCF
                     AlignWithMargins = True
                     Left = 4
                     Top = 144
-                    Width = 798
+                    Width = 198
                     Height = 15
                     Align = alBottom
                     Caption = 'Kasambahay Reports were submitted:'
@@ -23908,7 +23908,6 @@ object frmDCF: TfrmDCF
                     Font.Style = [fsBold]
                     ParentFont = False
                     WordWrap = True
-                    ExplicitWidth = 198
                   end
                   object Panel130: TPanel
                     AlignWithMargins = True
@@ -24001,8 +24000,8 @@ object frmDCF: TfrmDCF
                     object Label187: TLabel
                       Left = 0
                       Top = 0
-                      Width = 804
-                      Height = 30
+                      Width = 310
+                      Height = 17
                       Margins.Top = 0
                       Margins.Right = 0
                       Margins.Bottom = 5
@@ -24019,8 +24018,6 @@ object frmDCF: TfrmDCF
                       ParentFont = False
                       Layout = tlCenter
                       WordWrap = True
-                      ExplicitWidth = 310
-                      ExplicitHeight = 17
                     end
                   end
                 end
@@ -24047,6 +24044,7 @@ object frmDCF: TfrmDCF
             Font.Style = [fsBold]
             ParentFont = False
             TabOrder = 0
+            ExplicitWidth = 496
           end
           object gpForm21: TGridPanel
             Left = 0
@@ -24346,7 +24344,7 @@ object frmDCF: TfrmDCF
                   Left = 2
                   Top = 17
                   Width = 56
-                  Height = 18
+                  Height = 15
                   Margins.Left = 0
                   Margins.Top = 0
                   Margins.Bottom = 0
@@ -24360,7 +24358,6 @@ object frmDCF: TfrmDCF
                   Font.Style = [fsBold]
                   ParentFont = False
                   Layout = tlCenter
-                  ExplicitHeight = 15
                 end
               end
               object GroupBox81: TGroupBox
@@ -25223,7 +25220,7 @@ object frmDCF: TfrmDCF
                     AlignWithMargins = True
                     Left = 11
                     Top = 41
-                    Width = 793
+                    Width = 278
                     Height = 15
                     Margins.Left = 10
                     Margins.Top = 10
@@ -25237,7 +25234,6 @@ object frmDCF: TfrmDCF
                     Font.Style = [fsBold]
                     ParentFont = False
                     WordWrap = True
-                    ExplicitWidth = 278
                   end
                   object Panel135: TPanel
                     Left = 1
@@ -25260,8 +25256,8 @@ object frmDCF: TfrmDCF
                     object Label234: TLabel
                       Left = 0
                       Top = 0
-                      Width = 806
-                      Height = 30
+                      Width = 235
+                      Height = 17
                       Margins.Top = 0
                       Margins.Right = 0
                       Margins.Bottom = 5
@@ -25278,8 +25274,6 @@ object frmDCF: TfrmDCF
                       ParentFont = False
                       Layout = tlCenter
                       WordWrap = True
-                      ExplicitWidth = 235
-                      ExplicitHeight = 17
                     end
                   end
                   object DBEdit10: TDBEdit
@@ -25313,7 +25307,7 @@ object frmDCF: TfrmDCF
                     AlignWithMargins = True
                     Left = 11
                     Top = 101
-                    Width = 793
+                    Width = 245
                     Height = 15
                     Margins.Left = 10
                     Margins.Top = 45
@@ -25327,13 +25321,12 @@ object frmDCF: TfrmDCF
                     Font.Style = [fsBold]
                     ParentFont = False
                     WordWrap = True
-                    ExplicitWidth = 245
                   end
                   object Label236: TLabel
                     AlignWithMargins = True
                     Left = 11
                     Top = 41
-                    Width = 793
+                    Width = 201
                     Height = 15
                     Margins.Left = 10
                     Margins.Top = 10
@@ -25347,7 +25340,6 @@ object frmDCF: TfrmDCF
                     Font.Style = [fsBold]
                     ParentFont = False
                     WordWrap = True
-                    ExplicitWidth = 201
                   end
                   object Panel140: TPanel
                     Left = 1
@@ -25370,8 +25362,8 @@ object frmDCF: TfrmDCF
                     object Label237: TLabel
                       Left = 0
                       Top = 0
-                      Width = 806
-                      Height = 30
+                      Width = 235
+                      Height = 17
                       Margins.Top = 10
                       Margins.Right = 0
                       Margins.Bottom = 5
@@ -25388,8 +25380,6 @@ object frmDCF: TfrmDCF
                       ParentFont = False
                       Layout = tlCenter
                       WordWrap = True
-                      ExplicitWidth = 235
-                      ExplicitHeight = 17
                     end
                   end
                   object DBEdit11: TDBEdit
@@ -25588,6 +25578,7 @@ object frmDCF: TfrmDCF
             Font.Style = [fsBold]
             ParentFont = False
             TabOrder = 0
+            ExplicitWidth = 326
           end
           object gpForm22: TGridPanel
             Left = 0
@@ -25703,7 +25694,7 @@ object frmDCF: TfrmDCF
                   Left = 2
                   Top = 17
                   Width = 56
-                  Height = 18
+                  Height = 15
                   Margins.Left = 0
                   Margins.Top = 0
                   Margins.Bottom = 0
@@ -25717,7 +25708,6 @@ object frmDCF: TfrmDCF
                   Font.Style = [fsBold]
                   ParentFont = False
                   Layout = tlCenter
-                  ExplicitHeight = 15
                 end
               end
               object Panel153: TPanel
@@ -25976,7 +25966,7 @@ object frmDCF: TfrmDCF
                     AlignWithMargins = True
                     Left = 11
                     Top = 41
-                    Width = 789
+                    Width = 91
                     Height = 15
                     Margins.Left = 10
                     Margins.Top = 10
@@ -25991,7 +25981,6 @@ object frmDCF: TfrmDCF
                     Font.Style = [fsBold]
                     ParentFont = False
                     WordWrap = True
-                    ExplicitWidth = 91
                   end
                   object Panel145: TPanel
                     Left = 1
@@ -26014,8 +26003,8 @@ object frmDCF: TfrmDCF
                     object Label212: TLabel
                       Left = 0
                       Top = 0
-                      Width = 804
-                      Height = 30
+                      Width = 235
+                      Height = 17
                       Margins.Top = 0
                       Margins.Right = 0
                       Margins.Bottom = 5
@@ -26032,8 +26021,6 @@ object frmDCF: TfrmDCF
                       ParentFont = False
                       Layout = tlCenter
                       WordWrap = True
-                      ExplicitWidth = 235
-                      ExplicitHeight = 17
                     end
                   end
                   object DateTimePicker10: TDateTimePicker
@@ -26178,7 +26165,7 @@ object frmDCF: TfrmDCF
                   Left = 2
                   Top = 17
                   Width = 56
-                  Height = 18
+                  Height = 15
                   Margins.Left = 0
                   Margins.Top = 0
                   Margins.Bottom = 0
@@ -26192,7 +26179,6 @@ object frmDCF: TfrmDCF
                   Font.Style = [fsBold]
                   ParentFont = False
                   Layout = tlCenter
-                  ExplicitHeight = 15
                 end
               end
               object Panel151: TPanel
@@ -26469,6 +26455,7 @@ object frmDCF: TfrmDCF
             Font.Style = [fsBold]
             ParentFont = False
             TabOrder = 1
+            ExplicitWidth = 420
           end
         end
         object tsFunctionalityBNC: TTabSheet
@@ -26588,7 +26575,7 @@ object frmDCF: TfrmDCF
                   Left = 2
                   Top = 17
                   Width = 56
-                  Height = 18
+                  Height = 15
                   Margins.Left = 0
                   Margins.Top = 0
                   Margins.Bottom = 0
@@ -26602,7 +26589,6 @@ object frmDCF: TfrmDCF
                   Font.Style = [fsBold]
                   ParentFont = False
                   Layout = tlCenter
-                  ExplicitHeight = 15
                 end
               end
               object Panel157: TPanel
@@ -27717,7 +27703,7 @@ object frmDCF: TfrmDCF
                     AlignWithMargins = True
                     Left = 11
                     Top = 41
-                    Width = 793
+                    Width = 275
                     Height = 15
                     Margins.Left = 10
                     Margins.Top = 10
@@ -27731,7 +27717,6 @@ object frmDCF: TfrmDCF
                     Font.Style = [fsBold]
                     ParentFont = False
                     WordWrap = True
-                    ExplicitWidth = 275
                   end
                   object Panel180: TPanel
                     Left = 1
@@ -27754,8 +27739,8 @@ object frmDCF: TfrmDCF
                     object Label259: TLabel
                       Left = 0
                       Top = 0
-                      Width = 806
-                      Height = 30
+                      Width = 235
+                      Height = 17
                       Margins.Top = 0
                       Margins.Right = 0
                       Margins.Bottom = 5
@@ -27772,8 +27757,6 @@ object frmDCF: TfrmDCF
                       ParentFont = False
                       Layout = tlCenter
                       WordWrap = True
-                      ExplicitWidth = 235
-                      ExplicitHeight = 17
                     end
                   end
                   object DBEdit13: TDBEdit
@@ -27807,7 +27790,7 @@ object frmDCF: TfrmDCF
                     AlignWithMargins = True
                     Left = 11
                     Top = 101
-                    Width = 793
+                    Width = 212
                     Height = 15
                     Margins.Left = 10
                     Margins.Top = 45
@@ -27821,13 +27804,12 @@ object frmDCF: TfrmDCF
                     Font.Style = [fsBold]
                     ParentFont = False
                     WordWrap = True
-                    ExplicitWidth = 212
                   end
                   object Label261: TLabel
                     AlignWithMargins = True
                     Left = 11
                     Top = 41
-                    Width = 793
+                    Width = 201
                     Height = 15
                     Margins.Left = 10
                     Margins.Top = 10
@@ -27841,7 +27823,6 @@ object frmDCF: TfrmDCF
                     Font.Style = [fsBold]
                     ParentFont = False
                     WordWrap = True
-                    ExplicitWidth = 201
                   end
                   object Panel182: TPanel
                     Left = 1
@@ -27864,8 +27845,8 @@ object frmDCF: TfrmDCF
                     object Label262: TLabel
                       Left = 0
                       Top = 0
-                      Width = 806
-                      Height = 30
+                      Width = 235
+                      Height = 17
                       Margins.Top = 10
                       Margins.Right = 0
                       Margins.Bottom = 5
@@ -27882,8 +27863,6 @@ object frmDCF: TfrmDCF
                       ParentFont = False
                       Layout = tlCenter
                       WordWrap = True
-                      ExplicitWidth = 235
-                      ExplicitHeight = 17
                     end
                   end
                   object DBEdit14: TDBEdit
@@ -28104,6 +28083,7 @@ object frmDCF: TfrmDCF
             Font.Style = [fsBold]
             ParentFont = False
             TabOrder = 1
+            ExplicitWidth = 386
           end
         end
         object tsHAPAG: TTabSheet
@@ -28223,7 +28203,7 @@ object frmDCF: TfrmDCF
                   Left = 2
                   Top = 17
                   Width = 56
-                  Height = 18
+                  Height = 15
                   Margins.Left = 0
                   Margins.Top = 0
                   Margins.Bottom = 0
@@ -28237,7 +28217,6 @@ object frmDCF: TfrmDCF
                   Font.Style = [fsBold]
                   ParentFont = False
                   Layout = tlCenter
-                  ExplicitHeight = 15
                 end
               end
               object Panel185: TPanel
@@ -28548,7 +28527,7 @@ object frmDCF: TfrmDCF
                     AlignWithMargins = True
                     Left = 11
                     Top = 41
-                    Width = 789
+                    Width = 91
                     Height = 15
                     Margins.Left = 10
                     Margins.Top = 10
@@ -28563,7 +28542,6 @@ object frmDCF: TfrmDCF
                     Font.Style = [fsBold]
                     ParentFont = False
                     WordWrap = True
-                    ExplicitWidth = 91
                   end
                   object Panel188: TPanel
                     Left = 1
@@ -28586,8 +28564,8 @@ object frmDCF: TfrmDCF
                     object Label271: TLabel
                       Left = 0
                       Top = 0
-                      Width = 804
-                      Height = 30
+                      Width = 235
+                      Height = 17
                       Margins.Top = 0
                       Margins.Right = 0
                       Margins.Bottom = 5
@@ -28604,8 +28582,6 @@ object frmDCF: TfrmDCF
                       ParentFont = False
                       Layout = tlCenter
                       WordWrap = True
-                      ExplicitWidth = 235
-                      ExplicitHeight = 17
                     end
                   end
                   object DateTimePicker11: TDateTimePicker
@@ -28701,7 +28677,7 @@ object frmDCF: TfrmDCF
                     AlignWithMargins = True
                     Left = 11
                     Top = 41
-                    Width = 789
+                    Width = 91
                     Height = 15
                     Margins.Left = 10
                     Margins.Top = 10
@@ -28716,7 +28692,6 @@ object frmDCF: TfrmDCF
                     Font.Style = [fsBold]
                     ParentFont = False
                     WordWrap = True
-                    ExplicitWidth = 91
                   end
                   object Panel190: TPanel
                     Left = 1
@@ -28739,8 +28714,8 @@ object frmDCF: TfrmDCF
                     object Label273: TLabel
                       Left = 0
                       Top = 0
-                      Width = 804
-                      Height = 30
+                      Width = 235
+                      Height = 17
                       Margins.Top = 0
                       Margins.Right = 0
                       Margins.Bottom = 5
@@ -28757,8 +28732,6 @@ object frmDCF: TfrmDCF
                       ParentFont = False
                       Layout = tlCenter
                       WordWrap = True
-                      ExplicitWidth = 235
-                      ExplicitHeight = 17
                     end
                   end
                   object DateTimePicker12: TDateTimePicker
@@ -28912,7 +28885,7 @@ object frmDCF: TfrmDCF
                     AlignWithMargins = True
                     Left = 11
                     Top = 41
-                    Width = 789
+                    Width = 91
                     Height = 15
                     Margins.Left = 10
                     Margins.Top = 10
@@ -28927,7 +28900,6 @@ object frmDCF: TfrmDCF
                     Font.Style = [fsBold]
                     ParentFont = False
                     WordWrap = True
-                    ExplicitWidth = 91
                   end
                   object Panel192: TPanel
                     Left = 1
@@ -28950,8 +28922,8 @@ object frmDCF: TfrmDCF
                     object Label275: TLabel
                       Left = 0
                       Top = 0
-                      Width = 804
-                      Height = 30
+                      Width = 235
+                      Height = 17
                       Margins.Top = 0
                       Margins.Right = 0
                       Margins.Bottom = 5
@@ -28968,8 +28940,6 @@ object frmDCF: TfrmDCF
                       ParentFont = False
                       Layout = tlCenter
                       WordWrap = True
-                      ExplicitWidth = 235
-                      ExplicitHeight = 17
                     end
                   end
                   object DateTimePicker13: TDateTimePicker
@@ -29012,6 +28982,7 @@ object frmDCF: TfrmDCF
             Font.Style = [fsBold]
             ParentFont = False
             TabOrder = 1
+            ExplicitWidth = 632
           end
           object pFooterEnd4: TPanel
             Left = 0
@@ -29034,8 +29005,8 @@ object frmDCF: TfrmDCF
             object Label207: TLabel
               Left = 0
               Top = 0
-              Width = 857
-              Height = 25
+              Width = 450
+              Height = 17
               Align = alClient
               Alignment = taCenter
               Caption = 
@@ -29048,8 +29019,6 @@ object frmDCF: TfrmDCF
               Font.Style = [fsBold]
               ParentFont = False
               Layout = tlCenter
-              ExplicitWidth = 450
-              ExplicitHeight = 17
             end
           end
         end
@@ -29061,6 +29030,8 @@ object frmDCF: TfrmDCF
         Height = 35
         Align = alBottom
         TabOrder = 1
+        ExplicitTop = 618
+        ExplicitWidth = 863
         object Button24: TButton
           AlignWithMargins = True
           Left = 779
@@ -29077,6 +29048,7 @@ object frmDCF: TfrmDCF
           Font.Style = [fsBold]
           ParentFont = False
           TabOrder = 0
+          ExplicitLeft = 777
         end
       end
       object pHeader4: TPanel
@@ -29086,6 +29058,7 @@ object frmDCF: TfrmDCF
         Height = 40
         Align = alTop
         TabOrder = 2
+        ExplicitWidth = 863
         object SkLabel121: TSkLabel
           Left = 1
           Top = 1
@@ -29177,7 +29150,7 @@ object frmDCF: TfrmDCF
         Align = alClient
         MultiLine = True
         TabOrder = 2
-        OnChange = PageControl4Change
+        OnChange = PageControl6Change
         object tsPower: TTabSheet
           Caption = #9632' 5.1'
           object gpForm26: TGridPanel
@@ -30551,9 +30524,7 @@ object frmDCF: TfrmDCF
         Align = alClient
         MultiLine = True
         TabOrder = 0
-        OnChange = PageControl4Change
-        ExplicitLeft = -3
-        ExplicitTop = -56
+        OnChange = PageControl7Change
         object tsFunctionalityBESWMC: TTabSheet
           Caption = #9632' 6.1'
           object gpForm29: TGridPanel
@@ -30796,8 +30767,6 @@ object frmDCF: TfrmDCF
                   Align = alTop
                   BevelOuter = bvLowered
                   TabOrder = 1
-                  ExplicitLeft = 45
-                  ExplicitWidth = 767
                   object Label277: TLabel
                     AlignWithMargins = True
                     Left = 11
@@ -30827,7 +30796,6 @@ object frmDCF: TfrmDCF
                     Align = alTop
                     BevelOuter = bvNone
                     TabOrder = 0
-                    ExplicitWidth = 765
                     object Shape37: TShape
                       Left = 0
                       Top = 0
@@ -32139,8 +32107,6 @@ object frmDCF: TfrmDCF
                 Value = 94.723117224120100000
               end>
             TabOrder = 0
-            ExplicitWidth = 855
-            ExplicitHeight = 527
             object Panel224: TPanel
               Left = 0
               Top = 0
@@ -32569,7 +32535,6 @@ object frmDCF: TfrmDCF
                     Font.Name = 'Segoe UI'
                     Font.Style = [fsBold]
                     ParentFont = False
-                    ExplicitTop = 125
                     ExplicitWidth = 18
                   end
                   object Label298: TLabel
@@ -32611,8 +32576,7 @@ object frmDCF: TfrmDCF
                     Font.Name = 'Segoe UI'
                     Font.Style = [fsBold]
                     ParentFont = False
-                    ExplicitLeft = -5
-                    ExplicitTop = 328
+                    ExplicitWidth = 18
                   end
                   object Label300: TLabel
                     AlignWithMargins = True
@@ -32642,7 +32606,6 @@ object frmDCF: TfrmDCF
                     Align = alTop
                     BevelOuter = bvNone
                     TabOrder = 0
-                    ExplicitWidth = 804
                     object Shape39: TShape
                       Left = 0
                       Top = 0
@@ -32700,7 +32663,6 @@ object frmDCF: TfrmDCF
                     ParentFont = False
                     TabOrder = 1
                     WordWrap = True
-                    ExplicitWidth = 784
                   end
                   object CheckBox84: TCheckBox
                     AlignWithMargins = True
@@ -32722,8 +32684,6 @@ object frmDCF: TfrmDCF
                     ParentFont = False
                     TabOrder = 2
                     WordWrap = True
-                    ExplicitLeft = -19
-                    ExplicitTop = 221
                   end
                   object CheckBox85: TCheckBox
                     AlignWithMargins = True
@@ -32745,7 +32705,6 @@ object frmDCF: TfrmDCF
                     ParentFont = False
                     TabOrder = 3
                     WordWrap = True
-                    ExplicitTop = 239
                   end
                   object CheckBox86: TCheckBox
                     AlignWithMargins = True
@@ -32769,8 +32728,6 @@ object frmDCF: TfrmDCF
                     ParentFont = False
                     TabOrder = 4
                     WordWrap = True
-                    ExplicitLeft = 0
-                    ExplicitTop = 256
                   end
                   object CheckBox129: TCheckBox
                     AlignWithMargins = True
@@ -32794,7 +32751,6 @@ object frmDCF: TfrmDCF
                     ParentFont = False
                     TabOrder = 5
                     WordWrap = True
-                    ExplicitTop = 407
                   end
                   object CheckBox130: TCheckBox
                     AlignWithMargins = True
@@ -32840,7 +32796,6 @@ object frmDCF: TfrmDCF
             Font.Style = [fsBold]
             ParentFont = False
             TabOrder = 1
-            ExplicitWidth = 462
           end
         end
         object tsProvision: TTabSheet
@@ -32860,13 +32815,12 @@ object frmDCF: TfrmDCF
             Font.Style = [fsBold]
             ParentFont = False
             TabOrder = 0
-            ExplicitWidth = 399
           end
           object gpForm31: TGridPanel
             Left = 0
             Top = 21
             Width = 857
-            Height = 530
+            Height = 505
             Align = alClient
             BevelOuter = bvNone
             ColumnCollection = <
@@ -32896,14 +32850,14 @@ object frmDCF: TfrmDCF
               Left = 0
               Top = 0
               Width = 857
-              Height = 28
+              Height = 27
               Align = alClient
               TabOrder = 0
               object SkLabel167: TSkLabel
                 Left = 1
                 Top = 1
                 Width = 855
-                Height = 26
+                Height = 25
                 Align = alClient
                 TextSettings.Font.Weight = Bold
                 TextSettings.HorzAlign = Center
@@ -32917,9 +32871,9 @@ object frmDCF: TfrmDCF
             end
             object ScrollBox25: TScrollBox
               Left = 0
-              Top = 28
+              Top = 27
               Width = 857
-              Height = 502
+              Height = 478
               Align = alClient
               Anchors = []
               BorderStyle = bsNone
@@ -33247,7 +33201,6 @@ object frmDCF: TfrmDCF
                   ValueChecked = 'Yes'
                   ValueUnchecked = 'No'
                   WordWrap = True
-                  ExplicitTop = 71
                 end
                 object Panel207: TPanel
                   AlignWithMargins = True
@@ -33262,8 +33215,6 @@ object frmDCF: TfrmDCF
                   Align = alTop
                   BevelOuter = bvLowered
                   TabOrder = 1
-                  ExplicitLeft = 20
-                  ExplicitTop = 92
                   object Label301: TLabel
                     AlignWithMargins = True
                     Left = 11
@@ -33352,6 +33303,43 @@ object frmDCF: TfrmDCF
               end
             end
           end
+          object pFooterEnd6: TPanel
+            Left = 0
+            Top = 526
+            Width = 857
+            Height = 25
+            Align = alBottom
+            BevelOuter = bvNone
+            TabOrder = 2
+            object Shape43: TShape
+              Left = 0
+              Top = 0
+              Width = 857
+              Height = 25
+              Align = alClient
+              Brush.Color = clInfoBk
+              ExplicitWidth = 378
+              ExplicitHeight = 27
+            end
+            object Label320: TLabel
+              Left = 0
+              Top = 0
+              Width = 857
+              Height = 25
+              Align = alClient
+              Alignment = taCenter
+              Caption = 'End of Essential Governance Area No. 3: Environmental Management'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Height = -13
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              ParentFont = False
+              Layout = tlCenter
+              ExplicitWidth = 426
+              ExplicitHeight = 17
+            end
+          end
         end
       end
       object pButtonToolbar6: TPanel
@@ -33361,8 +33349,6 @@ object frmDCF: TfrmDCF
         Height = 35
         Align = alBottom
         TabOrder = 1
-        ExplicitTop = 618
-        ExplicitWidth = 863
         object Button53: TButton
           AlignWithMargins = True
           Left = 779
@@ -33379,7 +33365,6 @@ object frmDCF: TfrmDCF
           Font.Style = [fsBold]
           ParentFont = False
           TabOrder = 0
-          ExplicitLeft = 777
         end
       end
       object pHeader6: TPanel
@@ -33389,7 +33374,6 @@ object frmDCF: TfrmDCF
         Height = 40
         Align = alTop
         TabOrder = 2
-        ExplicitWidth = 863
         object SkLabel224: TSkLabel
           Left = 1
           Top = 1

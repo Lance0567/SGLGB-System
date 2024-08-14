@@ -1853,6 +1853,16 @@ begin
   PageControl5.Visible := False;
   pHeader4.Visible := False;
   pButtonToolbar4.Visible := False;
+
+  // BFC tab
+  PageControl6.Visible := False;
+  pHeader5.Visible := False;
+  pButtonToolbar5.Visible := False;
+
+  // EM tab
+  PageControl7.Visible := False;
+  pHeader6.Visible := False;
+  pButtonToolbar6.Visible := False;
 end;
 
 //-------Details Tab-------//
@@ -2285,9 +2295,24 @@ end;
 procedure TfrmDCF.FormResize(Sender: TObject);
 begin
   Self.Caption := 'Height: ' + IntToStr(ClientHeight) + ' ' + 'Width: ' + IntToStr(ClientWidth);
+end;
 
+procedure TfrmDCF.FormShow(Sender: TObject);
+begin
+//  ClientHeight := 722;
+  TabsReset1;
+  TabsReset2;
+  TabsReset3;
+  TabsReset4;
+  TabsReset5;
+  TabsReset6;
+  TabsReset7;
+
+  // Show the first tab
+  DetailsTab;
 
   { Set the PageControls to its first tab }
+
   // FAS Tab
   PageControl2.ActivePageIndex := 0;
 
@@ -2305,18 +2330,6 @@ begin
 
   // EM Tab
   PageControl7.ActivePageIndex := 0;
-end;
-
-procedure TfrmDCF.FormShow(Sender: TObject);
-begin
-//  ClientHeight := 722;
-  TabsReset1;
-  TabsReset2;
-  TabsReset3;
-  TabsReset4;
-
-  // Show the first tab
-  DetailsTab;
 end;
 
 //-------Main PageControl-------//
@@ -2374,15 +2387,15 @@ end;
 procedure TfrmDCF.PageControl5Change(Sender: TObject);
 begin
   case PageControl5.ActivePageIndex of
-    1: FunctionalityVAWTab;
-    2: AccessHealthTab;
-    3: FunctionalityBDCTab;
-    4: ImplementationKLTab;
-    5: FunctionalityBCPCTab;
-    6: GADTab;
-    7: RBIsTab;
-    8: FunctionalityBNCTab;
-    9: HAPAGTab;
+    0: FunctionalityVAWTab;
+    1: AccessHealthTab;
+    2: FunctionalityBDCTab;
+    3: ImplementationKLTab;
+    4: FunctionalityBCPCTab;
+    5: GADTab;
+    6: RBIsTab;
+    7: FunctionalityBNCTab;
+    8: HAPAGTab;
   end;
 end;
 
@@ -2390,9 +2403,9 @@ end;
 procedure TfrmDCF.PageControl6Change(Sender: TObject);
 begin
   case PageControl6.ActivePageIndex of
-    1: PowerTab;
-    2: ComplianceTab;
-    3: IssuanceTab;
+    0: PowerTab;
+    1: ComplianceTab;
+    2: IssuanceTab;
   end;
 end;
 
@@ -2400,9 +2413,9 @@ end;
 procedure TfrmDCF.PageControl7Change(Sender: TObject);
 begin
   case PageControl7.ActivePageIndex of
-    1: FunctionalityBESWMCTab;
-    2: ExistenceTab;
-    3: ProvisionTab;
+    0: FunctionalityBESWMCTab;
+    1: ExistenceTab;
+    2: ProvisionTab;
   end;
 end;
 

@@ -1735,12 +1735,12 @@ type
     // Tabs Reset 4
     procedure TabsReset4;
     // Tabs
-    procedure FunctionalityBADAC;
-    procedure FunctionalityBPOC;
-    procedure FunctionalityLT;
-    procedure Organization;
-    procedure Barangay;
-    procedure ConductBaRCO;
+    procedure FunctionalityBADACTab;
+    procedure FunctionalityBPOCTab;
+    procedure FunctionalityLTTab;
+    procedure OrganizationTab;
+    procedure BarangayTab;
+    procedure ConductBaRCOTab;
 
     { Page Control 5 }
     procedure PageControl5Change(Sender: TObject);
@@ -1749,15 +1749,15 @@ type
     procedure TabsReset5;
 
     // Tabs
-    procedure FunctionalityVAW;
-    procedure AccessHealth;
-    procedure FunctionalityBDC;
-    procedure ImplementationKL;
-    procedure FunctionalityBCPC;
-    procedure GAD;
-    procedure RBIs;
-    procedure FunctionalityBNC;
-    procedure HAPAG;
+    procedure FunctionalityVAWTab;
+    procedure AccessHealthTab;
+    procedure FunctionalityBDCTab;
+    procedure ImplementationKLTab;
+    procedure FunctionalityBCPCTab;
+    procedure GADTab;
+    procedure RBIsTab;
+    procedure FunctionalityBNCTab;
+    procedure HAPAGTab;
 
     { Page Control 6 }
     procedure PageControl6Change(Sender: TObject);
@@ -2051,42 +2051,42 @@ begin
   pFooterEnd3.Visible := False;
 end;
 
-procedure TfrmDCF.FunctionalityBADAC;
+procedure TfrmDCF.FunctionalityBADACTab;
 begin
   TabsReset4;
   gpForm11.Visible := True;
   stSection11.Visible := True;
 end;
 
-procedure TfrmDCF.FunctionalityBPOC;
+procedure TfrmDCF.FunctionalityBPOCTab;
 begin
   TabsReset4;
   gpForm12.Visible := True;
   stSection12.Visible := True;
 end;
 
-procedure TfrmDCF.FunctionalityLT;
+procedure TfrmDCF.FunctionalityLTTab;
 begin
   TabsReset4;
   gpForm13.Visible := True;
   stSection13.Visible := True;
 end;
 
-procedure TfrmDCF.Organization;
+procedure TfrmDCF.OrganizationTab;
 begin
   TabsReset4;
   gpForm14.Visible := True;
   stSection14.Visible := True;
 end;
 
-procedure TfrmDCF.Barangay;
+procedure TfrmDCF.BarangayTab;
 begin
   TabsReset4;
   gpForm15.Visible := True;
   stSection15.Visible := True;
 end;
 
-procedure TfrmDCF.ConductBaRCO;
+procedure TfrmDCF.ConductBaRCOTab;
 begin
   TabsReset4;
   gpForm16.Visible := True;
@@ -2118,63 +2118,63 @@ begin
   pFooterEnd4.Visible := False;
 end;
 
-procedure TfrmDCF.FunctionalityVAW;
+procedure TfrmDCF.FunctionalityVAWTab;
 begin
   TabsReset5;
   gpForm17.Visible := True;
   stSection17.Visible := True;
 end;
 
-procedure TfrmDCF.AccessHealth;
+procedure TfrmDCF.AccessHealthTab;
 begin
   TabsReset5;
   gpForm18.Visible := True;
   stSection18.Visible := True;
 end;
 
-procedure TfrmDCF.FunctionalityBDC;
+procedure TfrmDCF.FunctionalityBDCTab;
 begin
   TabsReset5;
   gpForm19.Visible := True;
   stSection19.Visible := True;
 end;
 
-procedure TfrmDCF.ImplementationKL;
+procedure TfrmDCF.ImplementationKLTab;
 begin
   TabsReset5;
   gpForm20.Visible := True;
   stSection20.Visible := True;
 end;
 
-procedure TfrmDCF.FunctionalityBCPC;
+procedure TfrmDCF.FunctionalityBCPCTab;
 begin
   TabsReset5;
   gpForm21.Visible := True;
   stSection21.Visible := True;
 end;
 
-procedure TfrmDCF.GAD;
+procedure TfrmDCF.GADTab;
 begin
   TabsReset5;
   gpForm22.Visible := True;
   stSection22.Visible := True;
 end;
 
-procedure TfrmDCF.RBIs;
+procedure TfrmDCF.RBIsTab;
 begin
   TabsReset5;
   gpForm23.Visible := True;
   stSection23.Visible := True;
 end;
 
-procedure TfrmDCF.FunctionalityBNC;
+procedure TfrmDCF.FunctionalityBNCTab;
 begin
   TabsReset5;
   gpForm24.Visible := True;
   stSection24.Visible := True;
 end;
 
-procedure TfrmDCF.HAPAG;
+procedure TfrmDCF.HAPAGTab;
 begin
   TabsReset5;
   gpForm25.Visible := True;
@@ -2201,7 +2201,7 @@ begin
   stSection26.Visible := True;
 end;
 
-procedure TfrmDCF.ComplianceSectab;
+procedure TfrmDCF.ComplianceSecTab;
 begin
   TabsReset6;
   gpForm27.Visible := True;
@@ -2219,7 +2219,35 @@ end;
 // Tabs Reset for PageControl6  - BFC
 procedure TfrmDCF.TabsReset7;
 begin
+  gpForm29.Visible := False;
+  stSection29.Visible := False;
+  gpForm30.Visible := False;
+  stSection30.Visible := False;
+  gpForm31.Visible := False;
+  stSection31.Visible := False;
+  pFooterEnd6.Visible := False;
+end;
 
+procedure TfrmDCF.FunctionalityBESWMCTab;
+begin
+  TabsReset7;
+  gpForm29.Visible := True;
+  stSection29.Visible := True;
+end;
+
+procedure TfrmDCF.ExistenceTab;
+begin
+  TabsReset7;
+  gpForm30.Visible := True;
+  stSection30.Visible := True;
+end;
+
+procedure TfrmDCF.ProvisionTab;
+begin
+  TabsReset7;
+  gpForm31.Visible := True;
+  stSection31.Visible := True;
+  pFooterEnd6.Visible := True;
 end;
 
 {-----------------------------------CheckBox-----------------------------------}
@@ -2258,14 +2286,25 @@ procedure TfrmDCF.FormResize(Sender: TObject);
 begin
   Self.Caption := 'Height: ' + IntToStr(ClientHeight) + ' ' + 'Width: ' + IntToStr(ClientWidth);
 
-  //-------Form Responsive Settings-------//
 
-  // Details Tab
-
+  { Set the PageControls to its first tab }
   // FAS Tab
+  PageControl2.ActivePageIndex := 0;
 
   // DP Tab
+  PageControl3.ActivePageIndex := 0;
 
+  // SPO Tab
+  PageControl4.ActivePageIndex := 0;
+
+  // SPS Tab
+  PageControl5.ActivePageIndex := 0;
+
+  // BFC Tab
+  PageControl6.ActivePageIndex := 0;
+
+  // EM Tab
+  PageControl7.ActivePageIndex := 0;
 end;
 
 procedure TfrmDCF.FormShow(Sender: TObject);
@@ -2322,12 +2361,12 @@ end;
 procedure TfrmDCF.PageControl4Change(Sender: TObject);
 begin
   case PageControl4.ActivePageIndex of
-    0: FunctionalityBADAC;
-    1: FunctionalityBPOC;
-    2: FunctionalityLT;
-    3: Organization;
-    4: Barangay;
-    5: ConductBaRCO;
+    0: FunctionalityBADACTab;
+    1: FunctionalityBPOCTab;
+    2: FunctionalityLTTab;
+    3: OrganizationTab;
+    4: BarangayTab;
+    5: ConductBaRCOTab;
   end;
 end;
 
@@ -2335,15 +2374,15 @@ end;
 procedure TfrmDCF.PageControl5Change(Sender: TObject);
 begin
   case PageControl5.ActivePageIndex of
-    1: FunctionalityVAW;
-    2: AccessHealth;
-    3: FunctionalityBDC;
-    4: ImplementationKL;
-    5: FunctionalityBCPC;
-    6: GAD;
-    7: RBIs;
-    8: FunctionalityBNC;
-    9: HAPAG;
+    1: FunctionalityVAWTab;
+    2: AccessHealthTab;
+    3: FunctionalityBDCTab;
+    4: ImplementationKLTab;
+    5: FunctionalityBCPCTab;
+    6: GADTab;
+    7: RBIsTab;
+    8: FunctionalityBNCTab;
+    9: HAPAGTab;
   end;
 end;
 
@@ -2361,7 +2400,9 @@ end;
 procedure TfrmDCF.PageControl7Change(Sender: TObject);
 begin
   case PageControl7.ActivePageIndex of
-    1: ;
+    1: FunctionalityBESWMCTab;
+    2: ExistenceTab;
+    3: ProvisionTab;
   end;
 end;
 

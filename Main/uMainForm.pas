@@ -544,6 +544,9 @@ begin
   frmDCF.PageControl2.ActivePageIndex := 0;
   frmDCF.PageControl3.ActivePageIndex := 0;
   frmDCF.PageControl4.ActivePageIndex := 0;
+  frmDCF.PageControl5.ActivePageIndex := 0;
+  frmDCF.PageControl6.ActivePageIndex := 0;
+  frmDCF.PageControl7.ActivePageIndex := 0;
   frmDCF.ShowModal;
 
 //  if SaveEmailsDialog.Execute then

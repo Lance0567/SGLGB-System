@@ -22,7 +22,7 @@ object frmDCF: TfrmDCF
     Width = 873
     Height = 686
     Margins.Right = 5
-    ActivePage = tsSPS
+    ActivePage = tsFAS
     Align = alClient
     TabOrder = 0
     OnChange = PageControl1Change
@@ -4491,7 +4491,7 @@ object frmDCF: TfrmDCF
         Top = 40
         Width = 865
         Height = 581
-        ActivePage = tsCompliance
+        ActivePage = tsInnovations
         Align = alClient
         MultiLine = True
         TabOrder = 1
@@ -18383,7 +18383,7 @@ object frmDCF: TfrmDCF
         Top = 40
         Width = 865
         Height = 581
-        ActivePage = tsImplementationKL
+        ActivePage = tsFunctionalityVAW
         Align = alClient
         MultiLine = True
         TabOrder = 0
@@ -29177,7 +29177,7 @@ object frmDCF: TfrmDCF
         Align = alClient
         MultiLine = True
         TabOrder = 2
-        OnChange = PageControl4Change
+        OnChange = PageControl6Change
         object tsPower: TTabSheet
           Caption = #9632' 5.1'
           object gpForm26: TGridPanel
@@ -30551,7 +30551,7 @@ object frmDCF: TfrmDCF
         Align = alClient
         MultiLine = True
         TabOrder = 0
-        OnChange = PageControl4Change
+        OnChange = PageControl7Change
         ExplicitLeft = -3
         ExplicitTop = -56
         object tsFunctionalityBESWMC: TTabSheet
@@ -32866,7 +32866,7 @@ object frmDCF: TfrmDCF
             Left = 0
             Top = 21
             Width = 857
-            Height = 530
+            Height = 505
             Align = alClient
             BevelOuter = bvNone
             ColumnCollection = <
@@ -32892,18 +32892,20 @@ object frmDCF: TfrmDCF
                 Value = 94.723117224120100000
               end>
             TabOrder = 1
+            ExplicitHeight = 530
             object Panel236: TPanel
               Left = 0
               Top = 0
               Width = 857
-              Height = 28
+              Height = 27
               Align = alClient
               TabOrder = 0
+              ExplicitHeight = 28
               object SkLabel167: TSkLabel
                 Left = 1
                 Top = 1
                 Width = 855
-                Height = 26
+                Height = 25
                 Align = alClient
                 TextSettings.Font.Weight = Bold
                 TextSettings.HorzAlign = Center
@@ -32917,14 +32919,16 @@ object frmDCF: TfrmDCF
             end
             object ScrollBox25: TScrollBox
               Left = 0
-              Top = 28
+              Top = 27
               Width = 857
-              Height = 502
+              Height = 478
               Align = alClient
               Anchors = []
               BorderStyle = bsNone
               TabOrder = 1
               OnMouseWheel = ScrollBoxMouseWheelHandler
+              ExplicitTop = 28
+              ExplicitHeight = 502
               object dbmRemarks31: TDBMemo
                 AlignWithMargins = True
                 Left = 10
@@ -33350,6 +33354,45 @@ object frmDCF: TfrmDCF
                   end
                 end
               end
+            end
+          end
+          object pFooterEnd6: TPanel
+            Left = 0
+            Top = 526
+            Width = 857
+            Height = 25
+            Align = alBottom
+            BevelOuter = bvNone
+            TabOrder = 2
+            ExplicitTop = 596
+            ExplicitWidth = 865
+            object Shape43: TShape
+              Left = 0
+              Top = 0
+              Width = 857
+              Height = 25
+              Align = alClient
+              Brush.Color = clInfoBk
+              ExplicitWidth = 378
+              ExplicitHeight = 27
+            end
+            object Label320: TLabel
+              Left = 0
+              Top = 0
+              Width = 857
+              Height = 25
+              Align = alClient
+              Alignment = taCenter
+              Caption = 'End of Essential Governance Area No. 3: Environmental Management'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Height = -13
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              ParentFont = False
+              Layout = tlCenter
+              ExplicitWidth = 426
+              ExplicitHeight = 17
             end
           end
         end
