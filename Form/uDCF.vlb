@@ -1,23 +1,8 @@
 ﻿[dtpDateCreated]
 Coordinates=2053,756,105,58
 
-[edYear]
-Coordinates=1925,1394,56,36
-
-[Image1]
-Coordinates=917,416,57,58
-
 [dtpDatePublished]
 Coordinates=1131,484,116,58
-
-[StatusPanel]
-Coordinates=1676,484,84,58
-
-[pYear]
-Coordinates=10,1028,49,58
-
-[cbStatus]
-Coordinates=10,10,101,124
 
 [DateCreatedPanel]
 Coordinates=1598,144,120,58
@@ -55,9 +40,6 @@ Coordinates=874,1532,69,36
 [Label6]
 Coordinates=995,1028,53,58
 
-[Label1]
-Coordinates=2702,348,53,58
-
 [tsDP]
 Coordinates=888,1256,42,36
 
@@ -91,9 +73,6 @@ Coordinates=1424,280,53,58
 [tsFAS]
 Coordinates=744,1440,49,36
 
-[Label2]
-Coordinates=2389,892,53,58
-
 [ScrollBox2]
 Coordinates=788,1578,76,36
 
@@ -125,7 +104,7 @@ Coordinates=514,688,81,58
 Coordinates=1026,756,83,58
 
 []
-Coordinates=2585,144,86,58
+Coordinates=1676,484,84,58
 Visible=True
 
 [pHeader1]
@@ -1104,9 +1083,6 @@ Coordinates=274,1394,75,36
 [Label47]
 Coordinates=2193,1028,60,58
 
-[chkbC33]
-Coordinates=1687,1394,65,36
-
 [slMOV7]
 Coordinates=2205,1210,60,36
 
@@ -1121,9 +1097,6 @@ Coordinates=343,348,55,58
 
 [gbMR2]
 Coordinates=2766,1164,56,36
-
-[Panel17]
-Coordinates=2186,892,62,58
 
 [SkLabel23]
 Coordinates=724,1394,75,36
@@ -1248,14 +1221,8 @@ Coordinates=1465,1532,65,36
 [slFMR5]
 Coordinates=719,1578,59,36
 
-[SkLabel22]
-Coordinates=1140,1578,75,36
-
 [Label104]
 Coordinates=221,620,67,58
-
-[slCMR10]
-Coordinates=2027,1532,67,36
 
 [chkbYes7]
 Coordinates=417,892,114,58

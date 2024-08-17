@@ -25,24 +25,23 @@ type
     SplitView: TSplitView;
     NavPanel: TPanel;
     NewLeadsSG: TStringGrid;
-    BindNavigator1: TBindNavigator;
     lblTitle: TLabel;
     PageControl: TPageControl;
-    MOVsTabs: TTabSheet;
-    CalendarTab: TTabSheet;
+    tsMOVs: TTabSheet;
+    tsCalendar: TTabSheet;
     Panel2: TPanel;
     Label1: TLabel;
     Image5: TImage;
-    CalendarView1: TCalendarView;
+    tcvCalendar: TCalendarView;
     LeadsSearchBox: TSearchBox;
-    Panel4: TPanel;
+    pCalendar: TPanel;
     Label3: TLabel;
-    DashboardTab: TTabSheet;
-    Panel5: TPanel;
+    tsDashboard: TTabSheet;
+    pDashboard: TPanel;
     Label4: TLabel;
     ImportLeadsDialog: TOpenDialog;
     ExportLeadsDialog: TSaveDialog;
-    FlowPanel1: TFlowPanel;
+    fpDashboard: TFlowPanel;
     RelativePanel1: TRelativePanel;
     Label5: TLabel;
     Label6: TLabel;
@@ -67,15 +66,13 @@ type
     Label20: TLabel;
     Label21: TLabel;
     Label22: TLabel;
-    UsersTab: TTabSheet;
-    Panel8: TPanel;
+    tsUsers: TTabSheet;
+    pUsers: TPanel;
     Label25: TLabel;
     SearchBox7: TSearchBox;
-    UsersSG: TStringGrid;
-    BindNavigator5: TBindNavigator;
     cbYear: TComboBox;
-    DCFTab: TTabSheet;
-    Panel3: TPanel;
+    tsDCF: TTabSheet;
+    pDCF: TPanel;
     Label2: TLabel;
     EmailsSearchBox: TSearchBox;
     SaveEmailsDialog: TSaveDialog;
@@ -94,8 +91,6 @@ type
     ClosedLeadsSG: TStringGrid;
     Label30: TLabel;
     VCLStylesCB: TComboBox;
-    VirtualImageList1: TVirtualImageList;
-    ImageCollection1: TImageCollection;
     ViewLeadButton: TSpeedButton;
     CreateLeadButton: TSpeedButton;
     ExportLeadsButton: TSpeedButton;
@@ -133,13 +128,16 @@ type
     LogOut: TMenuItem;
     btnEdit: TSpeedButton;
     RelativePanel7: TRelativePanel;
-    dbgDCF: TDBGrid;
+    tdbgDCF: TDBGrid;
     About1: TMenuItem;
     Help1: TMenuItem;
     Backup1: TMenuItem;
     Backup2: TMenuItem;
     lbUserStatus: TLabel;
-    procedure CalendarView1DrawDayItem(Sender: TObject;
+    pMovFooter: TPanel;
+    pWrapper: TPanel;
+    tdbgUsers: TDBGrid;
+    procedure tcvCalendarDrawDayItem(Sender: TObject;
       DrawParams: TDrawViewInfoParams; CalendarViewViewInfo: TCellItemViewInfo);
     procedure AcctSearchBoxKeyPress(Sender: TObject; var Key: Char);
     procedure LeadsSearchBoxKeyPress(Sender: TObject; var Key: Char);
@@ -171,11 +169,10 @@ type
     procedure btnRemoveMuniClick(Sender: TObject);
     procedure CreateUserButtonClick(Sender: TObject);
     procedure RemoveUserButtonClick(Sender: TObject);
-    procedure UsersTabResize(Sender: TObject);
+    procedure tsUsersResize(Sender: TObject);
     procedure CancelProposalButtonClick(Sender: TObject);
     procedure CompleteProposalButtonClick(Sender: TObject);
     procedure MenuVirtualImageClick(Sender: TObject);
-    procedure PageControlChange(Sender: TObject);
     procedure cbYearKeyPress(Sender: TObject; var Key: Char);
     procedure cbYearChange(Sender: TObject);
     procedure NewLeadsSGDblClick(Sender: TObject);
@@ -187,6 +184,20 @@ type
     procedure LogOutClick(Sender: TObject);
     procedure MunicipalitiesTabShow(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
+
+    { Main PageControl }
+    procedure PageControlChange(Sender: TObject);
+
+    // Main Tabs Reset;
+    procedure MainTabsReset;
+
+    // Tabs
+    procedure DashboardTab;
+    procedure DCFTab;
+    procedure MOVsTab;
+    procedure CalendarTab;
+    procedure UsersTab;
+
   private
     { Private declarations }
     FRanOnce: Boolean;
@@ -209,6 +220,8 @@ implementation
 uses uDataMod;
 
 {-------------------------------Functions & Procedures-------------------------}
+
+//---- Trap the application to not dubplicate ----//
 function IsSingleInstance: Boolean;
 const
   MUTEX_NAME = 'MyUniqueApplicationMutexName_YourAppID';
@@ -235,6 +248,78 @@ begin
 //  LeadsBindProposalSentSourceDB.DataSet.Refresh;
 end;
 
+// Tabs Reset for Main PageControl - Main tab
+procedure TfrmMain.MainTabsReset;
+begin
+  // Dashboard Tab
+  pDashboard.Visible := False;
+  fpDashboard.Visible := False;
+
+  // DCF Tab
+  pDCF.Visible := False;
+  tdbgDCF.Visible := False;
+
+  // MOVs Tab
+  pWrapper.Visible := False;
+
+  // Calendar Tab
+  pCalendar.Visible := False;
+  tcvCalendar.Visible := False;
+
+  // Users Tab
+  pUsers.Visible := False;
+  tdbgUsers.Visible := False;
+end;
+
+procedure TfrmMain.DashboardTab;
+begin
+  MainTabsReset;
+  pDashboard.Visible := True;
+  fpDashboard.Visible := True;
+
+  // Button focus
+  DashboardButton.SetFocus;
+end;
+
+procedure TfrmMain.DCFTab;
+begin
+  MainTabsReset;
+  pDCF.Visible := True;
+  tdbgDCF.Visible := True;
+
+  // Button focus
+  btnDCF.SetFocus;
+end;
+
+procedure TfrmMain.MOVsTab;
+begin
+  MainTabsReset;
+  pWrapper.Visible := True;
+
+  // Button focus
+  btnMOVs.SetFocus;
+end;
+
+procedure TfrmMain.CalendarTab;
+begin
+  MainTabsReset;
+  pCalendar.Visible := True;
+  tcvCalendar.Visible := True;
+
+  // Button focus
+  CalendarButton.SetFocus;
+end;
+
+procedure TfrmMain.UsersTab;
+begin
+  MainTabsReset;
+  pUsers.Visible := True;
+  tdbgUsers.Visible := True;
+
+  // Button focus
+  UsersButton.SetFocus;
+end;
+
 procedure TfrmMain.btnRemoveMuniClick(Sender: TObject);
 begin
 //  AcctBindSourceDB.DataSet.Delete;
@@ -250,7 +335,7 @@ begin
 //
 end;
 
-procedure TfrmMain.CalendarView1DrawDayItem(Sender: TObject;
+procedure TfrmMain.tcvCalendarDrawDayItem(Sender: TObject;
   DrawParams: TDrawViewInfoParams; CalendarViewViewInfo: TCellItemViewInfo);
 begin
   if DayOfWeek(CalendarViewViewInfo.Date) in [1, 7] then
@@ -276,13 +361,12 @@ begin
 //      DM.FDQueryTotal.Refresh;
     end;
   case PageControl.ActivePageIndex of
-    0: DashboardButton.SetFocus;
-    1: btnDCF.SetFocus;
-    2: btnMOVs.SetFocus;
-    3: CalendarButton.SetFocus;
-    4: UsersButton.SetFocus;
+    0: DashboardTab;
+    1: DCFTab;
+    2: MOVsTab;
+    3: CalendarTab;
+    4: UsersTab;
   end;
-
 end;
 
 procedure TfrmMain.SalesSearchBoxKeyPress(Sender: TObject; var Key: Char);
@@ -313,7 +397,7 @@ begin
   dm.qMunicipalities.Active := True;
 end;
 
-procedure TfrmMain.UsersTabResize(Sender: TObject);
+procedure TfrmMain.tsUsersResize(Sender: TObject);
 begin
 //
 end;
@@ -540,13 +624,6 @@ var
   LYear: String;
 begin
   LYear := InputBox('Create DCF', 'Year', '');
-  frmDCF.PageControl1.ActivePageIndex := 0;
-  frmDCF.PageControl2.ActivePageIndex := 0;
-  frmDCF.PageControl3.ActivePageIndex := 0;
-  frmDCF.PageControl4.ActivePageIndex := 0;
-  frmDCF.PageControl5.ActivePageIndex := 0;
-  frmDCF.PageControl6.ActivePageIndex := 0;
-  frmDCF.PageControl7.ActivePageIndex := 0;
   frmDCF.ShowModal;
 
 //  if SaveEmailsDialog.Execute then
@@ -650,9 +727,7 @@ end;
 procedure TfrmMain.FormShow(Sender: TObject);
 begin
   VCLStylesCB.AutoComplete := True;
-  Self.Caption := 'Height: ' + IntToStr(ClientHeight) + ' ' + 'Width: ' + IntToStr(ClientWidth);
-
-
+//  Self.Caption := 'Height: ' + IntToStr(ClientHeight) + ' ' + 'Width: ' + IntToStr(ClientWidth);
 
   if dm.User.username = 'admin' then
   begin

@@ -1,9 +1,6 @@
 ﻿[ProposalSentLeadsSG]
 Coordinates=130,484,145,58
 
-[Panel8]
-Coordinates=786,10,55,58
-
 [Label4]
 Coordinates=1021,416,53,58
 
@@ -37,9 +34,6 @@ Coordinates=768,348,52,58
 [RelativePanel6]
 Coordinates=1021,348,101,58
 
-[UsersTab]
-Coordinates=82,552,70,36
-
 [Label2]
 Coordinates=382,348,53,58
 
@@ -64,9 +58,6 @@ Coordinates=1642,1,120,36
 [VirtualImage1]
 Coordinates=162,552,94,36
 
-[UsersSG]
-Coordinates=716,212,66,58
-
 [CalendarButton]
 Coordinates=186,212,104,58
 
@@ -77,20 +68,11 @@ Visible=True
 [VirtualImage12]
 Coordinates=10,690,101,36
 
-[CalendarView1]
-Coordinates=1067,644,102,36
-
 [CreateUserButton]
 Coordinates=385,644,117,36
 
-[Panel4]
-Coordinates=561,212,55,58
-
 [VCLStylesCB]
 Coordinates=157,10,101,124
-
-[Panel3]
-Coordinates=851,10,55,58
 
 [Label1]
 Coordinates=564,144,53,58
@@ -106,9 +88,6 @@ Coordinates=163,644,94,36
 
 [Label7]
 Coordinates=1075,280,53,58
-
-[FlowPanel1]
-Coordinates=466,484,82,58
 
 [Label5]
 Coordinates=818,416,53,58
@@ -170,14 +149,8 @@ Coordinates=10,598,101,36
 [NewLeadsPanel]
 Coordinates=862,212,108,58
 
-[DashboardTab]
-Coordinates=764,552,99,36
-
 [VirtualImage7]
 Coordinates=721,598,94,36
-
-[VirtualImageList1]
-Coordinates=1504,1482,114,36
 
 [Label15]
 Coordinates=1077,212,60,58
@@ -243,9 +216,6 @@ Coordinates=10,552,62,36
 [Label8]
 Coordinates=958,348,53,58
 
-[CalendarTab]
-Coordinates=266,552,89,36
-
 [DashboardButton]
 Coordinates=556,416,114,58
 
@@ -267,15 +237,8 @@ Coordinates=300,212,60,58
 [Label19]
 Coordinates=1021,144,60,58
 
-[Panel5]
-Coordinates=676,280,55,58
-Visible=True
-
 [Label28]
 Coordinates=10,416,60,58
-
-[ImageCollection1]
-Coordinates=1843,166,114,36
 
 [Splitter3]
 Coordinates=692,552,62,36
@@ -305,7 +268,7 @@ Coordinates=44,70,57,36
 Coordinates=121,690,55,36
 
 []
-Coordinates=1011,484,88,36
+Coordinates=716,212,66,58
 Visible=True
 
 [DM.]
@@ -314,18 +277,6 @@ Visible=False
 
 [btnMOVs]
 Coordinates=767,144,68,58
-
-[MOVsTabs]
-Coordinates=630,644,78,36
-
-[BindNavigator1]
-Coordinates=1034,10,103,58
-
-[BindNavigator5]
-Coordinates=10,144,103,58
-
-[DCFTab]
-Coordinates=1101,552,93,36
 
 [btnCreateDCF]
 Coordinates=225,598,128,36
@@ -344,4 +295,38 @@ Coordinates=10,212,55,58
 
 [viUserStatus]
 Coordinates=954,598,94,36
+
+[fpDashboard]
+Coordinates=466,484,82,58
+
+[pDashboard]
+Coordinates=676,280,55,58
+Visible=True
+
+[pDCF]
+Coordinates=851,10,55,58
+
+[pUsers]
+Coordinates=786,10,55,58
+
+[tcvCalendar]
+Coordinates=1067,644,102,36
+
+[pCalendar]
+Coordinates=561,212,55,58
+
+[tsCalendar]
+Coordinates=266,552,89,36
+
+[tsDashboard]
+Coordinates=764,552,99,36
+
+[tsDCF]
+Coordinates=1101,552,93,36
+
+[tsMOVs]
+Coordinates=630,644,78,36
+
+[tsUsers]
+Coordinates=82,552,70,36
 

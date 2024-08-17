@@ -1,0 +1,2433 @@
+unit uDCF;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls,
+  Vcl.WinXCtrls, Vcl.ExtCtrls, System.Skia, Vcl.Skia, Vcl.Mask, Vcl.DBCtrls,
+  Vcl.Imaging.pngimage, Data.DB, Vcl.Grids, Vcl.DBGrids, Vcl.WinXPanels;
+
+type
+  TfrmDCF = class(TForm)
+    PageControl1: TPageControl;
+    tsFAS: TTabSheet;
+    tsDetails: TTabSheet;
+    ScrollBox2: TScrollBox;
+    pYear: TPanel;
+    Label1: TLabel;
+    edYear: TDBEdit;
+    pProfile: TPanel;
+    Image1: TImage;
+    pBtnHolder: TPanel;
+    btnPrint: TButton;
+    btnComplete: TButton;
+    btnPublish: TButton;
+    StatusPanel: TPanel;
+    Label2: TLabel;
+    DatesPanel: TPanel;
+    DateContactedPanel: TPanel;
+    Label9: TLabel;
+    dtpDateCompleted: TDateTimePicker;
+    DateCreatedPanel: TPanel;
+    Label8: TLabel;
+    dtpDateCreated: TDateTimePicker;
+    DateClosedPanel: TPanel;
+    dtpDatePublished: TDateTimePicker;
+    cbStatus: TComboBox;
+    tsDP: TTabSheet;
+    NotesPanel: TPanel;
+    Label10: TLabel;
+    NotesMemo: TMemo;
+    NamePanel: TPanel;
+    Label3: TLabel;
+    edBarangay: TDBEdit;
+    pCityMunicipality: TPanel;
+    Label4: TLabel;
+    edCM: TDBEdit;
+    pProvince: TPanel;
+    Label5: TLabel;
+    edProvince: TDBEdit;
+    pRegion: TPanel;
+    Label6: TLabel;
+    edRegion: TDBEdit;
+    Label7: TLabel;
+    pHeader1: TPanel;
+    slTitle1: TSkLabel;
+    PageControl2: TPageControl;
+    tsCompliance: TTabSheet;
+    gpForm1: TGridPanel;
+    pMR1: TPanel;
+    SkLabel3: TSkLabel;
+    dbmRemarks1: TDBMemo;
+    GroupBox6: TGroupBox;
+    slRemWarning1: TSkLabel;
+    lbRem1: TLabel;
+    gbAnnex: TGroupBox;
+    gbAnnual: TGroupBox;
+    Label12: TLabel;
+    gbPR1: TGroupBox;
+    Label16: TLabel;
+    pPR1: TPanel;
+    Label18: TLabel;
+    RelativePanel2: TRelativePanel;
+    lbYes1: TLabel;
+    chkbYes1: TCheckBox;
+    lbNo1: TLabel;
+    chkbNo1: TCheckBox;
+    pBFDP: TPanel;
+    pPhotoDoc: TPanel;
+    lbTotalBFDP: TLabel;
+    pPhotoDocs: TPanel;
+    btnAddPhotoDoc: TButton;
+    btnViewPhotoDoc: TButton;
+    btnDeletePhotoDoc: TButton;
+    dbgPhotoDoc: TDBGrid;
+    pPhotoDocHeader: TPanel;
+    sPhotoDocBac: TShape;
+    Label11: TLabel;
+    pQuarterlyReport: TPanel;
+    Label13: TLabel;
+    pListOfNoticesDoc: TPanel;
+    lbListOfNotices: TLabel;
+    Panel3: TPanel;
+    btnAddListDoc: TButton;
+    btnViewListDoc: TButton;
+    btnDeleteListDoc: TButton;
+    dbgListOfNoticesDoc: TDBGrid;
+    Panel4: TPanel;
+    sListOfNoticesBac: TShape;
+    Label15: TLabel;
+    pMonthReport: TPanel;
+    Label14: TLabel;
+    pItemizedMonthlyDoc: TPanel;
+    lbItemizedMonthlyCol: TLabel;
+    Panel5: TPanel;
+    btnAddItemizedDoc: TButton;
+    btnViewItemizedDoc: TButton;
+    btnDeleteItemizedDoc: TButton;
+    DBGrid1: TDBGrid;
+    Panel6: TPanel;
+    sItemizedMonthly: TShape;
+    Label17: TLabel;
+    stSection1: TStaticText;
+    tsInnovations: TTabSheet;
+    gpForm2: TGridPanel;
+    pMR2: TPanel;
+    SkLabel14: TSkLabel;
+    dbmRemarks2: TDBMemo;
+    GroupBox8: TGroupBox;
+    slRemWarning2: TSkLabel;
+    lbRem2: TLabel;
+    gbPR2: TGroupBox;
+    Label20: TLabel;
+    pPR2: TPanel;
+    Label21: TLabel;
+    RelativePanel1: TRelativePanel;
+    Label22: TLabel;
+    chkbYes2: TCheckBox;
+    Label23: TLabel;
+    chkbNo2: TCheckBox;
+    pSRE: TPanel;
+    Panel7: TPanel;
+    lbTotalAO: TLabel;
+    Panel9: TPanel;
+    Button5: TButton;
+    Button6: TButton;
+    Button7: TButton;
+    DBGrid2: TDBGrid;
+    Panel10: TPanel;
+    sTotalAmount: TShape;
+    Label25: TLabel;
+    stSection2: TStaticText;
+    tbApproval: TTabSheet;
+    stSection3: TStaticText;
+    gpForm3: TGridPanel;
+    pMR3: TPanel;
+    SkLabel2: TSkLabel;
+    dbmRemarks3: TDBMemo;
+    GroupBox2: TGroupBox;
+    slRemWarning3: TSkLabel;
+    lbRem3: TLabel;
+    gbPR3: TGroupBox;
+    Label24: TLabel;
+    Panel8: TPanel;
+    Label26: TLabel;
+    RelativePanel3: TRelativePanel;
+    Label27: TLabel;
+    chkbYes3: TCheckBox;
+    Label28: TLabel;
+    chkbNo3: TCheckBox;
+    pApproved: TPanel;
+    Panel12: TPanel;
+    Label19: TLabel;
+    Panel14: TPanel;
+    sApproved: TShape;
+    Label30: TLabel;
+    dtpDateOfApproval1: TDateTimePicker;
+    pFooter3: TPanel;
+    tsAllocation: TTabSheet;
+    stSection4: TStaticText;
+    gpForm4: TGridPanel;
+    pMOV4: TPanel;
+    SkLabel8: TSkLabel;
+    dbmRemarks4: TDBMemo;
+    GroupBox5: TGroupBox;
+    slRemWarning4: TSkLabel;
+    lbRem4: TLabel;
+    gbMR4: TScrollBox;
+    gbPR4: TGroupBox;
+    Label32: TLabel;
+    Panel18: TPanel;
+    Label33: TLabel;
+    RelativePanel4: TRelativePanel;
+    Label34: TLabel;
+    chkbYes4: TCheckBox;
+    Label35: TLabel;
+    chkbNo4: TCheckBox;
+    pAllocated: TPanel;
+    Panel20: TPanel;
+    Panel22: TPanel;
+    sBarangay: TShape;
+    Label38: TLabel;
+    pFooter4: TPanel;
+    chkbC1: TDBCheckBox;
+    chkbC2: TDBCheckBox;
+    chkbC3: TDBCheckBox;
+    chkbC4: TDBCheckBox;
+    chkbC5: TDBCheckBox;
+    chkbC6: TDBCheckBox;
+    chkbC7: TDBCheckBox;
+    chkbC8: TDBCheckBox;
+    chkbC9: TDBCheckBox;
+    chkbC10: TDBCheckBox;
+    chkbC11: TDBCheckBox;
+    chkbC12: TDBCheckBox;
+    chkbC13: TDBCheckBox;
+    chkbC14: TDBCheckBox;
+    chkbC16: TDBCheckBox;
+    chkbC17: TDBCheckBox;
+    chkbC18: TDBCheckBox;
+    chkbC19: TDBCheckBox;
+    chkbC20: TDBCheckBox;
+    chkbC21: TDBCheckBox;
+    chkbC22: TDBCheckBox;
+    chkbC23: TDBCheckBox;
+    tsPosting: TTabSheet;
+    stSection5: TStaticText;
+    gpForm5: TGridPanel;
+    pMOV5: TPanel;
+    SkLabel6: TSkLabel;
+    gbMR5: TScrollBox;
+    gbPR5: TGroupBox;
+    Label31: TLabel;
+    Panel24: TPanel;
+    Label36: TLabel;
+    RelativePanel5: TRelativePanel;
+    Label39: TLabel;
+    chkbYes5: TCheckBox;
+    Label40: TLabel;
+    chkbNo5: TCheckBox;
+    pBarangay: TPanel;
+    chkbC24: TDBCheckBox;
+    pFooter5: TPanel;
+    tsRelease: TTabSheet;
+    stSection6: TStaticText;
+    gpForm6: TGridPanel;
+    pMR6: TPanel;
+    SkLabel9: TSkLabel;
+    dbmRemarks6: TDBMemo;
+    GroupBox9: TGroupBox;
+    slRemWarning6: TSkLabel;
+    lbRem6: TLabel;
+    gbMR6: TScrollBox;
+    pFooter: TPanel;
+    tsConduct: TTabSheet;
+    gpForm7: TGridPanel;
+    pMR7: TPanel;
+    SkLabel11: TSkLabel;
+    sbMR7: TScrollBox;
+    dbmRemarks7: TDBMemo;
+    GroupBox3: TGroupBox;
+    slRemWarning7: TSkLabel;
+    lbRem7: TLabel;
+    pFooter7: TPanel;
+    stSection7: TStaticText;
+    GroupBox10: TGroupBox;
+    Label37: TLabel;
+    dtpDateOfApproval2: TDateTimePicker;
+    pButtonToolbar1: TPanel;
+    sbMR1: TScrollBox;
+    Panel26: TPanel;
+    btnSave: TButton;
+    pButtonToolbar2: TPanel;
+    Button1: TButton;
+    pHeader2: TPanel;
+    SkLabel13: TSkLabel;
+    PageControl3: TPageControl;
+    tsFunctionality: TTabSheet;
+    gpForm8: TGridPanel;
+    Panel33: TPanel;
+    SkLabel16: TSkLabel;
+    ScrollBox11: TScrollBox;
+    Panel49: TPanel;
+    stSection8: TStaticText;
+    tsExtentRisk: TTabSheet;
+    gpForm9: TGridPanel;
+    Panel51: TPanel;
+    SkLabel30: TSkLabel;
+    ScrollBox12: TScrollBox;
+    GroupBox17: TGroupBox;
+    Label63: TLabel;
+    Panel52: TPanel;
+    Label64: TLabel;
+    RelativePanel9: TRelativePanel;
+    Label65: TLabel;
+    chkbYes9: TCheckBox;
+    Label66: TLabel;
+    chkbNo9: TCheckBox;
+    Panel57: TPanel;
+    stSection9: TStaticText;
+    tsExtentPrep: TTabSheet;
+    stSection10: TStaticText;
+    gpForm10: TGridPanel;
+    Panel59: TPanel;
+    SkLabel34: TSkLabel;
+    ScrollBox13: TScrollBox;
+    Panel64: TPanel;
+    slCMR9: TSkLabel;
+    slCMR1: TSkLabel;
+    gbMR2: TScrollBox;
+    slIMR1: TSkLabel;
+    GroupBox33: TGroupBox;
+    lbCYYear1: TLabel;
+    edCYYear1: TDBEdit;
+    GroupBox34: TGroupBox;
+    lbCYYear2: TLabel;
+    edCYYear2: TDBEdit;
+    Panel27: TPanel;
+    gbMR3: TScrollBox;
+    slAMR1: TSkLabel;
+    slConsideration: TSkLabel;
+    slAMR2: TSkLabel;
+    dbmRemarks5: TDBMemo;
+    GroupBox7: TGroupBox;
+    slRemWarning5: TSkLabel;
+    lbRem5: TLabel;
+    slPMR1: TSkLabel;
+    gbPR6: TGroupBox;
+    Label41: TLabel;
+    Panel29: TPanel;
+    Label42: TLabel;
+    RelativePanel6: TRelativePanel;
+    Label43: TLabel;
+    chkbYes6: TCheckBox;
+    Label44: TLabel;
+    chkbNo6: TCheckBox;
+    GroupBox35: TGroupBox;
+    slRMR2: TSkLabel;
+    slRMR1: TSkLabel;
+    GroupBox36: TGroupBox;
+    slRMR3: TSkLabel;
+    slMOV3: TSkLabel;
+    chkbC27: TDBCheckBox;
+    slMOV4: TSkLabel;
+    slMOV1: TSkLabel;
+    chkbC25: TDBCheckBox;
+    chkbC26: TDBCheckBox;
+    slMOV2: TSkLabel;
+    GroupBox37: TGroupBox;
+    slRMR5: TSkLabel;
+    chkbC29: TDBCheckBox;
+    chkbC28: TDBCheckBox;
+    slMOV5: TSkLabel;
+    slRMR4: TSkLabel;
+    GroupBox38: TGroupBox;
+    slRMR6: TSkLabel;
+    slMOV6: TSkLabel;
+    chkbC31: TDBCheckBox;
+    chkbC30: TDBCheckBox;
+    slMOV7: TSkLabel;
+    chkbC32: TDBCheckBox;
+    GroupBox4: TGroupBox;
+    Label45: TLabel;
+    Panel16: TPanel;
+    Label46: TLabel;
+    RelativePanel7: TRelativePanel;
+    Label47: TLabel;
+    chkbYes7: TCheckBox;
+    Label48: TLabel;
+    chkbNo7: TCheckBox;
+    Panel36: TPanel;
+    Panel37: TPanel;
+    Panel39: TPanel;
+    Shape1: TShape;
+    Label54: TLabel;
+    chkbC34: TDBCheckBox;
+    slFMR1: TSkLabel;
+    slFMR2: TSkLabel;
+    slFMR3: TSkLabel;
+    DateTimePicker3: TDateTimePicker;
+    Label61: TLabel;
+    GroupBox12: TGroupBox;
+    chkbC35: TDBCheckBox;
+    chkbC36: TDBCheckBox;
+    chkbC37: TDBCheckBox;
+    slFMR4: TSkLabel;
+    slFMR5: TSkLabel;
+    Panel40: TPanel;
+    Panel41: TPanel;
+    Label56: TLabel;
+    Label29: TLabel;
+    Panel43: TPanel;
+    Shape3: TShape;
+    Label57: TLabel;
+    edEstimatedRev: TDBEdit;
+    edAmountOfBDRRMF: TDBEdit;
+    GroupBox1: TGroupBox;
+    slFMR7: TSkLabel;
+    slFMR6: TSkLabel;
+    chkbC38: TDBCheckBox;
+    SkLabel23: TSkLabel;
+    GroupBox39: TGroupBox;
+    SkLabel24: TSkLabel;
+    chkbAccRep: TDBCheckBox;
+    chkbCertification: TDBCheckBox;
+    Panel44: TPanel;
+    Panel45: TPanel;
+    Label59: TLabel;
+    Panel47: TPanel;
+    Shape4: TShape;
+    Label60: TLabel;
+    edPercentOfPrograms: TDBEdit;
+    SkLabel25: TSkLabel;
+    Label58: TLabel;
+    Panel2: TPanel;
+    Label103: TLabel;
+    Panel11: TPanel;
+    Shape9: TShape;
+    Label104: TLabel;
+    edAmountUtilized: TDBEdit;
+    Panel1: TPanel;
+    Label53: TLabel;
+    Label102: TLabel;
+    RelativePanel15: TRelativePanel;
+    Label55: TLabel;
+    chkbYesAcc: TCheckBox;
+    Label101: TLabel;
+    chkbNoAcc: TCheckBox;
+    Panel13: TPanel;
+    Label106: TLabel;
+    RelativePanel16: TRelativePanel;
+    Label107: TLabel;
+    CheckBox15: TCheckBox;
+    Label108: TLabel;
+    CheckBox16: TCheckBox;
+    GroupBox13: TGroupBox;
+    Label49: TLabel;
+    Panel35: TPanel;
+    Label50: TLabel;
+    RelativePanel8: TRelativePanel;
+    Label51: TLabel;
+    chkbYes8: TCheckBox;
+    Label52: TLabel;
+    chkbNo8: TCheckBox;
+    GroupBox14: TGroupBox;
+    slRemWarning8: TSkLabel;
+    lbRem8: TLabel;
+    dbmRemarks8: TDBMemo;
+    SkLabel26: TSkLabel;
+    chkbAnnualBDRRMF: TDBCheckBox;
+    chkbCertificationSub: TDBCheckBox;
+    Label105: TLabel;
+    edAmountAllocated: TDBEdit;
+    GroupBox16: TGroupBox;
+    slRemWarning9: TSkLabel;
+    lbRem9: TLabel;
+    dbmRemarks9: TDBMemo;
+    GroupBox11: TGroupBox;
+    SkLabel31: TSkLabel;
+    chkbC39: TDBCheckBox;
+    GroupBox15: TGroupBox;
+    SkLabel1: TSkLabel;
+    chkbC40: TDBCheckBox;
+    Panel15: TPanel;
+    Panel19: TPanel;
+    Label67: TLabel;
+    Label68: TLabel;
+    edTopH1: TDBEdit;
+    edTopH2: TDBEdit;
+    SkLabel4: TSkLabel;
+    chkbC41: TDBCheckBox;
+    GroupBox19: TGroupBox;
+    slRemWarning10: TSkLabel;
+    lbRem10: TLabel;
+    dbmRemarks10: TDBMemo;
+    GroupBox18: TGroupBox;
+    SkLabel35: TSkLabel;
+    chkbC42: TDBCheckBox;
+    GroupBox40: TGroupBox;
+    SkLabel5: TSkLabel;
+    chkbC44: TDBCheckBox;
+    GroupBox41: TGroupBox;
+    Label62: TLabel;
+    Panel21: TPanel;
+    Label69: TLabel;
+    RelativePanel17: TRelativePanel;
+    Label70: TLabel;
+    chkbYes10: TCheckBox;
+    Label109: TLabel;
+    chkbNo10: TCheckBox;
+    chkbC43: TDBCheckBox;
+    Panel25: TPanel;
+    Label110: TLabel;
+    Panel28: TPanel;
+    Label111: TLabel;
+    Label114: TLabel;
+    gpMultiCheckbox: TGridPanel;
+    chkbYesCom: TCheckBox;
+    chkbNoCom: TCheckBox;
+    skCommunicaitonEqu: TSkLabel;
+    chkbYesRes: TCheckBox;
+    chkbNoRes: TCheckBox;
+    skRescueVec: TSkLabel;
+    chkbYesGen: TCheckBox;
+    chkbNoGen: TCheckBox;
+    slGenerator: TSkLabel;
+    chkbYesFir: TCheckBox;
+    chkbNoFir: TCheckBox;
+    slFirstAid: TSkLabel;
+    chkbYesFla: TCheckBox;
+    chkbNoFla: TCheckBox;
+    slFlashlight: TSkLabel;
+    chkbYesPer: TCheckBox;
+    chkbNoPer: TCheckBox;
+    slPersonalPro: TSkLabel;
+    pFooterEnd: TPanel;
+    Shape2: TShape;
+    lbFooterEnd: TLabel;
+    pFooterEnd2: TPanel;
+    Shape5: TShape;
+    Label71: TLabel;
+    tsSPO: TTabSheet;
+    PageControl4: TPageControl;
+    tsFunctionalityBADAC: TTabSheet;
+    gpForm11: TGridPanel;
+    Panel23: TPanel;
+    SkLabel7: TSkLabel;
+    ScrollBox1: TScrollBox;
+    dbmRemarks11: TDBMemo;
+    GroupBox20: TGroupBox;
+    slRemWarning11: TSkLabel;
+    lbRem11: TLabel;
+    Panel30: TPanel;
+    Panel31: TPanel;
+    SkLabel12: TSkLabel;
+    Panel32: TPanel;
+    Label73: TLabel;
+    Panel38: TPanel;
+    Shape6: TShape;
+    Label74: TLabel;
+    chkbC45: TDBCheckBox;
+    GroupBox21: TGroupBox;
+    DBCheckBox7: TDBCheckBox;
+    Panel42: TPanel;
+    Panel46: TPanel;
+    Label77: TLabel;
+    Panel50: TPanel;
+    Shape7: TShape;
+    Label78: TLabel;
+    DBCheckBox8: TDBCheckBox;
+    GroupBox22: TGroupBox;
+    Label79: TLabel;
+    Panel53: TPanel;
+    Label80: TLabel;
+    RelativePanel10: TRelativePanel;
+    Label81: TLabel;
+    chkbYes11: TCheckBox;
+    Label82: TLabel;
+    chkbNo11: TCheckBox;
+    Panel54: TPanel;
+    Panel55: TPanel;
+    lbTransmittals: TLabel;
+    Panel56: TPanel;
+    Button11: TButton;
+    Button12: TButton;
+    Button13: TButton;
+    DBGrid5: TDBGrid;
+    Panel58: TPanel;
+    Shape8: TShape;
+    Label85: TLabel;
+    GroupBox23: TGroupBox;
+    SkLabel15: TSkLabel;
+    DBCheckBox10: TDBCheckBox;
+    stSection11: TStaticText;
+    tsFunctionalityBPOC: TTabSheet;
+    gpForm12: TGridPanel;
+    Panel60: TPanel;
+    SkLabel17: TSkLabel;
+    ScrollBox3: TScrollBox;
+    dbmRemarks12: TDBMemo;
+    GroupBox24: TGroupBox;
+    slRemWarning12: TSkLabel;
+    lbRem12: TLabel;
+    Panel61: TPanel;
+    SkLabel19: TSkLabel;
+    Panel62: TPanel;
+    Label87: TLabel;
+    Panel65: TPanel;
+    Shape10: TShape;
+    Label89: TLabel;
+    GroupBox27: TGroupBox;
+    Label91: TLabel;
+    Panel66: TPanel;
+    Label92: TLabel;
+    RelativePanel11: TRelativePanel;
+    Label93: TLabel;
+    CheckBox3: TCheckBox;
+    Label94: TLabel;
+    CheckBox4: TCheckBox;
+    Panel67: TPanel;
+    stSection12: TStaticText;
+    tsFunctionalityLT: TTabSheet;
+    stSection13: TStaticText;
+    gpForm13: TGridPanel;
+    Panel68: TPanel;
+    SkLabel20: TSkLabel;
+    ScrollBox4: TScrollBox;
+    dbmRemarks13: TDBMemo;
+    GroupBox28: TGroupBox;
+    slRemWarning13: TSkLabel;
+    lbRem13: TLabel;
+    GroupBox29: TGroupBox;
+    Label96: TLabel;
+    Panel69: TPanel;
+    Label97: TLabel;
+    RelativePanel12: TRelativePanel;
+    Label98: TLabel;
+    CheckBox5: TCheckBox;
+    Label99: TLabel;
+    CheckBox6: TCheckBox;
+    Panel70: TPanel;
+    Panel71: TPanel;
+    SkLabel27: TSkLabel;
+    SkLabel28: TSkLabel;
+    tsOrganization: TTabSheet;
+    stSection14: TStaticText;
+    gpForm14: TGridPanel;
+    Panel74: TPanel;
+    SkLabel29: TSkLabel;
+    ScrollBox5: TScrollBox;
+    GroupBox30: TGroupBox;
+    Label113: TLabel;
+    Panel75: TPanel;
+    Label115: TLabel;
+    RelativePanel13: TRelativePanel;
+    Label116: TLabel;
+    CheckBox7: TCheckBox;
+    Label117: TLabel;
+    CheckBox8: TCheckBox;
+    Panel76: TPanel;
+    SkLabel32: TSkLabel;
+    Panel77: TPanel;
+    Panel78: TPanel;
+    Shape12: TShape;
+    Label118: TLabel;
+    GroupBox31: TGroupBox;
+    Label119: TLabel;
+    DateTimePicker2: TDateTimePicker;
+    DBCheckBox22: TDBCheckBox;
+    Panel79: TPanel;
+    dbmRemarks14: TDBMemo;
+    GroupBox32: TGroupBox;
+    slRemWarning14: TSkLabel;
+    lbRem14: TLabel;
+    tsBarangay: TTabSheet;
+    stSection15: TStaticText;
+    gpForm15: TGridPanel;
+    Panel80: TPanel;
+    SkLabel36: TSkLabel;
+    ScrollBox6: TScrollBox;
+    GroupBox42: TGroupBox;
+    Label121: TLabel;
+    Panel81: TPanel;
+    Label122: TLabel;
+    RelativePanel14: TRelativePanel;
+    Label123: TLabel;
+    CheckBox9: TCheckBox;
+    Label124: TLabel;
+    CheckBox10: TCheckBox;
+    Panel83: TPanel;
+    dbmRemarks15: TDBMemo;
+    GroupBox43: TGroupBox;
+    slRemWarning15: TSkLabel;
+    lbRem15: TLabel;
+    tsConductBaRCO: TTabSheet;
+    stSection16: TStaticText;
+    gpForm16: TGridPanel;
+    Panel84: TPanel;
+    SkLabel39: TSkLabel;
+    ScrollBox7: TScrollBox;
+    dbmRemarks16: TDBMemo;
+    GroupBox44: TGroupBox;
+    slRemWarning16: TSkLabel;
+    lbRem16: TLabel;
+    Panel85: TPanel;
+    GroupBox45: TGroupBox;
+    Label127: TLabel;
+    Panel86: TPanel;
+    Label128: TLabel;
+    RelativePanel18: TRelativePanel;
+    Label129: TLabel;
+    CheckBox11: TCheckBox;
+    Label130: TLabel;
+    CheckBox12: TCheckBox;
+    GroupBox46: TGroupBox;
+    SkLabel42: TSkLabel;
+    DBCheckBox24: TDBCheckBox;
+    pButtonToolbar3: TPanel;
+    Button17: TButton;
+    pHeader3: TPanel;
+    SkLabel58: TSkLabel;
+    Label137: TLabel;
+    SkLabel59: TSkLabel;
+    DateTimePicker4: TDateTimePicker;
+    SkLabel60: TSkLabel;
+    Panel34: TPanel;
+    Label75: TLabel;
+    Panel94: TPanel;
+    Shape14: TShape;
+    Label138: TLabel;
+    DateTimePicker5: TDateTimePicker;
+    SkLabel61: TSkLabel;
+    DateTimePicker6: TDateTimePicker;
+    GroupBox52: TGroupBox;
+    SkLabel62: TSkLabel;
+    DBCheckBox1: TDBCheckBox;
+    Panel48: TPanel;
+    Label76: TLabel;
+    Panel95: TPanel;
+    Shape15: TShape;
+    Label139: TLabel;
+    DateTimePicker7: TDateTimePicker;
+    GroupBox53: TGroupBox;
+    SkLabel63: TSkLabel;
+    DBCheckBox2: TDBCheckBox;
+    SkLabel64: TSkLabel;
+    GroupBox54: TGroupBox;
+    SkLabel65: TSkLabel;
+    SkLabel66: TSkLabel;
+    DBCheckBox3: TDBCheckBox;
+    DBCheckBox4: TDBCheckBox;
+    Panel92: TPanel;
+    Label140: TLabel;
+    Label141: TLabel;
+    RelativePanel20: TRelativePanel;
+    Label142: TLabel;
+    CheckBox17: TCheckBox;
+    Label143: TLabel;
+    CheckBox18: TCheckBox;
+    GroupBox55: TGroupBox;
+    SkLabel67: TSkLabel;
+    DBCheckBox5: TDBCheckBox;
+    SkLabel68: TSkLabel;
+    DBCheckBox6: TDBCheckBox;
+    SkLabel69: TSkLabel;
+    DBCheckBox9: TDBCheckBox;
+    Panel93: TPanel;
+    Panel96: TPanel;
+    Label83: TLabel;
+    Panel97: TPanel;
+    Button2: TButton;
+    Button3: TButton;
+    Button4: TButton;
+    DBGrid3: TDBGrid;
+    Panel98: TPanel;
+    Shape16: TShape;
+    Label84: TLabel;
+    DBCheckBox33: TDBCheckBox;
+    SkLabel70: TSkLabel;
+    SkLabel10: TSkLabel;
+    DateTimePicker8: TDateTimePicker;
+    GroupBox25: TGroupBox;
+    SkLabel71: TSkLabel;
+    SkLabel72: TSkLabel;
+    DBCheckBox11: TDBCheckBox;
+    GroupBox26: TGroupBox;
+    SkLabel73: TSkLabel;
+    DBCheckBox12: TDBCheckBox;
+    Panel63: TPanel;
+    Label72: TLabel;
+    Label88: TLabel;
+    RelativePanel21: TRelativePanel;
+    Label90: TLabel;
+    CheckBox1: TCheckBox;
+    Label144: TLabel;
+    CheckBox2: TCheckBox;
+    SkLabel74: TSkLabel;
+    Panel99: TPanel;
+    SkLabel75: TSkLabel;
+    Label145: TLabel;
+    SkLabel76: TSkLabel;
+    Panel100: TPanel;
+    Label146: TLabel;
+    Panel101: TPanel;
+    Shape17: TShape;
+    Label147: TLabel;
+    DBEdit1: TDBEdit;
+    Panel102: TPanel;
+    Label148: TLabel;
+    Label149: TLabel;
+    Panel103: TPanel;
+    Shape18: TShape;
+    Label150: TLabel;
+    DBEdit2: TDBEdit;
+    DBEdit3: TDBEdit;
+    Panel104: TPanel;
+    RelativePanel22: TRelativePanel;
+    Label152: TLabel;
+    CheckBox19: TCheckBox;
+    Label153: TLabel;
+    CheckBox20: TCheckBox;
+    DBCheckBox34: TDBCheckBox;
+    Label151: TLabel;
+    DBCheckBox13: TDBCheckBox;
+    GroupBox56: TGroupBox;
+    SkLabel77: TSkLabel;
+    SkLabel78: TSkLabel;
+    DBCheckBox35: TDBCheckBox;
+    SkLabel79: TSkLabel;
+    SkLabel80: TSkLabel;
+    DBCheckBox36: TDBCheckBox;
+    GroupBox57: TGroupBox;
+    SkLabel81: TSkLabel;
+    SkLabel82: TSkLabel;
+    DBCheckBox37: TDBCheckBox;
+    GroupBox58: TGroupBox;
+    SkLabel83: TSkLabel;
+    SkLabel84: TSkLabel;
+    DBCheckBox38: TDBCheckBox;
+    SkLabel18: TSkLabel;
+    GroupBox59: TGroupBox;
+    SkLabel21: TSkLabel;
+    SkLabel85: TSkLabel;
+    DBCheckBox14: TDBCheckBox;
+    GroupBox60: TGroupBox;
+    SkLabel86: TSkLabel;
+    SkLabel87: TSkLabel;
+    DBCheckBox15: TDBCheckBox;
+    GroupBox61: TGroupBox;
+    SkLabel37: TSkLabel;
+    DBCheckBox16: TDBCheckBox;
+    Panel72: TPanel;
+    Panel73: TPanel;
+    Shape11: TShape;
+    Label86: TLabel;
+    GroupBox62: TGroupBox;
+    Label95: TLabel;
+    DateTimePicker1: TDateTimePicker;
+    DBCheckBox17: TDBCheckBox;
+    Panel82: TPanel;
+    Label100: TLabel;
+    Panel87: TPanel;
+    Button8: TButton;
+    Button9: TButton;
+    Button10: TButton;
+    DBGrid4: TDBGrid;
+    Panel88: TPanel;
+    Shape13: TShape;
+    Label112: TLabel;
+    pFooterEnd3: TPanel;
+    Shape19: TShape;
+    Label120: TLabel;
+    tsSPS: TTabSheet;
+    PageControl5: TPageControl;
+    tsFunctionalityVAW: TTabSheet;
+    gpForm17: TGridPanel;
+    Panel89: TPanel;
+    SkLabel33: TSkLabel;
+    ScrollBox8: TScrollBox;
+    dbmRemarks17: TDBMemo;
+    GroupBox47: TGroupBox;
+    slRemWarning17: TSkLabel;
+    lbRem17: TLabel;
+    Panel90: TPanel;
+    Panel91: TPanel;
+    SkLabel40: TSkLabel;
+    Label126: TLabel;
+    Panel105: TPanel;
+    Label131: TLabel;
+    Panel106: TPanel;
+    Shape20: TShape;
+    Label132: TLabel;
+    DateTimePicker9: TDateTimePicker;
+    DBCheckBox18: TDBCheckBox;
+    GroupBox48: TGroupBox;
+    SkLabel43: TSkLabel;
+    DBCheckBox19: TDBCheckBox;
+    GroupBox49: TGroupBox;
+    Label154: TLabel;
+    Panel112: TPanel;
+    Label155: TLabel;
+    RelativePanel19: TRelativePanel;
+    Label156: TLabel;
+    CheckBox13: TCheckBox;
+    Label157: TLabel;
+    CheckBox14: TCheckBox;
+    stSection17: TStaticText;
+    tsAccessHealth: TTabSheet;
+    gpForm18: TGridPanel;
+    Panel124: TPanel;
+    SkLabel55: TSkLabel;
+    ScrollBox9: TScrollBox;
+    dbmRemarks18: TDBMemo;
+    GroupBox66: TGroupBox;
+    slRemWarning18: TSkLabel;
+    lbRem18: TLabel;
+    GroupBox67: TGroupBox;
+    Label171: TLabel;
+    Panel128: TPanel;
+    Label172: TLabel;
+    RelativePanel24: TRelativePanel;
+    Label173: TLabel;
+    CheckBox23: TCheckBox;
+    Label174: TLabel;
+    CheckBox24: TCheckBox;
+    Panel129: TPanel;
+    GroupBox68: TGroupBox;
+    SkLabel89: TSkLabel;
+    DBCheckBox32: TDBCheckBox;
+    GroupBox69: TGroupBox;
+    SkLabel91: TSkLabel;
+    DBCheckBox39: TDBCheckBox;
+    stSection18: TStaticText;
+    tsFunctionalityBDC: TTabSheet;
+    stSection19: TStaticText;
+    gpForm19: TGridPanel;
+    Panel137: TPanel;
+    SkLabel95: TSkLabel;
+    ScrollBox10: TScrollBox;
+    dbmRemarks19: TDBMemo;
+    GroupBox70: TGroupBox;
+    slRemWarning19: TSkLabel;
+    lbRem19: TLabel;
+    GroupBox71: TGroupBox;
+    Label189: TLabel;
+    Panel138: TPanel;
+    Label190: TLabel;
+    RelativePanel27: TRelativePanel;
+    Label191: TLabel;
+    CheckBox29: TCheckBox;
+    Label192: TLabel;
+    CheckBox30: TCheckBox;
+    Panel139: TPanel;
+    GroupBox72: TGroupBox;
+    SkLabel99: TSkLabel;
+    SkLabel100: TSkLabel;
+    DBCheckBox42: TDBCheckBox;
+    GroupBox73: TGroupBox;
+    SkLabel103: TSkLabel;
+    SkLabel104: TSkLabel;
+    DBCheckBox44: TDBCheckBox;
+    GroupBox74: TGroupBox;
+    SkLabel105: TSkLabel;
+    DBCheckBox45: TDBCheckBox;
+    tsImplementationKL: TTabSheet;
+    stSection20: TStaticText;
+    gpForm20: TGridPanel;
+    Panel141: TPanel;
+    SkLabel107: TSkLabel;
+    ScrollBox14: TScrollBox;
+    GroupBox75: TGroupBox;
+    Label193: TLabel;
+    Panel142: TPanel;
+    Label194: TLabel;
+    RelativePanel28: TRelativePanel;
+    Label195: TLabel;
+    CheckBox31: TCheckBox;
+    Label196: TLabel;
+    CheckBox32: TCheckBox;
+    Panel146: TPanel;
+    dbmRemarks20: TDBMemo;
+    GroupBox77: TGroupBox;
+    slRemWarning20: TSkLabel;
+    lbRem20: TLabel;
+    GroupBox78: TGroupBox;
+    SkLabel111: TSkLabel;
+    DBCheckBox47: TDBCheckBox;
+    tsFunctionalityBCPC: TTabSheet;
+    stSection21: TStaticText;
+    gpForm21: TGridPanel;
+    Panel147: TPanel;
+    SkLabel113: TSkLabel;
+    ScrollBox15: TScrollBox;
+    GroupBox79: TGroupBox;
+    Label200: TLabel;
+    Panel148: TPanel;
+    Label201: TLabel;
+    RelativePanel29: TRelativePanel;
+    Label202: TLabel;
+    CheckBox33: TCheckBox;
+    Label203: TLabel;
+    CheckBox34: TCheckBox;
+    Panel149: TPanel;
+    dbmRemarks21: TDBMemo;
+    GroupBox80: TGroupBox;
+    slRemWarning21: TSkLabel;
+    lbRem21: TLabel;
+    GroupBox81: TGroupBox;
+    SkLabel115: TSkLabel;
+    DBCheckBox48: TDBCheckBox;
+    GroupBox83: TGroupBox;
+    SkLabel117: TSkLabel;
+    DBCheckBox49: TDBCheckBox;
+    DBCheckBox50: TDBCheckBox;
+    tsGAD: TTabSheet;
+    stSection22: TStaticText;
+    gpForm22: TGridPanel;
+    Panel152: TPanel;
+    SkLabel118: TSkLabel;
+    ScrollBox16: TScrollBox;
+    dbmRemarks22: TDBMemo;
+    GroupBox84: TGroupBox;
+    slRemWarning22: TSkLabel;
+    lbRem22: TLabel;
+    Panel153: TPanel;
+    GroupBox85: TGroupBox;
+    Label208: TLabel;
+    Panel154: TPanel;
+    Label209: TLabel;
+    RelativePanel30: TRelativePanel;
+    Label210: TLabel;
+    CheckBox35: TCheckBox;
+    Label211: TLabel;
+    CheckBox36: TCheckBox;
+    GroupBox86: TGroupBox;
+    SkLabel120: TSkLabel;
+    DBCheckBox51: TDBCheckBox;
+    pButtonToolbar4: TPanel;
+    Button24: TButton;
+    pHeader4: TPanel;
+    SkLabel121: TSkLabel;
+    Label215: TLabel;
+    GroupBox87: TGroupBox;
+    SkLabel41: TSkLabel;
+    Label133: TLabel;
+    DBCheckBox52: TDBCheckBox;
+    GroupBox88: TGroupBox;
+    SkLabel122: TSkLabel;
+    Label134: TLabel;
+    DBCheckBox53: TDBCheckBox;
+    Panel107: TPanel;
+    Label216: TLabel;
+    Panel108: TPanel;
+    Button25: TButton;
+    Button26: TButton;
+    Button27: TButton;
+    DBGrid9: TDBGrid;
+    Panel159: TPanel;
+    Shape21: TShape;
+    Label217: TLabel;
+    GroupBox89: TGroupBox;
+    SkLabel123: TSkLabel;
+    DBCheckBox54: TDBCheckBox;
+    SkLabel124: TSkLabel;
+    Panel160: TPanel;
+    Label218: TLabel;
+    Panel161: TPanel;
+    Button28: TButton;
+    Button29: TButton;
+    Button30: TButton;
+    DBGrid10: TDBGrid;
+    Panel163: TPanel;
+    Label220: TLabel;
+    Panel164: TPanel;
+    Button31: TButton;
+    Button32: TButton;
+    Button33: TButton;
+    DBGrid11: TDBGrid;
+    Panel165: TPanel;
+    Shape34: TShape;
+    Label221: TLabel;
+    Panel162: TPanel;
+    Label219: TLabel;
+    Panel166: TPanel;
+    Button34: TButton;
+    Button35: TButton;
+    Button36: TButton;
+    DBGrid12: TDBGrid;
+    Panel167: TPanel;
+    Label222: TLabel;
+    Panel168: TPanel;
+    Button37: TButton;
+    Button38: TButton;
+    Button39: TButton;
+    DBGrid13: TDBGrid;
+    GroupBox90: TGroupBox;
+    SkLabel125: TSkLabel;
+    DBCheckBox55: TDBCheckBox;
+    GroupBox51: TGroupBox;
+    SkLabel48: TSkLabel;
+    DBCheckBox26: TDBCheckBox;
+    Panel109: TPanel;
+    Label135: TLabel;
+    Label136: TLabel;
+    RelativePanel31: TRelativePanel;
+    Label223: TLabel;
+    CheckBox37: TCheckBox;
+    Label224: TLabel;
+    CheckBox38: TCheckBox;
+    DBCheckBox20: TDBCheckBox;
+    Panel110: TPanel;
+    SkLabel44: TSkLabel;
+    Label225: TLabel;
+    SkLabel126: TSkLabel;
+    Panel111: TPanel;
+    Label226: TLabel;
+    Panel169: TPanel;
+    Shape22: TShape;
+    Label227: TLabel;
+    DBEdit7: TDBEdit;
+    Panel170: TPanel;
+    Label228: TLabel;
+    Label229: TLabel;
+    Panel171: TPanel;
+    Shape33: TShape;
+    Label230: TLabel;
+    DBEdit8: TDBEdit;
+    DBEdit9: TDBEdit;
+    Panel172: TPanel;
+    Label231: TLabel;
+    RelativePanel32: TRelativePanel;
+    Label232: TLabel;
+    CheckBox39: TCheckBox;
+    Label233: TLabel;
+    CheckBox40: TCheckBox;
+    DBCheckBox57: TDBCheckBox;
+    SkLabel127: TSkLabel;
+    SkLabel128: TSkLabel;
+    DBCheckBox56: TDBCheckBox;
+    DBCheckBox21: TDBCheckBox;
+    Panel113: TPanel;
+    Label158: TLabel;
+    Label159: TLabel;
+    RelativePanel23: TRelativePanel;
+    Label160: TLabel;
+    CheckBox21: TCheckBox;
+    Label161: TLabel;
+    CheckBox22: TCheckBox;
+    Panel114: TPanel;
+    Label163: TLabel;
+    RelativePanel33: TRelativePanel;
+    CheckBox41: TCheckBox;
+    CheckBox42: TCheckBox;
+    SkLabel92: TSkLabel;
+    SkLabel45: TSkLabel;
+    DBCheckBox23: TDBCheckBox;
+    GroupBox50: TGroupBox;
+    SkLabel46: TSkLabel;
+    DBCheckBox25: TDBCheckBox;
+    GroupBox63: TGroupBox;
+    SkLabel47: TSkLabel;
+    DBCheckBox27: TDBCheckBox;
+    Panel115: TPanel;
+    Label162: TLabel;
+    Label164: TLabel;
+    RelativePanel25: TRelativePanel;
+    Label165: TLabel;
+    CheckBox25: TCheckBox;
+    Label166: TLabel;
+    CheckBox26: TCheckBox;
+    Panel116: TPanel;
+    Label167: TLabel;
+    RelativePanel26: TRelativePanel;
+    CheckBox27: TCheckBox;
+    CheckBox28: TCheckBox;
+    Panel117: TPanel;
+    Label169: TLabel;
+    RelativePanel34: TRelativePanel;
+    CheckBox43: TCheckBox;
+    CheckBox44: TCheckBox;
+    Panel118: TPanel;
+    Label170: TLabel;
+    RelativePanel35: TRelativePanel;
+    CheckBox45: TCheckBox;
+    CheckBox46: TCheckBox;
+    GroupBox64: TGroupBox;
+    SkLabel38: TSkLabel;
+    SkLabel49: TSkLabel;
+    DBCheckBox28: TDBCheckBox;
+    DBCheckBox29: TDBCheckBox;
+    Panel119: TPanel;
+    Label125: TLabel;
+    Label168: TLabel;
+    RelativePanel36: TRelativePanel;
+    Label175: TLabel;
+    CheckBox47: TCheckBox;
+    Label176: TLabel;
+    CheckBox48: TCheckBox;
+    Panel120: TPanel;
+    SkLabel50: TSkLabel;
+    Label177: TLabel;
+    SkLabel51: TSkLabel;
+    Panel121: TPanel;
+    Label178: TLabel;
+    Panel122: TPanel;
+    Shape23: TShape;
+    Label179: TLabel;
+    DBEdit4: TDBEdit;
+    Panel123: TPanel;
+    Label180: TLabel;
+    Label181: TLabel;
+    Panel125: TPanel;
+    Shape24: TShape;
+    Label182: TLabel;
+    DBEdit5: TDBEdit;
+    DBEdit6: TDBEdit;
+    Panel126: TPanel;
+    Label183: TLabel;
+    RelativePanel37: TRelativePanel;
+    Label184: TLabel;
+    CheckBox49: TCheckBox;
+    Label185: TLabel;
+    CheckBox50: TCheckBox;
+    DBCheckBox30: TDBCheckBox;
+    GroupBox65: TGroupBox;
+    SkLabel52: TSkLabel;
+    DBCheckBox31: TDBCheckBox;
+    Panel127: TPanel;
+    Label186: TLabel;
+    Panel130: TPanel;
+    Button14: TButton;
+    Button15: TButton;
+    Button16: TButton;
+    DBGrid6: TDBGrid;
+    Panel131: TPanel;
+    Shape25: TShape;
+    Label187: TLabel;
+    SkLabel53: TSkLabel;
+    GroupBox76: TGroupBox;
+    SkLabel54: TSkLabel;
+    SkLabel56: TSkLabel;
+    DBCheckBox40: TDBCheckBox;
+    GroupBox82: TGroupBox;
+    SkLabel57: TSkLabel;
+    SkLabel88: TSkLabel;
+    DBCheckBox41: TDBCheckBox;
+    GroupBox91: TGroupBox;
+    SkLabel90: TSkLabel;
+    SkLabel93: TSkLabel;
+    DBCheckBox43: TDBCheckBox;
+    SkLabel94: TSkLabel;
+    SkLabel96: TSkLabel;
+    SkLabel97: TSkLabel;
+    DBCheckBox46: TDBCheckBox;
+    GroupBox92: TGroupBox;
+    SkLabel98: TSkLabel;
+    DBCheckBox58: TDBCheckBox;
+    Panel132: TPanel;
+    Label188: TLabel;
+    Label197: TLabel;
+    RelativePanel38: TRelativePanel;
+    Label198: TLabel;
+    CheckBox51: TCheckBox;
+    Label199: TLabel;
+    CheckBox52: TCheckBox;
+    Panel133: TPanel;
+    SkLabel101: TSkLabel;
+    Label205: TLabel;
+    SkLabel102: TSkLabel;
+    Panel134: TPanel;
+    Label206: TLabel;
+    Panel135: TPanel;
+    Shape26: TShape;
+    Label234: TLabel;
+    DBEdit10: TDBEdit;
+    Panel136: TPanel;
+    Label235: TLabel;
+    Label236: TLabel;
+    Panel140: TPanel;
+    Shape27: TShape;
+    Label237: TLabel;
+    DBEdit11: TDBEdit;
+    DBEdit12: TDBEdit;
+    Panel143: TPanel;
+    Label238: TLabel;
+    RelativePanel39: TRelativePanel;
+    Label239: TLabel;
+    CheckBox53: TCheckBox;
+    Label240: TLabel;
+    CheckBox54: TCheckBox;
+    Panel144: TPanel;
+    Label204: TLabel;
+    Panel145: TPanel;
+    Shape28: TShape;
+    Label212: TLabel;
+    DateTimePicker10: TDateTimePicker;
+    tsRBIs: TTabSheet;
+    gpForm23: TGridPanel;
+    Panel150: TPanel;
+    SkLabel106: TSkLabel;
+    ScrollBox17: TScrollBox;
+    dbmRemarks23: TDBMemo;
+    GroupBox93: TGroupBox;
+    slRemWarning23: TSkLabel;
+    lbRem23: TLabel;
+    Panel151: TPanel;
+    GroupBox94: TGroupBox;
+    Label213: TLabel;
+    Panel155: TPanel;
+    Label214: TLabel;
+    RelativePanel40: TRelativePanel;
+    Label241: TLabel;
+    CheckBox55: TCheckBox;
+    Label242: TLabel;
+    CheckBox56: TCheckBox;
+    GroupBox95: TGroupBox;
+    SkLabel109: TSkLabel;
+    DBCheckBox59: TDBCheckBox;
+    stSection23: TStaticText;
+    DBCheckBox60: TDBCheckBox;
+    tsFunctionalityBNC: TTabSheet;
+    gpForm24: TGridPanel;
+    Panel156: TPanel;
+    SkLabel108: TSkLabel;
+    ScrollBox18: TScrollBox;
+    dbmRemarks24: TDBMemo;
+    GroupBox96: TGroupBox;
+    slRemWarning24: TSkLabel;
+    lbRem24: TLabel;
+    Panel157: TPanel;
+    GroupBox97: TGroupBox;
+    Label243: TLabel;
+    Panel158: TPanel;
+    Label244: TLabel;
+    RelativePanel41: TRelativePanel;
+    Label245: TLabel;
+    CheckBox57: TCheckBox;
+    Label246: TLabel;
+    CheckBox58: TCheckBox;
+    GroupBox98: TGroupBox;
+    SkLabel112: TSkLabel;
+    DBCheckBox61: TDBCheckBox;
+    stSection24: TStaticText;
+    SkLabel114: TSkLabel;
+    GroupBox99: TGroupBox;
+    SkLabel116: TSkLabel;
+    DBCheckBox63: TDBCheckBox;
+    SkLabel119: TSkLabel;
+    GroupBox100: TGroupBox;
+    SkLabel129: TSkLabel;
+    DBCheckBox62: TDBCheckBox;
+    DBCheckBox64: TDBCheckBox;
+    Panel173: TPanel;
+    Label247: TLabel;
+    RelativePanel42: TRelativePanel;
+    Label249: TLabel;
+    Label250: TLabel;
+    Panel174: TPanel;
+    Label251: TLabel;
+    RelativePanel43: TRelativePanel;
+    CheckBox61: TCheckBox;
+    CheckBox62: TCheckBox;
+    Panel175: TPanel;
+    Label252: TLabel;
+    RelativePanel44: TRelativePanel;
+    CheckBox63: TCheckBox;
+    CheckBox64: TCheckBox;
+    Panel176: TPanel;
+    Label253: TLabel;
+    RelativePanel45: TRelativePanel;
+    CheckBox65: TCheckBox;
+    CheckBox66: TCheckBox;
+    GroupBox101: TGroupBox;
+    SkLabel130: TSkLabel;
+    DBCheckBox65: TDBCheckBox;
+    Panel177: TPanel;
+    Label248: TLabel;
+    Label254: TLabel;
+    RelativePanel46: TRelativePanel;
+    Label255: TLabel;
+    CheckBox59: TCheckBox;
+    Label256: TLabel;
+    CheckBox60: TCheckBox;
+    DBCheckBox66: TDBCheckBox;
+    Panel178: TPanel;
+    SkLabel131: TSkLabel;
+    Label257: TLabel;
+    SkLabel132: TSkLabel;
+    Panel179: TPanel;
+    Label258: TLabel;
+    Panel180: TPanel;
+    Shape29: TShape;
+    Label259: TLabel;
+    DBEdit13: TDBEdit;
+    Panel181: TPanel;
+    Label260: TLabel;
+    Label261: TLabel;
+    Panel182: TPanel;
+    Shape30: TShape;
+    Label262: TLabel;
+    DBEdit14: TDBEdit;
+    DBEdit15: TDBEdit;
+    Panel183: TPanel;
+    Label263: TLabel;
+    RelativePanel47: TRelativePanel;
+    Label264: TLabel;
+    CheckBox67: TCheckBox;
+    Label265: TLabel;
+    CheckBox68: TCheckBox;
+    DBCheckBox67: TDBCheckBox;
+    tsHAPAG: TTabSheet;
+    gpForm25: TGridPanel;
+    Panel184: TPanel;
+    SkLabel110: TSkLabel;
+    ScrollBox19: TScrollBox;
+    dbmRemarks25: TDBMemo;
+    GroupBox102: TGroupBox;
+    slRemWarning25: TSkLabel;
+    lbRem25: TLabel;
+    Panel185: TPanel;
+    GroupBox103: TGroupBox;
+    Label266: TLabel;
+    Panel186: TPanel;
+    Label267: TLabel;
+    RelativePanel48: TRelativePanel;
+    Label268: TLabel;
+    CheckBox69: TCheckBox;
+    Label269: TLabel;
+    CheckBox70: TCheckBox;
+    GroupBox104: TGroupBox;
+    SkLabel134: TSkLabel;
+    DBCheckBox68: TDBCheckBox;
+    GroupBox105: TGroupBox;
+    SkLabel136: TSkLabel;
+    DBCheckBox69: TDBCheckBox;
+    stSection25: TStaticText;
+    Panel187: TPanel;
+    Label270: TLabel;
+    Panel188: TPanel;
+    Shape31: TShape;
+    Label271: TLabel;
+    DateTimePicker11: TDateTimePicker;
+    GroupBox106: TGroupBox;
+    SkLabel135: TSkLabel;
+    DBCheckBox70: TDBCheckBox;
+    Panel189: TPanel;
+    Label272: TLabel;
+    Panel190: TPanel;
+    Shape32: TShape;
+    Label273: TLabel;
+    DateTimePicker12: TDateTimePicker;
+    GroupBox107: TGroupBox;
+    SkLabel137: TSkLabel;
+    DBCheckBox71: TDBCheckBox;
+    GroupBox108: TGroupBox;
+    SkLabel138: TSkLabel;
+    DBCheckBox72: TDBCheckBox;
+    Panel191: TPanel;
+    Label274: TLabel;
+    Panel192: TPanel;
+    Shape35: TShape;
+    Label275: TLabel;
+    DateTimePicker13: TDateTimePicker;
+    pFooterEnd4: TPanel;
+    Shape36: TShape;
+    Label207: TLabel;
+    tsBFC: TTabSheet;
+    pHeader5: TPanel;
+    SkLabel133: TSkLabel;
+    pButtonToolbar5: TPanel;
+    Button18: TButton;
+    PageControl6: TPageControl;
+    tsPower: TTabSheet;
+    gpForm26: TGridPanel;
+    Panel195: TPanel;
+    SkLabel139: TSkLabel;
+    ScrollBox20: TScrollBox;
+    dbmRemarks26: TDBMemo;
+    GroupBox109: TGroupBox;
+    slRemWarning26: TSkLabel;
+    lbRem26: TLabel;
+    Panel196: TPanel;
+    GroupBox110: TGroupBox;
+    GroupBox111: TGroupBox;
+    Label281: TLabel;
+    Panel200: TPanel;
+    Label282: TLabel;
+    RelativePanel49: TRelativePanel;
+    Label283: TLabel;
+    CheckBox71: TCheckBox;
+    Label284: TLabel;
+    CheckBox72: TCheckBox;
+    stSection26: TStaticText;
+    tsComplianceSec: TTabSheet;
+    gpForm27: TGridPanel;
+    Panel220: TPanel;
+    SkLabel153: TSkLabel;
+    ScrollBox21: TScrollBox;
+    dbmRemarks27: TDBMemo;
+    GroupBox117: TGroupBox;
+    slRemWarning27: TSkLabel;
+    lbRem27: TLabel;
+    GroupBox118: TGroupBox;
+    Label308: TLabel;
+    Panel221: TPanel;
+    Label309: TLabel;
+    RelativePanel52: TRelativePanel;
+    Label310: TLabel;
+    CheckBox77: TCheckBox;
+    Label311: TLabel;
+    CheckBox78: TCheckBox;
+    Panel222: TPanel;
+    GroupBox119: TGroupBox;
+    SkLabel155: TSkLabel;
+    DBCheckBox83: TDBCheckBox;
+    stSection27: TStaticText;
+    tsIssuance: TTabSheet;
+    gpForm28: TGridPanel;
+    Panel229: TPanel;
+    SkLabel161: TSkLabel;
+    ScrollBox22: TScrollBox;
+    dbmRemarks28: TDBMemo;
+    GroupBox123: TGroupBox;
+    slRemWarning28: TSkLabel;
+    lbRem28: TLabel;
+    GroupBox124: TGroupBox;
+    Label325: TLabel;
+    Panel230: TPanel;
+    Label326: TLabel;
+    RelativePanel59: TRelativePanel;
+    Label327: TLabel;
+    CheckBox91: TCheckBox;
+    Label328: TLabel;
+    CheckBox92: TCheckBox;
+    Panel231: TPanel;
+    GroupBox128: TGroupBox;
+    SkLabel168: TSkLabel;
+    SkLabel169: TSkLabel;
+    DBCheckBox93: TDBCheckBox;
+    SkLabel141: TSkLabel;
+    DBCheckBox73: TDBCheckBox;
+    GroupBox112: TGroupBox;
+    SkLabel142: TSkLabel;
+    DBCheckBox74: TDBCheckBox;
+    stSection28: TLabel;
+    pFooterEnd5: TPanel;
+    Shape53: TShape;
+    Label414: TLabel;
+    tsEM: TTabSheet;
+    PageControl7: TPageControl;
+    tsFunctionalityBESWMC: TTabSheet;
+    gpForm29: TGridPanel;
+    Panel193: TPanel;
+    SkLabel140: TSkLabel;
+    ScrollBox23: TScrollBox;
+    dbmRemarks29: TDBMemo;
+    GroupBox113: TGroupBox;
+    slRemWarning29: TSkLabel;
+    lbRem29: TLabel;
+    Panel194: TPanel;
+    GroupBox114: TGroupBox;
+    SkLabel145: TSkLabel;
+    Label280: TLabel;
+    DBCheckBox76: TDBCheckBox;
+    GroupBox115: TGroupBox;
+    Label285: TLabel;
+    Panel201: TPanel;
+    Label286: TLabel;
+    RelativePanel50: TRelativePanel;
+    Label287: TLabel;
+    CheckBox73: TCheckBox;
+    Label288: TLabel;
+    CheckBox74: TCheckBox;
+    GroupBox116: TGroupBox;
+    SkLabel146: TSkLabel;
+    Label289: TLabel;
+    DBCheckBox77: TDBCheckBox;
+    GroupBox120: TGroupBox;
+    SkLabel147: TSkLabel;
+    Label290: TLabel;
+    DBCheckBox78: TDBCheckBox;
+    Panel215: TPanel;
+    SkLabel156: TSkLabel;
+    Label302: TLabel;
+    SkLabel157: TSkLabel;
+    Panel216: TPanel;
+    Label303: TLabel;
+    Panel217: TPanel;
+    Shape40: TShape;
+    Label304: TLabel;
+    DBEdit16: TDBEdit;
+    Panel218: TPanel;
+    Label305: TLabel;
+    Label306: TLabel;
+    Panel219: TPanel;
+    Shape41: TShape;
+    Label307: TLabel;
+    DBEdit17: TDBEdit;
+    DBEdit18: TDBEdit;
+    Panel223: TPanel;
+    Label312: TLabel;
+    RelativePanel53: TRelativePanel;
+    Label313: TLabel;
+    CheckBox79: TCheckBox;
+    Label314: TLabel;
+    CheckBox80: TCheckBox;
+    DBCheckBox85: TDBCheckBox;
+    stSection29: TStaticText;
+    tsExistence: TTabSheet;
+    gpForm30: TGridPanel;
+    Panel224: TPanel;
+    SkLabel158: TSkLabel;
+    ScrollBox24: TScrollBox;
+    dbmRemarks30: TDBMemo;
+    GroupBox126: TGroupBox;
+    slRemWarning30: TSkLabel;
+    lbRem30: TLabel;
+    GroupBox127: TGroupBox;
+    Label316: TLabel;
+    Panel225: TPanel;
+    Label317: TLabel;
+    RelativePanel54: TRelativePanel;
+    Label318: TLabel;
+    CheckBox81: TCheckBox;
+    Label319: TLabel;
+    CheckBox82: TCheckBox;
+    Panel226: TPanel;
+    GroupBox129: TGroupBox;
+    SkLabel160: TSkLabel;
+    stSection30: TStaticText;
+    tsProvision: TTabSheet;
+    stSection31: TStaticText;
+    gpForm31: TGridPanel;
+    Panel236: TPanel;
+    SkLabel167: TSkLabel;
+    ScrollBox25: TScrollBox;
+    dbmRemarks31: TDBMemo;
+    GroupBox133: TGroupBox;
+    slRemWarning31: TSkLabel;
+    lbRem31: TLabel;
+    GroupBox134: TGroupBox;
+    Label337: TLabel;
+    Panel237: TPanel;
+    Label338: TLabel;
+    RelativePanel62: TRelativePanel;
+    Label339: TLabel;
+    CheckBox97: TCheckBox;
+    Label340: TLabel;
+    CheckBox98: TCheckBox;
+    Panel238: TPanel;
+    GroupBox138: TGroupBox;
+    SkLabel176: TSkLabel;
+    DBCheckBox97: TDBCheckBox;
+    pButtonToolbar6: TPanel;
+    Button53: TButton;
+    pHeader6: TPanel;
+    SkLabel224: TSkLabel;
+    Panel197: TPanel;
+    Label277: TLabel;
+    Panel198: TPanel;
+    Shape37: TShape;
+    Label278: TLabel;
+    DateTimePicker14: TDateTimePicker;
+    GroupBox170: TGroupBox;
+    SkLabel144: TSkLabel;
+    DBCheckBox75: TDBCheckBox;
+    Panel199: TPanel;
+    Label279: TLabel;
+    Panel202: TPanel;
+    Button19: TButton;
+    Button20: TButton;
+    Button21: TButton;
+    DBGrid7: TDBGrid;
+    Panel203: TPanel;
+    Shape38: TShape;
+    Label291: TLabel;
+    Panel204: TPanel;
+    Label292: TLabel;
+    Label293: TLabel;
+    RelativePanel51: TRelativePanel;
+    Label294: TLabel;
+    CheckBox75: TCheckBox;
+    Label295: TLabel;
+    CheckBox76: TCheckBox;
+    SkLabel143: TSkLabel;
+    Panel205: TPanel;
+    Label296: TLabel;
+    Panel206: TPanel;
+    Shape39: TShape;
+    Label297: TLabel;
+    CheckBox83: TCheckBox;
+    CheckBox84: TCheckBox;
+    Label276: TLabel;
+    Label298: TLabel;
+    CheckBox85: TCheckBox;
+    CheckBox86: TCheckBox;
+    Label299: TLabel;
+    Label300: TLabel;
+    CheckBox129: TCheckBox;
+    CheckBox130: TCheckBox;
+    Panel207: TPanel;
+    Label301: TLabel;
+    Panel208: TPanel;
+    Shape42: TShape;
+    Label315: TLabel;
+    DateTimePicker19: TDateTimePicker;
+    pFooterEnd6: TPanel;
+    Shape43: TShape;
+    Label320: TLabel;
+    GroupBox121: TGroupBox;
+    slCMR10: TSkLabel;
+    chkbC33: TDBCheckBox;
+
+    // CheckBox Reusable
+    procedure CheckBoxYesClick(Sender: TObject);
+    procedure CheckBoxNoClick(Sender: TObject);
+
+    procedure FormShow(Sender: TObject);
+    procedure FormResize(Sender: TObject);
+    // ScrollBox Reusable
+    procedure ScrollBoxMouseWheelHandler(Sender: TObject; Shift: TShiftState;
+      WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
+
+    { Page Control 1 } // - Main Tab
+    procedure PageControl1Change(Sender: TObject);
+    // Tabs Reset 1
+    procedure TabsReset1;
+    // Tabs
+    procedure DetailsTab;
+    procedure FASTab;
+    procedure DPTab;
+    procedure SPOTab;
+    procedure SPSTab;
+    procedure BFCTab;
+    procedure EMTab;
+    {---------------}
+
+    { Page Control 2 } // - Start of Sub tab
+    procedure PageControl2Change(Sender: TObject);
+    // Tabs Reset 2
+    procedure TabsReset2;
+    // Tabs
+    procedure ComplianceTab;
+    procedure InnovationsTab;
+    procedure ApprovalTab;
+    procedure AllocationTab;
+    procedure PostingTab;
+    procedure ReleaseTab;
+    procedure ConductTab;
+    {---------------}
+
+    { Page Control 3 }
+    procedure PageControl3Change(Sender: TObject);
+    // Tabs Reset 3
+    procedure TabsReset3;
+    // Tabs
+    procedure FunctionalityTab;
+    procedure ExtentRiskTab;
+    procedure ExtentPrepTab;
+    {----------------}
+
+    { Page Control 4 }
+    procedure PageControl4Change(Sender: TObject);
+    // Tabs Reset 4
+    procedure TabsReset4;
+    // Tabs
+    procedure FunctionalityBADACTab;
+    procedure FunctionalityBPOCTab;
+    procedure FunctionalityLTTab;
+    procedure OrganizationTab;
+    procedure BarangayTab;
+    procedure ConductBaRCOTab;
+
+    { Page Control 5 }
+    procedure PageControl5Change(Sender: TObject);
+
+    // Tabs Reset 5
+    procedure TabsReset5;
+
+    // Tabs
+    procedure FunctionalityVAWTab;
+    procedure AccessHealthTab;
+    procedure FunctionalityBDCTab;
+    procedure ImplementationKLTab;
+    procedure FunctionalityBCPCTab;
+    procedure GADTab;
+    procedure RBIsTab;
+    procedure FunctionalityBNCTab;
+    procedure HAPAGTab;
+
+    { Page Control 6 }
+    procedure PageControl6Change(Sender: TObject);
+
+    // Tabs Reset 6
+    procedure TabsReset6;
+
+    // Tabs
+    procedure PowerTab;
+    procedure ComplianceSectab;
+    procedure IssuanceTab;
+
+    { Page Control 7 }
+    procedure PageControl7Change(Sender: TObject);
+
+    // Tabs Reset 7
+    procedure TabsReset7;
+
+    // Tabs
+    procedure FunctionalityBESWMCTab;
+    procedure ExistenceTab;
+    procedure ProvisionTab;
+  private
+    FCheckboxValue: string;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmDCF: TfrmDCF;
+
+implementation
+
+{$R *.dfm}
+
+{-----------------------------FUNCTIONS & PROCEDURES---------------------------}
+
+//-------Mouse Wheel-------//
+procedure HandleScrollBoxMouseWheel(ScrollBox: TScrollBox; Shift: TShiftState;
+  WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
+const
+  ScrollAmount = 35; // Adjust this value to control the scroll speed
+begin
+  // Scroll up
+  if WheelDelta > 0 then
+  begin
+    if ScrollBox.VertScrollBar.Position - ScrollAmount < 0 then
+      ScrollBox.VertScrollBar.Position := 0
+    else
+      ScrollBox.VertScrollBar.Position := ScrollBox.VertScrollBar.Position -
+        ScrollAmount;
+  end;
+
+  // Scroll down
+  if WheelDelta < 0 then
+  begin
+    if ScrollBox.VertScrollBar.Position + ScrollAmount >
+      ScrollBox.VertScrollBar.Range then
+      ScrollBox.VertScrollBar.Position := ScrollBox.VertScrollBar.Range
+    else
+      ScrollBox.VertScrollBar.Position := ScrollBox.VertScrollBar.Position +
+        ScrollAmount;
+  end;
+
+  // Indicate that the event was handled
+  Handled := True;
+end;
+
+// Tabs Reset for PageControl1  - Main tab
+procedure TfrmDCF.TabsReset1;
+begin
+  // Details tab
+  pProfile.Visible := False;
+  ScrollBox2.Visible := False;
+
+  // FAS tab
+  PageControl2.Visible := False;
+  pHeader1.Visible := False;
+  pButtonToolbar1.Visible := False;
+
+  // DP tab
+  PageControl3.Visible := False;
+  pHeader2.Visible := False;
+  pButtonToolbar2.Visible := False;
+
+  // SPO tab
+  PageControl4.Visible := False;
+  pHeader3.Visible := False;
+  pButtonToolbar3.Visible := False;
+
+  // SPS tab
+  PageControl5.Visible := False;
+  pHeader4.Visible := False;
+  pButtonToolbar4.Visible := False;
+
+  // BFC tab
+  PageControl6.Visible := False;
+  pHeader5.Visible := False;
+  pButtonToolbar5.Visible := False;
+
+  // EM tab
+  PageControl7.Visible := False;
+  pHeader6.Visible := False;
+  pButtonToolbar6.Visible := False;
+end;
+
+//-------Details Tab-------//
+procedure TfrmDCF.DetailsTab;
+begin
+  TabsReset1;
+  pProfile.Visible := True;
+  ScrollBox2.Visible := True;
+end;
+
+//--------FAS Tabs--------//
+procedure TfrmDCF.FASTab;
+begin
+  TabsReset1;
+  PageControl2.Visible := True;
+  pHeader1.Visible := True;
+  pButtonToolbar1.Visible := True;
+  gpForm1.Visible := True;
+  stSection1.Visible := True;
+end;
+
+//--------DP Tabs--------//
+procedure TfrmDCF.DPTab;
+begin
+  TabsReset1;
+  PageControl3.Visible := True;
+  pHeader2.Visible := True;
+  pButtonToolbar2.Visible := True;
+  gpForm8.Visible := True;
+  stSection8.Visible := True;
+end;
+
+//--------SPO Tabs--------//
+procedure TfrmDCF.SPOTab;
+begin
+  TabsReset1;
+  PageControl4.Visible := True;
+  pHeader3.Visible := True;
+  pButtonToolbar3.Visible := True;
+  gpForm11.Visible := True;
+  stSection11.Visible := True;
+end;
+
+//--------SPS Tabs--------//
+procedure TfrmDCF.SPSTab;
+begin
+  TabsReset1;
+  PageControl5.Visible := True;
+  pHeader4.Visible := True;
+  pButtonToolbar4.Visible := True;
+  gpForm17.Visible := True;
+  stSection17.Visible := True;
+end;
+
+//--------BFC Tabs--------//
+procedure TfrmDCF.BFCTab;
+begin
+  TabsReset1;
+  PageControl6.Visible := True;
+  pHeader5.Visible := True;
+  pButtonToolbar5.Visible := True;
+  gpForm26.Visible := True;
+  stSection26.Visible := True;
+end;
+
+//--------EM Tabs--------//
+procedure TfrmDCF.EMTab;
+begin
+  TabsReset1;
+  PageControl7.Visible := True;
+  pHeader6.Visible := True;
+  pButtonToolbar6.Visible := True;
+  gpForm29.Visible := True;
+  stSection29.Visible := True;
+end;
+
+// Tabs Reset for PageControl2  - FAS
+procedure TfrmDCF.TabsReset2;
+begin
+  gpForm1.Visible := False;
+  stSection1.Visible := False;
+  gpForm2.Visible := False;
+  stSection2.Visible := False;
+  gpForm3.Visible := False;
+  stSection3.Visible := False;
+  gpForm4.Visible := False;
+  stSection4.Visible := False;
+  gpForm5.Visible := False;
+  stSection5.Visible := False;
+  gpForm6.Visible := False;
+  stSection6.Visible := False;
+  gpForm7.Visible := False;
+  stSection7.Visible := False;
+  pFooterEnd.Visible := False;
+end;
+
+procedure TfrmDCF.ComplianceTab;
+begin
+  TabsReset2;
+  gpForm1.Visible := True;
+  stSection1.Visible := True;
+end;
+
+procedure TfrmDCF.InnovationsTab;
+begin
+  TabsReset2;
+  gpForm2.Visible := True;
+  stSection2.Visible := True;
+end;
+
+procedure TfrmDCF.ApprovalTab;
+begin
+  TabsReset2;
+  gpForm3.Visible := True;
+  stSection3.Visible := True;
+end;
+
+procedure TfrmDCF.AllocationTab;
+begin
+  TabsReset2;
+  gpForm4.Visible := True;
+  stSection4.Visible := True;
+end;
+
+procedure TfrmDCF.PostingTab;
+begin
+  TabsReset2;
+  gpForm5.Visible := True;
+  stSection5.Visible := True;
+end;
+
+procedure TfrmDCF.ReleaseTab;
+begin
+  TabsReset2;
+  gpForm6.Visible := True;
+  stSection6.Visible := True;
+end;
+
+procedure TfrmDCF.ConductTab;
+begin
+  TabsReset2;
+  gpForm7.Visible := True;
+  stSection7.Visible := True;
+  pFooterEnd.Visible := True;
+end;
+
+// Tabs Reset for PageControl3  - DP
+procedure TfrmDCF.TabsReset3;
+begin
+  gpForm8.Visible := False;
+  stSection8.Visible := False;
+  gpForm9.Visible := False;
+  stSection9.Visible := False;
+  gpForm10.Visible := False;
+  stSection10.Visible := False;
+  pFooterEnd2.Visible := False;
+end;
+
+procedure TfrmDCF.FunctionalityTab;
+begin
+  TabsReset3;
+  gpForm8.Visible := True;
+  stSection8.Visible := True;
+end;
+
+procedure TfrmDCF.ExtentRiskTab;
+begin
+  TabsReset3;
+  gpForm9.Visible := True;
+  stSection9.Visible := True;
+end;
+
+procedure TfrmDCF.ExtentPrepTab;
+begin
+  TabsReset3;
+  gpForm10.Visible := True;
+  stSection10.Visible := True;
+  pFooterEnd2.Visible := True;
+end;
+
+// Tabs Reset for PageControl4  - SPO
+procedure TfrmDCF.TabsReset4;
+begin
+  gpForm11.Visible := False;
+  stSection11.Visible := False;
+  gpForm12.Visible := False;
+  stSection12.Visible := False;
+  gpForm13.Visible := False;
+  stSection13.Visible := False;
+  gpForm14.Visible := False;
+  stSection14.Visible := False;
+  gpForm15.Visible := False;
+  stSection15.Visible := False;
+  gpForm16.Visible := False;
+  stSection16.Visible := False;
+  pFooterEnd3.Visible := False;
+end;
+
+procedure TfrmDCF.FunctionalityBADACTab;
+begin
+  TabsReset4;
+  gpForm11.Visible := True;
+  stSection11.Visible := True;
+end;
+
+procedure TfrmDCF.FunctionalityBPOCTab;
+begin
+  TabsReset4;
+  gpForm12.Visible := True;
+  stSection12.Visible := True;
+end;
+
+procedure TfrmDCF.FunctionalityLTTab;
+begin
+  TabsReset4;
+  gpForm13.Visible := True;
+  stSection13.Visible := True;
+end;
+
+procedure TfrmDCF.OrganizationTab;
+begin
+  TabsReset4;
+  gpForm14.Visible := True;
+  stSection14.Visible := True;
+end;
+
+procedure TfrmDCF.BarangayTab;
+begin
+  TabsReset4;
+  gpForm15.Visible := True;
+  stSection15.Visible := True;
+end;
+
+procedure TfrmDCF.ConductBaRCOTab;
+begin
+  TabsReset4;
+  gpForm16.Visible := True;
+  stSection16.Visible := True;
+  pFooterEnd3.Visible := True;
+end;
+
+// Tabs Reset for PageControl5  - SPS
+procedure TfrmDCF.TabsReset5;
+begin
+  gpForm17.Visible := False;
+  stSection17.Visible := False;
+  gpForm18.Visible := False;
+  stSection18.Visible := False;
+  gpForm19.Visible := False;
+  stSection19.Visible := False;
+  gpForm20.Visible := False;
+  stSection20.Visible := False;
+  gpForm21.Visible := False;
+  stSection21.Visible := False;
+  gpForm22.Visible := False;
+  stSection22.Visible := False;
+  gpForm23.Visible := False;
+  stSection23.Visible := False;
+  gpForm24.Visible := False;
+  stSection24.Visible := False;
+  gpForm25.Visible := False;
+  stSection25.Visible := False;
+  pFooterEnd4.Visible := False;
+end;
+
+procedure TfrmDCF.FunctionalityVAWTab;
+begin
+  TabsReset5;
+  gpForm17.Visible := True;
+  stSection17.Visible := True;
+end;
+
+procedure TfrmDCF.AccessHealthTab;
+begin
+  TabsReset5;
+  gpForm18.Visible := True;
+  stSection18.Visible := True;
+end;
+
+procedure TfrmDCF.FunctionalityBDCTab;
+begin
+  TabsReset5;
+  gpForm19.Visible := True;
+  stSection19.Visible := True;
+end;
+
+procedure TfrmDCF.ImplementationKLTab;
+begin
+  TabsReset5;
+  gpForm20.Visible := True;
+  stSection20.Visible := True;
+end;
+
+procedure TfrmDCF.FunctionalityBCPCTab;
+begin
+  TabsReset5;
+  gpForm21.Visible := True;
+  stSection21.Visible := True;
+end;
+
+procedure TfrmDCF.GADTab;
+begin
+  TabsReset5;
+  gpForm22.Visible := True;
+  stSection22.Visible := True;
+end;
+
+procedure TfrmDCF.RBIsTab;
+begin
+  TabsReset5;
+  gpForm23.Visible := True;
+  stSection23.Visible := True;
+end;
+
+procedure TfrmDCF.FunctionalityBNCTab;
+begin
+  TabsReset5;
+  gpForm24.Visible := True;
+  stSection24.Visible := True;
+end;
+
+procedure TfrmDCF.HAPAGTab;
+begin
+  TabsReset5;
+  gpForm25.Visible := True;
+  stSection25.Visible := True;
+  pFooterEnd4.Visible := True;
+end;
+
+// Tabs Reset for PageControl6  - BFC
+procedure TfrmDCF.TabsReset6;
+begin
+  gpForm26.Visible := False;
+  stSection26.Visible := False;
+  gpForm27.Visible := False;
+  stSection27.Visible := False;
+  gpForm28.Visible := False;
+  stSection28.Visible := False;
+  pFooterEnd5.Visible := False;
+end;
+
+procedure TfrmDCF.PowerTab;
+begin
+  TabsReset6;
+  gpForm26.Visible := True;
+  stSection26.Visible := True;
+end;
+
+procedure TfrmDCF.ComplianceSecTab;
+begin
+  TabsReset6;
+  gpForm27.Visible := True;
+  stSection27.Visible := True;
+end;
+
+procedure TfrmDCF.IssuanceTab;
+begin
+  TabsReset6;
+  gpForm28.Visible := True;
+  stSection28.Visible := True;
+  pFooterEnd5.Visible := True;
+end;
+
+// Tabs Reset for PageControl6  - BFC
+procedure TfrmDCF.TabsReset7;
+begin
+  gpForm29.Visible := False;
+  stSection29.Visible := False;
+  gpForm30.Visible := False;
+  stSection30.Visible := False;
+  gpForm31.Visible := False;
+  stSection31.Visible := False;
+  pFooterEnd6.Visible := False;
+end;
+
+procedure TfrmDCF.FunctionalityBESWMCTab;
+begin
+  TabsReset7;
+  gpForm29.Visible := True;
+  stSection29.Visible := True;
+end;
+
+procedure TfrmDCF.ExistenceTab;
+begin
+  TabsReset7;
+  gpForm30.Visible := True;
+  stSection30.Visible := True;
+end;
+
+procedure TfrmDCF.ProvisionTab;
+begin
+  TabsReset7;
+  gpForm31.Visible := True;
+  stSection31.Visible := True;
+  pFooterEnd6.Visible := True;
+end;
+
+{-----------------------------------CheckBox-----------------------------------}
+procedure TfrmDCF.CheckBoxYesClick(Sender: TObject);
+var
+  CheckBoxYes, CheckBoxNo: TCheckBox;
+  CheckBoxNoName: string;
+begin
+  CheckBoxYes := Sender as TCheckBox;
+  CheckBoxNoName := StringReplace(CheckBoxYes.Name, 'Yes', 'No', []);
+  CheckBoxNo := FindComponent(CheckBoxNoName) as TCheckBox;
+  if CheckBoxYes.Checked then
+  begin
+    CheckBoxNo.Checked := False;
+    FCheckboxValue := 'Yes';
+  end;
+end;
+
+procedure TfrmDCF.CheckBoxNoClick(Sender: TObject);
+var
+  CheckBoxNo, CheckBoxYes: TCheckBox;
+  CheckBoxYesName: string;
+begin
+  CheckBoxNo := Sender as TCheckBox;
+  CheckBoxYesName := StringReplace(CheckBoxNo.Name, 'No', 'Yes', []);
+  CheckBoxYes := FindComponent(CheckBoxYesName) as TCheckBox;
+  if CheckBoxNo.Checked then
+  begin
+    CheckBoxYes.Checked := False;
+    FCheckboxValue := 'No';
+  end;
+end;
+
+{------------------------------------FORM--------------------------------------}
+procedure TfrmDCF.FormResize(Sender: TObject);
+begin
+  Self.Caption := 'Height: ' + IntToStr(ClientHeight) + ' ' + 'Width: ' + IntToStr(ClientWidth);
+end;
+
+procedure TfrmDCF.FormShow(Sender: TObject);
+begin
+//  ClientHeight := 722;
+  TabsReset1;
+  TabsReset2;
+  TabsReset3;
+  TabsReset4;
+  TabsReset5;
+  TabsReset6;
+  TabsReset7;
+
+  // Show the first tab
+  DetailsTab;
+
+  { Set the PageControls to its first tab }
+
+  // Details Tab
+  PageControl1.ActivePageIndex := 0;
+
+  // FAS Tab
+  PageControl2.ActivePageIndex := 0;
+
+  // DP Tab
+  PageControl3.ActivePageIndex := 0;
+
+  // SPO Tab
+  PageControl4.ActivePageIndex := 0;
+
+  // SPS Tab
+  PageControl5.ActivePageIndex := 0;
+
+  // BFC Tab
+  PageControl6.ActivePageIndex := 0;
+
+  // EM Tab
+  PageControl7.ActivePageIndex := 0;
+end;
+
+//-------Main PageControl-------//
+procedure TfrmDCF.PageControl1Change(Sender: TObject);
+begin
+  case PageControl1.ActivePageIndex of
+    0: DetailsTab;
+    1: FASTab;
+    2: DPTab;
+    3: SPOTab;
+    4: SPSTab;
+    5: BFCTab;
+    6: EMTab;
+  end;
+end;
+
+//-------FAS PageControl-------//
+procedure TfrmDCF.PageControl2Change(Sender: TObject);
+begin
+  case PageControl2.ActivePageIndex of
+    0: ComplianceTab;
+    1: InnovationsTab;
+    2: ApprovalTab;
+    3: AllocationTab;
+    4: PostingTab;
+    5: ReleaseTab;
+    6: ConductTab;
+  end;
+end;
+
+//-------DP PageControl-------//
+procedure TfrmDCF.PageControl3Change(Sender: TObject);
+begin
+  case PageControl3.ActivePageIndex of
+    0: FunctionalityTab;
+    1: ExtentRiskTab;
+    2: ExtentPrepTab;
+  end;
+end;
+
+//-------SPO PageControl-------//
+procedure TfrmDCF.PageControl4Change(Sender: TObject);
+begin
+  case PageControl4.ActivePageIndex of
+    0: FunctionalityBADACTab;
+    1: FunctionalityBPOCTab;
+    2: FunctionalityLTTab;
+    3: OrganizationTab;
+    4: BarangayTab;
+    5: ConductBaRCOTab;
+  end;
+end;
+
+//-------SPS PageControl-------//
+procedure TfrmDCF.PageControl5Change(Sender: TObject);
+begin
+  case PageControl5.ActivePageIndex of
+    0: FunctionalityVAWTab;
+    1: AccessHealthTab;
+    2: FunctionalityBDCTab;
+    3: ImplementationKLTab;
+    4: FunctionalityBCPCTab;
+    5: GADTab;
+    6: RBIsTab;
+    7: FunctionalityBNCTab;
+    8: HAPAGTab;
+  end;
+end;
+
+//-------BFC PageControl-------//
+procedure TfrmDCF.PageControl6Change(Sender: TObject);
+begin
+  case PageControl6.ActivePageIndex of
+    0: PowerTab;
+    1: ComplianceTab;
+    2: IssuanceTab;
+  end;
+end;
+
+//-------EM PageControl-------//
+procedure TfrmDCF.PageControl7Change(Sender: TObject);
+begin
+  case PageControl7.ActivePageIndex of
+    0: FunctionalityBESWMCTab;
+    1: ExistenceTab;
+    2: ProvisionTab;
+  end;
+end;
+
+{----------------------------------SCROLLBOX-----------------------------------}
+
+//-------Mouse Wheel Sender-------//
+procedure TfrmDCF.ScrollBoxMouseWheelHandler(Sender: TObject; Shift: TShiftState;
+  WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
+begin
+  HandleScrollBoxMouseWheel(TScrollBox(Sender), Shift, WheelDelta,MousePos, Handled);
+end;
+
+end.

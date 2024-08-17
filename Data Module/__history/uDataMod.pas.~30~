@@ -1,0 +1,89 @@
+unit uDataMod;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf, FireDAC.Stan.StorageBin, Data.DB, FireDAC.Comp.DataSet,
+  FireDAC.Comp.Client, FireDAC.Stan.StorageJSON, FireDAC.Stan.StorageXML,
+  FireDAC.Stan.ExprFuncs, FireDAC.Phys.SQLiteDef, FireDAC.UI.Intf,
+  FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
+  FireDAC.Phys.SQLite, FireDAC.VCLUI.Wait, FireDAC.DApt, System.Variants,
+  FireDAC.Phys.SQLiteVDataSet, FireDAC.Comp.BatchMove.Text, System.IOUtils,
+  FireDAC.Comp.BatchMove, FireDAC.Comp.BatchMove.DataSet, System.StrUtils,
+  FireDAC.Phys.SQLiteWrapper.Stat, Vcl.BaseImageCollection, Vcl.ImageCollection,
+  System.ImageList, Vcl.ImgList, Vcl.VirtualImageList;
+
+type
+  // User details
+  TUser = class(Tobject)
+    id: Integer;
+    username: String;
+    isAdmin: boolean;
+    isActive: boolean;
+  end;
+
+  // DCF Details
+  TDCF = class(TObject)
+    id: integer;
+    rec: String;
+  end;
+
+  TDM = class(TDataModule)
+    conSGLGB: TFDConnection;
+    qMunicipalities: TFDQuery;
+    qMunicipalitiesid: TFDAutoIncField;
+    qMunicipalitiesmunicipality: TStringField;
+    dsMunicipalities: TDataSource;
+    VirtualImageList1: TVirtualImageList;
+    ImageCollection1: TImageCollection;
+    procedure DataModuleCreate(Sender: TObject);
+    procedure DataModuleDestroy(Sender: TObject);
+  private
+    { Private declarations }
+    FUser: TUser;
+    FDCF: TDCF;
+  public
+    { Public declarations }
+    property User: TUser read FUser write FUser;
+    property DCF: TDCF read FDCF write FDCF;
+ end;
+
+var
+  DM: TDM;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+{$R *.dfm}
+
+procedure TDM.DataModuleCreate(Sender: TObject);
+var
+  DBPath: String;
+begin
+  { Classes }
+  FUser := TUser.Create;
+  FDCF := TDCF.Create;
+  {---------}
+
+  conSGLGB.Params.Values['Database'] := '';
+
+  // Get the directory of the executable relative path
+  DBPath := ExtractFilePath(ParamStr(0)) + 'database\sglgb.db';
+  conSGLGB.Params.Values['DriverID'] := 'SQLite';
+  conSGLGB.Params.Values['Database'] := DBPath;
+
+  // Deactivate queries
+//  dm.qMunicipalities.Active := False;
+//
+//  conSGLGB.Connected := True;
+end;
+
+procedure TDM.DataModuleDestroy(Sender: TObject);
+begin
+  FUser.Free;
+  FDCF.Free;
+end;
+
+end.

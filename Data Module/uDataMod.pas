@@ -12,7 +12,8 @@ uses
   FireDAC.Phys.SQLite, FireDAC.VCLUI.Wait, FireDAC.DApt, System.Variants,
   FireDAC.Phys.SQLiteVDataSet, FireDAC.Comp.BatchMove.Text, System.IOUtils,
   FireDAC.Comp.BatchMove, FireDAC.Comp.BatchMove.DataSet, System.StrUtils,
-  FireDAC.Phys.SQLiteWrapper.Stat;
+  FireDAC.Phys.SQLiteWrapper.Stat, Vcl.BaseImageCollection, Vcl.ImageCollection,
+  System.ImageList, Vcl.ImgList, Vcl.VirtualImageList;
 
 type
   // User details
@@ -35,6 +36,10 @@ type
     qMunicipalitiesid: TFDAutoIncField;
     qMunicipalitiesmunicipality: TStringField;
     dsMunicipalities: TDataSource;
+    VirtualImageList1: TVirtualImageList;
+    ImageCollection1: TImageCollection;
+    qDCF: TFDQuery;
+    dsDCF: TDataSource;
     procedure DataModuleCreate(Sender: TObject);
     procedure DataModuleDestroy(Sender: TObject);
   private

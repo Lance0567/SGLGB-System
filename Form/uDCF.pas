@@ -6,7 +6,8 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls,
   Vcl.WinXCtrls, Vcl.ExtCtrls, System.Skia, Vcl.Skia, Vcl.Mask, Vcl.DBCtrls,
-  Vcl.Imaging.pngimage, Data.DB, Vcl.Grids, Vcl.DBGrids, Vcl.WinXPanels;
+  Vcl.Imaging.pngimage, Data.DB, Vcl.Grids, Vcl.DBGrids, Vcl.WinXPanels,
+  Vcl.VirtualImage, uDataMod;
 
 type
   TfrmDCF = class(TForm)
@@ -14,17 +15,11 @@ type
     tsFAS: TTabSheet;
     tsDetails: TTabSheet;
     ScrollBox2: TScrollBox;
-    pYear: TPanel;
-    Label1: TLabel;
-    edYear: TDBEdit;
     pProfile: TPanel;
-    Image1: TImage;
     pBtnHolder: TPanel;
     btnPrint: TButton;
     btnComplete: TButton;
     btnPublish: TButton;
-    StatusPanel: TPanel;
-    Label2: TLabel;
     DatesPanel: TPanel;
     DateContactedPanel: TPanel;
     Label9: TLabel;
@@ -34,7 +29,6 @@ type
     dtpDateCreated: TDateTimePicker;
     DateClosedPanel: TPanel;
     dtpDatePublished: TDateTimePicker;
-    cbStatus: TComboBox;
     tsDP: TTabSheet;
     NotesPanel: TPanel;
     Label10: TLabel;
@@ -349,9 +343,6 @@ type
     chkbC30: TDBCheckBox;
     slMOV7: TSkLabel;
     chkbC32: TDBCheckBox;
-    Panel17: TPanel;
-    SkLabel22: TSkLabel;
-    chkbC33: TDBCheckBox;
     GroupBox4: TGroupBox;
     Label45: TLabel;
     Panel16: TPanel;
@@ -361,7 +352,6 @@ type
     chkbYes7: TCheckBox;
     Label48: TLabel;
     chkbNo7: TCheckBox;
-    slCMR10: TSkLabel;
     Panel36: TPanel;
     Panel37: TPanel;
     Panel39: TPanel;
@@ -1681,6 +1671,21 @@ type
     pFooterEnd6: TPanel;
     Shape43: TShape;
     Label320: TLabel;
+    GroupBox121: TGroupBox;
+    slCMR10: TSkLabel;
+    chkbC33: TDBCheckBox;
+    VirtualImage2: TVirtualImage;
+    lbEncoder: TLabel;
+    Panel17: TPanel;
+    rpHeader: TRelativePanel;
+    viLogo1: TVirtualImage;
+    viLogo2: TVirtualImage;
+    pYear: TPanel;
+    lbTitle: TLabel;
+    lbYear: TLabel;
+    StatusPanel: TPanel;
+    Label2: TLabel;
+    DBComboBox1: TDBComboBox;
 
     // CheckBox Reusable
     procedure CheckBoxYesClick(Sender: TObject);
@@ -2294,12 +2299,14 @@ end;
 {------------------------------------FORM--------------------------------------}
 procedure TfrmDCF.FormResize(Sender: TObject);
 begin
-  Self.Caption := 'Height: ' + IntToStr(ClientHeight) + ' ' + 'Width: ' + IntToStr(ClientWidth);
+//  Self.Caption := 'Height: ' + IntToStr(ClientHeight) + ' ' + 'Width: ' + IntToStr(ClientWidth);
 end;
 
 procedure TfrmDCF.FormShow(Sender: TObject);
 begin
 //  ClientHeight := 722;
+
+  // Reset the tabs
   TabsReset1;
   TabsReset2;
   TabsReset3;
@@ -2312,6 +2319,9 @@ begin
   DetailsTab;
 
   { Set the PageControls to its first tab }
+
+  // Details Tab
+  PageControl1.ActivePageIndex := 0;
 
   // FAS Tab
   PageControl2.ActivePageIndex := 0;
