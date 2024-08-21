@@ -58,9 +58,6 @@ Coordinates=1642,1,120,36
 [VirtualImage1]
 Coordinates=162,552,94,36
 
-[CalendarButton]
-Coordinates=186,212,104,58
-
 [RelativePanel4]
 Coordinates=477,10,101,58
 Visible=True
@@ -173,9 +170,6 @@ Coordinates=680,416,128,58
 [EmailsSearchBox]
 Coordinates=1138,280,116,58
 
-[UsersButton]
-Coordinates=145,416,85,58
-
 [Label12]
 Coordinates=951,416,60,58
 
@@ -215,9 +209,6 @@ Coordinates=10,552,62,36
 
 [Label8]
 Coordinates=958,348,53,58
-
-[DashboardButton]
-Coordinates=556,416,114,58
 
 [Label13]
 Coordinates=698,348,60,58
@@ -329,4 +320,13 @@ Coordinates=630,644,78,36
 
 [tsUsers]
 Coordinates=82,552,70,36
+
+[btnDashboard]
+Coordinates=556,416,114,58
+
+[btnCalendar]
+Coordinates=186,212,104,58
+
+[btnUsers]
+Coordinates=145,416,85,58
 

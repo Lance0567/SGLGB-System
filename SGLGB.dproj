@@ -123,6 +123,7 @@
             <Form>frmDCF</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Settings\Activated.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

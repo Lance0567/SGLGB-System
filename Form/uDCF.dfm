@@ -22,7 +22,7 @@ object frmDCF: TfrmDCF
     Width = 912
     Height = 686
     Margins.Right = 5
-    ActivePage = tsDetails
+    ActivePage = tsEM
     Align = alClient
     TabOrder = 0
     OnChange = PageControl1Change
@@ -687,7 +687,7 @@ object frmDCF: TfrmDCF
             Width = 157
             Height = 35
             Align = alTop
-            Caption = 'Print Document'
+            Caption = 'Print Certification'
             TabOrder = 0
           end
           object btnComplete: TButton
@@ -14890,7 +14890,7 @@ object frmDCF: TfrmDCF
                   TextSettings.Font.Size = 13.000000000000000000
                   Words = <
                     item
-                      Caption = '3.1.1 Structure '
+                      Caption = '4.1.1 Structure '
                       Font.Weight = Bold
                       StyledSettings = [Family, Size, FontColor]
                     end>
@@ -26917,7 +26917,7 @@ object frmDCF: TfrmDCF
         Top = 40
         Width = 904
         Height = 581
-        ActivePage = tsProvision
+        ActivePage = tsExistence
         Align = alClient
         MultiLine = True
         TabOrder = 0
@@ -28541,7 +28541,7 @@ object frmDCF: TfrmDCF
               object dbmRemarks30: TDBMemo
                 AlignWithMargins = True
                 Left = 10
-                Top = 722
+                Top = 682
                 Width = 854
                 Height = 105
                 Margins.Left = 10
@@ -28555,7 +28555,7 @@ object frmDCF: TfrmDCF
               object GroupBox126: TGroupBox
                 AlignWithMargins = True
                 Left = 10
-                Top = 680
+                Top = 640
                 Width = 859
                 Height = 37
                 Margins.Left = 10
@@ -28609,7 +28609,7 @@ object frmDCF: TfrmDCF
               object GroupBox127: TGroupBox
                 AlignWithMargins = True
                 Left = 5
-                Top = 556
+                Top = 516
                 Width = 869
                 Height = 114
                 Margins.Left = 5
@@ -28781,7 +28781,7 @@ object frmDCF: TfrmDCF
               end
               object Panel226: TPanel
                 Left = 0
-                Top = 827
+                Top = 787
                 Width = 879
                 Height = 32
                 Align = alBottom
@@ -28793,7 +28793,7 @@ object frmDCF: TfrmDCF
                 Left = 5
                 Top = 5
                 Width = 869
-                Height = 546
+                Height = 506
                 Margins.Left = 5
                 Margins.Top = 5
                 Margins.Right = 5
@@ -28887,7 +28887,7 @@ object frmDCF: TfrmDCF
                   Left = 32
                   Top = 105
                   Width = 815
-                  Height = 416
+                  Height = 376
                   Margins.Left = 30
                   Margins.Top = 10
                   Margins.Right = 20
@@ -28918,13 +28918,13 @@ object frmDCF: TfrmDCF
                   object Label276: TLabel
                     AlignWithMargins = True
                     Left = 1
-                    Top = 108
+                    Top = 98
                     Width = 813
                     Height = 17
                     Margins.Left = 0
-                    Margins.Top = 25
+                    Margins.Top = 15
                     Margins.Right = 0
-                    Margins.Bottom = 15
+                    Margins.Bottom = 10
                     Align = alTop
                     Alignment = taCenter
                     Caption = 'OR'
@@ -28934,12 +28934,13 @@ object frmDCF: TfrmDCF
                     Font.Name = 'Segoe UI'
                     Font.Style = [fsBold]
                     ParentFont = False
+                    ExplicitTop = 108
                     ExplicitWidth = 18
                   end
                   object Label298: TLabel
                     AlignWithMargins = True
                     Left = 11
-                    Top = 150
+                    Top = 135
                     Width = 800
                     Height = 15
                     Margins.Left = 10
@@ -28954,18 +28955,19 @@ object frmDCF: TfrmDCF
                     Font.Style = [fsBold]
                     ParentFont = False
                     WordWrap = True
+                    ExplicitTop = 150
                     ExplicitWidth = 64
                   end
                   object Label299: TLabel
                     AlignWithMargins = True
                     Left = 1
-                    Top = 271
+                    Top = 246
                     Width = 813
                     Height = 17
                     Margins.Left = 0
-                    Margins.Top = 25
+                    Margins.Top = 15
                     Margins.Right = 0
-                    Margins.Bottom = 15
+                    Margins.Bottom = 10
                     Align = alTop
                     Alignment = taCenter
                     Caption = 'OR'
@@ -28975,12 +28977,13 @@ object frmDCF: TfrmDCF
                     Font.Name = 'Segoe UI'
                     Font.Style = [fsBold]
                     ParentFont = False
+                    ExplicitTop = 271
                     ExplicitWidth = 18
                   end
                   object Label300: TLabel
                     AlignWithMargins = True
                     Left = 11
-                    Top = 313
+                    Top = 283
                     Width = 800
                     Height = 15
                     Margins.Left = 10
@@ -28995,6 +28998,7 @@ object frmDCF: TfrmDCF
                     Font.Style = [fsBold]
                     ParentFont = False
                     WordWrap = True
+                    ExplicitTop = 313
                     ExplicitWidth = 123
                   end
                   object Panel206: TPanel
@@ -29066,7 +29070,7 @@ object frmDCF: TfrmDCF
                   object CheckBox84: TCheckBox
                     AlignWithMargins = True
                     Left = 11
-                    Top = 175
+                    Top = 160
                     Width = 793
                     Height = 17
                     Margins.Left = 10
@@ -29083,11 +29087,12 @@ object frmDCF: TfrmDCF
                     ParentFont = False
                     TabOrder = 2
                     WordWrap = True
+                    ExplicitTop = 175
                   end
                   object CheckBox85: TCheckBox
                     AlignWithMargins = True
                     Left = 11
-                    Top = 202
+                    Top = 187
                     Width = 793
                     Height = 17
                     Margins.Left = 10
@@ -29104,11 +29109,12 @@ object frmDCF: TfrmDCF
                     ParentFont = False
                     TabOrder = 3
                     WordWrap = True
+                    ExplicitTop = 202
                   end
                   object CheckBox86: TCheckBox
                     AlignWithMargins = True
                     Left = 11
-                    Top = 229
+                    Top = 214
                     Width = 793
                     Height = 17
                     Margins.Left = 10
@@ -29127,11 +29133,12 @@ object frmDCF: TfrmDCF
                     ParentFont = False
                     TabOrder = 4
                     WordWrap = True
+                    ExplicitTop = 229
                   end
                   object CheckBox129: TCheckBox
                     AlignWithMargins = True
                     Left = 11
-                    Top = 338
+                    Top = 308
                     Width = 793
                     Height = 17
                     Margins.Left = 10
@@ -29150,11 +29157,12 @@ object frmDCF: TfrmDCF
                     ParentFont = False
                     TabOrder = 5
                     WordWrap = True
+                    ExplicitTop = 338
                   end
                   object CheckBox130: TCheckBox
                     AlignWithMargins = True
                     Left = 11
-                    Top = 365
+                    Top = 335
                     Width = 793
                     Height = 36
                     Margins.Left = 10
@@ -29174,6 +29182,7 @@ object frmDCF: TfrmDCF
                     ParentFont = False
                     TabOrder = 6
                     WordWrap = True
+                    ExplicitTop = 365
                   end
                 end
               end

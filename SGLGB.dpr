@@ -8,7 +8,8 @@ uses
   uSettings in 'Modal\uSettings.pas' {frmSettings},
   Vcl.Themes,
   Vcl.Styles,
-  uDCF in 'Form\uDCF.pas' {frmDCF};
+  uDCF in 'Form\uDCF.pas' {frmDCF},
+  Activated in 'Settings\Activated.pas';
 
 {$R *.res}
 
