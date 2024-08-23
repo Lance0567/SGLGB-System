@@ -17,7 +17,7 @@ uses
   Vcl.WinXPanels, System.Actions, Vcl.ActnList, Vcl.Themes,
   Vcl.BaseImageCollection, Vcl.ImageCollection, System.ImageList, Vcl.ImgList,
   Vcl.VirtualImageList, Vcl.VirtualImage, System.IOUtils, Vcl.TitleBarCtrls,
-  Vcl.Menus, uLogin, Vcl.DBGrids, System.Skia, Vcl.Skia, uDCF;
+  Vcl.Menus, uLogin, Vcl.DBGrids, System.Skia, Vcl.Skia, uDCF, uControl;
 
 type
   TfrmMain = class(TForm)
@@ -100,11 +100,11 @@ type
     UsersRelativePanel: TRelativePanel;
     CreateUserButton: TSpeedButton;
     RemoveUserButton: TSpeedButton;
-    DashboardButton: TButton;
+    btnDashboard: TButton;
     btnMOVs: TButton;
     btnDCF: TButton;
-    CalendarButton: TButton;
-    UsersButton: TButton;
+    btnCalendar: TButton;
+    btnUsers: TButton;
     ExportAcctsDialog: TSaveDialog;
     VirtualImage1: TVirtualImage;
     VirtualImage3: TVirtualImage;
@@ -165,7 +165,7 @@ type
     procedure SplitViewOpening(Sender: TObject);
     procedure SplitViewClosing(Sender: TObject);
     procedure CreateAcctButtonClick(Sender: TObject);
-    procedure DashboardButtonClick(Sender: TObject);
+    procedure btnDashboardClick(Sender: TObject);
     procedure btnRemoveMuniClick(Sender: TObject);
     procedure CreateUserButtonClick(Sender: TObject);
     procedure RemoveUserButtonClick(Sender: TObject);
@@ -278,7 +278,7 @@ begin
   fpDashboard.Visible := True;
 
   // Button focus
-  DashboardButton.SetFocus;
+  btnDashboard.SetFocus;
 end;
 
 procedure TfrmMain.DCFTab;
@@ -307,7 +307,7 @@ begin
   tcvCalendar.Visible := True;
 
   // Button focus
-  CalendarButton.SetFocus;
+  btnCalendar.SetFocus;
 end;
 
 procedure TfrmMain.UsersTab;
@@ -317,7 +317,7 @@ begin
   tdbgUsers.Visible := True;
 
   // Button focus
-  UsersButton.SetFocus;
+  btnUsers.SetFocus;
 end;
 
 procedure TfrmMain.btnRemoveMuniClick(Sender: TObject);
@@ -376,20 +376,20 @@ end;
 
 procedure TfrmMain.SplitViewClosing(Sender: TObject);
 begin
-  DashboardButton.Caption := '';
+  btnDashboard.Caption := '';
   btnDCF.Caption := '';
   btnMOVs.Caption := '';
-  CalendarButton.Caption := '';
-  UsersButton.Caption := '';
+  btnCalendar.Caption := '';
+  btnUsers.Caption := '';
 end;
 
 procedure TfrmMain.SplitViewOpening(Sender: TObject);
 begin
-  DashboardButton.Caption := '          '+DashboardButton.Hint;
+  btnDashboard.Caption := '          '+btnDashboard.Hint;
   btnDCF.Caption := '          '+btnDCF.Hint;
   btnMOVs.Caption := '          '+btnMOVs.Hint;
-  CalendarButton.Caption := '          '+CalendarButton.Hint;
-  UsersButton.Caption := '          '+UsersButton.Hint;
+  btnCalendar.Caption := '          '+btnCalendar.Hint;
+  btnUsers.Caption := '          '+btnUsers.Hint;
 end;
 
 procedure TfrmMain.MunicipalitiesTabShow(Sender: TObject);
@@ -442,7 +442,7 @@ end;
 
 procedure TfrmMain.VCLStylesCBKeyPress(Sender: TObject; var Key: Char);
 begin
-  Key := #0;
+  Key := #10;
 end;
 
 procedure TfrmMain.ViewLeadButtonClick(Sender: TObject);
@@ -506,7 +506,7 @@ begin
 //
 end;
 
-procedure TfrmMain.DashboardButtonClick(Sender: TObject);
+procedure TfrmMain.btnDashboardClick(Sender: TObject);
 begin
   PageControl.ActivePageIndex := TButton(Sender).Tag;
 end;
@@ -588,30 +588,12 @@ end;
 
 procedure TfrmMain.LoginClick(Sender: TObject);
 begin
-  frmLogin.Tag := 0;
-  frmLogin.ShowModal;
-
-  if frmLogin.Tag = 0 then
-  begin
-    ShowMessage('Not logged in');
-    // Application.Terminate;
-  end
-  else
-  begin
-    viUserStatus.ImageName := 'open';
-    lbUserStatus.Caption := 'You are logged in, system activated';
-    Self.Caption := 'SGLGB System | SEAL OF GOOD LOCAL GOVERNANCE FOR BARANGAY | 2024 | ' ;
-    Login.Visible := False;
-    LogOut.Visible := True;
-  end;
+  uControl.FormActivated;
 end;
 
 procedure TfrmMain.LogOutClick(Sender: TObject);
 begin
-  viUserStatus.ImageName := 'close';
-  lbUserStatus.Caption := 'You have logout, system deactivated';
-  Login.Visible := True;
-  LogOut.Visible := False;
+  uControl.FormLogout;
 end;
 
 procedure TfrmMain.EmailsSearchBoxKeyPress(Sender: TObject; var Key: Char);
@@ -643,10 +625,11 @@ begin
   begin
     FRanOnce := True;
 
-    DashboardButton.SetFocus;
+    btnDashboard.SetFocus;
   end;
 end;
 
+{------------------------------------FORM--------------------------------------}
 procedure TfrmMain.FormActivate(Sender: TObject);
 begin
 //  if FRanOnce then
@@ -678,12 +661,18 @@ begin
     end;
   end;
 
-  Application.OnIdle := AppIdle;
+//  Application.OnIdle := AppIdle;
 
+  // VCL Style config
   for StyleName in TStyleManager.StyleNames do
     VCLStylesCB.Items.Add(StyleName);
 
   VCLStylesCB.ItemIndex := VCLStylesCB.Items.IndexOf(TStyleManager.ActiveStyle.Name);
+
+  // Start of the system
+  PageControl.ActivePageIndex := 0;
+
+  VCLStylesCB.SetFocus;
 
   UpdateNavButtons;
 end;
@@ -699,17 +688,17 @@ procedure TfrmMain.UpdateNavButtons;
 var
   LStyle: Dword;
 begin
-  LStyle := GetWindowLong(DashboardButton.Handle, GWL_STYLE);
-  SetWindowLong(DashboardButton.Handle, GWL_STYLE, LStyle or BS_LEFT);
-  DashboardButton.Caption := '          '+DashboardButton.Hint;
+  LStyle := GetWindowLong(btnDashboard.Handle, GWL_STYLE);
+  SetWindowLong(btnDashboard.Handle, GWL_STYLE, LStyle or BS_LEFT);
+  btnDashboard.Caption := '          '+btnDashboard.Hint;
   SetWindowLong(btnDCF.Handle, GWL_STYLE, LStyle or BS_LEFT);
   btnDCF.Caption := '          '+btnDCF.Hint;
   SetWindowLong(btnMOVs.Handle, GWL_STYLE, LStyle or BS_LEFT);
   btnMOVs.Caption := '          '+btnMOVs.Hint;
-  SetWindowLong(CalendarButton.Handle, GWL_STYLE, LStyle or BS_LEFT);
-  CalendarButton.Caption := '          '+CalendarButton.Hint;
-  SetWindowLong(UsersButton.Handle, GWL_STYLE, LStyle or BS_LEFT);
-  UsersButton.Caption := '          '+UsersButton.Hint;
+  SetWindowLong(btnCalendar.Handle, GWL_STYLE, LStyle or BS_LEFT);
+  btnCalendar.Caption := '          '+btnCalendar.Hint;
+  SetWindowLong(btnUsers.Handle, GWL_STYLE, LStyle or BS_LEFT);
+  btnUsers.Caption := '          '+btnUsers.Hint;
 end;
 
 procedure TfrmMain.FormResize(Sender: TObject);

@@ -1,0 +1,16 @@
+unit Activated;
+
+interface
+
+uses uMainForm;
+
+procedure FormActivated;
+
+implementation
+
+procedure FormActivated;
+begin
+
+end;
+
+end.
