@@ -435,7 +435,8 @@ end;
 
 procedure TfrmMain.VCLStylesCBChange(Sender: TObject);
 begin
-  frmMain.WindowState := TWindowState.wsMaximized;
+//  frmMain.WindowState := TWindowState.wsMaximized;
+  SplitView.SetFocus;
   TStyleManager.TrySetStyle(VCLStylesCB.Text);
   UpdateNavButtons;
 end;
@@ -672,8 +673,6 @@ begin
   // Start of the system
   PageControl.ActivePageIndex := 0;
 
-  VCLStylesCB.SetFocus;
-
   UpdateNavButtons;
 end;
 
@@ -715,7 +714,7 @@ end;
 
 procedure TfrmMain.FormShow(Sender: TObject);
 begin
-  VCLStylesCB.AutoComplete := True;
+  SplitView.SetFocus;
 //  Self.Caption := 'Height: ' + IntToStr(ClientHeight) + ' ' + 'Width: ' + IntToStr(ClientWidth);
 
   if dm.User.username = 'admin' then

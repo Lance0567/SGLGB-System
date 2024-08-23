@@ -35,6 +35,7 @@ object frmMain: TfrmMain
     StyleName = 'Windows10 SlateGray'
     OnClosing = SplitViewClosing
     OnOpening = SplitViewOpening
+    ExplicitHeight = 516
     object pnlToolbar: TPanel
       Left = 0
       Top = 0
@@ -83,6 +84,7 @@ object frmMain: TfrmMain
       FullRepaint = False
       ParentBackground = False
       TabOrder = 1
+      ExplicitHeight = 460
       object Image5: TImage
         Left = -56
         Top = 192
@@ -916,7 +918,8 @@ object frmMain: TfrmMain
     TabOrder = 1
     TabWidth = 75
     OnChange = PageControlChange
-    ExplicitWidth = 914
+    ExplicitWidth = 906
+    ExplicitHeight = 496
     object tsDashboard: TTabSheet
       Caption = 'Dashboard'
       ImageIndex = 3
@@ -931,6 +934,7 @@ object frmMain: TfrmMain
         BevelOuter = bvNone
         FullRepaint = False
         TabOrder = 0
+        ExplicitWidth = 870
         object Label4: TLabel
           AlignWithMargins = True
           Left = 108
@@ -976,6 +980,8 @@ object frmMain: TfrmMain
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 1
+        ExplicitWidth = 858
+        ExplicitHeight = 377
         object RelativePanel1: TRelativePanel
           AlignWithMargins = True
           Left = 3
@@ -2508,6 +2514,7 @@ object frmMain: TfrmMain
     Height = 41
     Align = alTop
     TabOrder = 2
+    ExplicitWidth = 1112
     object viUserStatus: TVirtualImage
       AlignWithMargins = True
       Left = 6
@@ -2572,6 +2579,7 @@ object frmMain: TfrmMain
       BevelOuter = bvNone
       FullRepaint = False
       TabOrder = 0
+      ExplicitWidth = 937
       object cbYear: TComboBox
         AlignWithMargins = True
         Left = 637
