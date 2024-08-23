@@ -9,7 +9,8 @@ uses
   Vcl.Themes,
   Vcl.Styles,
   uDCF in 'Form\uDCF.pas' {frmDCF},
-  Activated in 'Settings\Activated.pas';
+  uControl in 'Settings\uControl.pas',
+  uUserProfile in 'Main\uUserProfile.pas' {Form1};
 
 {$R *.res}
 
@@ -22,5 +23,6 @@ begin
   Application.CreateForm(TDM, DM);
   Application.CreateForm(TfrmLogin, frmLogin);
   Application.CreateForm(TfrmDCF, frmDCF);
+  Application.CreateForm(TForm1, Form1);
   Application.Run;
 end.

@@ -22,7 +22,7 @@ object frmDCF: TfrmDCF
     Width = 912
     Height = 686
     Margins.Right = 5
-    ActivePage = tsEM
+    ActivePage = tsDetails
     Align = alClient
     TabOrder = 0
     OnChange = PageControl1Change
@@ -39,8 +39,8 @@ object frmDCF: TfrmDCF
         Align = alClient
         TabOrder = 0
         OnMouseWheel = ScrollBoxMouseWheelHandler
-        ExplicitWidth = 673
-        ExplicitHeight = 653
+        ExplicitLeft = 226
+        ExplicitTop = 128
         object DatesPanel: TPanel
           AlignWithMargins = True
           Left = 10
@@ -55,7 +55,6 @@ object frmDCF: TfrmDCF
           BevelOuter = bvNone
           FullRepaint = False
           TabOrder = 0
-          ExplicitWidth = 632
           object DateContactedPanel: TPanel
             Left = 170
             Top = 0
@@ -91,6 +90,7 @@ object frmDCF: TfrmDCF
               Date = 43916.000000000000000000
               Format = ' '
               Time = 0.506186122685903700
+              Enabled = False
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
               Font.Height = -16
@@ -136,6 +136,7 @@ object frmDCF: TfrmDCF
               Date = 43916.000000000000000000
               Format = ' '
               Time = 0.506186250000610000
+              Enabled = False
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
               Font.Height = -16
@@ -181,6 +182,7 @@ object frmDCF: TfrmDCF
               Date = 43916.000000000000000000
               Format = ' '
               Time = 0.506186446757055800
+              Enabled = False
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
               Font.Height = -16
@@ -205,7 +207,6 @@ object frmDCF: TfrmDCF
           BevelOuter = bvNone
           FullRepaint = False
           TabOrder = 1
-          ExplicitWidth = 632
           object Label3: TLabel
             AlignWithMargins = True
             Left = 3
@@ -237,7 +238,6 @@ object frmDCF: TfrmDCF
             Font.Style = []
             ParentFont = False
             TabOrder = 0
-            ExplicitWidth = 626
             ExplicitHeight = 29
           end
         end
@@ -254,7 +254,6 @@ object frmDCF: TfrmDCF
           Align = alTop
           BevelOuter = bvNone
           TabOrder = 2
-          ExplicitWidth = 632
           object Label10: TLabel
             AlignWithMargins = True
             Left = 3
@@ -282,7 +281,6 @@ object frmDCF: TfrmDCF
             Align = alClient
             ScrollBars = ssVertical
             TabOrder = 0
-            ExplicitWidth = 626
           end
         end
         object pCityMunicipality: TPanel
@@ -299,7 +297,6 @@ object frmDCF: TfrmDCF
           BevelOuter = bvNone
           FullRepaint = False
           TabOrder = 3
-          ExplicitWidth = 632
           object Label4: TLabel
             AlignWithMargins = True
             Left = 3
@@ -331,7 +328,6 @@ object frmDCF: TfrmDCF
             Font.Style = []
             ParentFont = False
             TabOrder = 0
-            ExplicitWidth = 626
             ExplicitHeight = 29
           end
         end
@@ -349,7 +345,6 @@ object frmDCF: TfrmDCF
           BevelOuter = bvNone
           FullRepaint = False
           TabOrder = 4
-          ExplicitWidth = 632
           object Label5: TLabel
             AlignWithMargins = True
             Left = 3
@@ -381,7 +376,6 @@ object frmDCF: TfrmDCF
             Font.Style = []
             ParentFont = False
             TabOrder = 0
-            ExplicitWidth = 626
             ExplicitHeight = 29
           end
         end
@@ -399,7 +393,6 @@ object frmDCF: TfrmDCF
           BevelOuter = bvNone
           FullRepaint = False
           TabOrder = 5
-          ExplicitWidth = 632
           object Label6: TLabel
             AlignWithMargins = True
             Left = 3
@@ -431,7 +424,6 @@ object frmDCF: TfrmDCF
             Font.Style = []
             ParentFont = False
             TabOrder = 0
-            ExplicitWidth = 626
             ExplicitHeight = 29
           end
         end
@@ -444,7 +436,6 @@ object frmDCF: TfrmDCF
           Align = alTop
           BevelOuter = bvNone
           TabOrder = 6
-          ExplicitWidth = 646
         end
         object rpHeader: TRelativePanel
           Left = 0
@@ -482,7 +473,6 @@ object frmDCF: TfrmDCF
             end>
           Align = alTop
           TabOrder = 7
-          ExplicitWidth = 652
           object viLogo1: TVirtualImage
             AlignWithMargins = True
             Left = 11
@@ -583,7 +573,6 @@ object frmDCF: TfrmDCF
           BevelOuter = bvNone
           FullRepaint = False
           TabOrder = 8
-          ExplicitWidth = 632
           object Label2: TLabel
             AlignWithMargins = True
             Left = 3
@@ -631,7 +620,6 @@ object frmDCF: TfrmDCF
         Height = 656
         Align = alLeft
         TabOrder = 1
-        ExplicitHeight = 653
         object VirtualImage2: TVirtualImage
           AlignWithMargins = True
           Left = 25
@@ -942,7 +930,7 @@ object frmDCF: TfrmDCF
                 object pPhotoDoc: TPanel
                   AlignWithMargins = True
                   Left = 11
-                  Top = 148
+                  Top = 144
                   Width = 841
                   Height = 163
                   Margins.Left = 10
@@ -952,6 +940,7 @@ object frmDCF: TfrmDCF
                   Align = alTop
                   BevelOuter = bvLowered
                   TabOrder = 0
+                  ExplicitTop = 148
                   object lbTotalBFDP: TLabel
                     AlignWithMargins = True
                     Left = 4
@@ -1108,11 +1097,11 @@ object frmDCF: TfrmDCF
                   Left = 41
                   Top = 97
                   Width = 811
-                  Height = 46
+                  Height = 32
                   Margins.Left = 40
                   Margins.Top = 5
                   Margins.Right = 10
-                  Margins.Bottom = 0
+                  Margins.Bottom = 10
                   Align = alTop
                   Caption = 
                     'Two (2) Photo Documentation of the BFDP board showing the name o' +
@@ -26917,11 +26906,13 @@ object frmDCF: TfrmDCF
         Top = 40
         Width = 904
         Height = 581
-        ActivePage = tsExistence
+        ActivePage = tsFunctionalityBESWMC
         Align = alClient
         MultiLine = True
         TabOrder = 0
         OnChange = PageControl7Change
+        ExplicitWidth = 902
+        ExplicitHeight = 578
         object tsFunctionalityBESWMC: TTabSheet
           Caption = #9632' 6.1'
           object gpForm29: TGridPanel
@@ -28505,6 +28496,8 @@ object frmDCF: TfrmDCF
                 Value = 94.723117224120100000
               end>
             TabOrder = 0
+            ExplicitWidth = 894
+            ExplicitHeight = 527
             object Panel224: TPanel
               Left = 0
               Top = 0
@@ -28934,7 +28927,6 @@ object frmDCF: TfrmDCF
                     Font.Name = 'Segoe UI'
                     Font.Style = [fsBold]
                     ParentFont = False
-                    ExplicitTop = 108
                     ExplicitWidth = 18
                   end
                   object Label298: TLabel
@@ -28955,7 +28947,6 @@ object frmDCF: TfrmDCF
                     Font.Style = [fsBold]
                     ParentFont = False
                     WordWrap = True
-                    ExplicitTop = 150
                     ExplicitWidth = 64
                   end
                   object Label299: TLabel
@@ -28977,7 +28968,6 @@ object frmDCF: TfrmDCF
                     Font.Name = 'Segoe UI'
                     Font.Style = [fsBold]
                     ParentFont = False
-                    ExplicitTop = 271
                     ExplicitWidth = 18
                   end
                   object Label300: TLabel
@@ -28998,7 +28988,6 @@ object frmDCF: TfrmDCF
                     Font.Style = [fsBold]
                     ParentFont = False
                     WordWrap = True
-                    ExplicitTop = 313
                     ExplicitWidth = 123
                   end
                   object Panel206: TPanel
@@ -29087,7 +29076,6 @@ object frmDCF: TfrmDCF
                     ParentFont = False
                     TabOrder = 2
                     WordWrap = True
-                    ExplicitTop = 175
                   end
                   object CheckBox85: TCheckBox
                     AlignWithMargins = True
@@ -29109,7 +29097,6 @@ object frmDCF: TfrmDCF
                     ParentFont = False
                     TabOrder = 3
                     WordWrap = True
-                    ExplicitTop = 202
                   end
                   object CheckBox86: TCheckBox
                     AlignWithMargins = True
@@ -29133,7 +29120,6 @@ object frmDCF: TfrmDCF
                     ParentFont = False
                     TabOrder = 4
                     WordWrap = True
-                    ExplicitTop = 229
                   end
                   object CheckBox129: TCheckBox
                     AlignWithMargins = True
@@ -29157,7 +29143,6 @@ object frmDCF: TfrmDCF
                     ParentFont = False
                     TabOrder = 5
                     WordWrap = True
-                    ExplicitTop = 338
                   end
                   object CheckBox130: TCheckBox
                     AlignWithMargins = True
@@ -29182,7 +29167,6 @@ object frmDCF: TfrmDCF
                     ParentFont = False
                     TabOrder = 6
                     WordWrap = True
-                    ExplicitTop = 365
                   end
                 end
               end
@@ -29204,6 +29188,7 @@ object frmDCF: TfrmDCF
             Font.Style = [fsBold]
             ParentFont = False
             TabOrder = 1
+            ExplicitWidth = 894
           end
         end
         object tsProvision: TTabSheet
@@ -29757,6 +29742,8 @@ object frmDCF: TfrmDCF
         Height = 35
         Align = alBottom
         TabOrder = 1
+        ExplicitTop = 618
+        ExplicitWidth = 902
         object Button53: TButton
           AlignWithMargins = True
           Left = 818
@@ -29773,6 +29760,7 @@ object frmDCF: TfrmDCF
           Font.Style = [fsBold]
           ParentFont = False
           TabOrder = 0
+          ExplicitLeft = 816
         end
       end
       object pHeader6: TPanel
@@ -29782,6 +29770,7 @@ object frmDCF: TfrmDCF
         Height = 40
         Align = alTop
         TabOrder = 2
+        ExplicitWidth = 902
         object SkLabel224: TSkLabel
           Left = 1
           Top = 1

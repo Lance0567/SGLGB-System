@@ -17,7 +17,7 @@ uses
   Vcl.WinXPanels, System.Actions, Vcl.ActnList, Vcl.Themes,
   Vcl.BaseImageCollection, Vcl.ImageCollection, System.ImageList, Vcl.ImgList,
   Vcl.VirtualImageList, Vcl.VirtualImage, System.IOUtils, Vcl.TitleBarCtrls,
-  Vcl.Menus, uLogin, Vcl.DBGrids, System.Skia, Vcl.Skia, uDCF, Activated;
+  Vcl.Menus, uLogin, Vcl.DBGrids, System.Skia, Vcl.Skia, uDCF, uControl;
 
 type
   TfrmMain = class(TForm)
@@ -442,7 +442,7 @@ end;
 
 procedure TfrmMain.VCLStylesCBKeyPress(Sender: TObject; var Key: Char);
 begin
-  Key := #0;
+  Key := #10;
 end;
 
 procedure TfrmMain.ViewLeadButtonClick(Sender: TObject);
@@ -588,17 +588,12 @@ end;
 
 procedure TfrmMain.LoginClick(Sender: TObject);
 begin
-  Activated.FormActivated;
+  uControl.FormActivated;
 end;
 
 procedure TfrmMain.LogOutClick(Sender: TObject);
 begin
-  frmLogin.Tag := 0;
-
-  viUserStatus.ImageName := 'close';
-  lbUserStatus.Caption := 'You have logout, system deactivated';
-  Login.Visible := True;
-  LogOut.Visible := False;
+  uControl.FormLogout;
 end;
 
 procedure TfrmMain.EmailsSearchBoxKeyPress(Sender: TObject; var Key: Char);
@@ -634,6 +629,7 @@ begin
   end;
 end;
 
+{------------------------------------FORM--------------------------------------}
 procedure TfrmMain.FormActivate(Sender: TObject);
 begin
 //  if FRanOnce then
@@ -672,6 +668,11 @@ begin
     VCLStylesCB.Items.Add(StyleName);
 
   VCLStylesCB.ItemIndex := VCLStylesCB.Items.IndexOf(TStyleManager.ActiveStyle.Name);
+
+  // Start of the system
+  PageControl.ActivePageIndex := 0;
+
+  VCLStylesCB.SetFocus;
 
   UpdateNavButtons;
 end;
