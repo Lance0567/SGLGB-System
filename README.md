@@ -48,7 +48,7 @@ Traditionally, SGLGB assessments involve manual checklists and paper-based scori
   <tr>
     <td width="50%">
       <h3 align="center">Assessment Form</h3>
-      <img src="assets/dcf-alt2" alt="Assessment Screen" width="100%">
+      <img src="assets/dcf-alt2.png" alt="Assessment Screen" width="100%">
     </td>
   </tr>
   <tr>
