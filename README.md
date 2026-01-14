@@ -67,7 +67,6 @@ Traditionally, SGLGB assessments involve manual checklists and paper-based scori
     * `TADOConnection` / `TFDConnection` (Database Connectivity)
     * `TDBGrid` (Data Presentation)
     * `TPageControl` (Tabbed Navigation for Categories)
-    * `TFrxReport` (Reporting Engine)
 
 ---
 
