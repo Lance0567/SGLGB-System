@@ -12,7 +12,6 @@
     <img src="https://img.shields.io/badge/Delphi-EE1F35?style=for-the-badge&logo=delphi&logoColor=white" alt="Delphi" />
     <img src="https://img.shields.io/badge/VCL-Framework-blue?style=for-the-badge&logo=windows&logoColor=white" alt="VCL" />
     <img src="https://img.shields.io/badge/Database-SQLite-orange?style=for-the-badge&logo=database&logoColor=white" alt="Database" />
-    <img src="https://img.shields.io/badge/Reporting-FastReport-green?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Reports" />
   </p>
 
   <img src="assets/dashboard.png" alt="SGLGB Dashboard" width="100%">
