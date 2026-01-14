@@ -35,9 +35,7 @@ Traditionally, SGLGB assessments involve manual checklists and paper-based scori
 | **🏘️ Barangay Profiling** | Database management of barangay demographics, officials, and profile data. |
 | **📝 Automated Scoring** | Dynamic forms for checking compliance requirements; automatically computes the overall score based on weighted criteria. |
 | **📂 Core Governance Areas** | dedicated modules for the 3 Core Areas (Financial Admin, Disaster Prep, Safety) and Essential Areas. |
-| **🖨️ Report Generation** | Generates the official **SGLGB Assessment Form** and Summary of Ratings ready for printing (using FastReport/QuickRep). |
 | **🔍 Search & Filtering** | Rapidly filter barangays by district, score range, or compliance status (Pass/Fail). |
-| **💾 Data Backup/Restore** | Integrated utilities to secure assessment data and prevent data loss. |
 
 ---
 
